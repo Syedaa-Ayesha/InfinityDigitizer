@@ -52,9 +52,12 @@ const features = [
 
 const PortfolioSlider = () => {
   return (
-    <section className="pt-[50px]">
+    <section className="pt-[50px]" style={{
+    background:
+      "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
+  }}>
 
-      <div className="max-w-[1320px]  px-4 mx-[113px]">
+      <div className="max-w-[1320px]  px-4 mx-[113px]" >
 
         {/* Badge */}
 <SectionHeading

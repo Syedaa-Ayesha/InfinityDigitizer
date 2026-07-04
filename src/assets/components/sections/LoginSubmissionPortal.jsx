@@ -34,7 +34,10 @@ const LoginSubmissionPortal = () => {
     ]
   return (
     <>
-    <div className="min-h-screen flex px-[70px] py-12 border">
+    <div className="min-h-screen flex px-[70px] py-12 " style={{
+    background:
+      "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
+  }}>
 <div>
 <Heading title={`Your Artwork,
     Perfectly Prepared`}/>
