@@ -12,7 +12,7 @@ const SectionHeading = ({icon, badge, heading, description}) => {
         {heading}
       </h2>
 
-      <p className="mt-5 mx-auto max-w-[500px] text-sm text-[#00030B] leading-6">
+      <p className="mt-5 mx-auto max-w-[500px] text-sm text-[#00030B] leading-6 whitespace-pre-line">
         {description}
       </p>
     

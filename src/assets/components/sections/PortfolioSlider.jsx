@@ -52,12 +52,12 @@ const features = [
 
 const PortfolioSlider = () => {
   return (
-    <section className="pt-[50px]" style={{
+    <section className="py-12.5" style={{
     background:
       "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
   }}>
 
-      <div className="max-w-[1320px]  px-4 mx-[113px]" >
+      <div className="max-w-330  px-4 mx-28.25" >
 
         {/* Badge */}
 <SectionHeading
@@ -75,7 +75,7 @@ const PortfolioSlider = () => {
           {/* Previous */}
 
           <button
-            className="custom-prev absolute left-[-24px] top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-xl"
+            className="custom-prev absolute -left-6 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-xl"
           >
             <ChevronLeft />
           </button>
@@ -85,30 +85,31 @@ const PortfolioSlider = () => {
           <Swiper
             modules={[Navigation]}
             loop={true}
-            spaceBetween={20}
+            speed={700}
+            spaceBetween={30}
             navigation={{
-              prevEl: ".custom-prev",
-              nextEl: ".custom-next",
+              prevEl: ".pricing-prev",
+              nextEl: ".pricing-next",
             }}
+            slidesPerView={3}
             breakpoints={{
               0: {
                 slidesPerView: 1,
+                spaceBetween:20,
               },
-              640: {
+              768: {
                 slidesPerView: 2,
               },
-              1024: {
-                slidesPerView: 3,
-              },
-              1280: {
+              1200: {
                 slidesPerView: 4,
               },
+              
             }}
           >
             {portfolio.map((item) => (
               <SwiperSlide key={item.id}>
 
-                <div className="relative h-[340px] overflow-hidden rounded-[18px]">
+                <div className="relative h-85 overflow-hidden rounded-[18px]">
 
                   <img
                     src={item.image}
@@ -136,7 +137,7 @@ const PortfolioSlider = () => {
           {/* Next */}
 
           <button
-            className="custom-next absolute right-[-24px] top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-xl"
+            className="custom-next absolute -right-6 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-xl"
           >
             <ChevronRight />
           </button>
@@ -145,7 +146,7 @@ const PortfolioSlider = () => {
 
         {/* Instagram Button */}
 
-        <div className="flex justify-center my-[30px]">
+        <div className="flex justify-center my-7.5">
 
           <a
             href="#"
@@ -166,7 +167,7 @@ const PortfolioSlider = () => {
 
       </div>
 <section className="bg-[#46546A] py-10">
-  <div className="max-w-[1320px] mx-auto px-4">
+  <div className="max-w-330 mx-auto px-4">
 
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
 
@@ -189,7 +190,7 @@ const PortfolioSlider = () => {
 
           {/* Icon */}
 
-          <div className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full bg-white">
+          <div className="flex h-13.5 w-13.5 shrink-0 items-center justify-center rounded-full bg-white">
 
             <div className="text-[#7434E5]">
 
