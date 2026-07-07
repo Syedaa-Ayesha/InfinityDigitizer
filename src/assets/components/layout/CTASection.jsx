@@ -1,43 +1,56 @@
-import {Headphones, ArrowRight } from 'lucide-react'
+import { ArrowRight } from "lucide-react";
 
-const CTASection = () => {
+const CTASection = ({
+  icon,
+  title,
+  description,
+  buttonText = "Get Free Quote",
+  onClick,
+  titleClass,
+  sectionWidth,
+  iconHeight,
+  iconWidth
+}) => {
   return (
-    <div className="w-[1160px] h-[112px] rounded-[16px] bg-gradient-to-r from-[#B685FF] via-[#8C45F6] to-[#7434E5] px-8 flex items-center justify-between m-auto">
-                {/* Left Side */}
-                <div className="flex items-center gap-5">
-                    {/* Icon Circle */}
-                    <div className="w-[72px] h-[72px] rounded-full bg-white flex items-center justify-center shrink-0">
-                        <Headphones
-                            size={34}
-                            strokeWidth={2.2}
-                            className="text-[#7434E5]"
-                        />
-                    </div>
+    <section className={`mx-auto ${sectionWidth}`}>
+      <div className="flex items-center justify-between rounded-[16px] bg-gradient-to-l from-[#7434E5] to-[#A877FF] px-8 py-[21px]">
 
-                    {/* Text */}
-                    <div>
-                        <h2 className="font-dmSans text-white text-[32px] font-bold leading-none">
-                            Your Artwork Deserves the Best!
-                        </h2>
+        {/* Left */}
 
-                        <p className="mt-2 max-w-[470px] text-[14px] leading-[20px] text-white/80 font-inter">
-                            Upload it now, and our team will turn it into a clean, high
-                            quality file, fast, accurate, no errors, no delays, just quality
-                            work.
-                        </p>
-                    </div>
-                </div>
+        <div className="flex items-center gap-6">
 
-                {/* Button */}
-                <button className="group flex items-center gap-2 rounded-full bg-white px-8 py-4 text-[14px] font-semibold text-[#7434E5] transition hover:scale-105">
-                    Get Free Quote
-                    <ArrowRight
-                        size={18}
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                    />
-                </button>
-            </div>
-  )
-}
+          <div className={`${iconHeight} ${iconWidth} flex items-center justify-center rounded-full bg-white shrink-0 `}>
+            {icon}
+          </div>
 
-export default CTASection
+          <div>
+            <h2 className={`font-dmSans text-[32px] font-bold leading-none text-white ${titleClass}`}>
+              {title}
+            </h2>
+
+            <p className="mt-2.5 max-w-[470px] text-[16px] font-inter leading-5 text-white/80 font-light whitespace-pre-wrap" >
+              {description}
+            </p>
+          </div>
+        </div>
+
+        {/* Button */}
+
+        <button
+          onClick={onClick}
+          className="group flex items-center gap-2 rounded-full bg-white px-8 py-4 text-[14px] font-semibold text-[#7434E5] transition hover:scale-105"
+        >
+          {buttonText}
+
+          <ArrowRight
+            size={18}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </button>
+
+      </div>
+    </section>
+  );
+};
+
+export default CTASection;

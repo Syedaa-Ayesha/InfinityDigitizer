@@ -10,8 +10,8 @@ const PortfolioCard = ({
        
  <div
       className="
-        max-w-[241px]
-        h-[566px]
+        max-w-60.25
+        h-141.5
         rounded-[20px]
         bg-white
         border
@@ -29,7 +29,7 @@ const PortfolioCard = ({
        {beforeTitle}
       </h5>
 
-      <div className="mt-2 w-[191px]  h-[213px] overflow-hidden rounded-[10px]">
+      <div className="mt-2 w-47.75  h-53.25 overflow-hidden rounded-[10px]">
         <img
           src={before}
           alt="Before Design"
@@ -42,7 +42,7 @@ const PortfolioCard = ({
         {afterTitle}
       </h5>
 
-      <div className="mt-2 w-[191px]  h-[213px] overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat border items-center">
+      <div className="mt-2 w-47.75  h-53.25 overflow-hidden rounded-[10px] bg-cover bg-center bg-no-repeat border items-center">
         <img
           src={after}
           alt="After Design"

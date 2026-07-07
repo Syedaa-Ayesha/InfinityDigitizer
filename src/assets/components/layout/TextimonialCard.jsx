@@ -13,21 +13,17 @@ const TestimonialCard = ({
        className="
     flex
     flex-col
-    h-[360px]
+    h-90
     w-full
-    max-w-[410px]
-    rounded-[20px]
+    max-w-102.5
+    rounded-[16px]
     border
     border-[#ECECEC]
     bg-white
     px-8
     py-8
-    shadow-[0px_14px_40px_rgba(0,0,0,0.08)]
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:shadow-[0px_20px_55px_rgba(116,52,229,0.18)]
-  "
+   shadow-[0px_18px_45px_rgba(0,0,0,0.12)]"
+  
     >
       {/* Quote Icon */}
 

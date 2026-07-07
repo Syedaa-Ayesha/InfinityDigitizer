@@ -32,10 +32,10 @@ const EmbroideryDesignForm = () => {
      const [unit, setUnit] = useState("");
   const [location, setLocation] = useState("");
   return (
-     <form className="space-y-4">
+     <form className="space-y-4 ">
 
-      <label className="font-bold text-sm text-[#7A7591]">
-        Embroidery Service
+      <label className="font-bold text-sm text-[#7A7591] font-inter">
+        Embroidery Service Type
       </label>
 
       <DropDown

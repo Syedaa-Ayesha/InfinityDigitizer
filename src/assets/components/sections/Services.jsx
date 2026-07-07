@@ -30,7 +30,7 @@ const services = [
 const Services = () => {
   return (
     <>
-    <section className="py-[50px]  m-auto "  style={{
+    <section className="py-12.5  m-auto "  style={{
     background:
       "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
   }}>
@@ -47,8 +47,8 @@ const Services = () => {
         <div
             key={service.id}
             className="
-            h-[296px]
-            w-[296px]
+            h-74
+            w-74
             group
             rounded-[18px]
             bg-white
@@ -77,9 +77,9 @@ const Services = () => {
 
             {/* Divider */}
 
-            <div className="mx-auto  flex w-[90px] items-center gap-3">
+            <div className="mx-auto  flex w-22.5 items-center gap-3">
 
-                <div className="h-[2px] flex-1 bg-[#7434E5] my-3"></div>
+                <div className="h-0.5 flex-1 bg-[#7434E5] my-3"></div>
 
                 <span className="font-bold text-[#7434E5] text-xl">
 
@@ -87,7 +87,7 @@ const Services = () => {
 
                 </span>
 
-                <div className="h-[2px] flex-1 bg-[#7434E5] my-3"></div>
+                <div className="h-0.5 flex-1 bg-[#7434E5] my-3"></div>
 
             </div>
 
@@ -101,7 +101,7 @@ const Services = () => {
 
             {/* Description */}
 
-            <p className="mt-3 text-center text-[13px] leading-[20px] text-[#7A7591]">
+            <p className="mt-3 text-center text-[13px] leading-5 text-[#7A7591]">
 
                 {service.description}
 
@@ -112,7 +112,7 @@ const Services = () => {
             <div className="text-[20px] font-inter font-semibold flex justify-center ">
 
                 <button
-                    className="mt-auto h-[42px] w-[176px] rounded-[8px] bg-[#753DF0]  text-white font-semibold text-[12px] uppercase flex items-center justify-center gap-2 absolute inset-x-0 bottom-6.5 left-14.5"
+                    className="mt-auto h-10.5  w-44 rounded-lg bg-[#753DF0]  text-white font-semibold text-[12px] uppercase flex items-center justify-center gap-2 absolute inset-x-0 bottom-6.5 left-14.5"
                     
                 >
 
@@ -129,18 +129,18 @@ const Services = () => {
     ))}
 
 </div>
-<div className="w-[967px] h-[228px] rounded-[16px] bg-gradient-to-r from-[#B17BFF] via-[#8C45F6] to-[#7434E5] px-[30px] flex items-center justify-between m-auto px-[34px] py-[21px]">
+<div className="w-241.75 h-57 rounded-2xl bg-linear-to-r from-[#B17BFF] via-[#8C45F6] to-[#7434E5] flex items-center justify-between m-auto px-8.5 py-5.25">
 
         {/* Left Side */}
-        <div className="flex items-center gap-[42px]">
+        <div className="flex items-center gap-10.5">
 
           {/* Heading */}
-          <h2 className="w-[413px] h-[144px] font-inter text-white text-[40px] font-semibold leading-[52px]">
+          <h2 className="w-103.25 h-36 font-inter text-white text-[40px] font-semibold leading-13">
             Have a Design in Mind? Let's Turn it into Perfect Design
           </h2>
 
           {/* Description */}
-          <p className="w-[215px] text-[14px] leading-[20px] font-inter text-white/90">
+          <p className="w-53.75 text-[14px] leading-5 font-inter text-white/90">
             Share your artwork with our experts and receive high quality,
             machine ready embroidery & vector files designed for smooth
             production and outstanding results.
@@ -149,7 +149,7 @@ const Services = () => {
         </div>
 
         {/* Arrow Box */}
-        <button className="group w-[186px] h-[186px] rounded-[18px] border-2 border-white flex items-center justify-center transition-all duration-300 hover:bg-white/10">
+        <button className="group w-46.5 h-46.5 rounded-[18px] border-2 border-white flex items-center justify-center transition-all duration-300 hover:bg-white/10">
 
           <ArrowUpRight size={108}
             strokeWidth={2.8}

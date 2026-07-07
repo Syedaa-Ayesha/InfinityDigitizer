@@ -2,6 +2,9 @@ import { LifeBuoy } from "lucide-react";
 import SectionHeading from "../common/SectionHeading";
 import PricingTabs from "../layout/PricingTab";
 import Accordion from "../layout/Accordion";
+import CTASection from "../layout/CTASection";
+import { BellCheck } from "lucide-react";
+
 import { useState } from "react";
 const faqTabs = [
   {
@@ -25,6 +28,7 @@ const faqTabs = [
     value: "logo",
   },
 ];
+
 const FaqSection = () => {
 
   const [activeTab, setActiveTab] = useState("policy");
@@ -44,6 +48,7 @@ const FaqSection = () => {
         heading="Frequently Asked Questions"
         description={`Got questions? We've answered the ones our customers 
              ask most often`}
+             
       />
 
       <div className="mt-10 flex justify-center">
@@ -55,7 +60,23 @@ const FaqSection = () => {
       </div>
 
       <Accordion />
-
+<CTASection
+  icon={
+    <BellCheck 
+      size={38}
+      strokeWidth={2.2}
+      className="text-[#7434E5]"
+    />
+  }
+  title="Need Expert Design Assistance?"
+  description="Our team is available 24/7 to help with embroidery,
+  vector, and logo design projects."
+  buttonText="Get Free Quote"
+  titleClass="text-[28px]"
+sectionWidth = "w-[1032px]"
+iconHeight= "h-[96px]"
+iconWidth ="w-[96px]"
+/>
     </section>
   );
 };

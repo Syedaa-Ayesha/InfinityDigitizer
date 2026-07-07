@@ -19,3 +19,8 @@
 .swiper-button-prev{
     display:none !important;
 }
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  background: transparent !important;
+}

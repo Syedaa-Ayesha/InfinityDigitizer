@@ -4,7 +4,7 @@ import AccordionData from "../common/AccordionData";
 
 const Accordion = () => {
   return (
-    <div className="mx-auto mt-9 w-[775px] max-w-225">
+    <div className="mx-auto mt-9 w-193.75 max-w-225">
 
       {AccordionData.map((item) => (
         <Disclosure key={item.id}>

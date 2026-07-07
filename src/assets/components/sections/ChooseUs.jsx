@@ -1,5 +1,5 @@
 
-import { ShieldCheck } from "lucide-react"
+import { ShieldCheck , House} from "lucide-react"
 import SectionHeading from "../common/SectionHeading";
 import FeatureCard from "../layout/FeatureCard";
 import CTASection from "../layout/CTASection";
@@ -29,7 +29,23 @@ const ChooseUs = () => {
     />
   ))}
 </div>
-         <CTASection/>  
+        <CTASection
+  icon={
+    <House
+      size={34}
+      strokeWidth={2.2}
+      className="text-[#7434E5]"
+    />
+  }
+  title="Your Perfect Design File is Just One Upload Away"
+  description="Let our mortgage experts help you find the right solution."
+  buttonText="Get Free Consultation"
+  titleClass = "text-[26px]"
+  sectionWidth = "max-w-[1275px]"
+  iconHeight= "h-[84px]"
+  iconWidth = "w-[84px]"
+/>
+
     
 
         </section>

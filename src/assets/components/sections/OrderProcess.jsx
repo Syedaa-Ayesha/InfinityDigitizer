@@ -2,7 +2,7 @@ import { CardData } from "../common/CardData";
 import ProcessCard from "../common/ProcessCard";
 import SectionHeading from "../common/SectionHeading";
 import CTASection from "../layout/CTASection";
-import { Settings } from "lucide-react";
+import { Headphones, Settings } from "lucide-react";
 const OrderProcess = () => {
     return (
         <section
@@ -69,7 +69,24 @@ const OrderProcess = () => {
                     />
                 </button>
             </div> */}
-           <CTASection/>
+           <CTASection
+  icon={
+    <Headphones
+      size={38}
+      strokeWidth={2.2}
+      className="text-[#7434E5]"
+    />
+  }
+  title="Your Artwork Deserves the Best!"
+  description="Upload it now, and our team will turn it into a clean, high
+quality file, fast, accurate, no errors, no delays, just quality 
+work"
+  buttonText="Get Free Quote"
+  titleClass = "text-[28px]"
+  sectionWidth = "max-w-[1275px]"
+  iconHeight= "h-[96px]"
+  iconWidth = "w-[96px]"
+/>
         </section>
     );
 };
