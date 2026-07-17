@@ -1,5 +1,4 @@
 
-// import ServiceHeroImage01 from "../../images/ServiceHeroImage01.png";
 import ServiceHighlights from "../common/ServiceHighlights"
 
 const ServicePageHero = ({
@@ -10,7 +9,7 @@ const ServicePageHero = ({
   reverse = false,
 }) => {
   return (
-      <section className="py-[34px]">
+      <section className="py-[34px] bg-[#FBF9FE]">
       <div
         className={`
           mx-auto
@@ -84,3 +83,17 @@ const ServicePageHero = ({
 }
 
 export default ServicePageHero
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,9 @@
 // import logo from "../../images/logo.png"; 
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 const Header = () => {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
     {/* <header className="h-[59px] w-full flex justify-between items-center bg-[#7434E5]  border border-indigo-600border-1">
       
       <div>

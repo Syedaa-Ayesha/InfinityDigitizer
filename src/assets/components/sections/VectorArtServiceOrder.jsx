@@ -3,7 +3,7 @@ import ServicePageCard from "../layout/ServicePageCard";
 
 const VectorArtServiceOrder = () => {
   return (
-   <section className="py-20">
+   <section className="py-4">
          <div className="mx-auto max-w-[1320px]">
    
            <div

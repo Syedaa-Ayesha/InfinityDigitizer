@@ -3,7 +3,7 @@ import ServicePageCard from "../layout/ServicePageCard";
 
 const LogoDesignServiceOrder = () => {
   return (
-    <section className="py-20 border-1 border-black">
+    <section className="py-4">
           <div className="mx-auto max-w-[1320px]">
     
             <div
@@ -12,7 +12,7 @@ const LogoDesignServiceOrder = () => {
               grid-cols-1
               gap-7
     
-              sm:grid-cols-2
+              sm:grid-cols-1
               lg:grid-cols-3
             "
             >

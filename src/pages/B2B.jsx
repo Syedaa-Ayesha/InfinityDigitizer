@@ -1,8 +1,14 @@
-
+import B2BHero from "../assets/components/sections/B2BHero"
+import BusinessServe from "../assets/components/sections/BusinessServe"
+import B2BWhyChooseUs from "../assets/components/sections/B2BWhyChooseUs"
 
 const B2B = () => {
   return (
-    <div>B2B</div>
+    <>
+   <B2BHero />
+   <BusinessServe/>
+   <B2BWhyChooseUs />
+   </>
   )
 }
 

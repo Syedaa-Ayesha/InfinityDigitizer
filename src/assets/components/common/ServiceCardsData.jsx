@@ -9,6 +9,15 @@ import img7 from '../../icons/LogoDigitizing.png'
 import img8 from '../../icons/Hat.png'
 import img9 from '../../icons/Chenille.png'
 import img10 from '../../icons/Shirt.png'
+import img11 from '../../icons/DFT.png'
+import img12 from '../../icons/Die Cutting.png'
+import img13 from '../../icons/Engraving.png'
+import img14 from '../../icons/Digital Printing.png'
+import img15 from '../../icons/Flexographics.png'
+import img16 from '../../icons/Laser Cutting.png'
+import img17 from '../../icons/Offset printing.png'
+import img18 from '../../icons/Screen Printing.png'
+import img19 from '../../icons/Sublimation Design.png'
 export const serviceCards = {
   embroidery: [
     {
@@ -72,42 +81,146 @@ export const serviceCards = {
       image: img10,
     },
 
-    // total 10 cards
   ],
 
   vector: [
     {
       id: 1,
-      title: "Logo Vector",
-      description: "...",
-      image: img2,
+      title: "DTF Design Preparation",
+      description: "Production ready DTF artwork with clean layers, vibrant colors, and print perfect precision. Every design is carefully prepared for smooth transfers, accurate color reproduction, and consistent printing results on garments of every size and style.",
+      image: img11,
     },
 
-    {
+      {
       id: 2,
-      title: "Image Vector",
-      description: "...",
-      image: img3,
+      title: "Engraving Design",
+      description: "Detailed vector artwork crafted for smooth, accurate engraving on metal, wood, acrylic, glass, and other materials. Every design is optimized to produce sharp lines, fine details, and flawless engraving results across every project.",
+      image: img13,
+    },
+       {
+      id: 3,
+      title: "Screen Printing Design",
+      description: "Print ready vector designs with bold lines, accurate color separations, and clean artwork for flawless screen printing. Every file is professionally prepared to ensure consistent ink coverage, sharp details, and high quality production results.",
+      image: img18,
+    },
+       {
+      id: 4,
+      title: "Laser Cutting Design",
+      description: "Precision vector files created for clean cuts, smooth edges, and accurate laser production. Every design is optimized with precise cut paths to deliver professional results across acrylic, wood, metal, paper, and other materials.",
+      image: img16,
+    },
+       {
+      id: 5,
+      title: "Sublimation Design",
+      description: "High resolution sublimation artwork designed for vibrant, edge to edge print quality with exceptional color accuracy. Every file is carefully prepared to produce sharp graphics, smooth gradients, and long lasting results on a wide range of products.",
+      image: img19,
+    },
+       {
+      id: 6,
+      title: "Digital Printing Design",
+      description: "Sharp, press ready vector designs that deliver vibrant colors, crisp details, and exceptional print clarity. Every artwork file is optimized to ensure consistent quality and professional results across digital printing applications and promotional products.",
+      image: img14,
+    },
+       {
+      id: 7,
+      title: "Die Cutting Design",
+      description: "Custom die cut vector files with accurate cut paths and clean outlines for professional finishing. Every design is carefully prepared to ensure smooth cutting, precise shaping, and reliable production across labels, packaging, and custom products.",
+      image: img12,
+    },
+       {
+      id: 8,
+      title: "Offset Printing Design",
+      description: "Press ready vector artwork optimized for sharp details, accurate colors, and consistent offset printing. Every file is professionally prepared to produce quality prints with clean layouts, clear graphics, and reliable production performance.",
+      image: img17,
+    },
+       {
+      id: 9,
+      title: "Flexographic Printing Design",
+      description: "Best quality vector files prepared for smooth, accurate flexographic printing on packaging, labels, and flexible materials. Every design is optimized to ensure clean artwork, precise registration, and consistent printing results throughout the production process.",
+      image: img15,
     },
 
-    // total 9 cards
   ],
 
   logo: [
     {
       id: 1,
-      title: "Business Logo",
-      description: "...",
+      title: "Minimal Logo",
+      description: "Simple, clean logo designs created to deliver a modern and timeless brand identity. Every minimal logo is carefully crafted to convey professionalism, improve brand recognition, and leave a lasting impression across print and digital platforms.",
       image: img4,
     },
 
     {
       id: 2,
-      title: "Luxury Logo",
-      description: "...",
+      title: "Modern Logo",
+      description: "Fresh and contemporary logo concepts crafted to help your brand stand out in today's competitive market. We design visually striking logos that combine creativity, simplicity, and versatility for a memorable business identity.",
+      image: img5,
+    },
+     {
+      id: 3,
+      title: "Wordmark Logo",
+      description: "Custom text based logos designed to make your brand name bold, memorable, and instantly recognizable. Every wordmark is carefully styled with unique typography that reflects your business personality while maintaining a clean, professional appearance.",
       image: img5,
     },
 
-    // total logo cards
+     {
+      id: 4,
+      title: "Combination Mark Logo",
+      description: "Perfectly balanced icons and typography combined into one powerful logo design. Our combination marks create a versatile brand identity that looks professional across websites, business cards, packaging, social media, and marketing materials.",
+      image: img5,
+    },
+
+     {
+      id: 5,
+      title: "Mascot Logo",
+      description: "Unique mascot logo designs created to give your brand personality, charm, and a memorable visual identity. Every illustration is customized to connect with your audience while strengthening brand recognition across every platform.",
+      image: img5,
+    },
+
+     {
+      id: 6,
+      title: "Lettermark Logo",
+      description: "Professional lettermark logos that transform your business initials into sleek, memorable brand symbols. Every design is carefully crafted to create a clean, recognizable identity that works perfectly across print and digital media.",
+      image: img5,
+    },
+
+     {
+      id: 7,
+      title: "Monogram Logo",
+      description: "Elegant monogram logos designed with style, precision, and timeless appeal for businesses and personal brands. We combine initials into sophisticated designs that reflect professionalism while creating a strong and distinctive visual identity.",
+      image: img5,
+    },
+
+     {
+      id: 8,
+      title: "Abstract Logo",
+      description: "Creative abstract logo designs that transform unique shapes and symbols into meaningful brand identities. Every concept is thoughtfully crafted to capture your brand values while delivering a modern, distinctive, and memorable visual presence.",
+      image: img5,
+    },
+     {
+      id: 9,
+      title: "Emblem Logo",
+      description: "Classic emblem logos designed to build trust, authority, and a strong brand presence. We combine typography, symbols, and shapes into timeless badge style designs that work beautifully for businesses, organizations, and institutions.",
+      image: img5,
+    },
+
+     {
+      id: 10,
+      title: "Icon Logo",
+      description: "Distinctive icon based logos designed for instant recognition across websites, packaging, mobile apps, and social media. Every icon is carefully created to represent your brand with clarity, simplicity, and long lasting visual impact.",
+      image: img5,
+    },
+     {
+      id: 11,
+      title: "Typography Logo",
+      description: "Custom typography logos featuring stylish lettering that reflects your brand identity and personality. Every design is crafted with carefully selected fonts and balanced layouts to create a memorable and professional business image",
+      image: img5,
+    },
+     {
+      id: 12,
+      title: "Flat Logo",
+      description: "Clean flat logo designs created with modern simplicity for maximum versatility across print, web, packaging, and digital media. Every logo delivers a timeless, professional appearance while maintaining clarity at every size and application.",
+      image: img5,
+    },
   ],
 };
