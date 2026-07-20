@@ -1,13 +1,11 @@
-
 import { useState } from "react";
 const ProductGallery = ({ design }) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-//     const [activeImage, setActiveImage] = useState(
-//     design.images[0]
-//   );
+  const [activeIndex, setActiveIndex] = useState(0);
+  //     const [activeImage, setActiveImage] = useState(
+  //     design.images[0]
+  //   );
   return (
-     <section>
-
+    <section>
       {/* Main Image */}
 
       <div
@@ -21,9 +19,9 @@ bg-[#FFF7F5]
         "
       >
         <img
-  src={design.images[activeIndex]}
-  alt={design.title}
-  className="
+          src={design.images[activeIndex]}
+          alt={design.title}
+          className="
     h-[280px]
     sm:h-[360px]
     md:h-[450px]
@@ -35,18 +33,17 @@ bg-[#FFF7F5]
     duration-500
     group-hover:scale-105
   "
-/>
+        />
       </div>
 
       {/* Thumbnails */}
 
       <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
-
         {design.images.map((image, index) => (
-  <button
-    key={index}
-    onClick={() => setActiveIndex(index)}
-    className={`
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`
       flex-shrink-0
       h-20
       w-20
@@ -58,29 +55,23 @@ bg-[#FFF7F5]
       transition-all
       duration-300
       hover:scale-105
-      ${
-        activeIndex === index
-          ? "border-[#7B3FF2]"
-          : "border-[#ECECEC]"
-      }
+      ${activeIndex === index ? "border-[#7B3FF2]" : "border-[#ECECEC]"}
     `}
-  >
-    <img
-      src={image}
-      alt={design.title}
-      className="
+          >
+            <img
+              src={image}
+              alt={design.title}
+              className="
         h-full
         w-full
         object-cover
       "
-    />
-  </button>
-))}
-
+            />
+          </button>
+        ))}
       </div>
-
     </section>
-  )
-}
+  );
+};
 
-export default ProductGallery
+export default ProductGallery;

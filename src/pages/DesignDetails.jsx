@@ -2,6 +2,8 @@ import ProductGallery from "../assets/components/layout/ProductGallery";
 import ProductInfo from "../assets/components/layout/ProductInfo";
 import { useParams } from "react-router-dom";
 import { FreeDesignData } from "../assets/components/common/FreeDesignData";
+import PremiumProductStats from "../assets/components/sections/PremiumProductStats";
+import ProductTabs from "../assets/components/sections/ProductTabs";
 const DesignDetails = () => {
      const { id } = useParams();
 
@@ -30,7 +32,7 @@ const DesignDetails = () => {
         gap-10
         p-5
         md:p-8
-        xl:grid-cols-[46%_54%]
+        xl:grid-cols-[46%_50%]
         xl:gap-14
         "
       >
@@ -42,6 +44,8 @@ const DesignDetails = () => {
     </div>
 
   </div>
+  <PremiumProductStats design={design} />
+  <ProductTabs design={design}/>
 </section>
   )
 }
