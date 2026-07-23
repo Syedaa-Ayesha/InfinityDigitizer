@@ -4,93 +4,81 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 
-
 const AuthorCard = ({ blog }) => {
-    if (!blog?.author) return null;
+  if (!blog?.author) return null;
 
   const { name, role, bio, image, social } = blog.author;
+
   return (
-   <section
+    <section
       className="
-        mb-2
-        rounded-[30px]
+        rounded-[28px]
         border
         border-[#ECECF3]
         bg-white
-        p-6
+        px-5
+        py-8
         shadow-sm
 
-        md:p-10
-        border-black
+        sm:px-8
+        lg:px-10
+        lg:py-10
       "
     >
       <div
         className="
           flex
           flex-col
-          gap-8
+          gap-6
 
-          md:flex-row
-          md:items-center
+          sm:flex-row
+          sm:items-start
         "
       >
-
         {/* Author Image */}
 
-        <img
-          src={image}
-          alt={name}
+        <div
           className="
-            h-36
-            w-36
+            flex
+            h-[72px]
+            w-[72px]
+            shrink-0
+            items-center
+            justify-center
+            overflow-hidden
             rounded-full
-            object-cover
-            border-4
-            border-[#F3EEFF]
-            mx-auto
-
-            md:mx-0
+            bg-[#F3EEFF]
           "
-        />
+        >
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-full object-cover"
+          />
+        </div>
 
         {/* Content */}
 
-        <div className="flex-1 text-center md:text-left">
+        <div className="flex-1">
 
-          <span
+          <h3
             className="
-              inline-flex
-              rounded-full
-              bg-[#F3EEFF]
-              px-4
-              py-2
-              text-xs
-              font-semibold
-              uppercase
-              tracking-[2px]
-              text-[#7434E5]
-            "
-          >
-            Article Author
-          </span>
-
-          <h2
-            className="
-              mt-5
               font-dmSans
-              text-[34px]
+              text-[24px]
               font-bold
               text-[#0F1729]
+
+              md:text-[36px]
             "
           >
             {name}
-          </h2>
+          </h3>
 
           <p
             className="
-              mt-2
-              text-[18px]
-              font-medium
+              mt-1
+              text-[17px]
+              font-semibold
               text-[#7434E5]
             "
           >
@@ -99,11 +87,13 @@ const AuthorCard = ({ blog }) => {
 
           <p
             className="
-              mt-6
-              max-w-[760px]
-              text-[17px]
+              mt-3
+              max-w-[900px]
+              text-[15px]
               leading-8
-              text-[#5A6475]
+              text-[#667085]
+
+              md:text-[17px]
             "
           >
             {bio}
@@ -111,74 +101,72 @@ const AuthorCard = ({ blog }) => {
 
           {/* Social */}
 
-          <div
-            className="
-              mt-8
-              flex
-              justify-center
-              gap-4
-
-              md:justify-start
-            "
-          >
+          <div className="mt-6 flex items-center gap-3">
 
             <a
               href={social.facebook}
+              target="_blank"
+              rel="noreferrer"
               className="
                 flex
-                h-12
-                w-12
+                h-10
+                w-10
                 items-center
                 justify-center
                 rounded-full
-                border
-                border-[#ECECF3]
+                bg-[#F3EEFF]
+                text-[#7434E5]
                 transition-all
                 duration-300
                 hover:bg-[#7434E5]
                 hover:text-white
               "
             >
-              <FaFacebookF size={20} />
-            </a>
-
-            <a
-              href={social.linkedin}
-              className="
-                flex
-                h-12
-                w-12
-                items-center
-                justify-center
-                rounded-full
-                border
-                border-[#ECECF3]
-                transition-all
-                duration-300
-                hover:bg-[#7434E5]
-                hover:text-white
-              "
-            >
-              <FaLinkedinIn size={20} />
+              <FaFacebookF size={15} />
             </a>
 
             <a
               href={social.twitter}
+              target="_blank"
+              rel="noreferrer"
               className="
                 flex
-                h-12
-                w-12
+                h-10
+                w-10
                 items-center
                 justify-center
                 rounded-full
-                border
-                border-[#ECECF3]
+                bg-[#F3EEFF]
+                text-[#7434E5]
                 transition-all
                 duration-300
                 hover:bg-[#7434E5]
-                hover:text-white"
-              >
-              <FaXTwitter size={20} />
+                hover:text-white
+              "
+            >
+              <FaXTwitter size={15} />
+            </a>
+
+            <a
+              href={social.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-full
+                bg-[#F3EEFF]
+                text-[#7434E5]
+                transition-all
+                duration-300
+                hover:bg-[#7434E5]
+                hover:text-white
+              "
+            >
+              <FaLinkedinIn size={15} />
             </a>
 
           </div>
@@ -187,7 +175,7 @@ const AuthorCard = ({ blog }) => {
 
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AuthorCard
+export default AuthorCard;

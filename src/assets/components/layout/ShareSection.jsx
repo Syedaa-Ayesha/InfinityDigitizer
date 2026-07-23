@@ -4,6 +4,7 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { Link2 } from "lucide-react";
+
 const ShareSection = ({ blog }) => {
   if (!blog) return null;
 
@@ -21,78 +22,70 @@ const ShareSection = ({ blog }) => {
   const shareItems = [
     {
       id: 1,
+      label: "Facebook",
       icon: FaFacebookF,
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
         pageUrl
       )}`,
-      label: "Facebook",
     },
-
     {
       id: 2,
-      icon: FaLinkedinIn,
+      label: "Twitter",
+      icon: FaXTwitter,
       href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
         pageUrl
       )}&text=${encodeURIComponent(blog.title)}`,
-      label: "Twitter",
     },
-
     {
       id: 3,
-      icon: FaXTwitter,
+      label: "LinkedIn",
+      icon: FaLinkedinIn,
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
         pageUrl
       )}`,
-      label: "LinkedIn",
     },
   ];
 
   return (
     <section
       className="
-      mb-2
-        rounded-[24px]
+        my-4
+        rounded-[20px]
         border
         border-[#ECECF3]
         bg-white
-        p-6
+        p-5
         shadow-sm
-        md:p-8
+
+        md:px-8
+        md:py-6
       "
     >
       <div
         className="
           flex
           flex-col
-          gap-6
+          gap-5
 
-          md:flex-row
-          md:items-center
-          md:justify-between
+          lg:flex-row
+          lg:items-center
         "
       >
-        {/* Left */}
+        {/* Heading */}
 
-        <div>
+        <h4
+          className="
+            shrink-0
+            font-dmSans
+            text-[15px]
+            font-semibold
+            text-[#424957]
+          "
+        >
+          Share this article:
+        </h4>
 
-          <h3
-            className="
-              font-dmSans
-              text-[28px]
-              font-bold
-              text-[#0F1729]
-            "
-          >
-            Share this article
-          </h3>
-
-          <p className="mt-2 text-[#6B7280]">
-            Help others discover this article.
-          </p>
-
-        </div>
-
-        {/* Right */}
+        {/* Buttons */}
 
         <div className="flex flex-wrap gap-3">
 
@@ -106,22 +99,29 @@ const ShareSection = ({ blog }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  flex
-                  h-12
-                  w-12
+                  inline-flex
                   items-center
-                  justify-center
+                  gap-2
                   rounded-full
                   border
-                  border-[#ECECF3]
+                  border-[#E5E7EB]
+                  bg-white
+                  px-5
+                  py-3
+                  text-[14px]
+                  font-medium
+                  text-[#424957]
                   transition-all
                   duration-300
+
                   hover:border-[#7434E5]
                   hover:bg-[#7434E5]
                   hover:text-white
                 "
               >
-                <Icon size={18} />
+                <Icon size={15} />
+
+                <span>{item.label}</span>
               </a>
             );
           })}
@@ -129,26 +129,32 @@ const ShareSection = ({ blog }) => {
           <button
             onClick={handleCopy}
             className="
-              flex
-              h-12
-              w-12
+              inline-flex
               items-center
-              justify-center
+              gap-2
               rounded-full
               border
-              border-[#ECECF3]
+              border-[#E5E7EB]
+              bg-white
+              px-5
+              py-3
+              text-[14px]
+              font-medium
+              text-[#424957]
               transition-all
               duration-300
+
               hover:border-[#7434E5]
               hover:bg-[#7434E5]
               hover:text-white
             "
           >
-            <Link2 size={18} />
+            <Link2 size={15} />
+
+            <span>Copy Link</span>
           </button>
 
         </div>
-
       </div>
     </section>
   );

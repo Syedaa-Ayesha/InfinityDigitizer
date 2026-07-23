@@ -1,12 +1,12 @@
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const StitchTypes = ({ items }) => {
   if (!items?.length) return null;
 
   return (
-    <section className="my-14">
+    <section className="my-4">
 
-      <div className="space-y-8">
+      <div className="space-y-3">
 
         {items.map((item, index) => (
 
@@ -15,59 +15,51 @@ const StitchTypes = ({ items }) => {
             className="
               flex
               items-start
-              gap-5
+              gap-3
             "
           >
-            {/* Icon */}
 
-            <div
+            {/* Arrow */}
+
+            <ArrowRight
+              size={16}
+              strokeWidth={1.5}
               className="
-                mt-1
-                flex
-                h-10
-                w-10
+                mt-[6px]
                 shrink-0
-                items-center
-                justify-center
-                rounded-full
-                bg-[#F4EEFF]
+                
               "
-            >
-              <ChevronRight
-  size={18}
-  strokeWidth={2.8}
-  className="text-[#7434E5]"
-/>
-            </div>
+            />
 
             {/* Content */}
 
-            <div>
-
-              <h3
-                className="
-                  font-dmSans
-                  text-[20px]
-                  font-bold
-                  text-[#0F1729]
-
-                  md:text-[22px]
-                "
-              >
-                {item.title}
-              </h3>
+            <div className="flex-1">
 
               <p
                 className="
-                  mt-2
-                  text-[16px]
-                  leading-8
+                  text-[15px]
+                  leading-7
                   text-[#424957]
 
+                  sm:text-[16px]
                   md:text-[18px]
+                  md:leading-8
                 "
               >
+
+                <span
+                  className="
+                    font-bold
+                    text-[#0F1729]
+                  "
+                >
+                  {item.title}
+                </span>
+
+                {" — "}
+
                 {item.description}
+
               </p>
 
             </div>

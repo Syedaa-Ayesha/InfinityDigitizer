@@ -1,84 +1,58 @@
-import { Quote } from "lucide-react";
-
 const QuoteBox = ({ quote }) => {
   if (!quote) return null;
 
   return (
     <section
-        className="
-    relative
-    my-14
-    overflow-hidden
-    rounded-[24px]
-    border
-    border-[#DDD2F6]
-    bg-[#F7F3FF]
-    p-6
-
-    md:p-10
-  "
+      className="
+        relative
+        overflow-hidden
+        rounded-2xl
+        bg-[#F4F0F9]
+      "
     >
-        <div
-    className="
-      absolute
-      right-6
-      top-2
-      select-none
-      font-serif
-      text-[120px]
-      leading-none
-      text-[#7434E5]/10
-    "
-  >
-    ”
-  </div>
-      <div className="flex gap-5 ">
 
-        {/* Quote Icon */}
+      {/* Left Accent */}
 
-        <div
+      <div
+        className="
+          absolute
+          left-0
+          top-0
+          h-full
+          w-[6px]
+          bg-[#4F1DA5]
+        "
+      />
+
+      {/* Content */}
+
+      <blockquote
+        className="
+          px-6
+          py-5
+
+          sm:px-8
+          md:px-10
+          md:py-8
+        "
+      >
+
+        <p
           className="
-            flex
-            h-14
-            w-14
-            shrink-0
-            items-center
-            justify-center
-            rounded-full
-            bg-white
-            shadow-sm
+            font-dmSans
+            text-[20px]
+            italic
+            font-medium
+          leading-7
+            text-[#4F1DA5]
+            md:leading-[38px]
           "
         >
-          <Quote
-            size={28}
-            className="text-[#7434E5]"
-            strokeWidth={2.5}
-          />
-        </div>
+          "{quote}"
+        </p>
 
-        {/* Quote Text */}
+      </blockquote>
 
-        <blockquote>
-
-          <p
-            className="
-              font-dmSans
-              text-[20px]
-              font-medium
-              italic
-              leading-9
-              text-[#0F1729]
-
-              md:text-[28px]
-              md:leading-[48px]
-            "
-          >
-            "{quote}"
-          </p>
-
-        </blockquote>
-
-      </div>
     </section>
   );
 };

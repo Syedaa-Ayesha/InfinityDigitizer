@@ -26,7 +26,7 @@ const BlogPage = () => {
   }
 
   return (
-<main className="bg-[#FAFAFC] lg:p-16">
+<main className="bg-[#FBF9FE] lg:p-16">
 
   <div className="container mx-auto px-4">
 

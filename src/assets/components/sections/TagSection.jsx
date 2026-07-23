@@ -3,7 +3,7 @@ const TagSection = ({ tags }) => {
   if (!tags?.length) return null;
 
   return (
-    <section className="mb-2">
+    <section className="mb-4">
 
       <div className="flex flex-wrap items-center gap-3">
 

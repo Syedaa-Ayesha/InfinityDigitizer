@@ -161,10 +161,8 @@ export const BlogData = [
                 "JEF",
                 "EXP",
                 "VP3",
-                "HUS",
                 "XXX",
                 "EMB",
-                "PCS",
                 "CSD"
             ]
         },
@@ -336,10 +334,8 @@ export const BlogData = [
                 "JEF",
                 "EXP",
                 "VP3",
-                "HUS",
                 "XXX",
                 "EMB",
-                "PCS",
                 "CSD"
             ]
         },
@@ -511,10 +507,8 @@ export const BlogData = [
                 "JEF",
                 "EXP",
                 "VP3",
-                "HUS",
                 "XXX",
                 "EMB",
-                "PCS",
                 "CSD"
             ]
         },
@@ -686,10 +680,8 @@ export const BlogData = [
                 "JEF",
                 "EXP",
                 "VP3",
-                "HUS",
                 "XXX",
                 "EMB",
-                "PCS",
                 "CSD"
             ]
         },
@@ -861,10 +853,8 @@ export const BlogData = [
                 "JEF",
                 "EXP",
                 "VP3",
-                "HUS",
                 "XXX",
                 "EMB",
-                "PCS",
                 "CSD"
             ]
         },
@@ -1036,10 +1026,8 @@ export const BlogData = [
                 "JEF",
                 "EXP",
                 "VP3",
-                "HUS",
                 "XXX",
                 "EMB",
-                "PCS",
                 "CSD"
             ]
         },
