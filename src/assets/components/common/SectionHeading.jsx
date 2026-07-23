@@ -1,5 +1,5 @@
 
-const SectionHeading = ({icon, badge, heading, description}) => {
+const SectionHeading = ({icon, badge, heading, description, headingClassName}) => {
   return (
    <>
     <div className="text-center">
@@ -8,11 +8,11 @@ const SectionHeading = ({icon, badge, heading, description}) => {
         {badge}
       </span>
 
-      <h2 className="font-dmSans text-[36px] font-bold uppercase leading-none mt-4">
+      <h2 className={`font-dmSans text-[36px] font-bold uppercase leading-none mt-4 ${headingClassName}`}>
         {heading}
       </h2>
 
-      <p className="mt-5 mx-auto max-w-125 text-sm text-[#00030B] leading-6 whitespace-pre-line">
+      <p className="mt-5 mx-auto max-w-125 text-sm text-[#6B7280] leading-6 whitespace-pre-line font-medium font-inter">
         {description}
       </p>
     

@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
  const resources = [
-  { title: "Blogs", path: "/blogs" },
+  { title: "Blogs", path: "/blogsList" },
   { title: "Reviews", path: "/reviews" },
   { title: "Free Designs", path: "/free-designs" },
   { title: "Referral Program", path: "/referral-program" },

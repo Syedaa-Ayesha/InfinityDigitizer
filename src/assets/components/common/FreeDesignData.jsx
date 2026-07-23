@@ -90,7 +90,7 @@ export const FreeDesignData = [
     {
         id: 9,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty9",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",
@@ -183,7 +183,7 @@ export const FreeDesignData = [
     {
         id: 10,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty10",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",
@@ -276,7 +276,7 @@ export const FreeDesignData = [
     {
         id: 11,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty11",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",
@@ -369,7 +369,7 @@ export const FreeDesignData = [
     {
         id: 12,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty12",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",
@@ -461,7 +461,7 @@ export const FreeDesignData = [
     {
         id: 13,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty13",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",
@@ -553,7 +553,7 @@ export const FreeDesignData = [
     {
         id: 14,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty14",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",
@@ -645,7 +645,7 @@ export const FreeDesignData = [
     {
         id: 15,
         type: "premium",
-        title: "Butterfly Beauty",
+        title: "Butterfly Beauty15",
         category: "Embroidery Digitizing",
         image: Design02,
         price: "$1.00",

@@ -9,16 +9,17 @@ const CTASection = ({
   titleClass,
   sectionWidth,
   iconHeight,
+  bg,
   iconWidth,
 }) => {
   return (
     <section className={`mx-auto ${sectionWidth}`}>
-      <div className="flex items-center justify-between rounded-[16px] bg-gradient-to-l from-[#7434E5] to-[#A877FF] px-8 py-[21px]">
+      <div className={`flex items-center justify-between rounded-[16px] bg-gradient-to-l from-[#7434E5] to-[#A877FF] px-8 py-[21px] ${bg}`}>
         {/* Left */}
 
         <div className="flex items-center gap-6">
           <div
-            className={`${iconHeight} ${iconWidth} flex items-center justify-center rounded-full bg-white shrink-0 `}
+            className={` flex items-center justify-center rounded-full bg-white shrink-0 ${iconHeight} ${iconWidth}`}
           >
             {icon}
           </div>

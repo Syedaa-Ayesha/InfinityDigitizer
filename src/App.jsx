@@ -23,6 +23,8 @@ import B2B from "./pages/B2B";
 import FreeDesign from "./pages/FreeDesign";
 import Contactus from "./pages/Contactus";
 import DesignDetails from "./pages/DesignDetails";
+import BlogListPage from "./pages/BlogListPage";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
@@ -37,6 +39,11 @@ function App() {
         <Route path="/freedesign" element={<FreeDesign />} />
          <Route path="/design/:id" element={<DesignDetails />} />
         <Route path="/contactus" element={<Contactus />} />
+        <Route path="/blogsList" element={<BlogListPage />} />
+         <Route
+    path="/blogs/:id"
+    element={<BlogPage />}
+  />
       </Routes>
 
       <Footer />
