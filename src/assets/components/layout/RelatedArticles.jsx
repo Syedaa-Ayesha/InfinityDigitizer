@@ -15,7 +15,7 @@ const RelatedArticles = ({ currentBlog }) => {
   return (
     <section
       className="
-      rounded-[24px]
+      rounded-3xl
       border
       border-[#ECECEC]
       bg-white

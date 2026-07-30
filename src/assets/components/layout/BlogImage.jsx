@@ -7,7 +7,7 @@ const BlogImage = ({ image, caption }) => {
       <div
         className="
           overflow-hidden
-          rounded-[24px]
+          rounded-3xl
           border
           border-[#ECECF3]
           bg-[#F8F8FA]

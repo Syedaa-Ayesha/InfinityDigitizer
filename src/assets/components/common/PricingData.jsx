@@ -167,7 +167,7 @@ const logoPricing = [
       "Commercial Rights",
     ],
   },
-  
+
   {
     id: 3,
     title: "PREMIUM LOGO",
@@ -181,7 +181,7 @@ const logoPricing = [
       "Commercial Rights",
     ],
   },
-  
+
   {
     id: 4,
     title: "PREMIUM LOGO",
@@ -195,7 +195,7 @@ const logoPricing = [
       "Commercial Rights",
     ],
   },
-  
+
   {
     id: 5,
     title: "PREMIUM LOGO",

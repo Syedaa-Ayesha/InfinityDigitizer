@@ -9,15 +9,15 @@ import LogoDesign from "../layout/LogoDesign";
 const categories = [
   {
     name: "Embroidery",
-    icon: <Flower className="h-[32px] w-[32px]" />,
+    icon: <Flower className="h-8 w-8" />,
   },
   {
     name: "Vector Art",
-    icon:<Frame className="h-[32px] w-[32px]" />,
+    icon:<Frame className="h-8 w-8" />,
   },
   {
     name: "Logo Design",
-    icon: <Gem className="h-[32px] w-[32px]" />,
+    icon: <Gem className="h-8 w-8" />,
   },
 ];
 
@@ -51,7 +51,7 @@ const FormState = () => {
       className={`h-[95px] w-[155px] rounded-[14px] px-[10px] py-4 cursor-pointer font-bold text-[13px] uppercase flex flex-col items-center justify-center gap-2 border transition-all duration-300
       ${
         activeTab === category.name
-          ? "bg-gradient-to-r from-[#753DF0] to-[#4E2A8C] text-white border-transparent"
+          ? "bg-linear-to-r from-[#753DF0] to-[#4E2A8C] text-white border-transparent"
           : "border-[#E7E4F3] text-black bg-white"
       }`}
     >

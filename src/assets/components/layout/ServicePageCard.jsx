@@ -94,7 +94,7 @@ image,
         items-center
         gap-3
         rounded-[6px]
-        bg-[linear-gradient(100.36deg,_#6C29E0_0%,_#5413C3_100%)]
+        bg-[linear-gradient(100.36deg,#6C29E0_0%,#5413C3_100%)]
         pr-[18px]
         pl-3
         py-[10px]

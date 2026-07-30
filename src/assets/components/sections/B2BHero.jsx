@@ -108,7 +108,7 @@ const B2BHero = () => {
             >
               <button
                 className="
-                  rounded-[12px]
+                  rounded-xl
                   bg-[#6C29E0]
                   px-7
                   py-4

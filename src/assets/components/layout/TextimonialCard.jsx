@@ -16,7 +16,7 @@ const TestimonialCard = ({
     h-90
     w-full
     max-w-102.5
-    rounded-[16px]
+    rounded-2xl
     border
     border-[#ECECEC]
     bg-white

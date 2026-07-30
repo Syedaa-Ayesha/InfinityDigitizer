@@ -18,7 +18,7 @@ const ServicePageHero = ({
           items-center
           justify-between
           gap-10
-          rounded-[24px]
+          rounded-3xl
           border
           border-[#E7E3ED]
           bg-white
@@ -35,7 +35,7 @@ const ServicePageHero = ({
               font-dmSans
               text-[48px]
               font-extrabold
-              leading-[60px]
+              leading-15
               tracking-[-0.04em]
               text-[#0F1729]
             "
@@ -48,7 +48,7 @@ const ServicePageHero = ({
               max-w-[580px]
               font-inter
               text-[16px]
-              leading-[20px]
+              leading-5
               text-[#6B7280]
             "
           >
@@ -69,7 +69,7 @@ const ServicePageHero = ({
         {/* Right */}
 
         <div className="relative w-[52%]">
-          <div className="h-[500px] overflow-hidden rounded-[24px]">
+          <div className="h-[500px] overflow-hidden rounded-3xl">
             <img
               src={image}
               alt={title}

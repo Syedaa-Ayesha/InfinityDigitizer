@@ -7,7 +7,7 @@ const ReviewsSummary = ({design}) => {
     <div
       className="
       h-fit
-      rounded-[16px]
+      rounded-2xl
       bg-[#F4F1F9]
       py-7
       px-6
@@ -83,7 +83,7 @@ const ReviewsSummary = ({design}) => {
 
             <div
               className="
-              h-[8px]
+              h-2
               flex-1
               overflow-hidden
               rounded-full

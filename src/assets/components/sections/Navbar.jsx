@@ -12,7 +12,7 @@ const Navbar = () => {
  const resources = [
   { title: "Blogs", path: "/blogsList" },
   { title: "Reviews", path: "/reviews" },
-  { title: "Free Designs", path: "/free-designs" },
+  { title: "Free Designs", path: "/freedesign" },
   { title: "Referral Program", path: "/referral-program" },
   { title: "Size Guideline", path: "/size-guideline" },
   { title: "FAQs", path: "/faqs" },
@@ -129,7 +129,7 @@ const Navbar = () => {
       mt-4
       w-[230px]
       -translate-x-1/2
-      rounded-[12px]
+      rounded-xl
       border
       border-[#ECECEC]
       bg-white
@@ -169,9 +169,9 @@ const Navbar = () => {
         </ul>
 
         {/* Button */}
-        <button className="font-dmSans bg-white text-black px-7 py-2 rounded-lg font-medium hover:bg-gray-100 " style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        <Link to="/login" className="font-dmSans bg-white text-black px-7 py-2 rounded-lg font-medium hover:bg-gray-100 " style={{ fontFamily: "'DM Sans', sans-serif" }}>
           Login | Sign up
-        </button>
+        </Link>
 
       </div>
     </nav>

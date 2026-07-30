@@ -142,7 +142,7 @@ const ProductInfo = ({ design }) => {
         <div
           className="
     flex
-    h-[60px]
+    h-15
     w-[130px]
     items-center
     justify-between
@@ -152,15 +152,15 @@ const ProductInfo = ({ design }) => {
     
     "
         >
-          <div className="h-full flex items-center justify-center border-r border-[#DCDFE5]  w-[40px]">
+          <div className="h-full flex items-center justify-center border-r border-[#DCDFE5]  w-10">
             <button onClick={decrease}>
               <Minus size={18} />
             </button>
           </div>
-          <div className="h-full flex items-center justify-center border-r border-[#DCDFE5] w-[40px]">
+          <div className="h-full flex items-center justify-center border-r border-[#DCDFE5] 10">
             <span className="font-semibold">{quantity}</span>
           </div>
-          <div className="h-full flex items-center justify-center w-[40px]">
+          <div className="h-full flex items-center justify-center w-10">
             <button onClick={increase}>
               <Plus size={18} />
             </button>

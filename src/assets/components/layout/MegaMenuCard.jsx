@@ -17,7 +17,7 @@ const MegaMenuCard = ({
     flex
     flex-col
     h-[413px]
-    rounded-[12px]
+    rounded-xl
     border
     bg-[#F3F3F34A]
     p-[18px]
@@ -134,7 +134,7 @@ const MegaMenuCard = ({
           shrink-0
           items-center
           justify-center
-          rounded-[16px]
+          rounded-2xl
           bg-white
           shadow-[0_15px_35px_rgba(0,0,0,.12)]
         "
@@ -157,7 +157,7 @@ const MegaMenuCard = ({
                 <button
                     className="
           w-full
-          rounded-[8px]
+          rounded-lg
           bg-[linear-gradient(94.89deg,_#6724DB_0%,_#5116B6_100%)]
           py-[10px]
           px-[46px]

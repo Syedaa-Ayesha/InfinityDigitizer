@@ -1,179 +1,233 @@
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Upload,
-  ArrowRight,
-} from "lucide-react";
+import { Phone, Mail, MapPin, CloudUpload, ArrowRight } from "lucide-react";
 
 import { footerContact } from "../common/FooterData";
 
+const contactItems = [
+  {
+    icon: Phone,
+    title: footerContact.phone,
+    subtitle: footerContact.phoneSubtitle,
+  },
+  {
+    icon: Mail,
+    title: footerContact.email,
+    subtitle: footerContact.emailSubtitle,
+  },
+  {
+    icon: MapPin,
+    title: footerContact.address,
+    subtitle: footerContact.addressSubtitle,
+  },
+];
+
 const FooterContact = () => {
   return (
-      <div className="w-[305px]">
+    <div
+      className="
+      max-w-[330px]
 
+      mx-auto
+      lg:mx-0
+      "
+    >
       {/* Heading */}
 
-      <h3 className="font-dmSans text-[18px] font-bold text-white">
+      <h3
+        className="
+        text-[20px]
+        font-bold
+        text-white
+
+        lg:text-left
+        "
+      >
         Contact Us
       </h3>
 
-      <div className="mt-3 mb-6 h-[3px] w-10 rounded-full bg-[#7434E5]" />
-
-      {/* Phone */}
-
-      <div className="mb-7 flex gap-4">
-
-        <div
-          className="
-          flex
-          h-11
-          w-11
-          shrink-0
-          items-center
-          justify-center
-          rounded-full
-          border
-          border-[#34345C]
-          bg-[#1B1B40]
-        "
-        >
-          <Phone size={18} className="text-[#9B6BFF]" />
-        </div>
-
-        <div>
-          <h4 className="text-[15px] font-semibold text-white">
-            {footerContact.phone}
-          </h4>
-
-          <p className="mt-1 text-[13px] text-[#9CA3AF]">
-            {footerContact.phoneSubtitle}
-          </p>
-        </div>
-      </div>
-
-      {/* Email */}
-
-      <div className="mb-7 flex gap-4">
-
-        <div
-          className="
-          flex
-          h-11
-          w-11
-          shrink-0
-          items-center
-          justify-center
-          rounded-full
-          border
-          border-[#34345C]
-          bg-[#1B1B40]
-        "
-        >
-          <Mail size={18} className="text-[#9B6BFF]" />
-        </div>
-
-        <div>
-          <h4 className="text-[15px] font-semibold text-white">
-            {footerContact.email}
-          </h4>
-
-          <p className="mt-1 text-[13px] text-[#9CA3AF]">
-            {footerContact.emailSubtitle}
-          </p>
-        </div>
-      </div>
-
-      {/* Address */}
-
-      <div className="mb-8 flex gap-4">
-
-        <div
-          className="
-          flex
-          h-11
-          w-11
-          shrink-0
-          items-center
-          justify-center
-          rounded-full
-          border
-          border-[#34345C]
-          bg-[#1B1B40]
-        "
-        >
-          <MapPin size={18} className="text-[#9B6BFF]" />
-        </div>
-
-        <div>
-          <h4 className="text-[15px] font-semibold text-white">
-            {footerContact.address}
-          </h4>
-        </div>
-
-      </div>
-
-      {/* Purple CTA Card */}
+      {/* Line */}
 
       <div
         className="
-        rounded-[16px]
+        mt-3
+        mb-8
+
+        h-[3px]
+        w-10
+        rounded-full
+        bg-[#7434E5]
+    
+        "
+      />
+
+      {/* Contact Items */}
+
+      <div className="space-y-7">
+        {contactItems.map((item, index) => {
+          const Icon = item.icon;
+
+          return (
+            <div
+              key={index}
+              className="
+              flex
+              items-start
+              gap-4
+              "
+            >
+              {/* Icon */}
+
+              <div
+                className="
+                flex
+                h-12
+                w-12
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+
+                border
+                border-[#35355A]
+
+                bg-[#1C1C42]
+
+                transition-all
+                duration-300
+
+                hover:border-[#7434E5]
+              "
+              >
+                <Icon size={18} className="text-[#9B6BFF]" />
+              </div>
+
+              {/* Text */}
+
+              <div className="min-w-0">
+                <h4
+                  className="
+                  wrap-break-words
+
+                  text-base
+                  font-semibold
+                  text-white
+                "
+                >
+                  {item.title}
+                </h4>
+
+                {item.subtitle && (
+                  <p
+                    className="
+                    mt-1
+
+                    text-[13px]
+                    leading-6
+                    text-[#9CA3AF]
+                  "
+                  >
+                    {item.subtitle}
+                  </p>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* CTA */}
+
+      <div
+        className="
+        mt-10
+
+        rounded-[18px]
+
         border
-        border-[#2D2D59]
-        bg-[#23234B]
+        border-[#2E2E5C]
+
+        bg-[#1B1B40]
+
         p-6
       "
       >
+        {/* Icon */}
 
         <div
           className="
           flex
-          h-12
-          w-12
+          h-11
+          w-11
           items-center
           justify-center
-          rounded-full
-          bg-[#7434E5]
+          rounded-full    
+border
+        border-[#7434E5]
+          bg-[#311C54]
         "
         >
-          <Upload size={20} className="text-white" />
+          <CloudUpload size={24} className="text-[#ffffff]/80" />
         </div>
 
-        <h3 className="mt-5 text-[20px] font-bold text-white">
+        {/* Heading */}
+
+        <h3
+          className="
+          mt-2
+font-dmSans
+          text-base
+          font-bold
+          text-white
+        "
+        >
           Send Your Design
         </h3>
 
-        <p className="mt-2 text-[14px] leading-7 text-[#A8A8C7]">
+        {/* Text */}
+
+        <p
+          className="
+          mt-2
+font-inter
+          text-xs
+          leading-5
+          text-[#A8A8C7]
+        "
+        >
           Upload your design and get a free quote in minutes.
         </p>
+
+        {/* Button */}
 
         <button
           className="
           group
-          mt-6
+          mt-3
+text-sm
+font-dmSans
           flex
           items-center
-          gap-2
-          text-[15px]
-          font-semibold
-          text-[#A877FF]
+          gap-1
+          font-bold
+          text-[#7434E5]
           transition-all
           duration-300
           hover:text-white
         "
         >
           Upload Now
-
           <ArrowRight
-            size={17}
-            className="transition-transform duration-300 group-hover:translate-x-1"
+            size={20}
+            className="
+            transition-transform
+            duration-300
+
+            group-hover:translate-x-1
+          "
           />
         </button>
-
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default FooterContact
+export default FooterContact;

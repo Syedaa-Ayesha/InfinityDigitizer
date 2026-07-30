@@ -1,72 +1,116 @@
 import { Lock } from "lucide-react";
-
+import Visa from "../../images/Visa.png";
+import PayPal from "../../images/Paypal.png";
+import Piyoneer from "../../images/payoneer_logo.svg.png";
+import MasterCard from "../../images/MasterCard.png";
+import Discover from "../../images/Discover.png";
 const paymentMethods = [
-  "VISA",
-  "PayPal",
-  "Mastercard",
-  "Discover",
-  "AmEx",
+  {
+    id: 1,
+    image: Visa,
+    alt: "Visa",
+  },
+  {
+    id: 2,
+    image: PayPal,
+    alt: "PayPal",
+  },
+  {
+    id: 3,
+    image: MasterCard,
+    alt: "MasterCard",
+  },
+  {
+    id: 4,
+    image: Discover,
+    alt: "Discover",
+  },
+  {
+    id: 5,
+    image: Piyoneer,
+    alt: "Payoneer",
+  },
 ];
 
 const FooterBottom = () => {
   return (
-     <div
+    <div
       className="
       mt-16
       border-t
-      border-[#2B2B52]
-      pt-7
-    "
+      border-[#26264D]
+      pt-8
+      pb-10
+      "
     >
       <div
         className="
         mx-auto
+        max-w-[1320px]
         flex
-        max-w-[1280px]
+        flex-col
         items-center
-        justify-between
-      "
+        gap-6
+        px-5
+        sm:px-6
+        lg:px-0
+        "
       >
         {/* Copyright */}
 
-        <p className="text-[14px] text-[#9CA3AF]">
-          © 2025 Infinity Digitizing. All Rights Reserved.
+        <p
+          className="
+          font-normal
+          text-sm
+          font-inter
+          leading-7
+          text-[#ffffff]
+        "
+        >
+          © 2026 Infinity Digitizing. All Rights Reserved.
         </p>
 
-        {/* Payment Methods */}
-
-        <div className="flex items-center gap-3">
-
+        <div
+          className="
+    flex
+    flex-wrap
+    items-center
+    justify-center
+    gap-3
+    sm:gap-4
+  "
+        >
           {paymentMethods.map((item) => (
-
             <div
-              key={item}
+              key={item.id}
               className="
-              flex
-              h-[42px]
-              min-w-[72px]
-              items-center
-              justify-center
-              rounded-lg
-              border
-              border-[#35355A]
-              bg-[#1C1C42]
-              px-4
-            "
+        flex
+        h-[46px]
+        w-[82px]
+        items-center
+        justify-center
+        rounded-[14px]
+        border
+        border-white/12
+        bg-white/6
+        transition-all
+        duration-300
+        hover:border-[#7434E5]
+        hover:bg-[#7434E5]/10
+      "
             >
-              <span
+              <img
+                src={item.image}
+                alt={item.alt}
                 className="
-                text-[13px]
-                font-semibold
-                text-white
-              "
-              >
-                {item}
-              </span>
+          h-auto
+          max-h-6
+          w-auto
+          object-contain
+        "
+              />
             </div>
-
           ))}
-
         </div>
 
         {/* Secure */}
@@ -75,25 +119,26 @@ const FooterBottom = () => {
           className="
           flex
           items-center
+          justify-center
           gap-2
-          text-[#9CA3AF]
+          text-center
         "
         >
+          <Lock size={24} className="text-[#FFFFFF]" strokeWidth={1} />
 
-          <Lock
-            size={16}
-            className="text-[#7434E5]"
-          />
-
-          <span className="text-[14px]">
-            Secure Payments
-          </span>
-
+          <p
+            className="
+            text-sm
+            text-[#FFFFFF]
+          "
+          >
+            Secure Payments.
+            <span>Your data is safe with us.</span>
+          </p>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FooterBottom
+export default FooterBottom;

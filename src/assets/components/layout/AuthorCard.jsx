@@ -40,8 +40,8 @@ const AuthorCard = ({ blog }) => {
         <div
           className="
             flex
-            h-[72px]
-            w-[72px]
+            h-18
+            w-18
             shrink-0
             items-center
             justify-center

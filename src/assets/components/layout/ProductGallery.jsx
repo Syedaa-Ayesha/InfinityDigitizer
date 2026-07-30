@@ -12,7 +12,7 @@ const ProductGallery = ({ design }) => {
         className="
        group
 overflow-hidden
-rounded-[24px]
+rounded-3xl
 border
 border-[#ECECEC]
 bg-[#FFF7F5]
@@ -44,7 +44,7 @@ bg-[#FFF7F5]
             key={index}
             onClick={() => setActiveIndex(index)}
             className={`
-      flex-shrink-0
+      shrink-0
       h-20
       w-20
       sm:h-24

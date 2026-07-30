@@ -73,7 +73,7 @@ const B2BWhyChooseUs = () => {
             Why Businesses Choose Us?
           </h2>
 
-          <div className="mx-auto mt-4 h-[4px] w-[64px] rounded-full bg-[#7434E5]" />
+          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-[#7434E5]" />
 
         </div>
 
@@ -122,7 +122,7 @@ const B2BWhyChooseUs = () => {
                     w-[54px]
                     items-center
                     justify-center
-                    rounded-[16px]
+                    rounded-2xl
                     bg-[#F5F0FF]
                     transition-all
                     duration-300

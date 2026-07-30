@@ -36,31 +36,31 @@ const HeroLogoContainer = () => {
 
   {/* First Row */}
   <div className="grid grid-cols-3 gap-4 mb-4 w-[414]">
-    <div className="bg-[#F4EFFC] rounded-2xl shadow h-[199px] flex items-center justify-center shadow-lg">
+    <div className="bg-[#F4EFFC] rounded-2xl  h-[199px] flex items-center justify-center shadow-lg">
       <img  src={logo01} alt="logo1" />
     </div>
 
-    <div className="bg-[#F4EFFC] rounded-2xl shadow h-[199px] flex items-center justify-center shadow-lg">
+    <div className="bg-[#F4EFFC] rounded-2xl  h-[199px] flex items-center justify-center shadow-lg">
       <img  src={logo02} alt="logo2" />
     </div>
 
-    <div className="bg-[#F4EFFC] rounded-2xl shadow h-[199px] flex items-center justify-center shadow-lg">
+    <div className="bg-[#F4EFFC] rounded-2xl  h-[199px] flex items-center justify-center shadow-lg">
       <img  src={logo03} alt="logo3" />
     </div>
   </div>
 
   {/* Second Row */}
   <div className="grid grid-cols-[167px_241px_160px] gap-4 mb-[34px]">
-    <div className="bg-[#F4EFFC] rounded-2xl shadow h-[199px] flex items-center justify-center shadow-lg">
+    <div className="bg-[#F4EFFC] rounded-2xl  h-[199px] flex items-center justify-center shadow-lg">
       <img src={logo04} alt="logo4" />
     </div>
 
     {/* Wider Middle Card */}
-    <div className="bg-[#F4EFFC] rounded-2xl shadow h-[199px] flex items-center justify-center shadow-lg">
+    <div className="bg-[#F4EFFC] rounded-2xl  h-[199px] flex items-center justify-center shadow-lg">
       <img  src={logo05} alt="logo5" />
     </div>
 
-    <div className="bg-[#F4EFFC] rounded-2xl shadow h-[199px] flex items-center justify-center shadow-lg">
+    <div className="bg-[#F4EFFC] rounded-2xl  h-[199px] flex items-center justify-center shadow-lg">
       <img  src={logo06} alt="logo6" />
     </div>
   </div>

@@ -20,17 +20,17 @@ const ProcessCard = ({
       <div className="flex items-center gap-3">
 
         {/* Icon */}
-        <div className="w-[88px] h-[88px] rounded-[16px] bg-[#F3EFFA] flex items-center justify-center text-[#7434E5] shrink-0">
+        <div className="w-22 h-22rounded-[16px] bg-[#F3EFFA] flex items-center justify-center text-[#7434E5] shrink-0">
           {icon}
         </div>
 
         {/* Content */}
-        <div className="w-[248px] h-[134px]">
+        <div className="w-62 h-[134px]">
           <h3 className="font-dmSans font-bold text-[20px] text-[#0F1729] ">
             {title}
           </h3>
 
-          <p className="mt-2 text-[#3F4D5E] text-base leading-[22px] text-[#6B7280] font-inter">
+          <p className="mt-2 text-base leading-[22px] text-[#6B7280] font-inter">
             {description}
           </p>
         </div>

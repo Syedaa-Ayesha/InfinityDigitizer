@@ -9,10 +9,7 @@ import {
   footerSupport,
 } from "../common/FooterData";
 
-
 const Footer = () => {
-  
-    // FooterColumn component label/link format expect karta hai
   const servicesLinks = footerServices.map((item) => ({
     label: item,
     link: "#",
@@ -29,49 +26,62 @@ const Footer = () => {
   }));
 
   return (
-    <footer className="bg-[#0D0D2B] pt-20">
+    <footer
+      className="
+      bg-[#0D0D2B]
+      pt-14
+      pb-10
+      sm:pt-16
+      lg:pt-20
+      lg:pb-8
+      md:pb-6
+      "
+    >
+      <div
+        className="
+        mx-auto
+        max-w-[1320px]
+        px-5
+        sm:px-6
+        lg:px-8
+        xl:px-0
+        "
+      >
+        <div
+          className="
+          grid
+          gap-14
 
-      {/* Main Footer */}
+          md:grid-cols-2
 
-      <div className="mx-auto flex max-w-[1320px] justify-between gap-12">
+          lg:grid-cols-[1.45fr_.9fr_.9fr_.9fr_1.2fr]
+          lg:gap-12
+          "
+        >
+          <FooterLogo />
 
-        {/* Logo */}
+          <FooterColumn
+            title="Services"
+            links={servicesLinks}
+          />
 
-        <FooterLogo />
+          <FooterColumn
+            title="Company"
+            links={companyLinks}
+          />
 
-        {/* Services */}
+          <FooterColumn
+            title="Support"
+            links={supportLinks}
+          />
 
-        <FooterColumn
-          title="Services"
-          links={servicesLinks}
-        />
+          <FooterContact />
+        </div>
 
-        {/* Company */}
-
-        <FooterColumn
-          title="Company"
-          links={companyLinks}
-        />
-
-        {/* Support */}
-
-        <FooterColumn
-          title="Support"
-          links={supportLinks}
-        />
-
-        {/* Contact */}
-
-        <FooterContact />
-
+        <FooterBottom />
       </div>
-
-      {/* Bottom */}
-
-      <FooterBottom />
-
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

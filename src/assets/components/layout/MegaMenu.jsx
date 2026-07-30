@@ -35,7 +35,7 @@ const MegaMenu = () => {
         -top-2
         left-1/4
         h-5
-        w-[28px]
+        w-7
         -translate-x-1/2
          rotate-45
         border-l

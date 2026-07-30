@@ -10,34 +10,6 @@ import BlogPagination from "../assets/components/layout/BlogPagination";
 const BlogListPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
   return (
-    
-    // <main className="bg-[#F9F9FC]">
-
-    //   <div className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 lg:px-8 xl:px-10">
-
-        
-
-    //     <div className="mt-10">
-    //       <BlogFilter />
-    //     </div>
-
-    //     <div className="mt-10">
-    //       <BlogGrid />
-    //     </div>
-
-    //     <div className="mt-12 flex justify-center">
-    //       <BlogPagination />
-    //     </div>
-
-    //     <div className="mt-20">
-    //       {/* <BlogNewsletter /> */}
-    //     </div>
-
-    //   </div>
-
-    // </main>
-
-
 <main className="bg-[#FAFAFD] flex
 flex-col
 gap-10">

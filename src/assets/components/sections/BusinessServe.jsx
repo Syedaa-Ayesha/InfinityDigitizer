@@ -98,7 +98,7 @@ const BusinessServe = () => {
                     w-[56px]
                     items-center
                     justify-center
-                    rounded-[16px]
+                    rounded-2xl
                     bg-white
                     shadow-[0px_6px_18px_rgba(0,0,0,0.08)]
                    transition-all
