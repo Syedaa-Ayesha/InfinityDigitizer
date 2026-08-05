@@ -7,15 +7,16 @@ const SolidButton = ({title, Icon, classname}) => {
         className={`
           group
           flex
-        
-          w-full
+         h-14
+         px-10
           items-center
           justify-center
-          gap-2
+          gap-3
           rounded-full
           bg-[linear-gradient(94.72deg,_#6C29E0_0%,_#5413C3_100%)]
           text-white
           font-semibold
+          cursor-pointer
           transition-all
           duration-300
           hover:shadow-xl

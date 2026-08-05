@@ -1,6 +1,7 @@
-import B2BHero from "../assets/components/sections/B2BHero"
-import BusinessServe from "../assets/components/sections/BusinessServe"
-import B2BWhyChooseUs from "../assets/components/sections/B2BWhyChooseUs"
+import B2BHero from "../assets/components/sections/B2BSections/B2BHero"
+import BusinessServe from "../assets/components/sections/B2BSections/BusinessServe"
+import B2BWhyChooseUs from "../assets/components/sections/B2BSections/B2BWhyChooseUs"
+import ProfessionalServices from "../assets/components/sections/B2BSections/ProfessionalServices"
 
 const B2B = () => {
   return (
@@ -8,6 +9,7 @@ const B2B = () => {
    <B2BHero />
    <BusinessServe/>
    <B2BWhyChooseUs />
+   <ProfessionalServices />
    </>
   )
 }

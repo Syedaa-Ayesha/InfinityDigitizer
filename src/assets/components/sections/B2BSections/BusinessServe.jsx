@@ -6,6 +6,7 @@ import {
   Mail,
   Share2,
 } from "lucide-react";
+import B2BHeading from "./B2BHeading";
 
 const businessData = [
   {
@@ -42,27 +43,12 @@ const businessData = [
 
 const BusinessServe = () => {
   return (
-    <section className="py-[85px]">
+    <section className="">
       <div className="mx-auto max-w-[1320px]">
 
         {/* Heading */}
 
-        <div className="mb-14 text-center">
-          <h2
-            className="
-              text-[24px]
-              font-extrabold
-              font-dmSans
-              text-[#111827]
-              md:text-[32px]
-              lg:text-[42px]
-            "
-          >
-            Businesses We Serve
-          </h2>
-
-          <div className="mx-auto mt-[11px] h-[3px] w-[64px] rounded-full bg-[#7434E5]" />
-        </div>
+        <B2BHeading title="Businesses We Serve" />
 
         {/* Cards */}
 
@@ -116,7 +102,7 @@ const BusinessServe = () => {
                     className="text-[#7434E5]
                     hover:transition
                     group-hover:text-[#ffffff]"
-                    
+
                   />
                 </div>
 

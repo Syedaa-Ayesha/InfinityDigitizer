@@ -5,6 +5,7 @@ import {
   ShieldCheck,
   Lock,
 } from "lucide-react";
+import B2BHeading from "./B2BHeading";
 
 const chooseUsData = [
   {
@@ -59,26 +60,10 @@ const B2BWhyChooseUs = () => {
 
         {/* Heading */}
 
-        <div className="mb-14 text-center">
+<B2BHeading title=" Why Businesses Choose Us?" />
 
-          <h2
-            className="
-              text-[30px]
-              font-extrabold
-              text-[#111827]
-              md:text-[38px]
-              lg:text-[48px]
-            "
-          >
-            Why Businesses Choose Us?
-          </h2>
-
-          <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-[#7434E5]" />
-
-        </div>
 
         {/* Cards */}
-
         <div
           className="
             grid

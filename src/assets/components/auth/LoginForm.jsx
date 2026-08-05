@@ -1,7 +1,7 @@
 import { Mail, Lock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import AuthInput from "./AuthInput";
+import AuthInput from "./InputFields";
 import ContinueWithGoogle from "../layout/ContinueWithGoogle";
 import SolidButton from "../layout/SolidButton";
 
@@ -118,6 +118,7 @@ const LoginForm = () => {
         <SolidButton
           title="Log In"
           Icon={ArrowRight}
+          classname="w-full"
         />
 
         {/* Divider */}

@@ -1,8 +1,9 @@
+import ContactUsSection from "../assets/components/sections/ContactUs/ContactUsSection"
 
 
 const Contactus = () => {
   return (
-    <div>Contactus</div>
+    <ContactUsSection />
   )
 }
 

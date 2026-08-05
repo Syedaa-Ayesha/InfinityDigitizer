@@ -1,13 +1,17 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-const AuthInput = ({
-  label,
+const InputFields = ({
   type = "text",
   placeholder,
   icon: Icon,
   value,
   onChange,
   error,
+  name,
+  id,
+  required = false,
+  disabled = false,
+  // className = "",
 }) => {
       const [showPassword, setShowPassword] = useState(false);
 
@@ -24,8 +28,8 @@ const AuthInput = ({
 
       {/* Label */}
 
-      {label && (
-        <label
+      {/* {label && (
+        <label htmlFor={id || name}
           className="
             mb-2
             block
@@ -37,7 +41,7 @@ const AuthInput = ({
         >
           {label}
         </label>
-      )}
+      )} */}
 
       {/* Input */}
 
@@ -59,10 +63,14 @@ const AuthInput = ({
         )}
 
         <input
-          type={inputType}
-          value={value}
-          onChange={onChange}
-          placeholder={placeholder}
+         id={id || name}
+  name={name}
+  type={inputType}
+  value={value}
+  onChange={onChange}
+  placeholder={placeholder}
+  required={required}
+  disabled={disabled}
           className={`
      p-[14px]
             w-full
@@ -88,19 +96,13 @@ const AuthInput = ({
                 ? "pr-12"
                 : "pr-4"
             }
-
             text-[15px]
             text-[#0F1729]
             outline-none
-
             transition-all
             duration-300
-
             placeholder:text-[#ACB0B9]
-
         focus:border-[#7434E5]
-            
-            focus:ring-[#7434E5]/10
           `}
         />
 
@@ -148,4 +150,4 @@ const AuthInput = ({
     </div>  )
 }
 
-export default AuthInput
+export default InputFields;

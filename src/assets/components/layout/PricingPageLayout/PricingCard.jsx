@@ -8,13 +8,10 @@ const PricingCard = ({ item}) => {
         w-full
         flex
         flex-col
-
         rounded-[20px]
         border
         border-[#E7E3ED]
-
         bg-white
-
         px-4
         py-5
 
@@ -187,7 +184,7 @@ const PricingCard = ({ item}) => {
         <SolidButton
           Icon={ArrowRight}
           title="Order Now"
-          classname = "py-3"
+          classname = "py-3 w-full"
         />
       </div>
 

@@ -9,7 +9,7 @@ UserRound,
 } from "lucide-react";
 
 import { Link } from "react-router-dom";
-import AuthInput from "./AuthInput";
+import AuthInput from "./InputFields";
 import SolidButton from "../layout/SolidButton";
 import ContinueWithGoogle from "../layout/ContinueWithGoogle";
 const RegisterForm = () => {
@@ -176,7 +176,7 @@ const RegisterForm = () => {
 
       {/* Register Button */}
 
-     <SolidButton title= "Create Account" Icon ={  ArrowRight}/>
+     <SolidButton title= "Create Account" Icon ={  ArrowRight} classname="w-full"/>
 
       {/* Divider */}
 

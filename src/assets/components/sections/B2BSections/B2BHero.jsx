@@ -1,7 +1,7 @@
 import { CalendarDays, BriefcaseBusiness } from "lucide-react";
-import heroImage from "../../images/B2BHeroImg.png";
-import B2BStateItem from "../layout/B2BStateItem";
-import { B2BStatsData } from "../common/B2BStatsData"
+import heroImage from "../../../images/B2BHeroImg.png";
+import B2BStateItem from "../../layout/B2BLayout/B2BStateItem";
+import { B2BStatsData } from "../../common/B2BStatsData"
 const B2BHero = () => {
   return (
     <section className="lg:py-[54px] py-[54px]">
@@ -69,9 +69,7 @@ const B2BHero = () => {
                leading-[52.5px]
     tracking-[-0.96px]
     text-[#111827]
-
                 md:text-[42px]
-
                 lg:text-[54px]
               "
             >Custom Digitizing, Vector Art & Logo Design for Growing Businesses
@@ -102,7 +100,6 @@ const B2BHero = () => {
                 flex
                 flex-col
                 gap-4
-
                 sm:flex-row
               "
             >

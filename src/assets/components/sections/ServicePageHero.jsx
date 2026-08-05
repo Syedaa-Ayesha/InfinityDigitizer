@@ -31,7 +31,7 @@ const ServicePageHero = ({
         <div className="flex w-[48%] flex-col gap-6">
           <h1
             className="
-              max-w-[480px]
+              max-w-120
               font-dmSans
               text-[48px]
               font-extrabold
