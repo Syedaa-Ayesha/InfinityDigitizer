@@ -2,7 +2,9 @@
 
 const B2BProcessWork = () => {
   return (
-    <div>B2BProcessWork</div>
+   <section className="py-21">
+    div
+   </section>
   )
 }
 
