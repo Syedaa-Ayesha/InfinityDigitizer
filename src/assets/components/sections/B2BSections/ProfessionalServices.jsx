@@ -1,4 +1,4 @@
-import B2BHeading from "./B2BHeading"
+import B2BHeading from "../../layout/B2BLayout/B2BHeading"
 import  {professionalServicesData} from "../../common/ProfessinalServicesData";
 import ServiceCard from "../../layout/B2BLayout/ProfessionalServicesCard";
 const ProfessionalServices = () => {

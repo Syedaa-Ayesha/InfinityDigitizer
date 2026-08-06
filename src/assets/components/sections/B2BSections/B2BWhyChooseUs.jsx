@@ -5,7 +5,7 @@ import {
   ShieldCheck,
   Lock,
 } from "lucide-react";
-import B2BHeading from "./B2BHeading";
+import B2BHeading from "../../layout/B2BLayout/B2BHeading";
 
 const chooseUsData = [
   {

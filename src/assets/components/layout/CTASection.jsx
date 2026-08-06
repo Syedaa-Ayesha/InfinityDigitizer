@@ -6,6 +6,7 @@ const CTASection = ({
   description,
   buttonText = "Get Free Quote",
   onClick,
+  Solidbtn ,
   titleClass = "",
   sectionWidth = "",
   iconHeight = "",
@@ -114,6 +115,8 @@ const CTASection = ({
           </div>
 
           {/* Button */}
+          <div className="flex gap-7">
+{Solidbtn}
 
           <button
   onClick={onClick}
@@ -159,6 +162,7 @@ whitespace-nowrap
     "
   />
 </button>
+</div>
         </div>
       </div>
     </section>

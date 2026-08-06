@@ -1,5 +1,5 @@
 
-import B2BHeading from './B2BHeading'
+import B2BHeading from '../../layout/B2BLayout/B2BHeading'
 import Process from "../../layout/B2BLayout/Process";
 import { B2BProcessData } from "../../common/B2BProcessData";
 

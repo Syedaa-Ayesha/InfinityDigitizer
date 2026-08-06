@@ -14,6 +14,7 @@ const Process = ({
         {!isLast && (
           <div
             className="
+           
               absolute
               left-[64%]
               top-1/2
@@ -21,6 +22,9 @@ const Process = ({
               w-[190px]
               -translate-y-1/2
              bg-[#7434E5]
+             lg:block
+             sm:hidden
+             
             "
           />
         )}
@@ -35,13 +39,13 @@ const Process = ({
             w-[54px]
             items-center
             justify-center
-            rounded-[14px]
-            bg-[linear-gradient(94.72deg,#6C29E0_0%,#5413C3_100%)]
-            shadow-[0px_10px_20px_rgba(116,52,229,0.25)]
+            rounded-[12px]
+               bg-[linear-gradient(94.72deg,#6C29E0_0%,#5413C3_100%)]
+            shadow-[0px_12px_20px_rgba(116,52,229,0.22)]
           "
         >
           <Icon
-            size={22}
+            size={24}
             strokeWidth={2}
             className="text-white"
           />
@@ -51,10 +55,11 @@ const Process = ({
       {/* Step Title */}
       <h3
         className="
+        w-max
           font-dmSans
-          text-[18px]
+          text-base
           font-bold
-          text-[#182032]
+          text-[#0C0C30]
         "
       >
         {title}
@@ -64,9 +69,9 @@ const Process = ({
       <p
         className="
           mt-4
-          max-w-[220px]
+          max-w-[230px]
           font-inter
-          text-[16px]
+          text-sm
           leading-7
           text-[#6B7280]
         "
