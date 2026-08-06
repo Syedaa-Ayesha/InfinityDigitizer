@@ -7,8 +7,9 @@ const SolidButton = ({title, Icon, classname}) => {
         className={`
           group
           flex
-         h-14
-         px-10
+         py-[14px]
+         px-6
+         text-sm
           items-center
           justify-center
           gap-3
@@ -21,6 +22,8 @@ const SolidButton = ({title, Icon, classname}) => {
           duration-300
           hover:shadow-xl
           hover:scale-[1.01]
+          lg:px-10
+          lg:text-xs
           ${classname}
         `}
       >

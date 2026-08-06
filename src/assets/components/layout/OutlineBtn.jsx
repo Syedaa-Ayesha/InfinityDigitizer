@@ -1,17 +1,17 @@
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 
 
-const OutlineBtn = ({ title }) => {
+const OutlineBtn = ({ title, Icon,classname }) => {
   return (
      <button
-      className="
-      h-10
-      px-5
+      className={`
+      px-6
+      py-14px
       rounded-full
       border
       border-[#7B3FF2]
       text-[#7B3FF2]
-      text-[12px]
+      text-sm
       font-medium
       flex
       items-center
@@ -20,11 +20,14 @@ const OutlineBtn = ({ title }) => {
       hover:text-white
       transition-all
       duration-300
-      "
+      lg:px-5
+      lg:text-xs
+    ${classname}`}
+      
     >
       {title}
 
-      <ArrowRight size={15} />
+      <Icon size={15}/>
     </button>
   )
 }

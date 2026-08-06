@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./assets/components/sections/Navbar";
+// import Navbar from "./assets/components/sections/Navbar";
 import Footer from "./assets/components/sections/Footer";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
@@ -16,7 +16,7 @@ import PricingPage from "./pages/PricingPage";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />

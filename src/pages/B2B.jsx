@@ -4,9 +4,11 @@ import B2BWhyChooseUs from "../assets/components/sections/B2BSections/B2BWhyChoo
 import ProfessionalServices from "../assets/components/sections/B2BSections/ProfessionalServices"
 import ProcessWork from "../assets/components/sections/B2BSections/ProcessWork"
 import TrustedPartnership from "../assets/components/sections/B2BSections/TrustedPartnership"
-import CTASection from "../assets/components/layout/CTASection"
-import { ArrowRight, Headphones } from "lucide-react"
 import SolidButton from "../assets/components/layout/SolidButton"
+import { ArrowRight, Headphones, Phone } from "lucide-react";
+import B2BCTA from "../assets/components/layout/B2BLayout/B2BCTA"
+import OutlineBtn from "../assets/components/layout/OutlineBtn"
+
 
 const B2B = () => {
   return (
@@ -17,31 +19,34 @@ const B2B = () => {
    <ProfessionalServices />
    <ProcessWork />
    <TrustedPartnership />
-   <CTASection
+   <div className="max-w-[1350px] mx-auto mb-5">
+
+<B2BCTA
   icon={
     <Headphones
-      size={38}
-      strokeWidth={2.2}
+      size={30}
       className="text-[#7434E5]"
     />
   }
-  title="Your Artwork Deserves the Best!"
-  description="Upload it now, and our team will turn it into a clean, high
-quality file, fast, accurate, no errors, no delays, just quality 
-work"
-  buttonText="Get Free Quote"
-  titleClass = "text-[28px]"
-  sectionWidth = "w-[1330px]"
-  iconHeight= "h-[96px]"
-  iconWidth = "w-[96px]"
-  bg =" bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)]"
-  Solidbtn ={<SolidButton
-      title="Get Started"
-      Icon={ArrowRight}
-    />}
- 
+  title="Your Complete B2B Artwork Solution Starts Here"
+  description="Everything you need to bring your ideas to life under one roof. We provide reliable artwork solutions designed to support your business at every stage."
+  buttons={
+    <>
+      <SolidButton
+        title="Become a B2B Partner"
+        Icon={ArrowRight}
+      />
+
+      <OutlineBtn
+        title="Get Free Consultation"
+        Icon={Phone}
+      />
+    </>
+  }
 />
+            </div>
    </>
+   
   )
 }
 

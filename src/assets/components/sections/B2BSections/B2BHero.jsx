@@ -1,17 +1,18 @@
-import { CalendarDays, BriefcaseBusiness } from "lucide-react";
+import { BriefcaseBusiness, ArrowRight, Phone } from "lucide-react";
 import heroImage from "../../../images/B2BHeroImg.png";
 import B2BStateItem from "../../layout/B2BLayout/B2BStateItem";
 import { B2BStatsData } from "../../common/B2BStatsData"
+import SolidButton from "../../layout/SolidButton";
+import OutlineBtn from "../../layout/OutlineBtn";
 const B2BHero = () => {
   return (
-    <section className="lg:py-[54px] py-[54px]">
+    <section className="p-[22px] lg:py-[54px]" >
       <div
         className="
           mx-auto
-          max-w-[1360px]
           rounded-[28px]
           bg-white
-         
+          lg:max-w-[1340px]
         "
       >
         <div
@@ -24,18 +25,18 @@ const B2BHero = () => {
         >
           {/* LEFT */}
 
-          <div className="w-full lg:w-[54%] font-dmSans">
+          <div className="w-full lg:w-[55%] font-dmSans flex flex-col lg:gap-2">
 
             {/* Badge */}
 
             <div
               className="
                 inline-flex
+                w-fit
                 items-center
                 rounded-full
                 bg-[#F5F0FF]
                 gap-2
-
                 px-[22px]
                 py-[10px]
               "
@@ -49,7 +50,6 @@ const B2BHero = () => {
                 className="
                   text-[14px]
                   font-bold
-                  
                   uppercase
                   tracking-[1px]
                   text-[#7434E5]
@@ -63,14 +63,22 @@ const B2BHero = () => {
 
             <h1
               className="
-              mt-[19px]
-               
-                font-extrabold
-               leading-[52.5px]
+               mt-5
+               pr-8
+    max-w-[780px]
+    font-dmSans
+    font-extrabold
+    text-[36px]
+    leading-[110%]
     tracking-[-0.96px]
+
     text-[#111827]
-                md:text-[42px]
-                lg:text-[54px]
+
+    md:text-[42px]
+    md:leading-[110%]
+
+    lg:text-[48px]
+    lg:leading-[52.5px]
               "
             >Custom Digitizing, Vector Art & Logo Design for Growing Businesses
             </h1>
@@ -79,12 +87,12 @@ const B2BHero = () => {
 
             <p
               className="
-                mt-6
-                max-w-[560px]
+                max-w-[480px]
                 font-inter
                 text-[16px]
                 leading-8
                 text-[#6C7283]
+                lg:mt-6
               "
             >
               We work behind the scenes with print shops,
@@ -96,50 +104,19 @@ const B2BHero = () => {
 
             <div
               className="
-                mt-8
+                mt-[10px]
+                mb-[18px]
                 flex
-                flex-col
-                gap-4
-                sm:flex-row
+              justify-around
+              flex-row
+              lg:gap-4
+                lg:mb-0
+                lg:justify-start
+                lg:mt-8
               "
             >
-              <button
-                className="
-                  rounded-xl
-                  bg-[#6C29E0]
-                  px-7
-                  py-4
-                  font-bold
-                  text-white
-                  transition
-                  hover:opacity-80
-                "
-              >
-                Get B2B Quote
-              </button>
-
-              <button
-                className="
-                  flex
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-[12px]
-                  border
-                  border-[#7434E5]
-                  px-7
-                  py-4
-                  font-bold
-                  text-[#7434E5]
-                  transition
-                  hover:bg-[#7434E5]
-                  hover:text-white
-                "
-              >
-                <CalendarDays size={18} />
-
-                Schedule a Call
-              </button>
+              <SolidButton title="Get  Quote" Icon={ArrowRight} classname=""/>
+               <OutlineBtn title="Schedule a Call" Icon={Phone} classname="flex-row-reverse"/>
             </div>
 
           </div>
@@ -148,7 +125,7 @@ const B2BHero = () => {
 
           
           
-          <div className="relative w-full lg:w-[46%] ">
+          <div className="relative w-full lg:w-[45%] ">
  <div
     className="
       overflow-hidden
