@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PricingTabs from "../layout/PricingTab";
+import PricingTabs from "../layout/CommonTab";
 import {embroideryPricing, vectorPricing, logoPricing} from "../common/PricingData";
 import SectionHeading from "../common/SectionHeading";
 import { Tag, ChevronLeft, ChevronRight } from "lucide-react";
@@ -44,7 +44,7 @@ const PricingSection = () => {
       <SectionHeading
         icon={<Tag size={24} />}
         badge="All Prices shown are start pricing"
-        heading="Our Competitive Prices"
+        heading="OUR COMPETITIVE PRICES"
         description="Affordable Embroidery, Logo and Vector Art Services. Grab Embroidery, Logo and Vector Designs Now"
       />
       <PricingTabs

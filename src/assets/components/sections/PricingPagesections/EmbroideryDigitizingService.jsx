@@ -18,7 +18,7 @@ const EmbroideryDigitizingService = () => {
   <OutlineBtn title="View All Logo Services"/>
   <PricingSectionHeading  title="Embroidery Digitizing Services"/>
   <div className="w-full xl:hidden">
-  <PricingSlider    data={embroideryServices} />
+  <PricingSlider    data={embroideryServices}  CardComponent={PricingCard}/>
 </div>
 <div
   className="

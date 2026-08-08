@@ -1,21 +1,15 @@
-import { CircleCheck } from "lucide-react";
+import { CircleCheck, CircleX,  } from "lucide-react";
 
 const ComparisonRow = ({
   leftText,
   rightText,
-  isLast,
+  
 }) => {
   return (
     <div
       className={`
         grid
         grid-cols-2
-
-        ${
-          !isLast
-            ? "border-b border-[#E7E3ED]"
-            : ""
-        }
       `}
     >
       {/* Left Side */}
@@ -24,30 +18,28 @@ const ComparisonRow = ({
         className="
           flex
           items-center
-          gap-3
-
+          gap-[10px]
           px-5
           py-[14px]
-
-          border-r
-          border-[#E7E3ED]
+          max-lg:px-[18px]
+          max-lg:py-[10px]
         "
       >
-        <CircleCheck
-          size={14}
+        <CircleX
+          size={16}
           strokeWidth={2.2}
           className="
             shrink-0
-            text-[#9CA3AF]
+            text-[#ACB0B9]
           "
         />
 
         <p
           className="
             font-inter
-            text-[13px]
+            text-sm
             leading-5
-            text-[#6B7280]
+            text-[#424957]
           "
         >
           {leftText}
@@ -60,14 +52,15 @@ const ComparisonRow = ({
         className="
           flex
           items-center
-          gap-3
-
+          gap-[10px]
           px-5
           py-[14px]
+          max-lg:px-[18px]
+          max-lg:py-[10px]
         "
       >
         <CircleCheck
-          size={14}
+          size={16}
           strokeWidth={2.2}
           className="
             shrink-0
@@ -78,9 +71,9 @@ const ComparisonRow = ({
         <p
           className="
             font-inter
-            text-[13px]
+            text-sm
             leading-5
-            text-[#182032]
+            text-[#424957]
             font-medium
           "
         >

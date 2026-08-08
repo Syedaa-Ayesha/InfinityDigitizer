@@ -1,18 +1,18 @@
 
-const SectionHeading = ({icon, badge, heading, description, headingClassName}) => {
+const SectionHeading = ({icon, badge, heading, description, headingClassName ,desClass}) => {
   return (
    <>
-    <div className="text-center">
-      <span className="inline-flex items-center  font-inter rounded-2xl gap-2 text-[#7434E5] px-2.5 py-1.5 text-base  uppercase  font-semibold bg-[#F1EDFD]"> 
+    <div className="flex flex-col justify-center items-center gap-[18px] lg:gap-4">
+      <span className="inline-flex w-fit items-center  font-inter rounded-2xl gap-2 text-[#7434E5] px-2.5 py-1.5 text-base  uppercase  font-semibold bg-[#F1EDFD]"> 
         {icon}
         {badge}
       </span>
 
-      <h2 className={`font-dmSans text-[36px] font-bold uppercase leading-none mt-4 ${headingClassName}`}>
+      <h2 className={`font-dmSans text-center text-[36px] font-bold text-[#0C0C30]  leading-10 lg:leading-none ${headingClassName}`}>
         {heading}
       </h2>
 
-      <p className="mt-5 mx-auto max-w-125 text-sm text-[#6B7280] leading-6 whitespace-pre-line font-medium font-inter">
+      <p className= {`mx-auto  text-center text-sm text-[#6B7280] leading-6 whitespace-pre-line font-normal font-inter  ${desClass}lg:max-w-125`}>
         {description}
       </p>
     

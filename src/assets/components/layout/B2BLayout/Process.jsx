@@ -5,16 +5,16 @@ const Process = ({
   isLast,
 }) => {
   return (
-    <div className="relative flex flex-col items-center flex-1 text-center">
+    <div className="relative flex flex-col items-center flex-1 text-center gap-3">
       
       {/* Top (Icon + Line) */}
-      <div className="relative flex items-center w-full justify-center mb-6">
+      <div className="relative flex items-center w-full justify-center">
 
         {/* Right Line */}
         {!isLast && (
           <div
             className="
-           
+            hidden
               absolute
               left-[64%]
               top-1/2
@@ -23,7 +23,7 @@ const Process = ({
               -translate-y-1/2
              bg-[#7434E5]
              lg:block
-             sm:hidden
+             
              
             "
           />
@@ -40,8 +40,8 @@ const Process = ({
             items-center
             justify-center
             rounded-[12px]
-               bg-[linear-gradient(94.72deg,#6C29E0_0%,#5413C3_100%)]
-            shadow-[0px_12px_20px_rgba(116,52,229,0.22)]
+                  bg-[linear-gradient(95.33deg,#7F3DF0_0%,#4E2A8C_100%)]
+  shadow-[0px_6px_18px_rgba(91,61,240,0.35)]
           "
         >
           <Icon
@@ -68,7 +68,6 @@ const Process = ({
       {/* Description */}
       <p
         className="
-          mt-4
           max-w-[230px]
           font-inter
           text-sm

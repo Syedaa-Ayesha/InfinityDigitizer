@@ -14,7 +14,7 @@ const CTASection = ({
   bg = "",
 }) => {
   return (
-    <section className={`px-7 lg:mx-auto w-full  ${sectionWidth}`}>
+    <section className={`w-full  ${sectionWidth}`}>
       <div
         className={`
           rounded-[24px]
@@ -102,8 +102,8 @@ const CTASection = ({
                   max-w-[600px]
 
                   text-[16px]
-                  leading-7
-
+                  leading-6
+whitespace-pre-wrap
                   text-white/85
                 "
               >

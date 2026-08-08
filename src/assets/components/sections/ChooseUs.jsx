@@ -13,7 +13,7 @@ const ChooseUs = () => {
         }}>
             <SectionHeading
                 icon={<ShieldCheck size={24} />}
-                badge="Our Commitment"
+                badge="OUR COMMITMENT"
                 heading="Why Choose Infinity Digitizing?"
                 description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs.Infinity Digitizing is your trusted partner for premium embroidery digitizing, logo designing and vector art services across the USA, UK, Canada, and Australia. We use advanced, industry leading software programs and we have a skilled team to deliver higher quality, affordable design services for every project. "
             />

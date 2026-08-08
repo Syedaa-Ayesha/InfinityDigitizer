@@ -1,8 +1,8 @@
 import {
   Clock3,
   Users,
-  FileText,
-  BadgeCheck,
+  File,
+ Award,
 } from "lucide-react";
 
 export const B2BStatsData = [
@@ -20,13 +20,13 @@ export const B2BStatsData = [
   },
   {
     id: 3,
-    icon: FileText,
+    icon: File,
     value: "$15+",
     title: "Affordable\nPricing",
   },
   {
     id: 4,
-    icon: BadgeCheck,
+    icon: Award,
     value: "98%",
     title: "Client\nSatisfaction",
   },

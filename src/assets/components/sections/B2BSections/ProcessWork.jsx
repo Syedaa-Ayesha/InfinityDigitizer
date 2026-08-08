@@ -5,7 +5,7 @@ import { B2BProcessData } from "../../common/B2BProcessData";
 
 const ProcessWork = () => {
   return (
-    <section className='py-20'>
+    <section className='p-[22px] lg:py-6'>
         <div className='mx-auto max-w-[1320px]'>
              <B2BHeading title="How Our B2B Process Works?" />
               {/* Process */}
@@ -14,8 +14,7 @@ const ProcessWork = () => {
           mt-16
           flex
           flex-col
-          gap-12
-
+          gap-3
           lg:flex-row
           lg:gap-0
           lg:items-start

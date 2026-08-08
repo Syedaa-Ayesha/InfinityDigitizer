@@ -1,64 +1,58 @@
 const ProfessionalServiceCard = ({
-  image,
-  icon: Icon,
-  title,
-  description,
+ item
 }) => {
+  const { image, icon: Icon, title, description } = item;
   return (
     <div
       className="
       group
+      h-max
       overflow-hidden
-      rounded-[22px]
+      rounded-[20px]
+      border-[#E7E3ED]
       bg-white
       shadow-[0px_12px_35px_rgba(0,0,0,0.08)]
       transition-all
       duration-300
-      hover:-translate-y-2
       hover:shadow-[0px_20px_45px_rgba(116,52,229,.16)]
+      lg:h-[492px]
     "
     >
       {/* Image */}
-
-      <div className="overflow-hidden">
         <img
           src={image}
           alt={title}
           className="
-          h-[220px]
           w-full
+          h-[206px]
           object-cover
-          transition
-          duration-500
-          group-hover:scale-105
-
           md:h-[260px]
-          lg:h-[310px]
+          lg:h-[282px]
         "
         />
-      </div>
+      
 
       {/* Content */}
 
-      <div className="p-6">
+      <div className="p-6 flex flex-col gap-[10px] lg:gap-2">
 
         {/* Icon */}
 
         <div
           className="
           flex
-          h-[58px]
-          w-[58px]
+          h-[44px]
+          w-[44px]
           items-center
           justify-center
-          rounded-[14px]
-          bg-[linear-gradient(100deg,#6C29E0_0%,#5413C3_100%)]
-          shadow-[0px_8px_20px_rgba(108,41,224,.30)]
+          rounded-[12px]
+          bg-[linear-gradient(95.33deg,#7F3DF0_0%,#4E2A8C_100%)]
+  shadow-[0px_6px_18px_rgba(91,61,240,0.35)]
         "
         >
           <Icon
-            size={28}
-            strokeWidth={2}
+            size={22}
+            strokeWidth={1.5}
             className="text-white"
           />
         </div>
@@ -67,13 +61,10 @@ const ProfessionalServiceCard = ({
 
         <h3
           className="
-          mt-5
           font-dmSans
-          text-[22px]
+          text-[18px]
           font-bold
-          text-[#111827]
-
-          md:text-[24px]
+          text-[#0C0C30]
         "
         >
           {title}
@@ -83,13 +74,10 @@ const ProfessionalServiceCard = ({
 
         <p
           className="
-          mt-4
           font-inter
-          text-[15px]
-          leading-8
+        text-sm
+          leading-6
           text-[#6C7283]
-
-          md:text-[16px]
         "
         >
           {description}

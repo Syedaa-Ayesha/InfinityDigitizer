@@ -26,7 +26,7 @@ title : `Bulk Order\nDiscounts`,
     <SectionHeading
         icon={<Tag size={24} />}
         badge="Transparent Pricing"
-        heading="Our Competitive Prices"
+        heading="OUR COMPETITIVE PRICES"
         description="Affordable Embroidery, Logo and Vector Art Services. Grab Embroidery, Logo and Vector Designs Now"
         
       />

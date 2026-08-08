@@ -3,7 +3,6 @@
 const SolidButton = ({title, Icon, classname}) => {
   return (
      <button
-        type="submit"
         className={`
           group
           flex
@@ -22,8 +21,7 @@ const SolidButton = ({title, Icon, classname}) => {
           duration-300
           hover:shadow-xl
           hover:scale-[1.01]
-          lg:px-10
-          lg:text-xs
+          lg:px-
           ${classname}
         `}
       >

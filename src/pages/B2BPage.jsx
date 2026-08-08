@@ -10,7 +10,7 @@ import B2BCTA from "../assets/components/layout/B2BLayout/B2BCTA"
 import OutlineBtn from "../assets/components/layout/OutlineBtn"
 
 
-const B2B = () => {
+const B2BPage = () => {
   return (
     <>
    <B2BHero />
@@ -24,7 +24,7 @@ const B2B = () => {
 <B2BCTA
   icon={
     <Headphones
-      size={30}
+      size={26}
       className="text-[#7434E5]"
     />
   }
@@ -40,6 +40,7 @@ const B2B = () => {
       <OutlineBtn
         title="Get Free Consultation"
         Icon={Phone}
+        classname="flex-row-reverse justify-center"
       />
     </>
   }
@@ -50,4 +51,4 @@ const B2B = () => {
   )
 }
 
-export default B2B
+export default B2BPage

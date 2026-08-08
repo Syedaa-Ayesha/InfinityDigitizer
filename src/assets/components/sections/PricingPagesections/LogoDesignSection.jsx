@@ -19,7 +19,7 @@ const LogoDesignSection = () => {
   <OutlineBtn title="View All Logo Services"/>
   <PricingSectionHeading  title="Logo Designing Services"/>
   <div className="w-full xl:hidden">
-  <PricingSlider   data={logoDesignServices} />
+  <PricingSlider   data={logoDesignServices} CardComponent={PricingCard}/>
 </div>
 <div
   className="

@@ -21,7 +21,7 @@ const Testimonial = () => {
             <SectionHeading
                 icon={<MessageCircle size={24} />}
                 badge="Testimonials"
-                heading="Feedback From Our Customers"
+                heading="FEEDBACK FROM OUR COSTUMERS"
                 description=""
             />
             <div className="flex justify-center align-middle my-4.5">

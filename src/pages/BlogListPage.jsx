@@ -28,7 +28,7 @@ gap-10">
          <SectionHeading
           icon={<Book size={24} />}
           badge="Our Blog"
-          heading="Latest Blogs & Expert Tips"
+          heading="LATEST BLOGS & EXPERT TIPS"
           description="Explore expert tips, practical guides, and industry updates to improve every design project."
            headingClassName="text-[56px] text-[#0F1729] font-extrablod"
         />

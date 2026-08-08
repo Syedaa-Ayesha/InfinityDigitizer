@@ -1,85 +1,65 @@
-import { LifeBuoy } from "lucide-react";
-import SectionHeading from "../common/SectionHeading";
-import PricingTabs from "../layout/PricingTab";
+import { useState } from "react";
+import { CircleMinus, CirclePlus, Headphones, } from "lucide-react";
+import CommonTab from "../layout/CommonTab";
 import Accordion from "../layout/Accordion";
 import CTASection from "../layout/CTASection";
-import { BellCheck } from "lucide-react";
 
-import { useState } from "react";
-const faqTabs = [
-  {
-    id: 1,
-    title: "Policies & Support",
-    value: "policy",
-  },
-  {
-    id: 2,
-    title: "Embroidery Digitizing",
-    value: "embroidery",
-  },
-  {
-    id: 3,
-    title: "Vector Tracing",
-    value: "vector",
-  },
-  {
-    id: 4,
-    title: "Logo Designing",
-    value: "logo",
-  },
-];
+import { faqData } from "../common/FaqData";
 
 const FaqSection = () => {
+  const [activeTab, setActiveTab] = useState("general");
 
-  const [activeTab, setActiveTab] = useState("policy");
+  const activeCategory = faqData.find(
+    (item) => item.id === activeTab
+  );
 
   return (
-    <section
-      className="py-20"
-      style={{
-        background:
-          "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
-      }}
-    >
+    <>
 
-      <SectionHeading
-        icon={<LifeBuoy size={20} />}
-        badge="Need Help?"
-        heading="Frequently Asked Questions"
-        description={`Got questions? We've answered the ones our customers 
-             ask most often`}
-             
-      />
+      {/* Tabs */}
 
-      <div className="mt-10 flex justify-center">
-     <PricingTabs
-  tabs={faqTabs}
-  activeTab={activeTab}
-  setActiveTab={setActiveTab}
-/>
+      <div className="mt-10 ">
+        
+        <CommonTab
+          tabs={faqData}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          classname="shadow-none border-0"
+        />
       </div>
 
-      <Accordion />
-<CTASection
-  icon={
-    <BellCheck 
-      size={38}
-      strokeWidth={2.2}
-      className="text-[#7434E5]"
-    />
-  }
-  title="Need Expert Design Assistance?"
-  description="Our team is available 24/7 to help with embroidery,
-  vector, and logo design projects."
-  buttonText="Get Free Quote"
-  titleClass="text-[28px]"
-sectionWidth = "w-[1032px]"
-iconHeight= "h-[96px]"
-iconWidth ="w-[96px]"
-/>
-    </section>
+      {/* Accordion */}
+
+      <div className="mt-6 px-4 pt-2 pb-4 w-full mx-auto rounded-2xl mb-9 shadow-2xl border border-[#E7E3ED] lg:max-w-[1300px]">
+        <Accordion
+          data={activeCategory?.questions || []} openIcon={CircleMinus}
+  closeIcon={CirclePlus}  
+width="lg:min-w-[1200px]"
+        />
+      </div>
+
+      {/* CTA */}
+
+      <CTASection
+        icon={
+          <Headphones
+            size={32}
+            strokeWidth={2.2}
+            className="text-[#7434E5]"
+          />
+        }
+        title="Need Expert Digitizing Assistance?"
+        description="Our team is available 24/7 to help with embroidery,
+vector, and logo design projects."
+        buttonText="Get Free Quote"
+        titleClass="text-[26px]"
+        
+        iconHeight="h-[72px]"
+        iconWidth="w-[72px]"
+        bg="bg-[linear-gradient(94.2deg,#6C29E0_0%,#5413C3_100%)] shadow-[0px_18px_40px_rgba(75,36,143,0.3)]"
+      />
+   </>
   );
 };
 
 export default FaqSection;
-

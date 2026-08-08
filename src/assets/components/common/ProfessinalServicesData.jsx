@@ -8,7 +8,7 @@ import embroideryImg from "../../images/ServiceHeroImage01.png";
 import vectorImg from "../../images/ServiceHeroImage02.png";
 import logoImg from "../../images/ServiceHeroImage03.png";
 
-export const professionalServicesData = [
+export const ProfessionalServicesData = [
   {
     id: 1,
     title: "Embroidery Digitizing",

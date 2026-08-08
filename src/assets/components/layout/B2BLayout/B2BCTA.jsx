@@ -7,23 +7,19 @@ const B2BCTA = ({
   buttons,
 }) => {
   return (
-    <section className="mx-auto max-w-[1320px] px-4 lg:px-0">
+    <section className="mx-auto max-w-[1320px] px-4 lg:px-0 pb-6">
       <div
         className="
           flex
           flex-col
-          gap-8
-
+          gap-4
           rounded-[24px]
           border
           border-[#E7E3ED]
           bg-white
-
-          px-6
-          py-7
-
-          shadow-[0px_10px_35px_rgba(116,52,229,0.08)]
-
+          p-[22px]
+         shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]
+lg:gap-8
           lg:flex-row
           lg:items-center
           lg:justify-between
@@ -33,7 +29,7 @@ const B2BCTA = ({
       >
         {/* Left Side */}
 
-        <div className="flex items-start gap-5">
+        <div className="flex flex-col items-start gap-5 lg:flex-row">
           {/* Icon */}
 
           <div
@@ -45,8 +41,7 @@ const B2BCTA = ({
               items-center
               justify-center
               rounded-full
-              bg-[#F4EDFF]
-
+              bg-[#EDE7F8]
               lg:h-16
               lg:w-16
             "
@@ -60,12 +55,12 @@ const B2BCTA = ({
             <h2
               className="
                 font-dmSans
-                text-[28px]
+                text-[20px]
                 font-bold
-                leading-[120%]
-                text-[#181A39]
-
+                leading-[140%]
+                text-[#0C0C30]
                 lg:text-[40px]
+                lg:leading-[110%]
               "
             >
               {title}
@@ -75,8 +70,8 @@ const B2BCTA = ({
               className="
                 mt-3
                 font-inter
-                text-[16px]
-                leading-6
+                text-sm
+                lg:leading-6
                 text-[#6B7280]
               "
             >
@@ -93,7 +88,6 @@ const B2BCTA = ({
             w-full
             flex-col
             gap-4
-
             sm:flex-row
             lg:w-auto
           "

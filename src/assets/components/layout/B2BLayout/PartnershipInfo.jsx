@@ -8,6 +8,7 @@ const PartnershipInfo = () => {
         flex-col
         items-center
         text-center
+        gap-4
         lg:max-w-[360px]
       "
     >
@@ -16,63 +17,32 @@ const PartnershipInfo = () => {
       <div
         className="
           flex
-          h-[88px]
-          w-[88px]
+          h-[84px]
+          w-[84px]
           items-center
           justify-center
-          rounded-full
-          border
-          border-white/20
-          bg-white/10
           backdrop-blur-sm
         "
       >
         <HeartHandshake
-          size={42}
+          size={84}
           strokeWidth={2}
           className="text-white"
         />
       </div>
 
-      {/* Heading */}
-
-      <h3
-        className="
-          mt-8
-
-          font-dmSans
-          font-bold
-
-          text-white
-
-          text-[28px]
-          leading-[120%]
-
-          lg:text-[32px]
-        "
-      >
-        Why It Matters
-      </h3>
-
       {/* Description */}
 
       <p
         className="
-          mt-5
-
           font-inter
-
-          text-[16px]
+          text-base
+          font-light
           leading-7
-
           text-white/85
         "
       >
-        A reliable digitizing partner becomes an extension of your
-        business. With consistent quality, fast turnaround times,
-        and dependable communication, you can confidently take on
-        more clients while reducing production delays and costly
-        revisions.
+      Partner with a trusted B2B team committed to delivering quality, consistency, and reliable creative solutions that help your business grow.
       </p>
     </div>
   );

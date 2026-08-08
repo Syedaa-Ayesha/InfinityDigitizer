@@ -5,12 +5,12 @@ import PartnershipInfo from "../../layout/B2BLayout/PartnershipInfo";
 
 const TrustedPartnership = () => {
     return (
-        <section className="mx-auto max-w-[1320px] px-5 py-8 lg:py-16">
+        <section className="mx-auto max-w-[1320px] px-5 py-6 lg:py-16">
             <div
                 className="
           rounded-[24px]
-          bg-[linear-gradient(93.97deg,#6C29E0_0%,#5413C3_100%)]
-          shadow-[0px_18px_40px_rgba(75,36,143,0.30)]
+      bg-[linear-gradient(101.47deg,#6C29E0_0%,#5413C3_100%)]
+        shadow-[0px_18px_40px_rgba(75,36,143,0.3)]
           px-6
           py-8
           lg:px-[48px]

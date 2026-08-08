@@ -6,7 +6,7 @@ const OutlineBtn = ({ title, Icon,classname }) => {
      <button
       className={`
       px-6
-      py-14px
+      py-[14px]
       rounded-full
       border
       border-[#7B3FF2]
@@ -27,7 +27,7 @@ const OutlineBtn = ({ title, Icon,classname }) => {
     >
       {title}
 
-      <Icon size={15}/>
+   {Icon && <Icon size={15} />}
     </button>
   )
 }

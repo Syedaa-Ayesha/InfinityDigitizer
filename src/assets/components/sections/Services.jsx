@@ -37,7 +37,7 @@ const Services = () => {
    <SectionHeading
   icon={<Sparkle size={24} />}
   badge="What we do best"
-  heading="What Services We Offer"
+  heading="WHAT SERVICES WE OFFER"
   description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs. "
 />
     <div className="w-max m-auto my-12 grid grid-cols-3 gap-8 " >

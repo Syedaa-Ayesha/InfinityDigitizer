@@ -1,63 +1,57 @@
-
-
 const B2BStateItem = ({
   icon: Icon,
   value,
   title,
 }) => {
   return (
-   <div
+    <div
       className="
-      my-6
-      mx-4
         flex
+        w-full
         flex-col
         items-center
         justify-center
-        border
+        mx-4
+        my-5
         text-center
+        lg:min-h-[170px]
+        lg:m-0
       "
     >
-      {/* Icon */}
-
       <Icon
         size={24}
         strokeWidth={2}
         className="text-[#7434E5]"
       />
 
-      {/* Value */}
-
       <h3
         className="
-          mt-3
+          mt-4
           font-dmSans
           text-[28px]
           font-extrabold
           leading-none
-          text-[#0F1729]
+          text-[#181A39]
+
         "
       >
         {value}
       </h3>
-
-      {/* Text */}
 
       <p
         className="
           mt-2
           whitespace-pre-line
           font-inter
-          text-[14px]
-          font-medium
-          leading-5
+          text-sm
+          leading-6
           text-[#6B7280]
         "
       >
         {title}
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default B2BStateItem
+export default B2BStateItem;

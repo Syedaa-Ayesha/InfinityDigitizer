@@ -14,7 +14,7 @@ const Navbar = () => {
   { title: "Reviews", path: "/reviews" },
   { title: "Free Designs", path: "/freedesign" },
   { title: "Referral Program", path: "/referral-program" },
-  { title: "Size Guideline", path: "/size-guideline" },
+  { title: "Size Guideline", path: "/sizes" },
   { title: "FAQs", path: "/faqs" },
   { title: "Documentation", path: "/documentation" },
 ];

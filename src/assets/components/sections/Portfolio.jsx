@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight, CircleDollarSign } from "lucide-react";
 
 import SectionHeading from "../common/SectionHeading";
 import PortfolioCard from "../layout/PortfolioCard";
-import PricingTabs from "../layout/PricingTab";
+import PricingTabs from "../layout/CommonTab";
 import {
   embroideryDesigns,
   vectorDesigns,

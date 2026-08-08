@@ -4,13 +4,11 @@ const TrustedHeading = () => {
       <h2
         className="
           font-dmSans
-          font-bold
+          font-extrabold
           text-white
-
-          text-[24px]
+          text-[28px]
           leading-[130%]
 
-          sm:text-[28px]
 
           lg:text-[36px]
         "

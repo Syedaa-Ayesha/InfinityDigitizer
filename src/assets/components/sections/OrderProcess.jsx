@@ -17,8 +17,8 @@ const OrderProcess = () => {
                 badge="OUR EASY ORDER PROCESS"
                 heading={
                     <>
-                        How to Place Your Order with <br />
-                        Infinity Digitizing
+                        HOW TO PLACE YOUR ORDER WITH <br />
+                        INFINITY DIGITIZING
                     </>
                 }
                 description=""

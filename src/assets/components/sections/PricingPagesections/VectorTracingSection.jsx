@@ -19,7 +19,7 @@ const VectorTracingSection = () => {
   <OutlineBtn title="View All Vector Services"/>
   <PricingSectionHeading  title="Vector Tracing Services"/>
   <div className="w-full xl:hidden">
-  <PricingSlider    data={vectorTracingServices}/>
+  <PricingSlider    data={vectorTracingServices} CardComponent={PricingCard}/>
 </div>
 <div
   className="
