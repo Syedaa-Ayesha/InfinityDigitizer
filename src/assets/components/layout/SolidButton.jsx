@@ -13,7 +13,7 @@ const SolidButton = ({title, Icon, classname}) => {
           justify-center
           gap-3
           rounded-full
-          bg-[linear-gradient(94.72deg,_#6C29E0_0%,_#5413C3_100%)]
+          bg-[linear-gradient(94.72deg,#6C29E0_0%,#5413C3_100%)]
           text-white
           font-semibold
           cursor-pointer

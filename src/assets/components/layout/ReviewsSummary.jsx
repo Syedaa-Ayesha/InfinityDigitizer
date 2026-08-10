@@ -92,7 +92,7 @@ const ReviewsSummary = ({design}) => {
             >
 
               <div
-                className="h-full rounded-full bg-gradient-to-r from-[#6C29E0] to-[#5413C3]
+                className="h-full rounded-full bg-linear-to-r from-[#6C29E0] to-[#5413C3]
     transition-all
     duration-500"
                 style={{

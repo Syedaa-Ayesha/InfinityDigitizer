@@ -1,10 +1,16 @@
 import {
   Shirt,
-  Hat,
+  Badge,
   Heart,
   BriefcaseBusiness,
   PanelsTopLeft,
 } from "lucide-react";
+import image1 from '../../icons/left chest.png';
+import image2 from '../../icons/right chest.png';
+import image3 from '../../icons/Center chest.png';
+import image4 from '../../icons/Full front.png';
+import image5 from '../../icons/Back upper.png';
+import image6 from '../../icons/Back full.png';
 
 export const sizeGuideData = [
   {
@@ -19,24 +25,48 @@ export const sizeGuideData = [
         item: "Left Chest",
         size: "3.5 - 4 inches",
         placement: "7 - 9 inches below shoulder seam",
+        notes:"Best for logos and small text designs.",
+        image: image1,
       },
       {
         id: 2,
         item: "Right Chest",
         size: "3.5 - 4 inches",
         placement: "7 - 9 inches below shoulder seam",
+        notes: "Ideal for name, text or logo.",
+        image:image2,
       },
       {
         id: 3,
         item: "Center Chest",
         size: "8 - 10 inches",
         placement: "Center of the chest area",
+        notes :"Perfect for larger logos and designs.",
+        image: image3,
       },
       {
-        id: 4,
-        item: "Sleeve",
+        id: 5,
+        item: "Front Full",
         size: "3 - 4 inches",
         placement: "2 - 4 inches above sleeve hem",
+        notes:"Best for big logos or custom artwork.",
+        image:image4
+      },
+      {
+        id: 6,
+        item: "Back (Upper)",
+        size: "3 - 4 inches",
+        placement: "2 - 4 inches above sleeve hem",
+        notes:"Best for big logos or custom artwork.",
+        image: image5
+      },
+      {
+        id: 7,
+        item: "Back (Full)",
+        size: "3 - 4 inches",
+        placement: "2 - 4 inches above sleeve hem",
+        notes:"Best for big logos or custom artwork.",
+        image: image6
       },
     ],
   },
@@ -45,7 +75,7 @@ export const sizeGuideData = [
     id: "cap",
     title: "Cap Embroidery",
     value: "cap",
-    icon: Hat,
+    icon: Badge,
 
     tableData: [
       {

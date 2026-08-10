@@ -5,8 +5,10 @@ const SizeGuideHeader = () => {
     <div
       className="
         flex
+        flex-col
         items-start
-        justify-between
+        lg:justify-between
+        lg:flex-row
         gap-8
       "
     >
@@ -20,8 +22,8 @@ const SizeGuideHeader = () => {
         <div
           className="
             flex
-            h-[64px]
-            w-[64px]
+            h-[50px]
+            w-[50px]
             shrink-0
             items-center
             justify-center
@@ -31,8 +33,8 @@ const SizeGuideHeader = () => {
           "
         >
           <Ruler
-            size={30}
-            strokeWidth={2}
+            size={26}
+            strokeWidth={1.4}
             className="text-[#7434E5]"
           />
         </div>
@@ -43,23 +45,23 @@ const SizeGuideHeader = () => {
           <h1
             className="
               font-dmSans
-              text-[28px]
+              text-[36px]
               font-bold
               leading-[34px]
               text-[#0C0C30]
             "
           >
-            Size Guidelines
+            Size <span className="text-[#7434E5]"> Guidelines</span>
           </h1>
 
           <p
             className="
-              mt-1.5
+              mt-3
               max-w-[430px]
               font-inter
-              text-[11px]
-              leading-[16px]
-              text-[#737789]
+              text-sm
+              leading-[22px]
+              text-[#6B7280]
             "
           >
             Find the recommended embroidery sizes for different placements
@@ -75,14 +77,14 @@ const SizeGuideHeader = () => {
       <div
         className="
           flex
-          w-[350px]
+          max-w-[450px]
           shrink-0
           items-start
-          gap-3
+          gap-4
           rounded-[12px]
           bg-white
-          px-4
-          py-3
+          px-6
+          py-5
           shadow-[0px_6px_18px_rgba(0,0,0,0.06)]
         "
       >
@@ -92,8 +94,8 @@ const SizeGuideHeader = () => {
         <div
           className="
             flex
-            h-[28px]
-            w-[28px]
+            h-[44px]
+            w-[44px]
             shrink-0
             items-center
             justify-center
@@ -102,8 +104,8 @@ const SizeGuideHeader = () => {
           "
         >
           <Info
-            size={14}
-            strokeWidth={2.5}
+            size={20}
+            strokeWidth={1.5}
             className="text-white"
           />
         </div>
@@ -114,9 +116,9 @@ const SizeGuideHeader = () => {
           <h3
             className="
               font-dmSans
-              text-[10px]
+              text-base
               font-bold
-              text-[#111118]
+              text-[#0C0C30]
             "
           >
             Important Note
@@ -126,9 +128,9 @@ const SizeGuideHeader = () => {
             className="
               mt-1
               font-inter
-              text-[9px]
-              leading-[13px]
-              text-[#737789]
+              text-sm
+              leading-[22px]
+              text-[#6B7280]
             "
           >
             These are general guidelines. Final size may vary depending on

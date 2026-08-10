@@ -22,11 +22,11 @@ bg-[#FFF7F5]
           src={design.images[activeIndex]}
           alt={design.title}
           className="
-    h-[280px]
-    sm:h-[360px]
+    h-70
+    sm:h-90
     md:h-[450px]
-    lg:h-[520px]
-    xl:h-[620px]
+    lg:h-130
+    xl:h-155
     w-full
     object-contain
     transition-transform

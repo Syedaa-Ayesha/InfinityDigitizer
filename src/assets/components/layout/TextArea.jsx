@@ -11,27 +11,6 @@ const TextArea = ({
 }) => {
   return (
     <div className="w-full">
-
-      {/* Label */}
-
-      {/* {label && (
-        <label
-          htmlFor={id || name}
-          className="
-            mb-2
-            block
-            font-dmSans
-            text-sm
-            font-bold
-            text-[#0F1729]
-          "
-        >
-          {label}
-        </label>
-      )} */}
-
-      {/* TextArea */}
-
      {/* TextArea */}
 
 <div className="relative">

@@ -26,7 +26,7 @@ const PricingCard = ({ item}) => {
 
       <h3
         className="
-          min-h-[52px]
+          min-h-13
 
           text-center
 
@@ -38,7 +38,7 @@ const PricingCard = ({ item}) => {
 
           text-[#0F1729]
 
-          lg:min-h-[60px]
+          lg:min-h-15
         "
       >
         {item.title}
@@ -81,11 +81,11 @@ const PricingCard = ({ item}) => {
 
             h-auto
 
-            max-h-[120px]
+            max-h-30
 
-            sm:max-h-[140px]
+            sm:max-h-35
 
-            lg:max-h-[160px]
+            lg:max-h-40
 
             object-contain
           "

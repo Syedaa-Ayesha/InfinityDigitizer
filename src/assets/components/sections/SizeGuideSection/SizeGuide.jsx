@@ -17,8 +17,8 @@ const SizeGuide = () => {
         border-t-[6px]
         border-[#7434E5]
         bg-[#FAF9FC]
-        py-6
-        lg:py-7
+        p-[22px]
+        lg:py-13
       "
     >
       <div
@@ -26,8 +26,6 @@ const SizeGuide = () => {
           mx-auto
           w-full
           max-w-[1210px]
-          px-4
-          lg:px-0
         "
       >
 
@@ -35,7 +33,7 @@ const SizeGuide = () => {
         <SizeGuideHeader />
 
         {/* Tabs */}
-        <div className="mt-10 ">
+        <div className="mt-8">
         
         <CommonTab
        tabs={sizeGuideData}
@@ -48,7 +46,7 @@ const SizeGuide = () => {
 
         {/* Placement Table */}
           {/* Active table */}
-      <SizeGuideTable data={activeCategory} />
+      <SizeGuideTable  data={activeCategory?.tableData || []}/>
         {/* Next step */}
 
         {/* Bottom Cards */}

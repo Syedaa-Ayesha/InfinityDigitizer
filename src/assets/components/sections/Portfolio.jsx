@@ -10,11 +10,12 @@ import { ChevronLeft, ChevronRight, CircleDollarSign } from "lucide-react";
 
 import SectionHeading from "../common/SectionHeading";
 import PortfolioCard from "../layout/PortfolioCard";
-import PricingTabs from "../layout/CommonTab";
+
 import {
   embroideryDesigns,
   vectorDesigns,
 } from "../common/PortfolioData";
+import CommonTab from "../layout/CommonTab";
 const portfolioTabs = [
   {
     id:1,
@@ -55,33 +56,8 @@ const Portfolio = () => {
         {/* Tabs + Navigation */}
 
         <div className="mt-14 flex items-center justify-between">
-
-          {/* <div className="flex gap-5">
-
-            <button
-              onClick={() => setActiveTab("embroidery")}
-              className={`rounded-full px-8 py-4 font-semibold duration-300
-              ${activeTab === "embroidery"
-                  ? "bg-linear-to-r from-[#7434E5] to-[#4E2A8C] text-white shadow-xl"
-                  : "bg-white border border-[#ECECEC]"
-                }`}
-            >
-              Embroidery Digitizing
-            </button>
-
-            <button
-              onClick={() => setActiveTab("vector")}
-              className={`rounded-full px-8 py-4 font-semibold duration-300
-              ${activeTab === "vector"
-                  ? "bg-linear-to-r from-[#7434E5] to-[#4E2A8C] text-white shadow-xl"
-                  : "bg-white border border-[#ECECEC]"
-                }`}
-            >
-              Vector Tracing
-            </button>
-
-          </div> */}
-<PricingTabs
+          
+<CommonTab
     tabs={portfolioTabs}
     activeTab={activeTab}
     setActiveTab={setActiveTab}
