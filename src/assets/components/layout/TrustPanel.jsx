@@ -1,8 +1,8 @@
 import { Star } from "lucide-react";
-import Trustprofile01 from "../../images/Trustprofile01.png"
-import Trustprofile02 from "../../images/Trustprofile02.png"
-import Trustprofile03 from "../../images/Trustprofile03.png"
-import Trustprofile04 from "../../images/Trustprofile04.png"
+import Trustprofile01 from "../../../assets/images/Trustprofile01.png"
+import Trustprofile02 from "../../../assets/images/Trustprofile02.png"
+import Trustprofile03 from "../../../assets/images/Trustprofile03.png"
+import Trustprofile04 from "../../../assets/images/Trustprofile04.png"
 
 const profiles = [
   Trustprofile01,

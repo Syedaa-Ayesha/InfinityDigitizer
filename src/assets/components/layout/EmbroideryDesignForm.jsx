@@ -2,7 +2,7 @@ import { useState } from "react";
 import DropDown from "../common/DropDown";
 import Instruction from "../common/Instruction";
 import UploadBox from "../common/UploadBox";
-import SubmitButton from "../common/SubmitBtn";
+import SubmitButton from "./HomeLayout/SubmitBtn";
 
 const embroideryServices = [
   "Cap Digitizing",

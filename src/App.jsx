@@ -14,6 +14,7 @@ import RegisterPage from "./pages/RegisterPage";
 import PricingPage from "./pages/PricingPage";
 import FAQPage from "./pages/FAQPage";
 import SizeGuidePage from "./pages/SizeGuidePage";
+import ReviewPage from './pages/ReviewPage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/pricing"  element={<PricingPage />}  /> 
         <Route path="/faqs"  element={<FAQPage />}  /> 
         <Route path="/sizes"  element={<SizeGuidePage />}  /> 
+        <Route path="/reviews"  element={<ReviewPage />}  /> 
       </Routes>
  <Footer />
     </>

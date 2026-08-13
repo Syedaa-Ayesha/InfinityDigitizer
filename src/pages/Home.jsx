@@ -1,4 +1,4 @@
-import Hero from "../assets/components/sections/Hero"
+import Hero from "../assets/components/sections/HomePageSections/Hero"
 import LoginSubmissionPortal from "../assets/components/sections/LoginSubmissionPortal"
 import PortfolioSlider from "../assets/components/sections/PortfolioSlider";
 import Services from "../assets/components/sections/Services";

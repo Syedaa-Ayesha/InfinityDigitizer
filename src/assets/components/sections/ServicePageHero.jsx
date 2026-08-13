@@ -1,5 +1,5 @@
 
-import ServiceHighlights from "../common/ServiceHighlights"
+import ServiceHighlights from "../layout/ServiceHighlights"
 
 const ServicePageHero = ({
   title,

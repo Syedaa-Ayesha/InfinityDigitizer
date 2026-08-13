@@ -1,5 +1,5 @@
 import SectionHeading from '../../common/SectionHeading'
-import ServiceHighlights from '../../common/ServiceHighlights'
+import ServiceHighlights from '../../layout/ServiceHighlights'
 import { Tag, Banknote, ReceiptPoundSterling, BanknoteArrowUp } from 'lucide-react'
 
 const PricingPageHero = () => {

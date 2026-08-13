@@ -3,7 +3,7 @@ import EmbroideryDigitizingService from "../assets/components/sections/PricingPa
 import VectorTracingSection from "../assets/components/sections/PricingPagesections/VectorTracingSection"
 import LogoDesignSection from "../assets/components/sections/PricingPagesections/LogoDesignSection"
 import CTASection from "../assets/components/layout/CTASection"
-import ServiceHighlights from "../assets/components/common/ServiceHighlights"
+import ServiceHighlights from "../assets/components/layout/ServiceHighlights"
 import {Leaf, BanknoteCheck, CreditCard, Headphones, FileSpreadsheet } from "lucide-react"
  const services = [
   {
