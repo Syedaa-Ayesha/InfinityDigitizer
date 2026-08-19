@@ -1,4 +1,4 @@
-import SectionHeading from '../../common/SectionHeading'
+import SectionHeading from '../../layout/SectionHeading'
 import ServiceHighlights from '../../layout/ServiceHighlights'
 import { Tag, Banknote, ReceiptPoundSterling, BanknoteArrowUp } from 'lucide-react'
 

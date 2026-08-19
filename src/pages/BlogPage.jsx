@@ -2,11 +2,10 @@ import { useParams } from "react-router-dom";
 import { BlogData } from "../assets/components/common/BlogData";
 
 import BlogHero from "../assets/components/layout/BlogHero";
-import BlogSidebar from "../assets/components/layout/BlogSidebar";
+import BlogSidebar from "../assets/components/layout/BlogLayout/BlogSidebar";
 import BlogContent from "../assets/components/sections/BlogContent";
-import AuthorCard from "../assets/components/layout/AuthorCard";
+import AuthorCard from "../assets/components/layout/BlogLayout/AuthorCard";
 import ShareSection from "../assets/components/layout/ShareSection";
-// import NextPreviousSection from "../assets/components/sections/NextPreviousSection";
 import MoreArticlesSection from "../assets/components/sections/MoreArticlesSection";
 import TagSection from "../assets/components/sections/TagSection";
 const BlogPage = () => {
@@ -49,9 +48,6 @@ const BlogPage = () => {
       <ShareSection blog={blog} />
 
       <AuthorCard blog={blog} />
-
-
-      {/* <NextPreviousSection currentBlog={blog} /> */}
 
 <MoreArticlesSection currentBlog={blog} />
     </div>

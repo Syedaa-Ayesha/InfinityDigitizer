@@ -1,5 +1,5 @@
 import PricingCard from "../../layout/PricingPageLayout/PricingCard"
-import PricingSlider from "../../layout/PricingPageLayout/PricingSlider"
+import PricingSlider from "../../layout/PricingSlider"
 import PricingSectionHeading from "../../layout/PricingPageLayout/PricingSectionHeading"
 import OutlineBtn from "../../layout/OutlineBtn"
 import {logoDesignServices}  from "../../common/PricingPageData"

@@ -1,29 +1,30 @@
 import Hero from "../assets/components/sections/HomePageSections/Hero"
-import LoginSubmissionPortal from "../assets/components/sections/LoginSubmissionPortal"
-import PortfolioSlider from "../assets/components/sections/PortfolioSlider";
+import ServiceForm from "../assets/components/sections/HomePageSections/ServiceForm"
+import PortfolioSlider from "../assets/components/sections/HomePageSections/Portfolio";
 import Services from "../assets/components/sections/Services";
-import OrderProcess from "../assets/components/sections/OrderProcess";
-import ChooseUs from "../assets/components/sections/ChooseUs";
-import Portfolio from "../assets/components/sections/Portfolio";
-import PricingSection from "../assets/components/sections/PricingSection";
-import FAQ from "../assets/components/sections/FAQ";
-import Testimonial from "../assets/components/sections/Testimonial";
-// import Footer from "../assets/components/sections/Footer";
+import OrderProcess from "../assets/components/sections/HomePageSections/OrderProcess";
+import ChooseUs from "../assets/components/sections/HomePageSections/ChooseUs";
+// import Portfolio from "../assets/components/sections/Portfolio";
+import PricingSection from "../assets/components/sections/HomePageSections/PricingSection";
+import FAQ from "../assets/components/sections/HomePageSections/FAQ";
+import Testimonial from "../assets/components/sections/HomePageSections/Testimonial";
+// import FreeDesignSection from "../assets/components/sections/HomePageSections/FreeDesignSection";
+
 const Home = () => {
   return (
 
 <>
        <Hero />
-       <LoginSubmissionPortal />
+       <ServiceForm />
        <PortfolioSlider/>
        <Services/>
        <OrderProcess/>
        <ChooseUs/>
        <PricingSection/>
-       <Portfolio/>
+       {/* <Portfolio/> */}
+       {/* <FreeDesignSection /> */}
        <FAQ/>
        <Testimonial />
-       {/* <Footer/> */}
        </>
   )
 }

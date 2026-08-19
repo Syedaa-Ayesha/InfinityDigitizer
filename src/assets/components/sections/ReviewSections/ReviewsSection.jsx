@@ -1,33 +1,210 @@
-import { useState } from "react";
+
+
+// import { useEffect, useState } from "react";
+
+// import ReviewHeader from "./ReviewHeader";
+// import ReviewCard from "../../layout/ReviewCard";
+// import CommonTab from "../../layout/CommonTab";
+// import CommonSlider from "../../layout/PricingSlider";
+// import OutlineButton from "../../layout/OutlineBtn";
+
+// import { Headphones, MoveUpRight } from "lucide-react";
+
+// import {
+//   reviewsData,
+//   reviewTabs,
+// } from "../../common/ReviewsData";
+
+// import CTASection from "../../layout/CTASection";
+
+// const REVIEWS_PER_LOAD = 6;
+
+// const ReviewsSection = () => {
+//   const [activeTab, setActiveTab] = useState("all");
+//   const [visibleCount, setVisibleCount] = useState(REVIEWS_PER_LOAD);
+
+//   const filteredReviews =
+//     activeTab === "all"
+//       ? reviewsData
+//       : reviewsData.filter(
+//           (review) => review.category === activeTab
+//         );
+
+//   // Reset Load More when tab changes
+//   useEffect(() => {
+//     // setVisibleCount(REVIEWS_PER_LOAD);
+//   }, [activeTab]);
+
+//   const visibleReviews = filteredReviews.slice(0, visibleCount);
+
+//   const hasMoreReviews = visibleCount < filteredReviews.length;
+
+//   const handleLoadMore = () => {
+//     setVisibleCount((prev) => prev + REVIEWS_PER_LOAD);
+//   };
+
+//   return (
+//     <section className="mx-auto w-full max-w-[1300px] px-4 py-[22px] sm:px-6 lg:px-8">
+
+//       {/* Header */}
+//       <ReviewHeader />
+
+//       {/* Tabs */}
+//       <div className="mt-6 flex justify-center">
+//         <CommonTab
+//           tabs={reviewTabs}
+//           activeTab={activeTab}
+//           setActiveTab={setActiveTab}
+//           classname="
+//             mt-0
+//             max-w-full
+//             overflow-x-auto
+//             border-0
+//             bg-transparent
+//             p-0
+//             shadow-none
+//           "
+//         />
+//       </div>
+
+//       {/* ================= DESKTOP / TABLET ================= */}
+//       <div
+//         className="
+//           mt-6
+//           hidden
+//           grid-cols-1
+//           gap-3
+//           sm:grid
+//           sm:grid-cols-2
+//           lg:grid-cols-3
+//           lg:gap-4
+//         "
+//       >
+//         {visibleReviews.map((review) => (
+//           <ReviewCard
+//             key={review.id}
+//             review={review}
+//           />
+//         ))}
+//       </div>
+
+//       {/* ================= MOBILE SLIDER ================= */}
+//       <div className="mt-6 block sm:hidden">
+//         <CommonSlider
+//           data={visibleReviews}
+//           CardComponent={ReviewCard}
+//           cardProp="review"
+//           slidesPerView={1}
+//           spaceBetween={16}
+//           loop={false}
+//         />
+//       </div>
+
+//       {/* Load More */}
+//       {hasMoreReviews && (
+//         <div className="mt-6 flex justify-center">
+//           <OutlineButton
+//             title="Load More Reviews"
+//             Icon={MoveUpRight}
+//             onClick={handleLoadMore}
+//           />
+//         </div>
+//       )}
+
+//       {/* CTA */}
+//       <CTASection
+//         icon={
+//           <Headphones
+//             size={38}
+//             strokeWidth={2.2}
+//             className="text-[#7434E5]"
+//           />
+//         }
+//         title="Your Artwork Deserves the Best!"
+//         description="Upload it now, and our team will turn it into a clean, high quality file, fast, accurate, no errors, no delays, just quality work"
+//         buttonText="Get Free Quote"
+//         titleClass="text-[28px]"
+//         sectionWidth="w-[1330px]"
+//         iconHeight="h-[96px]"
+//         iconWidth="w-[96px]"
+//         bg="bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)] mt-5"
+//       />
+//     </section>
+//   );
+// };
+
+// export default ReviewsSection;
+
+
+
+import {useState } from "react";
 
 import ReviewHeader from "./ReviewHeader";
-import ReviewCard from "../../layout/ReviewCard";
 import CommonTab from "../../layout/CommonTab";
+import CommonSlider from "../../layout/PricingSlider";
 import OutlineButton from "../../layout/OutlineBtn";
+import TestimonialCard from "../../layout/HomeLayout/TextimonialCard"
 
+import { Headphones, RefreshCw } from "lucide-react";
+import { TestimonialData } from '../../common/TestimonialData'
 import {
-  reviewsData,
+ 
   reviewTabs,
 } from "../../common/ReviewsData";
 
+import CTASection from "../../layout/CTASection";
+
+const REVIEWS_PER_LOAD = 3;
+
 const ReviewsSection = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(REVIEWS_PER_LOAD);
+
+  /* ================= FILTER REVIEWS ================= */
 
   const filteredReviews =
     activeTab === "all"
-      ? reviewsData
-      : reviewsData.filter(
+      ? TestimonialData
+      : TestimonialData.filter(
           (review) => review.category === activeTab
         );
 
-  return (
-    <section className="mx-auto p-[22px] max-w-[1300px] lg:py-16">
+  /* ================= RESET ON TAB CHANGE ================= */
 
-      {/* Header */}
+  // useEffect(() => {
+  //   setVisibleCount(REVIEWS_PER_LOAD);
+  // }, [activeTab]);
+
+  /* ================= VISIBLE REVIEWS ================= */
+
+  const visibleReviews = filteredReviews.slice(0, visibleCount);
+
+  /* ================= LOAD MORE ================= */
+
+  const hasMoreReviews =
+    visibleCount < filteredReviews.length;
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + REVIEWS_PER_LOAD);
+  };
+
+  return (
+    <section
+      className="
+        mx-auto
+        w-full
+        max-w-[1300px]
+        px-4
+        py-[22px]
+        sm:px-6
+        lg:px-8
+      "
+    >
+      {/* ================= HEADER ================= */}
 
       <ReviewHeader />
 
-      {/* Tabs */}
+      {/* ================= TABS ================= */}
 
       <div className="mt-6 flex justify-center">
         <CommonTab
@@ -46,33 +223,73 @@ const ReviewsSection = () => {
         />
       </div>
 
-      {/* Reviews Grid */}
+      {/* ================= DESKTOP / TABLET GRID ================= */}
 
       <div
         className="
           mt-6
-          grid
+          hidden
           grid-cols-1
-          gap-3
+          gap-4
+          sm:grid
           sm:grid-cols-2
           lg:grid-cols-3
-          lg:gap-4
+          lg:gap-5
         "
       >
-        {filteredReviews.map((review) => (
-          <ReviewCard
+        {visibleReviews.map((review) => (
+          <TestimonialCard
             key={review.id}
-            review={review}
+            item={review}
           />
         ))}
       </div>
 
-      {/* Load More */}
+      {/* ================= MOBILE SLIDER ================= */}
 
-      <div className="mt-5 flex justify-center">
-        <OutlineButton title="Load More Reviews ↗" />
+      <div className="mt-6 block sm:hidden">
+        <CommonSlider
+          data={visibleReviews}
+          CardComponent={TestimonialCard}
+          cardProp="item"
+          slidesPerView={1}
+          spaceBetween={16}
+          loop={false}
+        />
       </div>
 
+      {/* ================= LOAD MORE ================= */}
+
+      {hasMoreReviews && (
+        <div className="mt-7 flex justify-center">
+          <OutlineButton
+            title="Load More Reviews"
+            Icon={RefreshCw}
+           classname="w-full lg:w-fit justify-center"
+            onClick={handleLoadMore}
+          />
+        </div>
+      )}
+
+      {/* ================= CTA ================= */}
+
+      <CTASection
+        icon={
+          <Headphones
+            size={38}
+            strokeWidth={2.2}
+            className="text-[#7434E5]"
+          />
+        }
+        title="Your Artwork Deserves the Best!"
+        description="Upload it now, and our team will turn it into a clean, high quality file, fast, accurate, no errors, no delays, just quality work"
+        buttonText="Get Free Quote"
+        titleClass="text-[28px]"
+        sectionWidth="w-[1330px]"
+        iconHeight="h-[96px]"
+        iconWidth="w-[96px]"
+        bg="bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)] mt-5"
+      />
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import { Flower, PenTool, Gem, ArrowRight, Sparkle, ArrowUpRight } from "lucide-react";
-import SectionHeading from "../common/SectionHeading"
+import SectionHeading from "../layout/SectionHeading"
 
 const services = [
   {
@@ -29,8 +29,8 @@ const services = [
 ];
 const Services = () => {
   return (
-    <>
-    <section className="py-12.5  m-auto "  style={{
+    
+    <section className="p-[22px] lg:py-12.5  m-auto "  style={{
     background:
       "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
   }}>
@@ -40,15 +40,17 @@ const Services = () => {
   heading="WHAT SERVICES WE OFFER"
   description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs. "
 />
-    <div className="w-max m-auto my-12 grid grid-cols-3 gap-8 " >
+    <div className="w-max m-auto my-12 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-18 " >
 
     {services.map((service) => (
 
         <div
             key={service.id}
             className="
+            
+            w-84
             h-74
-            w-74
+            lg:w-74
             group
             rounded-[18px]
             bg-white
@@ -77,7 +79,7 @@ const Services = () => {
 
             {/* Divider */}
 
-            <div className="mx-auto  flex w-22.5 items-center gap-3">
+            <div className="mx-auto   flex w-22.5 items-center gap-3">
 
                 <div className="h-0.5 flex-1 bg-[#7434E5] my-3"></div>
 
@@ -109,10 +111,10 @@ const Services = () => {
 
             {/* Button */}
 
-            <div className="text-[20px] font-inter font-semibold flex justify-center ">
+            <div className="-inter font-semibold flex justify-center ">
 
                 <button
-                    className="mt-auto h-10.5  w-44 rounded-lg bg-[#753DF0]  text-white font-semibold text-[12px] uppercase flex items-center justify-center gap-2 absolute inset-x-0 bottom-6.5 left-14.5"
+                    className=" h-10.5  w-44 mx-auto rounded-lg bg-[#753DF0] text-white font-semibold text-[12px] uppercase flex items-center justify-center gap-2 absolute inset-x-0 bottom-4"
                     
                 >
 
@@ -129,39 +131,174 @@ const Services = () => {
     ))}
 
 </div>
-<div className="w-241.75 h-57 rounded-2xl bg-linear-to-r from-[#B17BFF] via-[#8C45F6] to-[#7434E5] flex items-center justify-between m-auto px-8.5 py-5.25">
+{/* CTA Section */}
+<div
+  className="
+    /* ================= DESKTOP — ORIGINAL ================= */
+    w-258.75
+    h-57
+    rounded-2xl
+    bg-linear-to-r
+    from-[#B17BFF]
+    via-[#8C45F6]
+    to-[#7434E5]
+    flex
+    items-center
+    justify-between
+    m-auto
+    px-8.5
+    py-5.25
 
-        {/* Left Side */}
-        <div className="flex items-center gap-10.5">
+    /* ================= TABLET ================= */
+    max-lg:w-[calc(100%-40px)]
+    max-lg:h-auto
+    max-lg:min-h-[220px]
+    max-lg:px-7
+    max-lg:py-7
+    max-lg:gap-6
 
-          {/* Heading */}
-          <h2 className="w-103.25 h-36 font-inter text-white text-[40px] font-semibold leading-13">
-            Have a Design in Mind? Let's Turn it into Perfect Design
-          </h2>
+    /* ================= MOBILE ================= */
+    max-md:w-[calc(100%-16px)]
+    max-md:min-h-0
+    max-md:flex-col
+    max-md:items-stretch
+    max-md:justify-start
+    max-md:gap-0
+    max-md:px-7
+    max-md:py-8
+  "
+>
+  {/* ================= LEFT CONTENT ================= */}
 
-          {/* Description */}
-          <p className="w-53.75 text-[14px] leading-5 font-inter text-white/90">
-            Share your artwork with our experts and receive high quality,
-            machine ready embroidery & vector files designed for smooth
-            production and outstanding results.
-          </p>
+  <div
+    className="
+      flex
+      items-center
+      gap-10.5
 
-        </div>
+      /* Tablet */
+      max-lg:w-full
+      max-lg:gap-7
 
-        {/* Arrow Box */}
-        <button className="group w-46.5 h-46.5 rounded-[18px] border-2 border-white flex items-center justify-center transition-all duration-300 hover:bg-white/10">
+      /* Mobile */
+      max-md:flex-col
+      max-md:items-stretch
+      max-md:gap-0
+    "
+  >
+    {/* Heading */}
 
-          <ArrowUpRight size={108}
-            strokeWidth={2.8}
-            className=" text-white transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1 group-hover:-translate-y-1 box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1"
-          />
+    <h2
+      className="
+        w-103.25
+        h-36
+        font-inter
+        text-white
+        text-[40px]
+        font-semibold
+        leading-13
 
-        </button>
+        /* Tablet */
+        max-lg:h-auto
+        max-lg:w-[55%]
+        max-lg:text-[32px]
+        max-lg:leading-10
 
-      </div>
+        /* Mobile */
+        max-md:w-full
+        max-md:h-auto
+        max-md:text-[42px]
+        max-md:leading-[1.2]
+        max-md:tracking-[-1.2px]
+      "
+    >
+      Have a Design in Mind? Let's Turn it into Perfect Design
+    </h2>
+
+    {/* Description */}
+
+    <p
+      className="
+        w-53.75
+        font-inter
+        text-[14px]
+        leading-5
+        text-white/90
+
+        /* Tablet */
+        max-lg:w-[45%]
+        max-lg:text-[13px]
+
+        /* Mobile */
+        max-md:mt-10
+        max-md:w-full
+        max-md:text-[18px]
+        max-md:leading-[1.35]
+      "
+    >
+      Share your artwork with our experts and receive high quality,
+      machine ready embroidery & vector files designed for smooth
+      production and outstanding results.
+    </p>
+  </div>
+
+  {/* ================= ARROW BOX ================= */}
+
+  <button
+    type="button"
+    className="
+      group
+      w-38.5
+      h-38.5
+      shrink-0
+      rounded-[18px]
+      border-2
+      border-white
+      flex
+      items-center
+      justify-center
+      transition-all
+      duration-300
+      hover:bg-white/10
+
+      /* Tablet */
+      max-lg:w-28
+      max-lg:h-28
+      max-lg:rounded-[16px]
+
+      /* Mobile */
+      max-md:mt-10
+      max-md:w-full
+      max-md:h-auto
+      max-md:aspect-square
+      max-md:rounded-[14px]
+    "
+  >
+    <ArrowUpRight
+      size={108}
+      strokeWidth={2.8}
+      className="
+        text-white
+        transition-transform
+        duration-300
+        group-hover:scale-110
+        group-hover:translate-x-1
+        group-hover:-translate-y-1
+
+        /* Tablet */
+        max-lg:w-16
+        max-lg:h-16
+
+        /* Mobile */
+        max-md:w-[55%]
+        max-md:h-[55%]
+      "
+    />
+  </button>
+</div>
 
 </section>
-    </>
+    
   )
 }
 

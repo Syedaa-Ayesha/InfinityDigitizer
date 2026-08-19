@@ -1,115 +1,16 @@
-// import {
-//   FileCheck,
-//   Headset,
-//   ShieldCheck,
-//   Zap,
-// } from "lucide-react";
-// import { FaWhatsapp } from "react-icons/fa";
-// import Heading from "../../common/Heading";
-// import ServiceHighlights from "./ServiceHighlights";
-// import Herobtn from "../../common/Herobtn";
-// import TrustPanel from "../../common/TrustPanel";
-
-// const services = [
-//   {
-//     title: `4-24 hours\nTurnaround`,
-//     Icon: Zap,
-//   },
-//   {
-//     title: `100% Quality\nGuarantee`,
-//     Icon: ShieldCheck,
-//   },
-//   {
-//     title: `All major\nfiles formats`,
-//     Icon: FileCheck,
-//   },
-//   {
-//     title: `24/7 friendly\nsupport`,
-//     Icon: Headset,
-//   },
-// ];
-
-// const HeroContentCard = () => {
-//   return (
-//     <div className="min-w-[613px] border">
-
-//       {/* WhatsApp Banner */}
-//       <div className="mb-[18px] flex w-fit items-center rounded-3xl bg-[#16E156]/10 px-3 py-1">
-//         <FaWhatsapp className="h-6 w-6 text-[#16E156]" />
-
-//         <a
-//           href="https://wa.me/923001234567"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className="ml-1 text-sm font-semibold uppercase text-[#16E156]"
-//         >
-//           Click here to Contact Quickly
-//         </a>
-//       </div>
-//     <Heading title={`Professional
-//         Embroidery Digitizing,
-//         Logo Designing &
-//         Vector Art Services`}/>
-     
-
-     
-
-//       {/* Features List */}
-//       <ul className="mb-7 ml-1 list-inside list-disc text-[#00030B]/70">
-//         <li>Serving the USA, Canada, the UK & Australia</li>
-//         <li>Fast Turnaround — 4 to 24 Hours</li>
-//         <li>Quality Guarantee on Every File</li>
-//       </ul>
-//  {/* Subtitle */}
-//       <p className="my-7 text-base font-medium text-[#00030B]/70">
-//         OVER 35,000 HAPPY CUSTOMERS, SERVING SINCE 2012
-//       </p>
-//       {/* Service Highlights */}
-//       <div className="mb-7 flex w-[553px] flex-wrap gap-4">
-//         {services.map((service, index) => (
-//           <ServiceHighlights
-//             key={index}
-//             title={service.title}
-//             Icon={service.Icon}
-//           />
-//         ))}
-//       </div>
-
-//       {/* Buttons */}
-//       <div className="flex gap-4">
-//         <Herobtn
-//           className="border border-[#8A38F5] bg-[#8A38F5] text-white"
-//           btnText="Get Free Quote"
-//         />
-
-//         <Herobtn
-//           className="border border-[#3F4D5E] bg-white text-[#00030B]"
-//           btnText="View Portfolio"
-//         />
-//       </div>
-
-//       {/* Trust Section */}
-//       <TrustPanel />
-//     </div>
-//   );
-// };
-
-// export default HeroContentCard;
-
-
 import {
+  ArrowRight,
   FileCheck,
   Headset,
   ShieldCheck,
   Zap,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-
-// import Heading from "../../common/Heading";
 import ServiceHighlights from "../ServiceHighlights";
-import Herobtn from "../../common/Herobtn";
-import TrustPanel from "../TrustPanel";
-
+import TrustPanel from "./TrustPanel";
+import OutlineBtn from "../OutlineBtn";
+import SolidButton from "../SolidButton";
+import { useNavigate } from "react-router-dom";
 const services = [
   {
     title: `4-24 hours\nTurnaround`,
@@ -130,12 +31,22 @@ const services = [
 ];
 
 const HeroContentCard = () => {
+    const navigate = useNavigate();
+    const handleGetFreeQuote = () => {
+    const quoteSection = document.getElementById("quote");
+
+    if (quoteSection) {
+      quoteSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <div
       className="
         w-full
         max-w-[613px]
-
         lg:min-w-[613px]
         lg:max-w-[613px]
       "
@@ -154,7 +65,6 @@ const HeroContentCard = () => {
           bg-[#16E156]/10
           px-3
           py-1
-
           sm:mb-[18px]
         "
       >
@@ -164,7 +74,6 @@ const HeroContentCard = () => {
             w-5
             shrink-0
             text-[#16E156]
-
             sm:h-6
             sm:w-6
           "
@@ -181,7 +90,6 @@ const HeroContentCard = () => {
             font-semibold
             uppercase
             text-[#16E156]
-
             sm:text-sm
           "
         >
@@ -191,57 +99,34 @@ const HeroContentCard = () => {
 
 
       {/* ================= MAIN HEADING ================= */}
-{/* 
-      <Heading
-        title={`Professional
-        Embroidery Digitizing,
-        Logo Designing &
-        Vector Art Services`}
-      /> */}
+
   <h1 className="text-[34px] font-bold leading-[110%] tracking-[-0.01em] text-[#04000B] mb-3 whitespace-pre-line lg:text-[58px]" >
       Professional Embroidery Digitizing,
         Logo Designing &
         Vector Art Services
       </h1>
 
-      {/* ================= FEATURES ================= */}
-
-      <ul
-        className="
-          mb-5
-          ml-1
-          list-inside
-          list-disc
-          text-sm
-          leading-6
-          text-[#00030B]/70
-
-          sm:mb-7
-          sm:text-base
-          sm:leading-7
-        "
-      >
-        <li>Serving the USA, Canada, the UK & Australia</li>
-        <li>Fast Turnaround — 4 to 24 Hours</li>
-        <li>Quality Guarantee on Every File</li>
-      </ul>
-
 
       {/* ================= CUSTOMER TEXT ================= */}
 
       <p
         className="
+        max-w-[286px]
           my-5
           text-sm
-          font-medium
-          leading-6
+          font-inter
+          leading-5
           text-[#00030B]/70
-
+whitespace-pre-line
           sm:my-7
           sm:text-base
+          lg:max-w-[484px]
         "
       >
-        OVER 35,000 HAPPY CUSTOMERS, SERVING SINCE 2012
+      Trusted by 35,000+ customers across the 
+      USA, Canada, the UK, and Australia since 
+      2012, we deliver precision crafted designs 
+      within 4 to 24 hours.
       </p>
 
 
@@ -280,10 +165,8 @@ border
     w-full
     flex-wrap
     gap-3
-
     sm:mb-7
     sm:gap-4
-
     lg:max-w-[553px]
     lg:flex-nowrap
   "
@@ -294,9 +177,13 @@ border
       title={service.title}
       Icon={service.Icon}
       width="
+        items-start
+        justify-start
         w-[calc(50%-6px)]
         lg:w-auto
         lg:flex-1
+      lg:items-center
+      lg:justify-center
       "
     />
   ))}
@@ -309,47 +196,244 @@ border
         className="
           flex
           w-full
-          flex-col
-          gap-3
-
-          sm:flex-row
-          sm:gap-4
+          gap-8
+          flex-row
+      lg:gap-3
         "
       >
-        <Herobtn
-          className="
-            w-full
-            border
-            border-[#8A38F5]
-            bg-[#8A38F5]
-            text-white
-
-            sm:w-auto
-          "
-          btnText="Get Free Quote"
-        />
-
-        <Herobtn
-          className="
-            w-full
-            border
-            border-[#3F4D5E]
-            bg-white
-            text-[#00030B]
-
-            sm:w-auto
-          "
-          btnText="View Portfolio"
-        />
+        <SolidButton title="Get Free Quote" Icon={ArrowRight} classname="rounded-xl" type="button"  
+         onClick={handleGetFreeQuote}/>
+       <OutlineBtn title = "View Portfolio" Icon ={ArrowRight} classname="rounded-xl" type="button" onClick={() => navigate("/free-design")}/>
       </div>
 
-
       {/* ================= TRUST PANEL ================= */}
-
+<div className="flex justify-center items-center w-full lg:justify-start">
       <TrustPanel />
-
+</div>
     </div>
   );
 };
 
 export default HeroContentCard;
+
+
+
+// import {
+//   ArrowRight,
+//   FileCheck,
+//   Headset,
+//   ShieldCheck,
+//   Zap,
+// } from "lucide-react";
+
+// import { FaWhatsapp } from "react-icons/fa";
+
+// import ServiceHighlights from "../ServiceHighlights";
+// import TrustPanel from "./TrustPanel";
+// import OutlineBtn from "../OutlineBtn";
+// import SolidButton from "../SolidButton";
+
+// const services = [
+//   {
+//     title: `4-24 hours\nTurnaround`,
+//     Icon: Zap,
+//   },
+//   {
+//     title: `100% Quality\nGuarantee`,
+//     Icon: ShieldCheck,
+//   },
+//   {
+//     title: `All major\nfiles formats`,
+//     Icon: FileCheck,
+//   },
+//   {
+//     title: `24/7 friendly\nsupport`,
+//     Icon: Headset,
+//   },
+// ];
+
+// const HeroContentCard = () => {
+//   const handleGetFreeQuote = () => {
+//     const quoteSection = document.getElementById("quote");
+
+//     if (quoteSection) {
+//       quoteSection.scrollIntoView({
+//         behavior: "smooth",
+//         block: "start",
+//       });
+//     }
+//   };
+
+//   return (
+//     <div
+//       className="
+//         w-full
+//         max-w-[613px]
+//         lg:min-w-[613px]
+//         lg:max-w-[613px]
+//       "
+//     >
+//       {/* ================= WHATSAPP BANNER ================= */}
+
+//       <div
+//         className="
+//           mb-4
+//           flex
+//           w-fit
+//           max-w-full
+//           items-center
+//           rounded-3xl
+//           bg-[#16E156]/10
+//           px-3
+//           py-1
+//           sm:mb-[18px]
+//         "
+//       >
+//         <FaWhatsapp
+//           className="
+//             h-5
+//             w-5
+//             shrink-0
+//             text-[#16E156]
+//             sm:h-6
+//             sm:w-6
+//           "
+//         />
+
+//         <a
+//           href="https://wa.me/923001234567"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className="
+//             ml-1
+//             whitespace-nowrap
+//             text-[12px]
+//             font-semibold
+//             uppercase
+//             text-[#16E156]
+//             sm:text-sm
+//           "
+//         >
+//           Click here to Contact Quickly
+//         </a>
+//       </div>
+
+//       {/* ================= MAIN HEADING ================= */}
+
+//       <h1
+//         className="
+//           mb-3
+//           whitespace-pre-line
+//           text-[34px]
+//           font-bold
+//           leading-[110%]
+//           tracking-[-0.01em]
+//           text-[#04000B]
+//           lg:text-[58px]
+//         "
+//       >
+//         Professional Embroidery Digitizing,
+//         Logo Designing &
+//         Vector Art Services
+//       </h1>
+
+//       {/* ================= CUSTOMER TEXT ================= */}
+
+//       <p
+//         className="
+//           my-5
+//           max-w-[286px]
+//           whitespace-pre-line
+//           font-inter
+//           text-sm
+//           leading-5
+//           text-[#00030B]/70
+//           sm:my-7
+//           sm:text-base
+//           lg:max-w-[484px]
+//         "
+//       >
+//         Trusted by 35,000+ customers across the
+//         USA, Canada, the UK, and Australia since
+//         2012, we deliver precision crafted designs
+//         within 4 to 24 hours.
+//       </p>
+
+//       {/* ================= SERVICE HIGHLIGHTS ================= */}
+
+//       <div
+//         className="
+//           mb-6
+//           flex
+//           w-full
+//           flex-wrap
+//           gap-3
+//           sm:mb-7
+//           sm:gap-4
+//           lg:max-w-[553px]
+//           lg:flex-nowrap
+//         "
+//       >
+//         {services.map((service, index) => (
+//           <ServiceHighlights
+//             key={index}
+//             title={service.title}
+//             Icon={service.Icon}
+//             width="
+//               items-start
+//               justify-start
+//               w-[calc(50%-6px)]
+//               lg:w-auto
+//               lg:flex-1
+//               lg:items-center
+//               lg:justify-center
+//             "
+//           />
+//         ))}
+//       </div>
+
+//       {/* ================= BUTTONS ================= */}
+
+//       <div
+//         className="
+//           flex
+//           w-full
+//           flex-row
+//           gap-8
+//           lg:gap-3
+//         "
+//       >
+//         <SolidButton
+//           title="Get Free Quote"
+//           Icon={ArrowRight}
+//           classname="rounded-xl"
+//           type="button"
+//           onClick={handleGetFreeQuote}
+//         />
+
+//         <OutlineBtn
+//           title="View Portfolio"
+//           Icon={ArrowRight}
+//           classname="rounded-xl"
+//           type="button"
+//         />
+//       </div>
+
+//       {/* ================= TRUST PANEL ================= */}
+
+//       <div
+//         className="
+//           flex
+//           w-full
+//           items-center
+//           justify-center
+//           lg:justify-start
+//         "
+//       >
+//         <TrustPanel />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HeroContentCard;

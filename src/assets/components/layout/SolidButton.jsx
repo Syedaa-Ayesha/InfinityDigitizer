@@ -1,8 +1,10 @@
 
 
-const SolidButton = ({title, Icon, classname}) => {
+const SolidButton = ({title, Icon, classname, type, onClick}) => {
   return (
      <button
+     type={type}
+     onClick={onClick}
         className={`
           group
           flex
@@ -15,13 +17,14 @@ const SolidButton = ({title, Icon, classname}) => {
           rounded-full
           bg-[linear-gradient(94.72deg,#6C29E0_0%,#5413C3_100%)]
           text-white
+          cursor-pointer
           font-semibold
           cursor-pointer
           transition-all
           duration-300
           hover:shadow-xl
-          hover:scale-[1.01]
-          lg:px-
+          lg:px-8
+          
           ${classname}
         `}
       >

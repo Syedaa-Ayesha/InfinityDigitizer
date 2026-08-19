@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import SearchInput from "../layout/SearchInput";
-import CategoryButton from "../layout/CategoryBtn";
+import CategoryButton from "../layout/BlogLayout/CategoryBtn";
 
 const BlogFilter = () => {
       const BlogCategories = [
@@ -31,7 +31,6 @@ const [activeCategory, setActiveCategory] = useState("All");
           flex
           flex-col
           gap-5
-
           lg:flex-row
           lg:items-center
           lg:justify-around

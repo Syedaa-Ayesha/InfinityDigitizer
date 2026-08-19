@@ -6,7 +6,6 @@ import Design04 from "../../images/Before After-07.jpg 1.png";
 export const FreeDesignData = [
     {
         id: 1,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -15,7 +14,6 @@ export const FreeDesignData = [
     },
     {
         id: 2,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -24,7 +22,6 @@ export const FreeDesignData = [
     },
     {
         id: 3,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -33,7 +30,6 @@ export const FreeDesignData = [
     },
     {
         id: 4,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -42,7 +38,6 @@ export const FreeDesignData = [
     },
     {
         id: 17,
-        type: "premium",
         title: "Butterfly Beauty",
         image: Design02,
         price: "$1.00",
@@ -51,7 +46,6 @@ export const FreeDesignData = [
     },
     {
         id: 5,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -61,7 +55,6 @@ export const FreeDesignData = [
 
     {
         id: 6,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -70,7 +63,6 @@ export const FreeDesignData = [
     },
     {
         id: 7,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -79,7 +71,6 @@ export const FreeDesignData = [
     },
     {
         id: 8,
-        type: "free",
         title: "Tribal Wolf Design",
         image: Design01,
         price: null,
@@ -89,7 +80,6 @@ export const FreeDesignData = [
 
     {
         id: 9,
-        type: "premium",
         title: "Butterfly Beauty9",
         category: "Embroidery Digitizing",
         image: Design02,
@@ -182,7 +172,6 @@ export const FreeDesignData = [
 
     {
         id: 10,
-        type: "premium",
         title: "Butterfly Beauty10",
         category: "Embroidery Digitizing",
         image: Design02,
@@ -193,7 +182,6 @@ export const FreeDesignData = [
         reviews: 128,
         description:
             "The Butterfly Beauty Embroidery Design is a high-quality, professionally digitized embroidery file ready for immediate use on your embroidery machine. Featuring a graceful butterfly with detailed wing patterns, this design is ideal for fashion garments, accessories, home décor, and gifts.",
-        favorite: true,
         included: [
             "Instant Digital Download",
             "Commercial License Included",

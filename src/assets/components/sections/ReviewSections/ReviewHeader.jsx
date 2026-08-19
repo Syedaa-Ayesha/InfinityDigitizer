@@ -1,11 +1,11 @@
 import { Star } from "lucide-react"
-import SectionHeading from "../../common/SectionHeading"
+import SectionHeading from "../../layout/SectionHeading"
 import StatsSection from "./StateSection"
 
 
 const ReviewHeader = () => {
   return (
-     <section className="bg-[#FFFFFF] p-[22px] lg:py-16 border">
+     <section className="bg-[#FFFFFF] p-[22px]">
          <SectionHeading
           icon={<Star size={24} />}
           badge="Reviews"

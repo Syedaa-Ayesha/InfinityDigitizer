@@ -24,3 +24,77 @@
 .swiper-slide {
   background: transparent !important;
 }
+
+
+
+/* =========================================
+   PRICING SLIDER
+========================================= */
+
+.pricing-slider .swiper {
+  overflow: visible;
+}
+
+.pricing-slider .swiper-wrapper {
+  align-items: center;
+}
+
+.pricing-slider .swiper-slide {
+  position: relative;
+  z-index: 1;
+  transition:
+    transform 500ms ease,
+    opacity 500ms ease,
+    z-index 500ms ease;
+}
+
+.pricing-slider .swiper-slide .pricing-card {
+  transform: scale(0.94);
+  opacity: 0.96;
+}
+
+/* CENTER / ACTIVE CARD */
+.pricing-slider .swiper-slide-active {
+  z-index: 10;
+}
+
+.pricing-slider .swiper-slide-active .pricing-card {
+  transform: scale(1);
+  opacity: 1;
+  border-color: #7434e5;
+  box-shadow:
+    0px 18px 38px rgba(116, 52, 229, 0.18),
+    0px 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1024px) {
+  .pricing-slider .swiper-slide .pricing-card {
+    transform: scale(0.94);
+  }
+
+  .pricing-slider .swiper-slide-active .pricing-card {
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .pricing-slider .swiper-slide .pricing-card {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .pricing-slider .swiper-slide-active .pricing-card {
+    transform: scale(1);
+    border-color: #7434e5;
+  }
+}

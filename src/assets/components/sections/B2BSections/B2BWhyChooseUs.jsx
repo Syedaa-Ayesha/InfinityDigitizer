@@ -6,7 +6,7 @@ import {
   UserSquare,
 } from "lucide-react";
 import B2BHeading from "../../layout/B2BLayout/B2BHeading";
-import PricingSlider from "../../layout/PricingPageLayout/PricingSlider";
+import PricingSlider from "../../layout/PricingSlider";
 import ChooseUsCard from "../../layout/B2BLayout/ChooseUsCard";
 const chooseUsData = [
   {

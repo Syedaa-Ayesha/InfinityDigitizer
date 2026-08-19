@@ -69,6 +69,7 @@ const CommonTab = ({
       <div className="lg:hidden">
         <Swiper
           modules={[Navigation]}
+          loop={true}
           spaceBetween={12}
           slidesPerView={1.5}
           navigation

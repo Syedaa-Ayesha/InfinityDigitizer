@@ -1,5 +1,5 @@
 import B2BHeading from "../../layout/B2BLayout/B2BHeading";
-import PricingSlider from "../../layout/PricingPageLayout/PricingSlider";
+import PricingSlider from "../../layout/PricingSlider";
 import BusinessCard from "../../layout/B2BLayout/BusinessCard";
 import { Eye, Mail, Printer, Share2, Shirt, Store } from "lucide-react";
 const businessData = [

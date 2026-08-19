@@ -42,7 +42,7 @@ const statsData = [
 
 const StatsSection = () => {
   return (
-    <section className="px-4 lg:px-0">
+    <section className="">
       <div
         className="
           mx-auto
@@ -53,52 +53,41 @@ const StatsSection = () => {
         bg-white
          shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)]
           grid
-          grid-cols-2
-          sm:grid-cols-3
+          grid-cols-1
+        //   sm:grid-cols-1
           lg:grid-cols-5
+          
         "
       >
         {statsData.map((item, index) => {
           const Icon = item.icon;
-
+const isLast = index === statsData.length - 1;
           return (
             <div
               key={item.id}
               className={`
-                relative
-                flex
-                min-h-[210px]
-                flex-col
-                items-center
-                justify-center
-                px-5
-                py-7
-                text-center
+  relative
+  flex
+  min-h-[210px]
+  flex-col
+  items-center
+  justify-center
+  px-5
+  py-7
+  text-center
+  border-[#E2DFE8]
 
-                ${
-                  index < statsData.length - 1
-                    ? "lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:h-[120px] lg:after:w-px lg:after:-translate-y-1/2 lg:after:bg-[#E2DFE8]"
-                    : ""
-                }
+  /* Mobile + Tablet */
+  ${!isLast ? "max-lg:border-b" : ""}
+  ${!isLast ? "max-lg:border-r" : ""}
 
-                ${
-                  index === 0
-                    ? "max-lg:border-b max-lg:border-r max-lg:border-[#E2DFE8]"
-                    : ""
-                }
-
-                ${
-                  index === 1
-                    ? "max-lg:border-b max-lg:border-[#E2DFE8]"
-                    : ""
-                }
-
-                ${
-                  index === 2
-                    ? "max-lg:border-b max-lg:border-r max-lg:border-[#E2DFE8] sm:border-r-0"
-                    : ""
-                }
-              `}
+  /* Desktop */
+  ${
+    !isLast
+      ? "lg:after:absolute lg:after:right-0 lg:after:top-1/2 lg:after:h-[120px] lg:after:w-px lg:after:-translate-y-1/2 lg:after:bg-[#E2DFE8]"
+      : ""
+  }
+`}
             >
               {item.type === "rating" ? (
                 <>
@@ -218,3 +207,5 @@ const StatsSection = () => {
 };
 
 export default StatsSection;
+
+

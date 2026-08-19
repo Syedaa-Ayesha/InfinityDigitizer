@@ -4,7 +4,7 @@ import Footer from "./assets/components/sections/Footer";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
 import B2B from "./pages/B2BPage";
-import FreeDesign from "./pages/FreeDesign";
+// import FreeDesign from "./pages/FreeDesign";
 import Contactus from "./pages/Contactus";
 import DesignDetails from "./pages/DesignDetails";
 import BlogListPage from "./pages/BlogListPage";
@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/b2b" element={<B2B />} />
-        <Route path="/freedesign" element={<FreeDesign />} />
+        {/* <Route path="/freedesign" element={<FreeDesign />} /> */}
         <Route path="/design/:id" element={<DesignDetails />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/blogsList" element={<BlogListPage />} />

@@ -1,7 +1,7 @@
-import FooterLogo from "../layout/FooterLogo";
-import FooterColumn from "../layout/FooterColumn";
-import FooterContact from "../layout/FooterContact";
-import FooterBottom from "../layout/FooterBottom";
+import FooterLogo from "../layout/FooterLayout/FooterLogo";
+import FooterColumn from "../layout/FooterLayout/FooterColumn";
+import FooterContact from "../layout/FooterLayout/FooterContact";
+import FooterBottom from "../layout/FooterLayout/FooterBottom";
 
 import {
   footerServices,

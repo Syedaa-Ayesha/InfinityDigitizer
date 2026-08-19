@@ -90,10 +90,12 @@ const ServiceHighlights = ({
     <div
       className={`
         flex
-        flex-row
+        
         items-center
         justify-center
-        gap-[10px]
+        gap-3
+        lg:gap-[10px]
+        
         ${width}
       `}
     >

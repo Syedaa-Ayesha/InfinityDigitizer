@@ -1,6 +1,6 @@
-import FaqSection from "../assets/components/sections/FAQ"
+import FaqSection from "../assets/components/sections/HomePageSections/FAQ"
 import { MessageCircleQuestionMark } from "lucide-react"
-import SectionHeading from "../assets/components/common/SectionHeading"
+import SectionHeading from "../assets/components/layout/SectionHeading"
 const FAQPage = () => {
   return (
        <section className="bg-[#FFFFFF] p-[22px] lg:py-16">

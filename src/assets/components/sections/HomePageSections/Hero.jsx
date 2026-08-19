@@ -1,39 +1,3 @@
-// import HeroContentCard from "../layout/HomeLayout/HeroContentCard"
-// import HeroLogoContainer from "../layout/HomeLayout/HeroLogoContainer"
-// import ServiceRibbon from "../layout/HomeLayout/ServiceRibbon"
-// const Hero = () => {
-//   return (
-//     <>
-//     <section className="" style={{
-//     background:
-//       "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
-//   }}>
-//      <div className=" mx-auto
-//     flex
-//      max-w-[1320px]
-//     border
-//     flex-col
- 
-//     gap-12
-//     px-6
-//     py-12
-//     lg:flex-row
-//   lg:items-start
-//     lg:gap-10
-//     lg:px-0">
-//   <HeroContentCard />
-//   <HeroLogoContainer />
-// </div>
-// <ServiceRibbon/>
-//     </section>
-//     </>
-//   )
-// }
-
-// export default Hero
-
-
-
 import HeroContentCard from "../../layout/HomeLayout/HeroContentCard";
 import HeroLogoContainer from "../../layout/HomeLayout/HeroLogoContainer";
 import ServiceRibbon from "../../layout/HomeLayout/ServiceRibbon";

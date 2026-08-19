@@ -96,6 +96,24 @@ export const faqData = [
         answer:
           "We provide commonly requested formats such as DST, PES, JEF, EXP and more.",
       },
+      {
+        id: 3,
+        question: "What embroidery file formats do you provide?",
+        answer:
+          "We provide commonly requested formats such as DST, PES, JEF, EXP and more.",
+      },
+      {
+        id: 4,
+        question: "What embroidery file formats do you provide?",
+        answer:
+          "We provide commonly requested formats such as DST, PES, JEF, EXP and more.",
+      },
+      {
+        id: 5,
+        question: "What embroidery file formats do you provide?",
+        answer:
+          "We provide commonly requested formats such as DST, PES, JEF, EXP and more.",
+      },
     ],
   },
 
@@ -164,7 +182,7 @@ export const faqData = [
 
   {
     id: "support",
-    title: "Support",
+    title: "Policies & Support",
     icon: Headphones,
 
     questions: [

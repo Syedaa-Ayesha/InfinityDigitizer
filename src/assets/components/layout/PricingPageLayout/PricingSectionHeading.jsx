@@ -19,6 +19,7 @@ const PricingSectionHeading = ({ title }) => {
       <div
         className="
           hidden
+          mt-3
           sm:flex
           flex-1
           items-center
@@ -52,6 +53,7 @@ lg:text-[56px]"
       <div
         className="
           hidden
+          mt-3
           sm:flex
           flex-1
           items-center

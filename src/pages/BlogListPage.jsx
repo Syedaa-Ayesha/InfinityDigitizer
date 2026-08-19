@@ -1,10 +1,10 @@
-import SectionHeading from "../assets/components/common/SectionHeading"
+import SectionHeading from "../assets/components/layout/SectionHeading"
 import { Book, Headphones } from "lucide-react"
 import { useState } from "react";
 import CTASection from "../assets/components/layout/CTASection";
 import BlogFilter from "../assets/components/sections/BlogFilter";
 import BlogGrid from "../assets/components/layout/BlogGrid";
-import BlogPagination from "../assets/components/layout/BlogPagination";
+import BlogPagination from "../assets/components/layout/BlogLayout/BlogPagination";
 
 // import BlogNewsletter from "../components/sections/BlogNewsletter";
 const BlogListPage = () => {
@@ -12,17 +12,15 @@ const BlogListPage = () => {
   return (
 <main className="bg-[#FAFAFD] flex
 flex-col
-gap-10">
+gap-10
+p-[22px]
+lg:py-[54px]">
 
       <div
         className="
           mx-auto
-          max-w-[1440px]
-          px-5
-          py-14
-
-          lg:px-10
-          xl:px-12
+          max-w-[1440px]  
+          
         "
       >
          <SectionHeading
@@ -30,19 +28,18 @@ gap-10">
           badge="Our Blog"
           heading="LATEST BLOGS & EXPERT TIPS"
           description="Explore expert tips, practical guides, and industry updates to improve every design project."
-           headingClassName="text-[56px] text-[#0F1729] font-extrablod"
+           headingClassName="lg:text-[52px] text-[#0F1729] font-extrablod leading-12"
         />
       </div>
-<div className="mt-0">
+<div >
           <BlogFilter />
         </div>
-        <div className="mt-0">
+        <div className="w-fit mx-auto">
   <BlogGrid />
   <BlogPagination currentPage={currentPage}
         totalPages={5}
         onPageChange={setCurrentPage} />
-</div>
- <CTASection
+        <CTASection
   icon={
     <Headphones
       size={38}
@@ -59,10 +56,12 @@ work"
   sectionWidth = "w-[1330px]"
   iconHeight= "h-[96px]"
   iconWidth = "w-[96px]"
-  bg =" bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)]"
+  bg =" bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)] mt-9"
  
 />
 
+</div>
+ 
 
     </main>
   )

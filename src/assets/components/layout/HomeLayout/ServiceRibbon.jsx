@@ -13,7 +13,7 @@ const ServiceRibbon = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden border py-2 text-white uppercase bg-[#3F4D5E] text-[20px]">
+    <div className="w-full overflow-hidden text-base border py-1 lg:py-2 text-white uppercase bg-[#3F4D5E] lg:text-[20px]">
       <div className="flex w-max animate-[ribbon_40s_linear_infinite]">
         {/* First Set */}
         {ribbons.map((service, index) => (
