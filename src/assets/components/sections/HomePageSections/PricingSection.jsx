@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CommonTabs from "../../layout/CommonTab";
-import {embroideryPricing, vectorPricing, logoPricing} from "../../common/PricingData";
+// import {embroideryPricing, vectorPricing, logoPricing} from "../../common/PricingData";
+import { embroideryServices, vectorTracingServices, logoDesignServices} from '../../common/PricingPageData'
 import SectionHeading from "../../layout/SectionHeading";
 import { Tag} from "lucide-react";
 import PricingCard from "../../layout/PricingCard";
@@ -10,19 +11,19 @@ const pricingTabs = [
     id: 1,
     title: "Embroidery Digitizing",
     value: "embroidery",
-    data: embroideryPricing,
+    data: embroideryServices,
   },
   {
     id: 2,
     title: "Vector Tracing",
     value: "vector",
-    data: vectorPricing,
+    data: vectorTracingServices,
   },
   {
     id: 3,
     title: "Logo Designing",
     value: "logo",
-     data: logoPricing,
+     data: logoDesignServices,
   },
 ];
 const PricingSection = () => {
@@ -58,7 +59,7 @@ const PricingSection = () => {
         description="Affordable Embroidery, Logo and Vector Art Services. Grab Embroidery, Logo and Vector Designs Now"
         headingClassName ="text-[12px]"
       />
-      <div className="mt-5 lg:mt-10 ">
+      <div className="mt-5 lg:my-10 ">
       <CommonTabs
         tabs={pricingTabs}
         activeTab={activePricing?.id}
@@ -66,7 +67,7 @@ const PricingSection = () => {
       />
       </div>
 {/* pricing sectionn */}
-      <div className="relative mx-auto h-[450px] w-full max-w-[1050px] mt-6  overflow-x-hidden px-1 px-12 lg:px-0">
+      <div className="relative flex justify-center items-center h-[450px] w-full max-w-[1050px] mx-auto overflow-x-hidden px-12 lg:px-0">
 
   <PricingSlider
    data={activePricing?.data || []}

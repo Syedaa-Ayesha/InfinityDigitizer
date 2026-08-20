@@ -7,6 +7,8 @@ export const embroideryServices = [
     title: "Custom Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -20,6 +22,8 @@ export const embroideryServices = [
     title: "Cap Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: true,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -33,6 +37,8 @@ export const embroideryServices = [
     title: "Jacket Back Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -46,6 +52,8 @@ export const embroideryServices = [
     title: "Left Chest Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -59,6 +67,8 @@ export const embroideryServices = [
     title: "Applique Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -71,6 +81,8 @@ export const embroideryServices = [
     title: "Custom Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -83,6 +95,8 @@ export const embroideryServices = [
     title: "Custom Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -95,6 +109,8 @@ export const embroideryServices = [
     title: "Custom Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -107,6 +123,8 @@ export const embroideryServices = [
     title: "Custom Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -119,6 +137,8 @@ export const embroideryServices = [
     title: "Custom Embroidery Digitizing",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -131,48 +151,56 @@ export const embroideryServices = [
 export const vectorTracingServices = [
   {
     id: 1,
-    title: "Custom Embroidery Digitizing",
+    title: "VECTOR TRACING",
     image: placeholder,
     price: "$15",
+    logoType: "ART",
+    active: true,
     features: [
-      "Fast Delivery",
-      "100% Quality Work",
-      "All File Formats",
-      "Unlimited Revisions",
-    ],
+      "FAST DELIVERY",
+      "PRINT READY FILE",
+      "UNLIMITED REVISIONS",
+      "AI, EPS, SVG, PDF",
+        ],
   },
 
   {
     id: 2,
-    title: "Cap Digitizing",
+     title: "DTF Design Preparation",
     image: placeholder,
     price: "$15",
+    logoType: "ART",
+    active: false,
     features: [
-      "Fast Delivery",
-      "100% Quality Work",
-      "All File Formats",
-      "Unlimited Revisions",
+      "FAST DELIVERY",
+      "PRINT READY FILE",
+      "UNLIMITED REVISIONS",
+      "AI, EPS, SVG, PDF",
     ],
   },
 
   {
     id: 3,
-    title: "Jacket Back Digitizing",
+    title: "Engraving Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+     active: false,
     features: [
-      "Fast Delivery",
-      "100% Quality Work",
-      "All File Formats",
-      "Unlimited Revisions",
+      "FAST DELIVERY",
+      "PRINT READY FILE",
+      "UNLIMITED REVISIONS",
+      "AI, EPS, SVG, PDF",
     ],
   },
 
   {
     id: 4,
-    title: "Left Chest Digitizing",
+    title: "Screen Printing Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -183,9 +211,11 @@ export const vectorTracingServices = [
 
   {
     id: 5,
-    title: "Applique Embroidery Digitizing",
+    title: "Laser Cutting Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -195,9 +225,11 @@ export const vectorTracingServices = [
   },
   {
     id: 6,
-    title: "Custom Embroidery Digitizing",
+    title: "Sublimation Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -205,11 +237,13 @@ export const vectorTracingServices = [
       "Unlimited Revisions",
     ],
   },
-  {
+ {
     id: 7,
-    title: "Custom Embroidery Digitizing",
+    title: "Digital Printing Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -219,9 +253,11 @@ export const vectorTracingServices = [
   },
   {
     id: 8,
-    title: "Custom Embroidery Digitizing",
+    title: "Die Cutting Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -231,9 +267,11 @@ export const vectorTracingServices = [
   },
   {
     id: 9,
-    title: "Custom Embroidery Digitizing",
+    title: "Offset Printing Design",
     image: placeholder,
     price: "$15",
+    logoType: "Art",
+    //  active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -243,9 +281,25 @@ export const vectorTracingServices = [
   },
   {
     id: 10,
-    title: "Custom Embroidery Digitizing",
+    title: "Flexographic Printing Design",
     image: placeholder,
     price: "$15",
+    logoType: "LOGO",
+    //  active: false,
+    features: [
+      "Fast Delivery",
+      "100% Quality Work",
+      "All File Formats",
+      "Unlimited Revisions",
+    ],
+  },
+  {
+    id: 11,
+    title: "High resolution png",
+    image: placeholder,
+    price: "$15",
+    logoType: "LOGO",
+    //  active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -258,9 +312,11 @@ export const vectorTracingServices = [
 export const logoDesignServices = [
   {
     id: 1,
-    title: "Custom Embroidery Digitizing",
+    title: "Minimal Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -271,9 +327,11 @@ export const logoDesignServices = [
 
   {
     id: 2,
-    title: "Cap Digitizing",
+    title: "Modern Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -284,9 +342,11 @@ export const logoDesignServices = [
 
   {
     id: 3,
-    title: "Jacket Back Digitizing",
+    title: "Wordmark Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -297,9 +357,11 @@ export const logoDesignServices = [
 
   {
     id: 4,
-    title: "Left Chest Digitizing",
+    title: "Combination Mark Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -310,9 +372,11 @@ export const logoDesignServices = [
 
   {
     id: 5,
-    title: "Applique Embroidery Digitizing",
+    title: "Mascot Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -322,9 +386,11 @@ export const logoDesignServices = [
   },
   {
     id: 6,
-    title: "Custom Embroidery Digitizing",
+    title: "Lettermark Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -334,9 +400,11 @@ export const logoDesignServices = [
   },
   {
     id: 7,
-    title: "Custom Embroidery Digitizing",
+    title: "Monogram Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -346,9 +414,11 @@ export const logoDesignServices = [
   },
   {
     id: 8,
-    title: "Custom Embroidery Digitizing",
+    title: "Abstract Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -358,9 +428,11 @@ export const logoDesignServices = [
   },
   {
     id: 9,
-    title: "Custom Embroidery Digitizing",
+    title: "Emblem Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",
@@ -370,9 +442,39 @@ export const logoDesignServices = [
   },
   {
     id: 10,
-    title: "Custom Embroidery Digitizing",
+    title: "Icon Logo",
     image: placeholder,
-    price: "$15",
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
+    features: [
+      "Fast Delivery",
+      "100% Quality Work",
+      "All File Formats",
+      "Unlimited Revisions",
+    ],
+  },
+   {
+    id: 11,
+    title: "Typography Logo",
+    image: placeholder,
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
+    features: [
+      "Fast Delivery",
+      "100% Quality Work",
+      "All File Formats",
+      "Unlimited Revisions",
+    ],
+  },
+     {
+    id: 12,
+    title: "Flat Logo",
+    image: placeholder,
+    price: "$100",
+    logoType: "LOGO",
+     active: false,
     features: [
       "Fast Delivery",
       "100% Quality Work",

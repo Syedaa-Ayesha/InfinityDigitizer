@@ -3,6 +3,7 @@ import ProcessCard from "../../layout/HomeLayout/ProcessCard";
 import SectionHeading from "../../layout/SectionHeading";
 import CTASection from "../../layout/CTASection";
 import { Headphones, Settings } from "lucide-react";
+import { scrollToQuote } from "../../layout/HomeLayout/ScrollTOQuote";
 const OrderProcess = () => {
     return (
         <section
@@ -51,6 +52,7 @@ work"
   sectionWidth = "max-w-[1275px] mx-auto"
   iconHeight= "h-[96px]"
   iconWidth = "w-[96px]"
+  onClick={scrollToQuote}
 />
         </section>
     );

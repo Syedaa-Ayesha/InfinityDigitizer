@@ -324,6 +324,10 @@ const PricingCard = ({ item }) => {
         lg:px-[22px]
         lg:py-[22px]
       "
+      style={{
+        background:
+          "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
+      }}
     >
       {/* ================= TITLE ================= */}
 
@@ -363,7 +367,7 @@ const PricingCard = ({ item }) => {
             text-black
           "
         >
-          ${item.price}
+          {item.price}
         </span>
 
         <span

@@ -5,6 +5,7 @@ import {
   CircleMinus,
   CirclePlus,
   Headphones,
+  MessageCircleQuestionMark,
 } from "lucide-react";
 
 import CommonTab from "../../layout/CommonTab";
@@ -12,6 +13,8 @@ import Accordion from "../../layout/Accordion";
 import CTASection from "../../layout/CTASection";
 
 import { faqData } from "../../common/FaqData";
+import { scrollToQuote } from "../../layout/HomeLayout/ScrollTOQuote";
+import SectionHeading from "../../layout/SectionHeading";
 // import SectionHeading from "../../layout/SectionHeading";
 
 const FaqSection = () => {
@@ -37,16 +40,18 @@ const FaqSection = () => {
     >
       {/* ================= SECTION HEADING ================= */}
 
-      {/* <SectionHeading
-        icon={<ShieldCheck size={24} />}
-        badge="OUR COMMITMENT"
-        heading="Why Choose Infinity Digitizing?"
-        description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs. Infinity Digitizing is your trusted partner for premium embroidery digitizing, logo designing and vector art services across the USA, UK, Canada, and Australia. We use advanced, industry leading software programs and we have a skilled team to deliver higher quality, affordable design services for every project."
-      /> */}
+      <SectionHeading
+          icon={<MessageCircleQuestionMark size={24} />}
+          badge="Ask"
+          heading="Frequently Asked Question"
+          description="Find Answer to common questions about our embroidery Digitizing, vector art, and logo design services"
+          desClass="text-[18px] font-light "
+          headingClassName=" capitalize "
+        />
 
       {/* ================= TABS ================= */}
 
-      <div>
+      <div className="mt-10">
         <CommonTab
           tabs={filteredFaqData}
           activeTab={activeTab}
@@ -99,6 +104,7 @@ vector, and logo design projects.`}
         iconHeight="h-[72px]"
         iconWidth="w-[72px]"
         bg="bg-[linear-gradient(94.2deg,#6C29E0_0%,#5413C3_100%)] shadow-[0px_18px_40px_rgba(75,36,143,0.3)]"
+         onClick={scrollToQuote}
       />
     </section>
   );

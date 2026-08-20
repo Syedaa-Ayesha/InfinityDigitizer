@@ -4,8 +4,10 @@ import SectionHeading from "../../layout/SectionHeading";
 import FeatureCard from "../../layout/HomeLayout/FeatureCard";
 import CTASection from "../../layout/CTASection";
 import { features } from "../../common/CardData";
-const ChooseUs = () => {
+import { useNavigate } from "react-router-dom";
 
+const ChooseUs = () => {
+ const navigate = useNavigate();
     return (
         <section className="py-[22px] lg:py-[54px]" style={{
             background:
@@ -15,7 +17,11 @@ const ChooseUs = () => {
                 icon={<ShieldCheck size={24} />}
                 badge="OUR COMMITMENT"
                 heading="Why Choose Infinity Digitizing?"
-                description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs.Infinity Digitizing is your trusted partner for premium embroidery digitizing, logo designing and vector art services across the USA, UK, Canada, and Australia. We use advanced, industry leading software programs and we have a skilled team to deliver higher quality, affordable design services for every project. "
+                description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs.
+                Infinity Digitizing is your trusted partner for premium embroidery digitizing, logo designing 
+                and vector art services across the USA, UK, Canada, and Australia. We use advanced, industry 
+                leading software programs and we have a skilled team to deliver higher quality, affordable design 
+                services for every project. "
             />
             <div className="mx-auto my-9 flex max-w-[1275px] flex-col gap-9">
   {features.map((feature) => (
@@ -44,6 +50,7 @@ const ChooseUs = () => {
   sectionWidth = "max-w-[1275px] mx-auto"
   iconHeight= "h-[84px]"
   iconWidth = "w-[84px]"
+  onClick={() => navigate("/contactus")}
 />
 
     

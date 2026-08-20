@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 
+
 const CTASection = ({
   icon,
   title,
@@ -117,7 +118,7 @@ whitespace-pre-wrap
 {Solidbtn}
 
           <button
-  onClick={onClick}
+   onClick={onClick}
   className="
     group
     mt-2

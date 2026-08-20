@@ -1,5 +1,6 @@
 import { Flower, PenTool, Gem, ArrowRight, Sparkle, ArrowUpRight } from "lucide-react";
-import SectionHeading from "../layout/SectionHeading"
+import SectionHeading from "../../layout/SectionHeading"
+import { scrollToQuote } from "../../layout/HomeLayout/ScrollTOQuote";
 
 const services = [
   {
@@ -246,6 +247,7 @@ const Services = () => {
 
   <button
     type="button"
+     onClick={scrollToQuote}
     className="
       group
       w-38.5
