@@ -116,34 +116,6 @@ const HeroLogoContainer = () => {
           lg:my-[34px]
         "
       />
-
-      {/* ================= SERVICE HIGHLIGHTS ================= */}
-
-      {/* <div
-        className="
-          mx-auto
-          flex
-          w-full
-          flex-wrap
-          justify-center
-          gap-3
-
-          sm:gap-4
-
-          lg:mb-7
-        "
-      >
-        {services.map((service, index) => (
-          <ServiceHighlights
-            key={index}
-            title={service.title}
-            Icon={service.Icon}
-            variant="logo"
-          />
-        ))}
-      </div> */}
-
-
       {/* ================= LOGO SERVICE HIGHLIGHTS ================= */}
 
 <div
@@ -151,12 +123,12 @@ const HeroLogoContainer = () => {
     mx-auto
     flex
     w-full  
-    justify-center
+  justify-center
     gap-2
-
     lg:flex-nowrap
     lg:gap-0
     lg:mb-7
+    
   "
 >
   {services.map((service, index) => (
@@ -175,6 +147,7 @@ const HeroLogoContainer = () => {
         border-r-1
         last:border-r-0
         lg:flex-row
+        lg:justify-center
       "
     />
   ))}

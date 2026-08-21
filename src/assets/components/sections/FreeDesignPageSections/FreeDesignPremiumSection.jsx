@@ -1,6 +1,6 @@
-import {FreeDesignData} from "../common/FreeDesignData"
-import PremiumCard from "../layout/PremiumDesignCard";
-import OutlineButton from "../layout/OutlineBtn";
+import {FreeDesignData} from "../../common/FreeDesignData"
+import PremiumCard from "../../layout/FreeDesignLayout/PremiumDesignCard";
+import OutlineButton from "../../layout/OutlineBtn";
 
 const FreeDesignPremiumSection = () => {
      const premiumDesigns = FreeDesignData.filter(

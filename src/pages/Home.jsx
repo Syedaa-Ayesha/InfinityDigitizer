@@ -4,12 +4,10 @@ import PortfolioSlider from "../assets/components/sections/HomePageSections/Port
 import Services from "../assets/components/sections/HomePageSections/Services";
 import OrderProcess from "../assets/components/sections/HomePageSections/OrderProcess";
 import ChooseUs from "../assets/components/sections/HomePageSections/ChooseUs";
-// import Portfolio from "../assets/components/sections/Portfolio";
 import PricingSection from "../assets/components/sections/HomePageSections/PricingSection";
 import FAQ from "../assets/components/sections/HomePageSections/FAQ";
 import Testimonial from "../assets/components/sections/HomePageSections/Testimonial";
 import FreeDesignSection from "../assets/components/sections/HomePageSections/FreeDesignSection";
-
 const Home = () => {
   return (
 
@@ -21,7 +19,6 @@ const Home = () => {
        <OrderProcess/>
        <ChooseUs/>
        <PricingSection/>
-       {/* <Portfolio/> */}
        <FreeDesignSection />
        <FAQ/>
        <Testimonial />

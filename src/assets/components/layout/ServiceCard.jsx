@@ -104,7 +104,7 @@ image,
               alt={title}
               className="h-full w-full object-cover"
             />
-          )}
+          )} 
         </div>
 
       </div>

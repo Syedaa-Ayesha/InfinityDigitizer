@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CommonTabs from "../../layout/CommonTab";
-// import {embroideryPricing, vectorPricing, logoPricing} from "../../common/PricingData";
 import { embroideryServices, vectorTracingServices, logoDesignServices} from '../../common/PricingPageData'
 import SectionHeading from "../../layout/SectionHeading";
 import { Tag} from "lucide-react";
@@ -96,9 +95,6 @@ const PricingSection = () => {
       },
     }}
   />
-
-
-
 
 </div>
 

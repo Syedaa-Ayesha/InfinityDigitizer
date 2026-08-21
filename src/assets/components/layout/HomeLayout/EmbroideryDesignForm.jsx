@@ -5,9 +5,7 @@ import FileUpload from "../HomeLayout/FileUpload";
 import FormActions from "../HomeLayout/FormActions";
 import TextArea from "../TextArea";
 
-/* =====================================================
-   EMBROIDERY SERVICES
-===================================================== */
+/* EMBROIDERY SERVICES*/
 
 const embroideryServices = [
   "Cap Digitizing",
@@ -16,9 +14,7 @@ const embroideryServices = [
   "3D Puff Embroidery",
 ];
 
-/* =====================================================
-   UNITS
-===================================================== */
+/*UNITS*/
 
 const units = [
   "Millimeters (mm)",
@@ -28,9 +24,7 @@ const units = [
   "Yards (yd)",
 ];
 
-/* =====================================================
-   LOCATIONS
-===================================================== */
+/* LOCATIONS */
 
 const locations = [
   "Sleeve",
@@ -41,9 +35,7 @@ const locations = [
   "Custom",
 ];
 
-/* =====================================================
-   FORMATS
-===================================================== */
+/* FORMATS*/
 
 const formats = [
   "DST",
@@ -53,9 +45,7 @@ const formats = [
   "XXX",
 ];
 
-/* =====================================================
-   RETURN HOURS
-===================================================== */
+/*RETURN HOURS */
 
 const returnHours = [
   "4 Hours",
@@ -64,9 +54,7 @@ const returnHours = [
   "24 Hours",
 ];
 
-/* =====================================================
-   EMBROIDERY DESIGN FORM
-===================================================== */
+/*EMBROIDERY DESIGN FORM */
 
 const EmbroideryDesignForm = () => {
   /* ================= FORM STATES ================= */
@@ -103,9 +91,7 @@ const EmbroideryDesignForm = () => {
         font-inter
       "
     >
-      {/* =====================================================
-          SERVICE TYPE
-      ====================================================== */}
+      {/* SERVICE TYPE*/}
 
       <div className="mb-3">
         <label
@@ -134,9 +120,7 @@ const EmbroideryDesignForm = () => {
         />
       </div>
 
-      {/* =====================================================
-          NUMBER OF COLORS
-      ====================================================== */}
+      {/*NUMBER OF COLORS*/}
 
       <InputFields
         name="colors"
@@ -144,9 +128,7 @@ const EmbroideryDesignForm = () => {
         placeholder="Number of colors"
       />
 
-      {/* =====================================================
-          FABRIC + RETURN HOURS
-      ====================================================== */}
+      {/*  FABRIC + RETURN HOURS */}
 
       <div
         className="
@@ -172,9 +154,7 @@ const EmbroideryDesignForm = () => {
         />
       </div>
 
-      {/* =====================================================
-          WIDTH + HEIGHT + UNIT
-      ====================================================== */}
+      {/*WIDTH + HEIGHT + UNIT */}
 
       <div
         className="
@@ -207,9 +187,7 @@ const EmbroideryDesignForm = () => {
         />
       </div>
 
-      {/* =====================================================
-          LOCATION
-      ====================================================== */}
+      {/*LOCATION*/}
 
       <div className="mb-2">
         <SelectField
@@ -223,9 +201,7 @@ const EmbroideryDesignForm = () => {
         />
       </div>
 
-      {/* =====================================================
-          CUSTOM LOCATION
-      ====================================================== */}
+      {/* CUSTOM LOCATION*/}
 
       {location === "Custom" && (
         <div className="mb-2">
@@ -236,9 +212,7 @@ const EmbroideryDesignForm = () => {
         </div>
       )}
 
-      {/* =====================================================
-          FORMAT
-      ====================================================== */}
+      {/*FORMAT */}
 
       <div
         className="
@@ -264,9 +238,7 @@ const EmbroideryDesignForm = () => {
         />
       </div>
 
-      {/* =====================================================
-          INSTRUCTIONS
-      ====================================================== */}
+      {/*INSTRUCTIONS*/}
 
       <div className="mb-2">
         <label
@@ -285,39 +257,10 @@ const EmbroideryDesignForm = () => {
           Instructions
         </label>
         <TextArea placeholder="Text your patches 'White background..." />
-{/* 
-        <textarea
-          id="embroidery-instructions"
-          name="instructions"
-          placeholder="Text your patches 'White background..."
-          className="
-            h-[60px]
-            min-h-[60px]
-            w-full
-            resize-none
-            rounded-[7px]
-            border
-            border-[#E7E3ED]
-            bg-white
-            p-2.5
-            font-inter
-            text-[13px]
-            leading-4
-            text-[#757575]
-            outline-none
-            transition-all
-            duration-200
-            placeholder:text-[#ACB0B9]
-            focus:border-[#7434E5]
-            focus:ring-1
-            focus:ring-[#7434E5]/10
-          "
-        /> */}
+
       </div>
 
-      {/* =====================================================
-          FILE UPLOAD
-      ====================================================== */}
+      {/* FILE UPLOAD*/}
 
       <FileUpload
         inputId="embroidery-file-upload"
@@ -327,9 +270,7 @@ const EmbroideryDesignForm = () => {
         accept="image/*,.dst,.pes,.jef,.exp,.xxx"
       />
 
-      {/* =====================================================
-          ACTION BUTTONS
-      ====================================================== */}
+      {/*ACTION BUTTONS*/}
 
       <FormActions />
     </form>

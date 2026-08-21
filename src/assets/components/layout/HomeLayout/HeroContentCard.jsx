@@ -130,32 +130,6 @@ whitespace-pre-line
       </p>
 
 
-      {/* ================= SERVICE HIGHLIGHTS ================= */}
-
-      {/* <div
-        className="
-          mb-6
-          flex
-          flex-row
-          w-full
-          flex-wrap
-          gap-3
-          sm:mb-7
-          sm:gap-4
-border
-          lg:max-w-[553px]
-        "
-      >
-        {services.map((service, index) => (
-          <ServiceHighlights
-            key={index}
-            title={service.title}
-            Icon={service.Icon}
-          />
-        ))}
-      </div> */}
-
-
   {/* ================= SERVICE HIGHLIGHTS ================= */}
 
 <div
@@ -185,6 +159,7 @@ border
       lg:items-center
       lg:justify-center
       "
+      
     />
   ))}
 </div>

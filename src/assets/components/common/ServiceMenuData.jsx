@@ -3,9 +3,7 @@ import {
   ScanSearch,
   Gem,
 } from "lucide-react";
-// import embroideryImg from "../../images/embroidery-preview.png";
-// import vectorImg from "../../images/vector-preview.png";
-// import logoImg from "../../images/logo-preview.png";
+
 export const serviceMenuData = [
   {
     id: 1,
@@ -14,7 +12,7 @@ export const serviceMenuData = [
     title: "Embroidery Digitizing",
     description:
       "Convert your artwork into production-ready embroidery files for perfect stitching on any fabric.",
-    //   image: embroideryImg,
+   
 
     features: [
       "DST, PES, EXP & more",
@@ -58,7 +56,7 @@ export const serviceMenuData = [
     title: "Logo Designing",
     description:
       "We create modern, unique and professional logos that make your brand stand out.",
-// image: logoImg,
+
     features: [
       "Unique & Creative Concepts",
       "Unlimited Revisions",

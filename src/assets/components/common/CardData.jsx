@@ -19,7 +19,7 @@ import img04 from '../../images/high-quality-result 1.png'
 import img05 from '../../images/Free-revisions-and-file-backup 1.png'
 import img06 from '../../images/price 1.png'
 import img02 from '../../images/qualiy-assurance 1.png'
-const CardData=[
+export const CardData=[
 
 {
     step: "01",
@@ -63,7 +63,7 @@ const CardData=[
     description: "Receive embroidery, logo designing & vector files in all major formats, including DST, PES, EMB, EXP, AI, SVG, EPS, PDF and more.",
   },
 ];
-const features = [
+export const features = [
   {
     step: "01",
     icon: <Gauge size={50} color="#7434E5" />,
@@ -113,4 +113,3 @@ const features = [
   },
 ];
 
-export { CardData, features };

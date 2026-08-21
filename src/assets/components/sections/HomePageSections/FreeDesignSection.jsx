@@ -1,18 +1,18 @@
 import SectionHeading from "../../layout/SectionHeading"
-import FreeDesignFreeSection from "../FreeDesignFreeSection"
-// import CommonTabs from '../../layout/CommonTab'
+import FreeDesignFreeSection from "../FreeDesignPageSections/FreeDesignFreeSection"
+
 const FreeDesignSection = () => {
   return (
     <section
          className="
            mx-auto
            max-w-[1300px]
-           p-[22px]
+           
            lg:py-[54px]
          "
        >
          {/* ================= SECTION HEADING ================= */}
-   
+   <div className="p-[22px]">
          <SectionHeading
              icon={Image}
              badge="Our Simple Process "
@@ -21,15 +21,8 @@ const FreeDesignSection = () => {
              desClass="text-[18px] font-light "
              headingClassName=" capitalize "
            />
-   
-        
-     {/* <div className="mt-5 lg:mt-10">
-      <CommonTabs
-        tabs={pricingTabs}
-       activeTab={activePricing?.id}
-       setActiveTab={handleTabChange}
-    /> 
-     </div> */}
+   </div>
+    
          {/* ================= ACCORDION ================= */}
    
          <div
@@ -38,17 +31,12 @@ const FreeDesignSection = () => {
              mb-9
              mt-6
              w-full
-             rounded-2xl
-             border
-             border-[#E7E3ED]
-             px-4
-             pb-4
-             pt-2
-             shadow-2xl
+             
+             
              lg:max-w-[1300px]
            "
          >
-        <FreeDesignFreeSection classname="border-0 shadow-none"/>
+        <FreeDesignFreeSection classname="px-[22px]"/>
    </div>
          {/* ================= CTA ================= */}
    

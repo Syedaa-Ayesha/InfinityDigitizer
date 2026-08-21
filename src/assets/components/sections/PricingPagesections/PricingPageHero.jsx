@@ -44,8 +44,7 @@ title : `Bulk Order\nDiscounts`,
   ))}
   
   </div>
-  {/* Divider */}
-  {/* <div className='h-px w-full bg-blue-300 my-5'/> */}
+  
   
   </div>
   )

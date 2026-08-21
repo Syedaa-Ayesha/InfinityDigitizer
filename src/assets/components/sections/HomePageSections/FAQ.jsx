@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 import CommonTab from "../../layout/CommonTab";
-import Accordion from "../../layout/Accordion";
+import Accordion from "../../layout/FAQPageLayout/Accordion";
 import CTASection from "../../layout/CTASection";
 
 import { faqData } from "../../common/FaqData";

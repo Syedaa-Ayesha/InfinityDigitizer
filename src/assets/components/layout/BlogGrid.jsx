@@ -1,5 +1,5 @@
 
-import BlogCard from "../layout/BlogCard";
+import BlogCard from "./BlogCard";
 import { BlogData } from "../common/BlogData";
 const BlogGrid = () => {
   return (

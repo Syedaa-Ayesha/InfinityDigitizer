@@ -1,7 +1,10 @@
-import FreeDesignDropdown from "../layout/FreeDesignDropDown";
-import SearchInput from "../layout/SearchInput";
+import FreeDesignDropdown from "./FreeDesignDropDown";
+import SearchInput from "../SearchInput";
 // import OutlineButton from "../layout/OutlineBtn";
-const FreeDesignHeader = () => {
+const FreeDesignHeader = ( {
+  searchTerm,
+  setSearchTerm,
+}) => {
   return (
     <section>
       {/* Heading */}
@@ -22,7 +25,10 @@ const FreeDesignHeader = () => {
 
       <div className="mt-7 flex flex-col xl:flex-row xl:justify-between gap-5">
           <FreeDesignDropdown label="Sort by: Latest" />
-          <SearchInput />
+          <SearchInput
+  searchTerm={searchTerm}
+  setSearchTerm={setSearchTerm}
+/>
 
          
 

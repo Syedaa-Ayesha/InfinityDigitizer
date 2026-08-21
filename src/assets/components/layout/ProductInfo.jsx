@@ -10,9 +10,10 @@ import {
   Lock,
   Heart
 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 const ProductInfo = ({ design }) => {
   const [quantity, setQuantity] = useState(1);
+  const navigate = useNavigate();
   const increase = () => {
     setQuantity((prev) => prev + 1);
   };
@@ -49,7 +50,7 @@ const ProductInfo = ({ design }) => {
 
         <span className="text-sm text-gray-500">{design.reviews}</span>
 
-        <button className="text-sm font-medium text-[#7B3FF2] hover:underline">
+        <button className="text-sm font-medium text-[#7B3FF2] hover:underline"  onClick={() => navigate("/reviews")}>
           See all reviews
         </button>
       </div>

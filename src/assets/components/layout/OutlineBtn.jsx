@@ -10,13 +10,13 @@ const OutlineBtn = ({ title, Icon,classname, onClick,type}) => {
       py-[14px]
       rounded-full
       border
-    
       border-[#7B3FF2]
       text-[#7B3FF2]
       text-sm
       font-medium
       flex
       items-center
+      justify-center
       cursor-pointer
       gap-2
       hover:bg-[linear-gradient(94.72deg,#6C29E0_0%,#5413C3_100%)]
