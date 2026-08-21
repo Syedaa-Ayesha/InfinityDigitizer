@@ -7,7 +7,7 @@ const ReviewHeader = () => {
   return (
      <section className="bg-[#FFFFFF] p-[22px]">
          <SectionHeading
-          icon={<Star size={24} />}
+          icon={<Star/>}
           badge="Reviews"
           heading="Real Businesses. Real Projects. Real Feedback."
           description="Every review reflects a project we've completed with care and commitment. From embroidery digitizing

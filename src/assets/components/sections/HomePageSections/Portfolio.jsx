@@ -64,7 +64,7 @@ const Portfolio = () => {
         {/* ================= SECTION HEADING ================= */}
 
         <SectionHeading
-          icon={<CircleUser size={24} />}
+          icon={<CircleUser/>}
           badge="Trusted by Thousands"
           heading="SEE THE WORK WE'RE KNOWN FOR"
           description="Every project we take on ends up here. Embroidery digitizing, high quality 

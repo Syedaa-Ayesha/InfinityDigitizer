@@ -23,7 +23,7 @@ const Testimonial = () => {
       {/* ================= SECTION HEADING ================= */}
 
       <SectionHeading
-        icon={<MessageCircle size={24} />}
+        icon={<MessageCircle/>}
         badge="Testimonials"
         heading="FEEDBACK FROM OUR COSTUMERS"
         description=""

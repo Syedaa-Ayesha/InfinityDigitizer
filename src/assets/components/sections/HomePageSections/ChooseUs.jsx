@@ -14,7 +14,7 @@ const ChooseUs = () => {
                 "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF "
         }}>
             <SectionHeading
-                icon={<ShieldCheck size={24} />}
+                icon={<ShieldCheck />}
                 badge="OUR COMMITMENT"
                 heading="Why Choose Infinity Digitizing?"
                 description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs.

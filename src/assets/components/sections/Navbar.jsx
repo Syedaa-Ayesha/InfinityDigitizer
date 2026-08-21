@@ -11,7 +11,7 @@ import MegaMenu from "../layout/MegaMenu";
 const resources = [
   { title: "Blogs", path: "/blogsList" },
   { title: "Reviews", path: "/reviews" },
-  { title: "Free Designs", path: "/freedesign" },
+  { title: "Why Choose Us", path: "/whychooseus" },
   { title: "Referral Program", path: "/referral-program" },
   { title: "Size Guideline", path: "/sizes" },
   { title: "FAQs", path: "/faqs" },
@@ -431,8 +431,8 @@ const Navbar = () => {
             {/* Free Design */}
 
             <MobileLink
-              to="/freedesign"
-              title="Free Design"
+              to="/whychooseus"
+              title="Why Choose Us"
               onClick={closeMobileMenu}
             />
 

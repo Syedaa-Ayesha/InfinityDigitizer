@@ -52,7 +52,7 @@ const PricingSection = () => {
       }}
     >
       <SectionHeading
-        icon={<Tag size={18} />}
+        icon={<Tag/>}
         badge="All Prices shown are start pricing"
         heading="OUR COMPETITIVE PRICES"
         description="Affordable Embroidery, Logo and Vector Art Services. Grab Embroidery, Logo and Vector Designs Now"

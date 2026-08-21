@@ -1,28 +1,28 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   Star,
-  Minus,
-  Plus,
-  ShoppingCart,
+  // Minus,
+  // Plus,
+  // ShoppingCart,
   Check,
-  Download,
-  ShieldCheck,
-  Lock,
-  Heart
+  // Download,
+  // ShieldCheck,
+  // Lock,
+  // Heart
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 const ProductInfo = ({ design }) => {
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
-  const increase = () => {
-    setQuantity((prev) => prev + 1);
-  };
+  // const increase = () => {
+  //   setQuantity((prev) => prev + 1);
+  // };
 
-  const decrease = () => {
-    if (quantity > 1) {
-      setQuantity((prev) => prev - 1);
-    }
-  };
+  // const decrease = () => {
+  //   if (quantity > 1) {
+  //     setQuantity((prev) => prev - 1);
+  //   }
+  // };
   return (
     <section className=" flex flex-col gap-5">
       {/* Category Badge */}
@@ -136,12 +136,12 @@ const ProductInfo = ({ design }) => {
         </div>
       </div>
 
-      <div className=" border-t border-[#ECECEC]" />
-      <div className=" flex flex-col gap-4 lg:flex-row">
+      {/* <div className=" border-t border-[#ECECEC]" /> */}
+      {/* <div className=" flex flex-col gap-4 lg:flex-row"> */}
         {/* Quantity */}
 
-        <div
-          className="
+        {/* <div */}
+          {/* className="
     flex
     h-15
     w-[130px]
@@ -149,8 +149,8 @@ const ProductInfo = ({ design }) => {
     justify-between
     rounded-[14px]
     border
-    border-[#DCDFE5]
-    
+    border-[#DCDFE5] */}
+{/*     
     "
         >
           <div className="h-full flex items-center justify-center border-r border-[#DCDFE5]  w-10">
@@ -165,10 +165,10 @@ const ProductInfo = ({ design }) => {
             <button onClick={increase}>
               <Plus size={18} />
             </button>
-          </div>
-        </div>
+          </div> */}
+        {/* </div>
 
-        {/* Add Cart */}
+      
 
         <button
           className="
@@ -186,10 +186,10 @@ const ProductInfo = ({ design }) => {
           <ShoppingCart size={18} className="mr-2 inline" />
           Add To Cart
         </button>
-      </div>
+      </div> */}
       
 
-<button
+{/* <button
   className="
     flex
     h-14
@@ -219,8 +219,8 @@ const ProductInfo = ({ design }) => {
   />
 
   Add to Wishlist
-</button>
-     <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+</button> */}
+     {/* <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
   <div className="flex items-center justify-center gap-2 border-r border-[#E5E7EB] px-2">
     <Download className="text-[#7B3FF2]" size={16} />
     <p className="text-[10px] sm:text-xs text-[#6B7280] whitespace-nowrap">
@@ -241,7 +241,7 @@ const ProductInfo = ({ design }) => {
       Quality Guarantee
     </p>
   </div>
-</div>
+</div> */}
     </section>
   );
 };

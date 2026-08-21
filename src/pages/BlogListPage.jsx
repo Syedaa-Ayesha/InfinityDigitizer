@@ -24,7 +24,7 @@ lg:py-[54px]">
         "
       >
          <SectionHeading
-          icon={<Book size={24} />}
+          icon={<Book/>}
           badge="Our Blog"
           heading="LATEST BLOGS & EXPERT TIPS"
           description="Explore expert tips, practical guides, and industry updates to improve every design project."

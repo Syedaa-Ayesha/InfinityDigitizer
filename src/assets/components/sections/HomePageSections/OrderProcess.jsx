@@ -14,7 +14,7 @@ const OrderProcess = () => {
             }}
         >
             <SectionHeading
-                icon={<Settings size={24} />}
+                icon={<Settings/>}
                 badge="OUR EASY ORDER PROCESS"
                 heading={
                     <>

@@ -1,21 +1,21 @@
 import SectionHeading from '../../layout/SectionHeading'
 import ServiceHighlights from '../../layout/ServiceHighlights'
-import { Tag, Banknote, ReceiptPoundSterling, BanknoteArrowUp } from 'lucide-react'
+import { Tag, Banknote, BanknoteArrowUp, ReceiptPoundSterling } from 'lucide-react'
 
 const PricingPageHero = () => {
       const highlights =[
         {
-icon:Banknote,
+Icon:Banknote,
 title : `Budget Friendly\nPackages`,
 
         },
         {
-icon:BanknoteArrowUp,
+Icon:BanknoteArrowUp,
 title : `Custom Pricing\nOptions`,
 
         },
         {
-icon:    ReceiptPoundSterling,
+Icon:    ReceiptPoundSterling,
 title : `Bulk Order\nDiscounts`,
 
         }
@@ -24,7 +24,7 @@ title : `Bulk Order\nDiscounts`,
     <div className=" lg:border-[#E7E3ED] lg:pb-12 lg:border-b">
     
     <SectionHeading
-        icon={<Tag size={24} />}
+        icon={<Tag/>}
         badge="Transparent Pricing"
         heading="OUR COMPETITIVE PRICES"
         description="Affordable Embroidery, Logo and Vector Art Services. Grab Embroidery, Logo and Vector Designs Now"
@@ -35,7 +35,7 @@ title : `Bulk Order\nDiscounts`,
         
     <ServiceHighlights
     key ={index}
-      Icon={highlights.icon}
+      Icon={highlights.Icon}
       title={highlights.title}
       classname = "text-base font-bold lg:pr-14"
       

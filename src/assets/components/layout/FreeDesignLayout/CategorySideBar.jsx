@@ -1,4 +1,4 @@
-import { Image, Shapes } from "lucide-react";
+import {ImageIcon, Shapes } from "lucide-react";
 const CategorySideBar = ({
   activeTab,
   setActiveTab,
@@ -45,7 +45,7 @@ const CategorySideBar = ({
               }
             `}
           >
-         <Image size={18} />
+         <ImageIcon size={18} />
 
             Embroidery Designs
           </button>

@@ -95,6 +95,7 @@ const ProductTabs = ({ design }) => {
             <ReviewsTab design={design} />
           )}
         </div>
+
       </div>
     </section>
   );

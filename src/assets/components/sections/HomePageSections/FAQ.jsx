@@ -15,7 +15,7 @@ import CTASection from "../../layout/CTASection";
 import { faqData } from "../../common/FaqData";
 import { scrollToQuote } from "../../layout/HomeLayout/ScrollTOQuote";
 import SectionHeading from "../../layout/SectionHeading";
-// import SectionHeading from "../../layout/SectionHeading";
+
 
 const FaqSection = () => {
   const [activeTab, setActiveTab] = useState("embroidery");
@@ -41,7 +41,7 @@ const FaqSection = () => {
       {/* ================= SECTION HEADING ================= */}
 
       <SectionHeading
-          icon={<MessageCircleQuestionMark size={24} />}
+          icon={<MessageCircleQuestionMark/>}
           badge="Ask"
           heading="Frequently Asked Question"
           description="Find Answer to common questions about our embroidery Digitizing, vector art, and logo design services"

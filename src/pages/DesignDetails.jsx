@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { FreeDesignData } from "../assets/components/common/FreeDesignData";
 import PremiumProductStats from "../assets/components/sections/PremiumProductStats";
 import ProductTabs from "../assets/components/sections/ProductTabs";
+import ReviewForm from "../assets/components/layout/ReviewLayout/ReviewForm";
 const DesignDetails = () => {
      const { id } = useParams();
 
@@ -46,6 +47,9 @@ const DesignDetails = () => {
   </div>
   <PremiumProductStats design={design} />
   <ProductTabs design={design}/>
+          {/* Review Form */}
+
+<ReviewForm />
 </section>
   )
 }

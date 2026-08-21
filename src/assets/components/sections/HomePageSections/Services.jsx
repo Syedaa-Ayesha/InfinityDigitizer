@@ -36,7 +36,7 @@ const Services = () => {
       "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
   }}>
    <SectionHeading
-  icon={<Sparkle size={24} />}
+  icon={<Sparkle/>}
   badge="What we do best"
   heading="WHAT SERVICES WE OFFER"
   description="Infinity Digitizing is your one stop shop for all your embroidery digitizing needs. "
