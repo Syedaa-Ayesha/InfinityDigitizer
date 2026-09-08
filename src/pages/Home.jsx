@@ -8,12 +8,12 @@ import PricingSection from "../assets/components/sections/HomePageSections/Prici
 import FAQ from "../assets/components/sections/HomePageSections/FAQ";
 import Testimonial from "../assets/components/sections/HomePageSections/Testimonial";
 import FreeDesignSection from "../assets/components/sections/HomePageSections/FreeDesignSection";
-import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb";
+
 const Home = () => {
   return (
 
 <>
-<Breadcrumb />
+
        <Hero />
        <ServiceForm />
        <PortfolioSlider/>
