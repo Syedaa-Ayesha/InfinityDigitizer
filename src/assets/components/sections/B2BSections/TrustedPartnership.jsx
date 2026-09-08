@@ -5,7 +5,9 @@ import PartnershipInfo from "../../layout/B2BLayout/PartnershipInfo";
 
 const TrustedPartnership = () => {
     return (
-        <section className="mx-auto max-w-[1320px] px-5 py-6 lg:py-16">
+        <section 
+        id="partner"
+         className="mx-auto max-w-[1320px] px-5 py-6 lg:py-16" >
             <div
                 className="
           rounded-[24px]

@@ -42,7 +42,7 @@ const statsData = [
 
 const StatsSection = () => {
   return (
-    <section className="">
+    <section id="success" className="" >
       <div
         className="
           mx-auto

@@ -44,7 +44,7 @@ const PricingSection = () => {
   
   return (
     
-    <section
+    <section id="price"
       className="lg:py-12.5 py-[22px]"
       style={{
         background:

@@ -1,6 +1,6 @@
 
 
-import Heading from "../../common/Heading";
+import Heading from "../../layout/Heading";
 import patchPreview from "../../../images/Patch preview with infographic.png";
 import FormState from "../../layout/HomeLayout/FormState";
 import {

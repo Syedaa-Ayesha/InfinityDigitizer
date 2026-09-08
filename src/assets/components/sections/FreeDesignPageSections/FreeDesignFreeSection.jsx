@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import OutlineButton from "../../layout/OutlineBtn";
 import PricingSlider from "../../layout/PricingSlider";
 
@@ -28,9 +28,9 @@ const FreeDesignFreeSection = ({
 
   /* ================= RESET VIEW ALL ================= */
 
-  useEffect(() => {
-    setShowAll(false);
-  }, [searchTerm, data]);
+  // useEffect(() => {
+  //   setShowAll(false);
+  // }, [searchTerm, data]);
 
   /* ================= VISIBLE DESIGNS ================= */
 

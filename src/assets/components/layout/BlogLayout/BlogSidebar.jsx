@@ -1,6 +1,7 @@
-import TableOfContents from "../../sections/TableOfContent";
-import RelatedArticles from "../RelatedArticles";
-import NewsletterCard from "../NewsletterCard";
+
+import RelatedArticles from "../BlogLayout/RelatedArticles";
+import NewsletterCard from "../BlogLayout/NewsletterCard";
+import TableOfContent from "../../sections/BlogSection/TableOfContent";
 const BlogSidebar = ({ blog }) => {
     if (!blog) return null;
   return (
@@ -14,7 +15,7 @@ const BlogSidebar = ({ blog }) => {
   
       "
     >
-      <TableOfContents
+      <TableOfContent
         sections={blog.content.sections}
       />
 

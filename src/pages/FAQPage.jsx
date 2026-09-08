@@ -1,21 +1,14 @@
 import FaqSection from "../assets/components/sections/HomePageSections/FAQ"
-import { MessageCircleQuestionMark } from "lucide-react"
-import SectionHeading from "../assets/components/layout/SectionHeading"
+import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb"
 const FAQPage = () => {
   return (
-       <section className="bg-[#FFFFFF] p-[22px] lg:py-16">
+    <>
+    <Breadcrumb />
+       <section className="bg-[#FFFFFF] p-[22px]">
   <div className="lg:mx-auto lg:max-w-[1320px] ">
-        <SectionHeading
-          icon={<MessageCircleQuestionMark/>}
-          badge="Ask"
-          heading="Frequently Asked Question"
-          description="Find Answer to common questions about our embroidery Digitizing, vector art, and logo design services"
-          desClass="text-[18px] font-light "
-          headingClassName=" capitalize "
-        />
          <FaqSection />
         </div>
-        </section>
+        </section></>
   )
 }
 

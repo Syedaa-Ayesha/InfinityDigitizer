@@ -6,7 +6,7 @@ import { Headphones, Settings } from "lucide-react";
 import { scrollToQuote } from "../../layout/HomeLayout/ScrollTOQuote";
 const OrderProcess = () => {
     return (
-        <section
+        <section id="order"
             className="p-[22px] lg:py-[54px] "
             style={{
                 background:

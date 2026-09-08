@@ -31,7 +31,7 @@ const services = [
 const Services = () => {
   return (
     
-    <section className="p-[22px] lg:py-12.5  m-auto "  style={{
+    <section id="offer" className="p-[22px] lg:py-12.5  m-auto "  style={{
     background:
       "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
   }}>

@@ -1,21 +1,75 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+
 import CommonTab from "../../layout/CommonTab";
 import SizeGuideHeader from "./SizeGuideHeader";
 import { sizeGuideData } from "../../common/SizeGuideData";
 import SizeGuideTable from "./SizeGuideTable";
 
 const SizeGuide = () => {
-  const [activeTab, setActiveTab] = useState("garments");
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  /* ================= DEFAULT CATEGORY ================= */
+
+  const defaultTab = "garments";
+
+  /* ================= URL CATEGORY ================= */
+
+  const categoryFromUrl =
+    searchParams.get("category") || defaultTab;
+
+  /* ================= VALID CATEGORY ================= */
+
+  const isValidCategory = sizeGuideData.some(
+    (item) => item.value === categoryFromUrl
+  );
+
+  /* ================= ACTIVE TAB ================= */
+
+  const [activeTab, setActiveTab] = useState(
+    isValidCategory ? categoryFromUrl : defaultTab
+  );
+
+  /* ================= SYNC URL → TAB ================= */
+
+  useEffect(() => {
+    const validCategory = sizeGuideData.some(
+      (item) => item.value === categoryFromUrl
+    );
+
+    const newTab = validCategory
+      ? categoryFromUrl
+      : defaultTab;
+
+    setActiveTab(newTab);
+  }, [categoryFromUrl]);
+
+  /* ================= TAB CHANGE ================= */
+
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+
+    const params = new URLSearchParams(searchParams);
+
+    if (value === defaultTab) {
+      params.delete("category");
+    } else {
+      params.set("category", value);
+    }
+
+    setSearchParams(params);
+  };
+
+  /* ================= ACTIVE CATEGORY ================= */
 
   const activeCategory = sizeGuideData.find(
     (item) => item.value === activeTab
   );
+
   return (
     <section
       className="
         min-h-screen
-        border-t-[6px]
-        border-[#7434E5]
         bg-[#FAF9FC]
         p-[22px]
         lg:py-13
@@ -29,28 +83,32 @@ const SizeGuide = () => {
         "
       >
 
-        {/* Header */}
+        {/* ================= HEADER ================= */}
+
         <SizeGuideHeader />
 
-        {/* Tabs */}
+        {/* ================= TABS ================= */}
+
         <div className="mt-8">
-        
-        <CommonTab
-       tabs={sizeGuideData}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-          classname="shadow-none border-0"
+          <CommonTab
+            tabs={sizeGuideData}
+            activeTab={activeTab}
+            setActiveTab={handleTabChange}
+            classname="shadow-none border-0"
+          />
+        </div>
+
+        {/* ================= ACTIVE TABLE ================= */}
+
+        <SizeGuideTable
+          data={activeCategory?.tableData || []}
         />
-      </div>
-        {/* Next step */}
+
+        {/* ================= NEXT SECTIONS ================= */}
 
         {/* Placement Table */}
-          {/* Active table */}
-      <SizeGuideTable  data={activeCategory?.tableData || []}/>
-        {/* Next step */}
 
         {/* Bottom Cards */}
-        {/* Next step */}
 
       </div>
     </section>

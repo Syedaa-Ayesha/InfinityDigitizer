@@ -2,9 +2,10 @@ import ProductGallery from "../assets/components/layout/ProductGallery";
 import ProductInfo from "../assets/components/layout/ProductInfo";
 import { useParams } from "react-router-dom";
 import { FreeDesignData } from "../assets/components/common/FreeDesignData";
-import PremiumProductStats from "../assets/components/sections/PremiumProductStats";
-import ProductTabs from "../assets/components/sections/ProductTabs";
+import PremiumProductStats from "../assets/components/sections/FreeDesignPageSections/PremiumProductStats";
+import ProductTabs from "../assets/components/sections/FreeDesignPageSections/ProductTabs";
 import ReviewForm from "../assets/components/layout/ReviewLayout/ReviewForm";
+import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb";
 const DesignDetails = () => {
      const { id } = useParams();
 
@@ -12,6 +13,8 @@ const DesignDetails = () => {
     (item) => item.id === Number(id)
   );
   return (
+    <>
+    <Breadcrumb />
    <section className="bg-[#FFFFFF] pb-16 lg:py-16">
   <div className="mx-auto max-w-[1320px]">
 
@@ -51,6 +54,7 @@ const DesignDetails = () => {
 
 <ReviewForm />
 </section>
+</>
   )
 }
 

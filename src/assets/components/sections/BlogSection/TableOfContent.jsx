@@ -1,5 +1,6 @@
-import SidebarHeading from "../layout/SidebarHeading"
+
 import { List } from "lucide-react"
+import SidebarHeading from "../../layout/SidebarHeading"
 const TableOfContent = ({ sections }) => {
   return (
     <div

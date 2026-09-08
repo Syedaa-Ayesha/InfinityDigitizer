@@ -16,6 +16,7 @@ const resources = [
   { title: "Size Guideline", path: "/sizes" },
   { title: "FAQs", path: "/faqs" },
   { title: "Documentation", path: "/documentation" },
+   { title: "Site Map", path: "/sitemap" },
 ];
 
 const Navbar = () => {

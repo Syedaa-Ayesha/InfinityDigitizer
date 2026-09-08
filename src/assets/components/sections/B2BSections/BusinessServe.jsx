@@ -12,7 +12,7 @@ const businessData = [
 ];
 const BusinessServe = () => {
   return (
-    <section className="p-[22px] lg:py-6">
+    <section id="serve" className="p-[22px] lg:py-6">
       <div className="mx-auto max-w-[1320px]">
         {/* Heading */}
 

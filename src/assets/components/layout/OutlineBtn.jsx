@@ -1,7 +1,7 @@
 // import { ArrowRight } from "lucide-react";
 
 
-const OutlineBtn = ({ title, Icon,classname, onClick,type}) => {
+const OutlineBtn = ({ title, Icon, classname, onClick, type}) => {
   return (
      <button
      type={type}

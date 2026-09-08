@@ -1,13 +1,15 @@
 import { useParams } from "react-router-dom";
 import { BlogData } from "../assets/components/common/BlogData";
 
-import BlogHero from "../assets/components/layout/BlogHero";
+import BlogHero from "../assets/components/layout/BlogLayout/BlogHero";
 import BlogSidebar from "../assets/components/layout/BlogLayout/BlogSidebar";
-import BlogContent from "../assets/components/sections/BlogContent";
+
 import AuthorCard from "../assets/components/layout/BlogLayout/AuthorCard";
-import ShareSection from "../assets/components/layout/ShareSection";
-import MoreArticlesSection from "../assets/components/sections/MoreArticlesSection";
-import TagSection from "../assets/components/sections/TagSection";
+import ShareSection from "../assets/components/layout/BlogLayout/ShareSection";
+import MoreArticlesSection from "../assets/components/sections/BlogSection/MoreArticlesSection";
+import TagSection from "../assets/components/sections/BlogSection/TagSection";
+import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb";
+import BlogContent from "../assets/components/sections/BlogSection/BlogContent";
 const BlogPage = () => {
 
   const { id } = useParams();
@@ -25,6 +27,8 @@ const BlogPage = () => {
   }
 
   return (
+    <>
+    <Breadcrumb/>
 <main className="bg-[#FBF9FE] lg:p-16">
 
   <div className="container mx-auto px-4">
@@ -55,6 +59,7 @@ const BlogPage = () => {
   </div>
 
 </main>
+</>
   );
 };
 

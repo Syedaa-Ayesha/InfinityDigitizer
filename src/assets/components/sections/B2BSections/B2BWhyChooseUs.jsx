@@ -56,7 +56,7 @@ const chooseUsData = [
 
 const B2BWhyChooseUs = () => {
   return (
-    <section className="p-[22px] lg:py-6">
+    <section id="chooseus" className="p-[22px] lg:py-6">
       <div className="mx-auto max-w-[1330px]">
 
         {/* Heading */}

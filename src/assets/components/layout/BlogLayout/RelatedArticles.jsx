@@ -1,7 +1,7 @@
 import { Book } from "lucide-react";
-import { BlogData } from "../common/BlogData";
-import RelatedArticleCard from "./BlogLayout/RelatedArticleCard";
-import SidebarHeading from "./SidebarHeading";
+import { BlogData } from "../../common/BlogData";
+import RelatedArticleCard from "../BlogLayout/RelatedArticleCard";
+import SidebarHeading from "../SidebarHeading";
 const RelatedArticles = ({ currentBlog }) => {
 
   const relatedBlogs = BlogData

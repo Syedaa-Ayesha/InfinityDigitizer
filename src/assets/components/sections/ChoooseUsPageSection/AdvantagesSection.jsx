@@ -1,168 +1,100 @@
-import {
-  BadgeCheck,
-  Clock3,
-  Palette,
-  Headphones,
-  ShieldCheck,
-  Zap,
-} from "lucide-react";
+// import { advantagesData } from "../../common/AdvantageData";
+// import SectionHeading from "../../layout/SectionHeading";
+// import AdvantageCard from "../../layout/WhyChooseLayout/AdvantageCard";
 
-import AdvantageCard from "../../layout/AdvantageCard";
+// const AdvantagesSection = () => {
+//   return (
+//     <section
+//       className="
+//         w-full
+//         bg-[#FAF9FC]
+//         px-4
+//         py-12
+//         sm:px-6
+//         lg:px-8
+//         lg:py-14
+//       "
+//     >
+//       <div
+//         className="
+//           mx-auto
+//           w-full
+//           max-w-[1320px]
+//         "
+//       >
 
-const advantagesData = [
-  {
-    icon: BadgeCheck,
-    title: "Premium Quality",
-    description:
-      "We deliver clean, precise and production-ready designs with attention to every detail.",
-  },
+//         {/* ================= HEADING ================= */}
 
-  {
-    icon: Clock3,
-    title: "Fast Turnaround",
-    description:
-      "Our streamlined workflow helps us complete your designs quickly without compromising quality.",
-  },
+//         <div className="mb-8 text-center">
+//           <h2
+//             className="
+//               font-dmSans
+//               text-[24px]
+//               font-bold
+//               leading-[32px]
+//               text-[#0C0C30]
+//               sm:text-[28px]
+//               sm:leading-[36px]
+//               lg:text-[25px]
+//               lg:leading-[32px]
+//             "
+//           >
+            
+//           </h2>
+          
+//  <SectionHeading
+               
+//                 badge="OUR EASY ORDER PROCESS"
+//                 heading={
+//                     <>
+//                        The Advantages of Working With Infinity Digitizing
+//                     </>
+//                 }
+                
+//             />
+//           {/* Purple underline */}
 
-  {
-    icon: Palette,
-    title: "Creative Expertise",
-    description:
-      "Our experienced designers combine creativity and technical expertise to bring your ideas to life.",
-  },
+//           <div
+//             className="
+//               mx-auto
+//               mt-[10px]
+//               h-[3px]
+//               w-[40px]
+//               rounded-full
+//               bg-[#7434E5]
+//             "
+//           />
+//         </div>
 
-  {
-    icon: Headphones,
-    title: "Dedicated Support",
-    description:
-      "Our support team is always available to understand your requirements and assist whenever needed.",
-  },
+//         {/* ================= CARDS ================= */}
 
-  {
-    icon: ShieldCheck,
-    title: "Reliable & Secure",
-    description:
-      "Your designs and information are handled with care through a secure and dependable workflow.",
-  },
+//         <div
+//           className="
+//           mt-12
+//             grid
+//             grid-cols-1
+//             gap-7
+//             sm:grid-cols-2
+//             lg:grid-cols-3
+//           "
+//         >
+//           {advantagesData.map((item) => (
+//             <AdvantageCard
+//               key={item.id}
+//               icon={item.icon}
+//               title={item.title}
+//               description={item.description}
+//               image={item.image}
+//             />
+//           ))}
+//         </div>
 
-  {
-    icon: Zap,
-    title: "Professional Results",
-    description:
-      "Every project is carefully reviewed to ensure consistent and professional results for your business.",
-  },
-];
+//       </div>
+     
+//     </section>
+//   );
+// };
 
-const AdvantagesSection = () => {
-  return (
-    <section
-      className="
-        w-full
-        bg-white
-      "
-    >
-      <div
-        className="
-          mx-auto
-          max-w-[1300px]
-          px-[24px]
-          py-[50px]
-          sm:px-[32px]
-          sm:py-[60px]
-          lg:px-[40px]
-          lg:py-[72px]
-        "
-      >
-        {/* ================= SECTION HEADING ================= */}
+// export default AdvantagesSection;
 
-        <div className="mx-auto max-w-[650px] text-center">
-          <span
-            className="
-              inline-flex
-              rounded-full
-              bg-[#F3EEFF]
-              px-[10px]
-              py-[4px]
-              text-[8px]
-              font-semibold
-              uppercase
-              tracking-[0.08em]
-              text-[#6825E5]
-            "
-          >
-            Our Advantages
-          </span>
-
-          <h2
-            className="
-              mt-[9px]
-              text-[23px]
-              font-semibold
-              leading-[1.2]
-              tracking-[-0.03em]
-              text-[#171735]
-              sm:text-[27px]
-              lg:text-[30px]
-            "
-          >
-            Why Businesses Choose Us
-          </h2>
-
-          <div
-            className="
-              mx-auto
-              mt-[9px]
-              h-[2px]
-              w-[35px]
-              rounded-full
-              bg-[#6825E5]
-            "
-          />
-
-          <p
-            className="
-              mx-auto
-              mt-[13px]
-              max-w-[560px]
-              text-[9px]
-              leading-[1.6]
-              text-[#858597]
-              sm:text-[10px]
-            "
-          >
-            We combine quality, creativity, speed and reliable support to
-            provide a smooth design experience from start to finish.
-          </p>
-        </div>
-
-        {/* ================= CARDS ================= */}
-
-        <div
-          className="
-            mt-[30px]
-            grid
-            grid-cols-1
-            gap-[14px]
-            sm:mt-[38px]
-            sm:grid-cols-2
-            sm:gap-[18px]
-            lg:mt-[44px]
-            lg:grid-cols-3
-            lg:gap-[20px]
-          "
-        >
-          {advantagesData.map((advantage) => (
-            <AdvantageCard
-              key={advantage.title}
-              icon={advantage.icon}
-              title={advantage.title}
-              description={advantage.description}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default AdvantagesSection;
+import { advantagesData } from "../../common/AdvantageData"; import SectionHeading from "../../layout/SectionHeading"; import AdvantageCard from "../../layout/WhyChooseLayout/AdvantageCard"; const AdvantagesSection = () => { return ( <section className="w-full bg-[#FAF9FC] px-4 py-12 sm:px-6 lg:px-8 lg:py-14"> <div className="mx-auto w-full max-w-[1320px]"> {/* ================= HEADING ================= */} <div clas sName="text-center"> <SectionHeading badge="OUR EASY ORDER PROCESS" heading="The Advantages of Working With Infinity Digitizing" /> <div className="mx-auto mt-3 h-[3px] w-10 rounded-full bg-[#7434E5]" /> </div> {/* ================= CARDS ================= */} <div className=" mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7 " > {advantagesData.map((item) => ( <AdvantageCard key={item.id} icon={item.icon} title={item.title} description={item.description} image={item.image} /> ))} </div> </div> </section> ); }; export default AdvantagesSection;

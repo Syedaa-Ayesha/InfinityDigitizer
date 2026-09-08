@@ -1,8 +1,7 @@
-import KeyPointBox from "../layout/KeyPointBox";
-import BlogImage from "../layout/BlogImage";
-import StitchTypes from "../layout/StitchTypes";
-import QuoteBox from "../layout/QuoteBox";
-import SupportedFormats from "../layout/SupportedFormats";
+import StitchTypes from "../../layout/StitchTypes";
+import QuoteBox from "../../layout/BlogLayout/QuoteBox";
+import SupportedFormats from "../../layout/SupportedFormats";
+import KeyPointBox from "../../layout/BlogLayout/KeyPointBox";
 
 const BlogContent = ({ blog }) => {
   if (!blog) return null;
@@ -16,11 +15,10 @@ const BlogContent = ({ blog }) => {
     quote,
     supportedFormats,
   } = blog.content;
+
   return (
     <article>
-
       {/* Introduction */}
-
       <p
         className="
           text-[16px]
@@ -34,20 +32,16 @@ const BlogContent = ({ blog }) => {
       </p>
 
       {/* Dynamic Sections */}
-
       {sections.map((section, index) => {
-
+        /* ================= TEXT ================= */
         if (section.type === "text") {
           return (
-            <section
-              key={index}
-              className="mt-12"
-            >
+            <section key={index} className="mt-12">
               <h2
                 className="
+                  font-dmSans
                   text-[28px]
                   font-bold
-                  font-dmSans
                   text-[#0F1729]
                   md:text-[34px]
                 "
@@ -56,7 +50,6 @@ const BlogContent = ({ blog }) => {
               </h2>
 
               <div className="mt-6 space-y-4">
-
                 {section.paragraphs.map((paragraph, i) => (
                   <p
                     key={i}
@@ -71,12 +64,12 @@ const BlogContent = ({ blog }) => {
                     {paragraph}
                   </p>
                 ))}
-
               </div>
             </section>
           );
         }
 
+        /* ================= KEY POINT ================= */
         if (section.type === "keyPoint") {
           return (
             <KeyPointBox
@@ -86,19 +79,43 @@ const BlogContent = ({ blog }) => {
           );
         }
 
-       if (section.type === "image") {
+        /* ================= IMAGE ================= */
+        if (section.type === "image") {
+          const currentImage = images?.[section.imageIndex];
 
-  const currentImage = images[section.imageIndex];
+          if (!currentImage) return null;
 
-  return (
-    <BlogImage
-      key={index}
-      image={currentImage.src}
-      caption={currentImage.caption}
-    />
-  );
-}
+          return (
+            <figure key={index} className="mt-10">
+              <img
+                src={currentImage.src}
+                alt={currentImage.caption || "Blog image"}
+                className="
+                  h-auto
+                  w-full
+                  rounded-2xl
+                  object-cover
+                "
+              />
 
+              {currentImage.caption && (
+                <figcaption
+                  className="
+                    mt-3
+                    text-center
+                    text-sm
+                    leading-6
+                    text-[#6B7280]
+                  "
+                >
+                  {currentImage.caption}
+                </figcaption>
+              )}
+            </figure>
+          );
+        }
+
+        /* ================= STITCH TYPES ================= */
         if (section.type === "stitchTypes") {
           return (
             <StitchTypes
@@ -108,6 +125,7 @@ const BlogContent = ({ blog }) => {
           );
         }
 
+        /* ================= QUOTE ================= */
         if (section.type === "quote") {
           return (
             <QuoteBox
@@ -117,6 +135,7 @@ const BlogContent = ({ blog }) => {
           );
         }
 
+        /* ================= FORMATS ================= */
         if (section.type === "formats") {
           return (
             <SupportedFormats

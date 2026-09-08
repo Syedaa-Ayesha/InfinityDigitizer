@@ -6,7 +6,7 @@ import {logoDesignServices}  from "../../common/PricingPageData"
 
 const LogoDesignSection = () => {
   return (
-      <section
+      <section id= "logoDesign"
   className="
     mx-auto
     max-w-[1320px]

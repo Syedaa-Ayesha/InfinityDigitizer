@@ -2,14 +2,18 @@ import SectionHeading from "../assets/components/layout/SectionHeading"
 import { Book, Headphones } from "lucide-react"
 import { useState } from "react";
 import CTASection from "../assets/components/layout/CTASection";
-import BlogFilter from "../assets/components/sections/BlogFilter";
-import BlogGrid from "../assets/components/layout/BlogGrid";
+
+import BlogGrid from "../assets/components/layout/BlogLayout/BlogGrid";
 import BlogPagination from "../assets/components/layout/BlogLayout/BlogPagination";
+import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb";
+import BlogFilter from "../assets/components/sections/BlogSection/BlogFilter";
 
 // import BlogNewsletter from "../components/sections/BlogNewsletter";
 const BlogListPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
   return (
+  <>
+    <Breadcrumb />
 <main className="bg-[#FAFAFD] flex
 flex-col
 gap-10
@@ -64,6 +68,7 @@ work"
  
 
     </main>
+    </>
   )
 }
 

@@ -4,64 +4,80 @@ const Accordion = ({
   data = [],
   openIcon: OpenIcon,
   closeIcon: CloseIcon,
-  width=""
-  
+  width = "",
+  buttonClassName = "",
+  titleClassName = "",
+  panelClassName = "",
+  defaultOpen = false,
 }) => {
   return (
-    <div className={`mx-auto  max-w-[900px] ${width}`}>
+    <div className={`mx-auto max-w-[900px] ${width}`}>
 
       {data.map((item, index) => (
-        <Disclosure key={item.id}>
+        <Disclosure
+          key={item.id}
+          defaultOpen={item.defaultOpen ?? defaultOpen}
+        >
           {({ open }) => (
-            <div className={` pb-5  ${index !== data.length - 1 ? "border-b border-[#D4D4E0]" : ""}`}>
+            <div
+              className={`
+                pb-5
+                ${
+                  index !== data.length - 1
+                    ? "border-b border-[#D4D4E0]"
+                    : ""
+                }
+              `}
+            >
 
-              {/* Question */}
+              {/* ================= QUESTION ================= */}
 
               <Disclosure.Button
-                className="
-               
+                className={`
                   flex
                   w-full
                   items-center
                   justify-between
                   py-4
                   lg:py-6
-
                   text-left
-                "
+                  ${buttonClassName}
+                `}
               >
                 <h3
-                  className="
+                  className={`
+                    pr-2
                     font-dmSans
                     text-[18px]
                     font-bold
                     leading-7
                     text-[#0C0C30]
-                    pr-2
-                  "
+                    ${titleClassName}
+                  `}
                 >
                   {item.question}
                 </h3>
 
-                {/* Dynamic Icon */}
+                {/* ================= DYNAMIC ICON ================= */}
 
-                {open ? (
-                  <OpenIcon
-                    size={32}
-                    strokeWidth={1}
-                    
-                    className="shrink-0 text-[#7434E5]"
-                  />
-                ) : (
-                  <CloseIcon
-                    size={32}
-                    strokeWidth={1}
-                    className="shrink-0 text-[#7434E5]"
-                  />
-                )}
+                {open
+                  ? OpenIcon && (
+                      <OpenIcon
+                        size={32}
+                        strokeWidth={1}
+                        className="shrink-0 text-[#7434E5]"
+                      />
+                    )
+                  : CloseIcon && (
+                      <CloseIcon
+                        size={32}
+                        strokeWidth={1}
+                        className="shrink-0 text-[#7434E5]"
+                      />
+                    )}
               </Disclosure.Button>
 
-              {/* Answer */}
+              {/* ================= ANSWER ================= */}
 
               <Transition
                 enter="transition-all duration-300"
@@ -72,18 +88,19 @@ const Accordion = ({
                 leaveTo="opacity-0 -translate-y-2"
               >
                 <Disclosure.Panel
-                  className="
-                  px-6
-                  py-5
-                  rounded-[16px]
-                    lg:pb-6
-                    lg:pr-14
+                  className={`
+                    rounded-[16px]
+                    bg-[#F7F5FA]
+                    px-6
+                    py-5
                     font-inter
                     text-base
                     leading-7
-                    bg-[#F7F5FA]
                     text-[#6B7280]
-                  "
+                    lg:pb-6
+                    lg:pr-14
+                    ${panelClassName}
+                  `}
                 >
                   {item.answer}
                 </Disclosure.Panel>

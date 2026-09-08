@@ -1,25 +1,57 @@
-import {useState } from "react";
+import { useEffect, useState } from "react";
+import {useNavigate, useSearchParams } from "react-router-dom";
+
 import ReviewHeader from "./ReviewHeader";
 import CommonTab from "../../layout/CommonTab";
 import CommonSlider from "../../layout/PricingSlider";
 import OutlineButton from "../../layout/OutlineBtn";
-import TestimonialCard from "../../layout/HomeLayout/TextimonialCard"
-
-import { Headphones, RefreshCw } from "lucide-react";
-import { TestimonialData } from '../../common/TestimonialData'
-import {
- 
-  reviewTabs,
-} from "../../common/ReviewsData";
-
+import TestimonialCard from "../../layout/HomeLayout/TextimonialCard";
 import CTASection from "../../layout/CTASection";
 
+import { Headphones, RefreshCw } from "lucide-react";
+
+import { TestimonialData } from "../../common/TestimonialData";
+import { reviewTabs } from "../../common/ReviewsData";
 
 const REVIEWS_PER_LOAD = 3;
 
 const ReviewsSection = () => {
-  const [activeTab, setActiveTab] = useState("all");
-  const [visibleCount, setVisibleCount] = useState(REVIEWS_PER_LOAD);
+  const [searchParams] = useSearchParams();
+
+  /* ================= URL TAB ================= */
+
+  const tabFromUrl = searchParams.get("tab");
+
+  const isValidTab = reviewTabs.some(
+    (tab) => tab.id === tabFromUrl
+  );
+
+  /* ================= ACTIVE TAB ================= */
+
+  const [activeTab, setActiveTab] = useState(
+    isValidTab ? tabFromUrl : "all"
+  );
+
+  /* ================= VISIBLE COUNT ================= */
+
+  const [visibleCount, setVisibleCount] =
+    useState(REVIEWS_PER_LOAD);
+
+  /* ================= UPDATE TAB FROM URL ================= */
+
+  useEffect(() => {
+    if (isValidTab) {
+      setActiveTab(tabFromUrl);
+    } else {
+      setActiveTab("all");
+    }
+  }, [tabFromUrl, isValidTab]);
+
+  /* ================= RESET LOAD MORE ================= */
+
+  useEffect(() => {
+    setVisibleCount(REVIEWS_PER_LOAD);
+  }, [activeTab]);
 
   /* ================= FILTER REVIEWS ================= */
 
@@ -30,15 +62,12 @@ const ReviewsSection = () => {
           (review) => review.category === activeTab
         );
 
-  /* ================= RESET ON TAB CHANGE ================= */
-
-  // useEffect(() => {
-  //   setVisibleCount(REVIEWS_PER_LOAD);
-  // }, [activeTab]);
-
   /* ================= VISIBLE REVIEWS ================= */
 
-  const visibleReviews = filteredReviews.slice(0, visibleCount);
+  const visibleReviews = filteredReviews.slice(
+    0,
+    visibleCount
+  );
 
   /* ================= LOAD MORE ================= */
 
@@ -46,9 +75,11 @@ const ReviewsSection = () => {
     visibleCount < filteredReviews.length;
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + REVIEWS_PER_LOAD);
+    setVisibleCount(
+      (prev) => prev + REVIEWS_PER_LOAD
+    );
   };
-
+const navigate = useNavigate();
   return (
     <section
       className="
@@ -66,7 +97,7 @@ const ReviewsSection = () => {
       <ReviewHeader />
 
       {/* ================= TABS ================= */}
-
+<div id="reviews">
       <div className="mt-6 flex justify-center">
         <CommonTab
           tabs={reviewTabs}
@@ -83,7 +114,7 @@ const ReviewsSection = () => {
           "
         />
       </div>
-
+</div>
       {/* ================= DESKTOP / TABLET GRID ================= */}
 
       <div
@@ -126,13 +157,11 @@ const ReviewsSection = () => {
           <OutlineButton
             title="Load More Reviews"
             Icon={RefreshCw}
-           classname="w-full lg:w-fit justify-center"
+            classname="w-full justify-center lg:w-fit"
             onClick={handleLoadMore}
           />
         </div>
       )}
-
-
 
       {/* ================= CTA ================= */}
 
@@ -152,6 +181,7 @@ const ReviewsSection = () => {
         iconHeight="h-[96px]"
         iconWidth="w-[96px]"
         bg="bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)] mt-5"
+        onClick={() => navigate("/#quote")}
       />
     </section>
   );

@@ -6,7 +6,7 @@ import OutlineBtn from "../../layout/OutlineBtn"
 
 const VectorTracingSection = () => {
   return (
-     <section
+     <section id="vectorTracing"
   className="
     mx-auto
     max-w-[1320px]

@@ -30,14 +30,16 @@ const SolidButton = ({title, Icon, classname, type, onClick}) => {
       >
         {title}
 
-        <Icon
-          size={18}
-          className="
-            transition-transform
-            duration-300
-            group-hover:translate-x-1
-          "
-        />
+        {Icon && (
+  <Icon
+    size={18}
+    className="
+      transition-transform
+      duration-300
+      group-hover:translate-x-1
+    "
+  />
+)}
 
       </button>
   )

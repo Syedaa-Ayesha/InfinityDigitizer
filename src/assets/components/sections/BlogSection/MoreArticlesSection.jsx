@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, ArrowUp } from "lucide-react";
-import { BlogData } from "../common/BlogData";
-import BlogCard from "../layout/BlogCard";
+import { BlogData } from "../../common/BlogData";
+import BlogCard from "../../layout/BlogLayout/BlogCard";
 
 const MoreArticlesSection = ({ currentBlog }) => {
     const [showAll, setShowAll] = useState(false);

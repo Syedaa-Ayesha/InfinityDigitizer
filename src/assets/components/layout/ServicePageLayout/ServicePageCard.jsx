@@ -1,12 +1,12 @@
 // import { ArrowRight } from "lucide-react";
 // import SolidButton from "../SolidButton";
 import OutlineBtn from "../OutlineBtn";
+import SolidButton from "../SolidButton";
 
 const ServicePageCard = ({
   image,
   title,
   description,
-  // onClick,
 }) => {
   return (
     <article
@@ -99,50 +99,9 @@ const ServicePageCard = ({
         {description}
       </p>
 
-      {/* ================= BUTTON ================= */}
-
-      {/* <button
-        type="button"
-        onClick={onClick}
-        className="
-          mt-4
-          flex
-          w-fit
-          items-center
-          gap-2.5
-          rounded-[6px]
-          bg-[linear-gradient(100.36deg,#6C29E0_0%,#5413C3_100%)]
-          px-3
-          py-2.5
-          font-dmSans
-          text-[13px]
-          font-semibold
-          uppercase
-          text-white
-          transition-all
-          duration-300
-          hover:scale-[1.03]
-          sm:mt-5
-          sm:text-[14px]
-          lg:text-[16px]
-        "
-      >
-        ORDER NOW
-
-        <ArrowRight
-          size={17}
-          strokeWidth={2}
-          className="
-            transition-transform
-            duration-300
-            group-hover:translate-x-1
-          "
-        />
-      </button> */}
-
-      <div classname="flex gap-3">
-        {/* <SolidButton title="Order Now" type="button" onClick={navigate()}/> */}
-        <OutlineBtn title="Learn More" type="button" />
+      <div className="flex gap-3 mt-3">
+        <SolidButton title="Order Now" type="button" classname ="rounded-xl"/>
+        <OutlineBtn title="Explore More" type="button" classname ="rounded-xl"/>
 
       </div>
     </article>

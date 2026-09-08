@@ -5,6 +5,7 @@ import LogoDesignSection from "../assets/components/sections/PricingPagesections
 import CTASection from "../assets/components/layout/CTASection"
 import ServiceHighlights from "../assets/components/layout/ServiceHighlights"
 import {Leaf, BanknoteCheck, CreditCard, Headphones, FileSpreadsheet } from "lucide-react"
+import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb"
  const services = [
   {
     title: `Packages That Fit\nYour Budget`,
@@ -26,6 +27,8 @@ import {Leaf, BanknoteCheck, CreditCard, Headphones, FileSpreadsheet } from "luc
 const PricingPage = () => {
  
   return (
+    <>
+    <Breadcrumb />
     <section className='mx-auto lg:max-w-[1320px] py-6 bg-[#FFFFFF] lg:py-[54px]'>
        
   <PricingPageHero />
@@ -82,6 +85,7 @@ gap-5
         ))}
       </div>
   </section>
+  </>
   )
 }
 

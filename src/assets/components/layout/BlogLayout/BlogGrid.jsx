@@ -1,6 +1,6 @@
 
-import BlogCard from "./BlogCard";
-import { BlogData } from "../common/BlogData";
+import BlogCard from "../BlogLayout/BlogCard";
+import { BlogData } from "../../common/BlogData";
 const BlogGrid = () => {
   return (
    <section

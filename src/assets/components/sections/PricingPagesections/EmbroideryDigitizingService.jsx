@@ -5,7 +5,7 @@ import OutlineBtn from "../../layout/OutlineBtn"
 import {embroideryServices}  from "../../common/PricingPageData"
 const EmbroideryDigitizingService = () => {
   return (
-    <section
+    <section  id="embroideryDigitizing"
   className="
     mx-auto
     max-w-[1320px]

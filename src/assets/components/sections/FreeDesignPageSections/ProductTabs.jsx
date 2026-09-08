@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FileText, Star } from "lucide-react";
-import DescriptionTab from "../sections/DescriptionTab";
-import ReviewsTab from "../sections/ReviewsTab";
+import DescriptionTab from "../DescriptionTab";
+import ReviewsTab from "../ReviewsTab";
 
 const ProductTabs = ({ design }) => {
   const [activeTab, setActiveTab] = useState("description");

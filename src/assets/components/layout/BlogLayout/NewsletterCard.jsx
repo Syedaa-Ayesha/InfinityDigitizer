@@ -1,5 +1,5 @@
 import { Mail, ArrowRight } from "lucide-react";
-import SidebarHeading from "./SidebarHeading";
+import SidebarHeading from "../SidebarHeading";
 const Newsletter = () => {
   return (
     <section
