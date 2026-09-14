@@ -16,7 +16,7 @@ export const MegaMenuData = [
     icon: Flower2,
 
     title: "Embroidery Digitizing",
-
+path:"/services#embroidery-digitizing",
     description:
       "Convert your artwork into production-ready embroidery files for perfect stitching on any fabric.",
 
@@ -41,7 +41,7 @@ export const MegaMenuData = [
     icon: PenTool,
 
     title: "Vector Tracing",
-
+ path: "/services#vector-art",
     description:
       "Convert low-resolution images into clean, scalable vector files for print, web and branding.",
 
@@ -66,7 +66,7 @@ export const MegaMenuData = [
     icon: Gem,
 
     title: "Logo Designing",
-
+path: "/services#logo-design",
     description:
       "We create modern, unique and professional logos that make your brand stand out from the crowd.",
 

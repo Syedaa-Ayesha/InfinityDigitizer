@@ -169,6 +169,7 @@ const MegaMenuCard = ({
           duration-300
           hover:opacity-90
         "
+        
                 >
                     {buttonText}
                 </button>

@@ -1,6 +1,4 @@
 
-// import { useState } from "react";
-
 import { useState } from "react";
 import { ChevronDown, Menu, X, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -16,7 +14,30 @@ const resources = [
   { title: "Size Guideline", path: "/sizes" },
   { title: "FAQs", path: "/faqs" },
   { title: "Documentation", path: "/documentation" },
-   { title: "Site Map", path: "/sitemap" },
+  { title: "Site Map", path: "/sitemap" },
+];
+
+/* =========================================================
+   MOBILE SERVICES
+========================================================= */
+
+const mobileServices = [
+  {
+    title: "Embroidery Digitizing",
+    path: "/services#embroidery-digitizing",
+  },
+  {
+    title: "Vector Tracing",
+    path: "/services#vector-art",
+  },
+  {
+    title: "Logo Designing",
+    path: "/services#logo-design",
+  },
+  {
+    title: "All Services",
+    path: "/services",
+  },
 ];
 
 const Navbar = () => {
@@ -45,8 +66,8 @@ const Navbar = () => {
     setMobileResourcesOpen(false);
   };
 
-  const openServices = () => {
-    setMobileServicesOpen(true);
+  const toggleMobileServices = () => {
+    setMobileServicesOpen((prev) => !prev);
     setMobileResourcesOpen(false);
   };
 
@@ -56,18 +77,17 @@ const Navbar = () => {
   };
 
   const goBack = () => {
-    setMobileServicesOpen(false);
     setMobileResourcesOpen(false);
   };
 
   return (
-    <nav className="sticky top-0 z-[1000] bg-[#7434E5] text-white">
+    <nav className="sticky top-0 z-[1000] w-full max-w-full overflow-x-clip bg-[#7434E5] text-white">
 
       {/* =====================================================
           DESKTOP NAVBAR
       ===================================================== */}
 
-      <div className="mx-auto hidden max-w-7xl items-center justify-between px-8 py-4 lg:flex">
+      <div className="mx-auto hidden w-full max-w-7xl min-w-0 items-center justify-between gap-6 overflow-x-clip px-6 py-4 xl:flex">
 
         {/* Logo */}
 
@@ -81,7 +101,7 @@ const Navbar = () => {
 
         {/* Navigation */}
 
-        <ul className="flex items-center gap-8 font-medium">
+        <ul className="flex min-w-0 flex-1 items-center justify-center gap-5 font-medium 2xl:gap-8">
 
           {/* Home */}
 
@@ -97,7 +117,7 @@ const Navbar = () => {
           {/* Services */}
 
           <li
-            className="relative"
+            className="relative shrink-0"
             onMouseEnter={() => setShowDesktopServices(true)}
             onMouseLeave={() => setShowDesktopServices(false)}
           >
@@ -124,6 +144,7 @@ const Navbar = () => {
                 pt-6
                 transition-all
                 duration-300
+
                 ${
                   showDesktopServices
                     ? "visible translate-y-0 opacity-100"
@@ -182,7 +203,7 @@ const Navbar = () => {
           {/* Resources */}
 
           <li
-            className="relative"
+            className="relative shrink-0"
             onMouseEnter={() => setShowDesktopResources(true)}
             onMouseLeave={() => setShowDesktopResources(false)}
           >
@@ -219,6 +240,7 @@ const Navbar = () => {
                 shadow-[0px_20px_40px_rgba(0,0,0,0.12)]
                 transition-all
                 duration-300
+
                 ${
                   showDesktopResources
                     ? "visible translate-y-0 opacity-100"
@@ -230,7 +252,9 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  onClick={() => setShowDesktopResources(false)}
+                  onClick={() =>
+                    setShowDesktopResources(false)
+                  }
                   className="
                     block
                     rounded-md
@@ -255,6 +279,8 @@ const Navbar = () => {
         <Link
           to="/login"
           className="
+            shrink-0
+            whitespace-nowrap
             rounded-lg
             bg-white
             px-7
@@ -274,7 +300,7 @@ const Navbar = () => {
           MOBILE / TABLET HEADER
       ===================================================== */}
 
-      <div className="flex items-center justify-between px-5 py-3 lg:hidden">
+      <div className="flex w-full max-w-full items-center justify-between gap-3 overflow-x-clip px-5 py-3 xl:hidden">
 
         {/* Logo */}
 
@@ -285,13 +311,13 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Infinity Digitizing"
-            className="h-10 w-auto"
+            className="h-10 w-auto max-w-[150px] object-contain"
           />
         </Link>
 
         {/* Right Side */}
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
 
           {/* Login */}
 
@@ -333,12 +359,7 @@ const Navbar = () => {
             aria-label="Toggle navigation"
             aria-expanded={mobileMenuOpen}
           >
-            <span
-              className="
-                transition-transform
-                duration-300
-              "
-            >
+            <span className="transition-transform duration-300">
               {mobileMenuOpen ? (
                 <X size={23} />
               ) : (
@@ -351,34 +372,34 @@ const Navbar = () => {
 
       {/* =====================================================
           MOBILE / TABLET MENU
-          Smooth Overlay
       ===================================================== */}
 
       <div
         className={`
           fixed
-          left-0
-          right-0
+          inset-x-0
           top-[64px]
           z-[999]
-          max-h-[calc(100vh-64px)]
+          box-border
+          w-auto
+          max-w-full
+          max-h-[calc(100dvh-64px)]
+          overflow-x-clip
           overflow-y-auto
           border-t
           border-white/10
           bg-[#7434E5]
           shadow-[0_20px_40px_rgba(0,0,0,0.18)]
-          lg:hidden
+          xl:hidden
 
-          origin-top
-          transform
           transition-all
           duration-300
-          ease-out
+          ease-[cubic-bezier(0.4,0,0.2,1)]
 
           ${
             mobileMenuOpen
-              ? "visible translate-y-0 opacity-100"
-              : "invisible pointer-events-none -translate-y-3 opacity-0"
+              ? "visible opacity-100"
+              : "invisible pointer-events-none opacity-0"
           }
         `}
       >
@@ -387,185 +408,243 @@ const Navbar = () => {
             MAIN MOBILE MENU
         =================================================== */}
 
-        {!mobileServicesOpen && !mobileResourcesOpen && (
-          <div className="px-5 py-4">
+        <div className="box-border w-full min-w-0 max-w-full overflow-x-clip px-5 py-4">
 
-            {/* Home */}
+          {/* Home */}
 
-            <MobileLink
-              to="/"
-              title="Home"
-              onClick={closeMobileMenu}
+          <MobileLink
+            to="/"
+            title="Home"
+            onClick={closeMobileMenu}
+          />
+
+          {/* =================================================
+              SERVICES ACCORDION
+          ================================================= */}
+
+          <button
+            type="button"
+            onClick={toggleMobileServices}
+            className="
+              flex
+              w-full
+              items-center
+              justify-between
+              border-b
+              border-white/10
+              py-4
+              text-left
+              text-[15px]
+              font-medium
+              transition
+              duration-200
+              hover:text-white/80
+            "
+          >
+            <span>Services</span>
+
+            <ChevronDown
+              size={19}
+              className={`
+                transition-transform
+                duration-300
+                ${
+                  mobileServicesOpen
+                    ? "rotate-180"
+                    : "rotate-0"
+                }
+              `}
             />
+          </button>
 
-            {/* Services */}
+          {/* =================================================
+              SERVICES DROPDOWN
+          ================================================= */}
 
-            <button
-              type="button"
-              onClick={openServices}
-              className="
-                flex
-                w-full
-                items-center
-                justify-between
-                border-b
-                border-white/10
-                py-4
-                text-left
-                text-[15px]
-                font-medium
-              "
-            >
-              <span>Services</span>
+          <div
+            className={`
+              overflow-hidden
+              transition-all
+              duration-300
+              ease-in-out
+              ${
+                mobileServicesOpen
+                  ? "max-h-[300px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }
+            `}
+          >
+            <div className="box-border w-full min-w-0 max-w-full overflow-x-clip border-b border-white/20 pl-6">
 
-              <ChevronDown size={19} />
-            </button>
-
-            {/* B2B */}
-
-            <MobileLink
-              to="/b2b"
-              title="B2B"
-              onClick={closeMobileMenu}
-            />
-
-            {/* Free Design */}
-
-            <MobileLink
-              to="/whychooseus"
-              title="Why Choose Us"
-              onClick={closeMobileMenu}
-            />
-
-            {/* Pricing */}
-
-            <MobileLink
-              to="/pricing"
-              title="Pricing"
-              onClick={closeMobileMenu}
-            />
-
-            {/* Contact */}
-
-            <MobileLink
-              to="/contactus"
-              title="Contact Us"
-              onClick={closeMobileMenu}
-            />
-
-            {/* Resources */}
-
-            <button
-              type="button"
-              onClick={openResources}
-              className="
-                flex
-                w-full
-                items-center
-                justify-between
-                py-4
-                text-left
-                text-[15px]
-                font-medium
-              "
-            >
-              <span>Resources</span>
-
-              <ChevronDown size={18} className="text-white"/>
-            </button>
-          </div>
-        )}
-
-        {/* ===================================================
-            SERVICES SUB MENU
-        =================================================== */}
-
-        {mobileServicesOpen && (
-          <div className="px-5 py-5">
-
-            {/* Back */}
-
-            <button
-              type="button"
-              onClick={goBack}
-              className="
-                mb-5
-                flex
-                items-center
-                gap-2
-                text-sm
-                font-medium
-              "
-            >
-              <ArrowLeft size={18} />
-              <span>Back</span>
-            </button>
-
-            <h3 className="mb-4 text-lg font-semibold">
-              Our Services
-            </h3>
-
-            <MegaMenu
-              mobile
-              onNavigate={closeMobileMenu}
-            />
-          </div>
-        )}
-
-        {/* ===================================================
-            RESOURCES SUB MENU
-        =================================================== */}
-
-        {mobileResourcesOpen && (
-          <div className="px-5 py-5">
-
-            {/* Back */}
-
-            <button
-              type="button"
-              onClick={goBack}
-              className="
-                mb-5
-                flex
-                items-center
-                gap-2
-                text-sm
-                font-medium
-              "
-            >
-              <ArrowLeft size={18} />
-              <span>Back</span>
-            </button>
-
-            <h3 className="mb-3 text-lg font-semibold">
-              Resources
-            </h3>
-
-            {/* Resource Links */}
-
-            <div>
-              {resources.map((item) => (
+              {mobileServices.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={closeMobileMenu}
                   className="
                     block
-                    border-b
-                    border-white/10
-                    py-3.5
-                    text-[15px]
+                   
+                  
+                   my-3
+                    
+                    text-[14px]
                     font-medium
+                    text-white
                     transition
-                    hover:text-white/80
+                    duration-200
+                    hover:text-white
                   "
                 >
                   {item.title}
                 </Link>
               ))}
+
             </div>
           </div>
-        )}
+
+          {/* B2B */}
+
+          <MobileLink
+            to="/b2b"
+            title="B2B"
+            onClick={closeMobileMenu}
+          />
+
+          {/* Why Choose Us */}
+
+          <MobileLink
+            to="/whychooseus"
+            title="Why Choose Us"
+            onClick={closeMobileMenu}
+          />
+
+          {/* Pricing */}
+
+          <MobileLink
+            to="/pricing"
+            title="Pricing"
+            onClick={closeMobileMenu}
+          />
+
+          {/* Contact */}
+
+          <MobileLink
+            to="/contactus"
+            title="Contact Us"
+            onClick={closeMobileMenu}
+          />
+
+          {/* =================================================
+              RESOURCES
+          ================================================= */}
+
+          <button
+            type="button"
+            onClick={openResources}
+            className="
+              flex
+              w-full
+              items-center
+              justify-between
+              py-4
+              text-left
+              text-[15px]
+              font-medium
+              transition
+              duration-200
+              hover:text-white/80
+            "
+          >
+            <span>Resources</span>
+
+            <ChevronDown
+              size={18}
+              className="text-white"
+            />
+          </button>
+        </div>
+
+        {/* =================================================
+            RESOURCES SUB MENU
+            SERVICES IS NO LONGER A SLIDER
+        ================================================= */}
+
+        <div
+          className={`
+            absolute
+            inset-x-0
+            top-0
+            min-h-full
+            box-border
+            w-auto
+            max-w-full
+            overflow-x-clip
+            bg-[#7434E5]
+            px-5
+            py-5
+            transition-all
+            duration-300
+            ease-[cubic-bezier(0.4,0,0.2,1)]
+
+            ${
+              mobileResourcesOpen
+                ? "translate-x-0 opacity-100"
+                : "pointer-events-none translate-x-full opacity-0"
+            }
+          `}
+        >
+
+          {/* Back */}
+
+          <button
+            type="button"
+            onClick={goBack}
+            className="
+              mb-5
+              flex
+              items-center
+              gap-2
+              text-sm
+              font-medium
+              transition
+              duration-200
+              hover:text-white/80
+            "
+          >
+            <ArrowLeft size={18} />
+
+            <span>Back</span>
+          </button>
+
+          <h3 className="mb-3 text-lg font-semibold">
+            Resources
+          </h3>
+
+          {/* Resource Links */}
+
+          <div>
+            {resources.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={closeMobileMenu}
+                className="
+                  block
+                  border-b
+                  border-white/10
+                  py-3.5
+                  text-[15px]
+                  font-medium
+                  transition
+                  duration-200
+                  hover:text-white/80
+                "
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </nav>
   );
@@ -591,6 +670,7 @@ const MobileLink = ({ to, title, onClick }) => {
         text-[15px]
         font-medium
         transition
+        duration-200
         hover:text-white/80
       "
     >
@@ -600,4 +680,3 @@ const MobileLink = ({ to, title, onClick }) => {
 };
 
 export default Navbar;
-
