@@ -3,16 +3,15 @@ import {
   ShieldCheck,
   Zap,
   FileCheck2,
+  FileUp,
 } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb";
 import SectionHeading from "../assets/components/layout/SectionHeading";
-import ServiceHighlights from "../assets/components/layout/ServiceHighlights";
-
 import FileFormatSection from "../assets/components/sections/FileFormateSection/FileFormatsSection";
 import FileFormatCTA from "../assets/components/layout/FileFormatPageLayout/FileFormatCTA";
-
 import { fileFormatData } from "../assets/components/common/FikeFormatData";
+import CTASection from "../assets/components/layout/CTASection";
 
 const formatHighlights = [
   {
@@ -27,16 +26,17 @@ const formatHighlights = [
     description: "Optimized for all major machines.",
     Icon: ShieldCheck,
   },
-  
   {
     id: 3,
     title: "24/7 Friendly Support",
-    description: "Our team is here to assist",
+    description: "Our team is here to assist.",
     Icon: Headset,
   },
 ];
 
 const FileFormatPage = () => {
+  const navigate = useNavigate();
+
   return (
     <main
       className="
@@ -57,15 +57,11 @@ const FileFormatPage = () => {
           w-full
           max-w-[1364px]
           min-w-0
-
           px-[14px]
 
           sm:px-[22px]
-
           md:px-[24px]
-
           lg:px-[40px]
-
           2xl:px-[48px]
         "
       >
@@ -141,55 +137,105 @@ const FileFormatPage = () => {
           "
           headingClassName="capitalize"
         />
+{/* =====================================================
+    SERVICE HIGHLIGHTS
+===================================================== */}
+<section
+  className="
+    mx-auto
+    mb-[6px]
+    grid
+    w-[280px]
+    max-w-[980px]
+    grid-cols-1
+    gap-y-[24px]
 
-        {/* =====================================================
-            SERVICE HIGHLIGHTS
-        ===================================================== */}
-        <section
+    sm:gap-y-[26px]
+
+    md:grid-cols-3
+    md:gap-x-[28px]
+
+    lg:gap-x-[42px]
+  "
+>
+  {formatHighlights.map(
+    ({ id, Icon, title, description }) => (
+      <div
+        key={id}
+        className="
+          flex
+          w-full
+          min-w-0
+          items-start
+          justify-start
+          gap-[12px]
+
+          sm:gap-[14px]
+
+          md:gap-[12px]
+          lg:gap-[14px]
+        "
+      >
+        {/* ICON */}
+        <div
           className="
-            mb-[6px]
             flex
-            w-full
-            max-w-[900px]
-            flex-wrap
+            h-[50px]
+            w-[50px]
+            shrink-0
+            items-center
             justify-center
-            gap-[10px]
-            mx-auto
+            rounded-full
+            bg-[#E8DBFE]
+            text-[#7434E5]
 
-            sm:gap-[12px]
-
-            md:gap-[14px]
-
-            lg:max-w-[680px]
-            lg:flex-nowrap
-            lg:gap-[14px]
+            sm:h-[54px]
+            sm:w-[54px]
           "
         >
-         {formatHighlights.map((item) => (
-  <ServiceHighlights
-    key={item.id}
-    title={item.title}
-    description={item.description}
-    Icon={item.Icon}
-    variant="logo"
-    width="
-      flex
-      items-start
-      justify-start
-      w-[calc(50%-5px)]
+          {Icon && (
+            <Icon
+              size={23}
+              strokeWidth={1.8}
+            />
+          )}
+        </div>
 
-      sm:w-[calc(50%-6px)]
+        {/* CONTENT */}
+        <div className="min-w-0 flex-1 text-left">
+          <h3
+            className="
+              font-dmSans
+              text-[16px]
+              font-bold
+              leading-[1.3]
+              text-[#0F1729]
 
-      md:w-[calc(25%-11px)]
+              sm:text-[17px]
+            "
+          >
+            {title}
+          </h3>
 
-      lg:w-auto
-      lg:flex-1
-      lg:items-center
-      lg:justify-center
-    "
-  />
-))}
-        </section>
+          <p
+            className="
+              mt-[5px]
+              max-w-full
+              font-inter
+              text-[12px]
+              leading-[1.55]
+              text-[#7A7591]
+
+              sm:text-[13px]
+            "
+          >
+            {description}
+          </p>
+        </div>
+      </div>
+    )
+  )}
+</section>
 
         {/* =====================================================
             EMBROIDERY FILE FORMATS
@@ -197,11 +243,8 @@ const FileFormatPage = () => {
         <div
           className="
             mt-[42px]
-
             sm:mt-[50px]
-
             md:mt-[58px]
-
             lg:mt-[66px]
           "
         >
@@ -218,11 +261,8 @@ const FileFormatPage = () => {
         <div
           className="
             mt-[42px]
-
             sm:mt-[50px]
-
             md:mt-[58px]
-
             lg:mt-[66px]
           "
         >
@@ -239,11 +279,8 @@ const FileFormatPage = () => {
         <div
           className="
             mt-[42px]
-
             sm:mt-[50px]
-
             md:mt-[58px]
-
             lg:mt-[66px]
           "
         >
@@ -255,21 +292,46 @@ const FileFormatPage = () => {
         </div>
 
         {/* =====================================================
-            BOTTOM CTA
+            BOTTOM CTA CARDS
         ===================================================== */}
         <div
           className="
             mt-[38px]
-
             sm:mt-[46px]
-
             md:mt-[54px]
-
             lg:mt-[62px]
           "
         >
           <FileFormatCTA
             cards={fileFormatData.bottomCards}
+          />
+        </div>
+
+        {/* =====================================================
+            FINAL CTA
+        ===================================================== */}
+        <div
+          className="
+            mt-[38px]
+            sm:mt-[46px]
+            md:mt-[54px]
+            lg:mt-[62px]
+          "
+        >
+          <CTASection
+            icon={
+              <FileUp
+                size={30}
+                strokeWidth={2.2}
+                className="text-[#7434E5]"
+              />
+            }
+            title="Have Your Artwork Ready?"
+            description="Upload your file now and get a fast, free quote from our expert team."
+            buttonText="Upload & Get Quote"
+            titleClass="text-[22px] sm:text-[24px]"
+            bg="bg-[linear-gradient(93.97deg,_#6C29E0_0%,_#5413C3_100%)] shadow-[0px_18px_40px_rgba(75,36,143,0.3)]"
+            onClick={() => navigate("/contact-us")}
           />
         </div>
       </div>

@@ -48,9 +48,9 @@ const FileFormatSection = ({
         <div
           className="
             mt-[10px]
-            h-[3px] w-[42px]
+            h-1 w-[42px]
             rounded-full
-            bg-[#B29BDA]
+            bg-[#7434E5]
             sm:mt-[11px]
             sm:w-[46px]
             lg:mt-[12px]

@@ -196,14 +196,14 @@ const FileFormatCTA = ({ cards = [] }) => {
                         mt-[12px]
                         inline-flex
                         items-center
-                        gap-[5px]
+                        gap-[6px]
 
                         rounded-full
-                        px-[12px]
-                        py-[7px]
+                        px-[14px]
+                        py-[12px]
 
                         font-inter
-                        text-[11px]
+                        text-[13px]
                         font-semibold
                         leading-none
                         text-white
@@ -213,10 +213,10 @@ const FileFormatCTA = ({ cards = [] }) => {
 
                         sm:mt-[14px]
                         sm:px-[14px]
-                        sm:py-[8px]
+                        sm:py-[16px]
                         sm:text-[12px]
 
-                        lg:px-[15px]
+                        lg:px-[16px]
                         lg:text-[12px]
 
                         ${
@@ -229,7 +229,7 @@ const FileFormatCTA = ({ cards = [] }) => {
                       {card.buttonText}
 
                       <ArrowRight
-                        size={13}
+                        size={14}
                         strokeWidth={1.8}
                         className="
                           transition-transform
