@@ -1,58 +1,75 @@
-const SizeGuideTable = ({ data = [] }) => {
+const SizeGuideTable = ({
+  data = [],
+  title = "Embroidery Placement on Garments",
+}) => {
   return (
     <>
       {/* ================= DESKTOP TABLE ================= */}
 
       <div
         className="
+          mt-[12px]
           hidden
           rounded-[20px]
           border
-          mt-[22px]
           border-[#E7E3ED]
-          p-8
           bg-white
+          p-5
           shadow-[0px_2px_12px_rgba(211,202,226,0.22)]
+
+          lg:mt-[58px]
           lg:block
-          lg:mt-[72px]
+          lg:p-6
+          xl:p-8
         "
       >
-            <h1 className="font-bold font-dmSans text-[22px] text-[#0C0C30]">Embroidery Placement on Garments</h1>
-          <table className="w-full border-collapse mt-6">
+        <h2
+          className="
+            font-dmSans
+            text-[20px]
+            font-bold
+            text-[#0C0C30]
 
-            {/* Header */}
+            xl:text-[22px]
+          "
+        >
+          {title}
+        </h2>
 
+        <div className="mt-5 w-full overflow-x-auto">
+          <table className="w-full min-w-[980px] border-collapse">
             <thead>
               <tr
                 className="
                   bg-[linear-gradient(95deg,#6C29E0_0%,#5413C3_100%)]
                   font-dmSans
-    
                 "
               >
-                <th className="px-5 py-4 text-left text-sm font-bold text-white">
+                <th className="px-4 py-4 text-left text-sm font-bold text-white">
                   Placement
                 </th>
 
-                <th className="px-5 py-4 text-center text-sm font-bold text-white">
+                <th className="px-4 py-4 text-center text-sm font-bold text-white">
                   Image
                 </th>
 
-                <th className="px-5 py-4 text-left text-sm font-bold text-white">
-                  Location
+                <th className="px-4 py-4 text-left text-sm font-bold text-white">
+                  Location Guide
                 </th>
 
-                <th className="px-5 py-4 text-left text-sm font-bold text-white">
+                <th className="px-4 py-4 text-left text-sm font-bold text-white">
                   Recommended Size
                 </th>
 
-                <th className="px-5 py-4 text-left text-sm font-bold text-white">
+                <th className="px-4 py-4 text-left text-sm font-bold text-white">
+                  Best For
+                </th>
+
+                <th className="px-4 py-4 text-left text-sm font-bold text-white">
                   Notes
                 </th>
               </tr>
             </thead>
-
-            {/* Body */}
 
             <tbody>
               {data.map((item) => (
@@ -65,13 +82,13 @@ const SizeGuideTable = ({ data = [] }) => {
                   "
                 >
                   {/* Placement */}
-
-                  <td className="px-4 py-5">
+                  <td className="px-4 py-5 align-middle">
                     <p
                       className="
                         font-dmSans
-                        text-base
+                        text-sm
                         font-bold
+                        leading-5
                         text-[#0C0C30]
                       "
                     >
@@ -80,45 +97,37 @@ const SizeGuideTable = ({ data = [] }) => {
                   </td>
 
                   {/* Image */}
-
-                  <td className="px-6 py-4">
+                  <td className="px-4 py-5 align-middle">
                     <div className="flex justify-center">
                       {item.image ? (
                         <img
                           src={item.image}
                           alt={item.item}
                           className="
-                            h-[46px]
-                            w-[44px]
+                            h-[64px]
+                            w-[80px]
                             object-contain
                           "
                         />
                       ) : (
                         <div
                           className="
-                            flex
-                            h-[60px]
-                            w-[60px]
-                            items-center
-                            justify-center
-                            
-    
+                            h-[64px]
+                            w-[80px]
                           "
-                        >
-                          
-                        </div>
+                        />
                       )}
                     </div>
                   </td>
 
                   {/* Location */}
-
-                  <td className="px-5 py-6">
+                  <td className="px-4 py-5 align-middle">
                     <p
                       className="
+                        whitespace-pre-line
                         font-inter
-                        text-sm
-                        leading-6
+                        text-[13px]
+                        leading-5
                         text-[#6B7280]
                       "
                     >
@@ -127,14 +136,14 @@ const SizeGuideTable = ({ data = [] }) => {
                   </td>
 
                   {/* Size */}
-
-                  <td className="px-5 py-6">
+                  <td className="px-4 py-5 align-middle">
                     <p
                       className="
+                        whitespace-pre-line
                         font-dmSans
-                        text-sm
+                        text-[13px]
                         font-bold
-                        leading-6
+                        leading-5
                         text-[#7434E5]
                       "
                     >
@@ -142,49 +151,55 @@ const SizeGuideTable = ({ data = [] }) => {
                     </p>
                   </td>
 
-                  {/* Notes */}
-
-                  <td className="px-5 py-6">
+                  {/* Best For */}
+                  <td className="px-4 py-5 align-middle">
                     <p
                       className="
                         font-inter
-                        text-sm
-                        leading-6
+                        text-[13px]
+                        leading-5
                         text-[#6B7280]
-                        font-normal
                       "
                     >
-                      {item.notes}
+                      {item.bestFor || "—"}
+                    </p>
+                  </td>
+
+                  {/* Notes */}
+                  <td className="px-4 py-5 align-middle">
+                    <p
+                      className="
+                        font-inter
+                        text-[13px]
+                        leading-5
+                        text-[#6B7280]
+                      "
+                    >
+                      {item.notes || "—"}
                     </p>
                   </td>
                 </tr>
               ))}
             </tbody>
-
           </table>
-        
+        </div>
       </div>
 
+      {/* ================= MOBILE ================= */}
 
-      {/* ================= MOBILE CARDS ================= */}
-
-      <div className="flex flex-col gap-3 lg:hidden mt-4">
-
+      <div className="mt-4 flex flex-col gap-3 lg:hidden">
         {data.map((item) => (
           <article
             key={item.id}
             className="
-              overflow-hidden
               rounded-[16px]
               border
               border-[#E7E3ED]
               bg-white
-            shadow-[0px_2px_12px_rgba(211,202,226,0.22)]
+              shadow-[0px_2px_12px_rgba(211,202,226,0.22)]
             "
           >
-
-            {/* Top Section */}
-
+            {/* Header */}
             <div
               className="
                 flex
@@ -197,14 +212,14 @@ const SizeGuideTable = ({ data = [] }) => {
                 py-4
               "
             >
-              <div>
+              <div className="min-w-0">
                 <p
                   className="
                     font-inter
-                    text-xs
+                    text-[10px]
                     font-bold
                     uppercase
-                    tracking-[1.2px]
+                    tracking-[1px]
                     text-[#7434E5]
                   "
                 >
@@ -215,8 +230,9 @@ const SizeGuideTable = ({ data = [] }) => {
                   className="
                     mt-1
                     font-dmSans
-                    text-[18px]
+                    text-[17px]
                     font-bold
+                    leading-5
                     text-[#182032]
                   "
                 >
@@ -224,14 +240,11 @@ const SizeGuideTable = ({ data = [] }) => {
                 </h3>
               </div>
 
-
-              {/* Garment Image */}
-
               <div
                 className="
                   flex
                   h-[62px]
-                  w-[62px]
+                  w-[70px]
                   shrink-0
                   items-center
                   justify-center
@@ -245,45 +258,41 @@ const SizeGuideTable = ({ data = [] }) => {
                     alt={item.item}
                     className="
                       h-[48px]
-                      w-[48px]
+                      w-[58px]
                       object-contain
                     "
                   />
                 ) : (
-                  <span className="text-xs text-[#7434E5]">
+                  <span className="text-[10px] text-[#7434E5]">
                     Image
                   </span>
                 )}
               </div>
             </div>
 
-
-            {/* Details */}
-
             <div className="p-4">
-
               {/* Location */}
-
               <div className="pb-4">
                 <p
                   className="
                     font-inter
-                    text-xs
+                    text-[10px]
                     font-bold
                     uppercase
                     tracking-[1px]
                     text-[#7434E5]
                   "
                 >
-                  Location
+                  Location Guide
                 </p>
 
                 <p
                   className="
                     mt-1
+                    whitespace-pre-line
                     font-inter
-                    text-sm
-                    leading-6
+                    text-[13px]
+                    leading-5
                     text-[#4B5563]
                   "
                 >
@@ -291,28 +300,25 @@ const SizeGuideTable = ({ data = [] }) => {
                 </p>
               </div>
 
-
-              {/* Size + Notes */}
-
+              {/* Bottom information */}
               <div
                 className="
                   grid
-                  grid-cols-2
+                  grid-cols-1
                   gap-4
-
                   border-t
                   border-[#E7E3ED]
-
                   pt-4
+
+                  sm:grid-cols-3
                 "
               >
-                {/* Recommended Size */}
-
+                {/* Size */}
                 <div>
                   <p
                     className="
                       font-inter
-                      text-[11px]
+                      text-[10px]
                       font-semibold
                       uppercase
                       tracking-[1px]
@@ -325,32 +331,31 @@ const SizeGuideTable = ({ data = [] }) => {
                   <p
                     className="
                       mt-2
+                      whitespace-pre-line
                       font-inter
-                      text-[14px]
+                      text-[13px]
                       font-bold
                       leading-5
                       text-[#7434E5]
                     "
                   >
-                    {item.size}
+                    {item.size || "—"}
                   </p>
                 </div>
 
-
-                {/* Notes */}
-
+                {/* Best For */}
                 <div>
                   <p
                     className="
                       font-inter
-                      text-xs
+                      text-[10px]
                       font-bold
                       uppercase
                       tracking-[1px]
                       text-[#0C0C30]
                     "
                   >
-                    Note
+                    Best For
                   </p>
 
                   <p
@@ -362,13 +367,39 @@ const SizeGuideTable = ({ data = [] }) => {
                       text-[#6B7280]
                     "
                   >
-                    {item.notes}
+                    {item.bestFor || "—"}
                   </p>
                 </div>
 
+                {/* Notes */}
+                <div>
+                  <p
+                    className="
+                      font-inter
+                      text-[10px]
+                      font-bold
+                      uppercase
+                      tracking-[1px]
+                      text-[#0C0C30]
+                    "
+                  >
+                    Notes
+                  </p>
+
+                  <p
+                    className="
+                      mt-2
+                      font-inter
+                      text-[13px]
+                      leading-5
+                      text-[#6B7280]
+                    "
+                  >
+                    {item.notes || "—"}
+                  </p>
+                </div>
               </div>
             </div>
-
           </article>
         ))}
       </div>
