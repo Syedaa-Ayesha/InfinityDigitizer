@@ -222,11 +222,11 @@ const FileFormatPage = () => {
               mt-[5px]
               max-w-full
               font-inter
-              text-[12px]
+              text-[14px]
               leading-[1.55]
-              text-[#7A7591]
+              text-[#6B6B80]
 
-              sm:text-[13px]
+              
             "
           >
             {description}

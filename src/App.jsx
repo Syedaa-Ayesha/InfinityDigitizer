@@ -50,7 +50,7 @@ function App() {
         <Route path="/b2b" element={<B2B />} />
         <Route path="/freedesign" element={<FreeDesign />} />
         <Route path="/design/:id" element={<DesignDetails />} />
-        <Route path="/contactus" element={<Contactus />} />
+        <Route path="/contact-us" element={<Contactus />} />
         <Route path="/blogs-list" element={<BlogListPage />} />
         <Route path="/blogs/:id" element={<BlogPage />} />
         <Route path="/login" element={<LoginPage />} />

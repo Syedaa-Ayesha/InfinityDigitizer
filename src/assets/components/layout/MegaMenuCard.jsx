@@ -63,9 +63,10 @@ const MegaMenuCard = ({
                         className="
             font-inter
             font-bold
-            text-[26px]
+            text-[20px]
             -leading-[3%]
             text-[#7434E5]
+            
           "
                     >
                         {title}
@@ -89,7 +90,7 @@ const MegaMenuCard = ({
 
             {/* Middle */}
 
-            <div className="mt-3 flex gap-2">
+            <div className="mt-8 flex gap-2">
 
                 {/* Features */}
 
@@ -125,28 +126,29 @@ const MegaMenuCard = ({
                 </div>
 
                 {/* Preview */}
-
-                <div
-                    className="
-          flex
-          h-[135px]
-          w-[111px]
-          shrink-0
-          items-center
-          justify-center
-          rounded-2xl
-          bg-white
-          shadow-[0_15px_35px_rgba(0,0,0,.12)]
-        "
-                >
-
-                    <img
-                        src={image}
-                        alt={title}
-                        className="max-h-[95px] object-contain"
-                    />
-
-                </div>
+<div
+  className="
+    h-[135px]
+    w-[111px]
+    shrink-0
+    overflow-hidden
+    rounded-2xl
+    bg-white
+    shadow-[0_15px_35px_rgba(0,0,0,.12)]
+  "
+>
+  <img
+    src={image}
+    alt={title}
+    className="
+      block
+      h-full
+      w-full
+      rounded-2xl
+      object-cover
+    "
+  />
+</div>
 
             </div>
 

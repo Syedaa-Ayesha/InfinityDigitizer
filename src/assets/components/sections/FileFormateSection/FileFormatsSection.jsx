@@ -34,7 +34,7 @@ const FileFormatSection = ({
               break-words
               font-inter text-[14px] font-normal
               leading-[1.7]
-              text-[#707080]
+              text-[#6B6B80]
               sm:mt-[8px]
               sm:text-[15px]
               lg:text-[16px]

@@ -1,4 +1,3 @@
-
 import img1 from '../../icons/Hat.png'
 import img2 from '../../icons/Jacket.png'
 import img3 from '../../icons/LeftChest.png'
@@ -52,7 +51,21 @@ export const serviceCards = {
             "We create embroidery digitizing files for different cap styles and materials, with each design prepared according to the shape and structure of the headwear. Our cap digitizing service covers everything from everyday caps to detailed and specialised designs.",
 
           description2:
-            "We provide cap digitizing for Baseball Caps, Snapback Caps, Trucker Caps, Dad Hats, Flat Bill / Flat Brim Caps, 5 Panel Caps, 6 Panel Caps, Flexfit / Fitted Caps, Bucket Hats, Visors, and Beanies / Winter."
+            "We provide cap digitizing for Baseball Caps, Snapback Caps, Trucker Caps, Dad Hats, Flat Bill / Flat Brim Caps, 5 Panel Caps, 6 Panel Caps, Flexfit / Fitted Caps, Bucket Hats, Visors, and Beanies / Winter.",
+
+          typesToDisplay: [
+            "Baseball Caps",
+            "Snapback Caps",
+            "Trucker Caps",
+            "Dad Hats",
+            "Flat Bill / Flat Brim Caps",
+            "5 Panel Caps",
+            "6 Panel Caps",
+            "Flexfit / Fitted Caps",
+            "Bucket Hats",
+            "Visors",
+            "Beanies / Winter",
+          ]
         },
 
         capTypes: [
@@ -152,6 +165,22 @@ export const serviceCards = {
             "Getting your cap design ready for embroidery is simple. Send us the artwork and some details about the cap and embroidery requirements, and our team can prepare the appropriate digitizing file for production.",
 
           steps: [
+            {
+              number: 1,
+              title: "Send Your Artwork",
+
+              details:
+                "Upload or send us the clearest format you have. Vector files such as AI, EPS and SVG are ideal, while a high resolution PNG can also be used for digitizing."
+            },
+
+            {
+              number: 2,
+              title: "Tell Us Your Cap Style",
+
+              details:
+                "Let us know which type of headwear you are using, such as a snapback, baseball cap, trucker cap, dad hat, fitted cap, bucket hat, visor or beanie. This helps us choose the right digitizing approach for the material and construction."
+            },
+
             {
               number: 3,
               title: "Choose Your Embroidery Style",

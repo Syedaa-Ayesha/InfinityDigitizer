@@ -8,32 +8,62 @@ const ServiceHero = ({
   imageAlt = "",
 }) => {
   return (
-    <section className="w-full">
+    <section
+      className="
+        box-border
+        mx-auto
+        w-full
+        min-w-0
+        max-w-[1344px]
+        px-[14px]
+        sm:px-[18px]
+        md:px-[24px]
+        lg:px-[32px]
+        xl:px-0
+        py-6
+    xl:py-13
+        border-b
+        border-[#6B7280]/20
+      "
+    >
       {/* Breadcrumb */}
-      <Breadcrumb />
+      <div className="w-full min-w-0 max-w-full">
+        <Breadcrumb />
+      </div>
 
       {/* Hero */}
       <div
         className="
-          mt-[22px]
-
+          mt-[18px]
           grid
+          w-full
+          min-w-0
+          max-w-full
           grid-cols-1
           items-start
-          gap-[36px]
+          gap-[24px]
+
+          sm:mt-[22px]
+          sm:gap-[28px]
 
           md:grid-cols-[minmax(0,1fr)_320px]
-          md:gap-[45px]
+          md:gap-[36px]
 
           lg:grid-cols-[minmax(0,1fr)_405px]
-          lg:gap-[62px]
+          lg:gap-[52px]
+
+          xl:gap-[62px]
         "
       >
         {/* LEFT CONTENT */}
         <div
           className="
+            box-border
             min-w-0
-            pt-[8px]
+            max-w-full
+            pt-0
+
+            sm:pt-[4px]
 
             lg:pt-[18px]
           "
@@ -42,30 +72,38 @@ const ServiceHero = ({
           <div
             className="
               inline-flex
+              max-w-full
               items-center
               rounded-full
               border
               border-[#D9C8FF]
               bg-[#F5F0FF]
+              px-[11px]
+              py-[5px]
 
-              px-[13px]
-              py-[6px]
+              sm:px-[13px]
+              sm:py-[6px]
 
-              sm:px-[14px]
-              sm:py-[7px]
+              lg:px-[14px]
+              lg:py-[7px]
             "
           >
             <span
               className="
+                max-w-full
+                break-words
                 font-inter
-                text-[8px]
+                text-[9px]
                 font-semibold
                 uppercase
-                tracking-[0.6px]
+                tracking-[0.45px]
                 text-[#7434E5]
 
-                sm:text-[9px]
+                sm:text-[10px]
+
+                lg:text-[10px]
               "
+              style={{ overflowWrap: "anywhere" }}
             >
               {category}
             </span>
@@ -74,62 +112,72 @@ const ServiceHero = ({
           {/* Title */}
           <h1
             className="
-              mt-[17px]
-              max-w-[560px]
-
+              mt-[14px]
+              max-w-[620px]
+              break-words
               font-dmSans
-              text-[36px]
+              text-[30px]
               font-extrabold
-              leading-[1.06]
-              tracking-[-1.6px]
+              leading-[1.08]
+              tracking-[-1.1px]
               text-[#111118]
 
-              sm:text-[42px]
+              sm:mt-[16px]
+              sm:text-[36px]
+              sm:tracking-[-1.3px]
 
+              md:text-[42px]
+
+              lg:mt-[17px]
               lg:text-[48px]
+              lg:tracking-[-1.6px]
             "
+            style={{ overflowWrap: "anywhere" }}
           >
             {title}
           </h1>
 
           {/* Description */}
-          <p
-            className="
-              mt-[16px]
-              max-w-[570px]
+          {description && (
+            <p
+              className="
+                mt-[13px]
+                max-w-[620px]
+                break-words
+                font-inter
+                text-[13px]
+                font-normal
+                leading-[1.65]
+                text-[#6B6B80]
 
-              font-inter
-              text-[13px]
-              font-normal
-              leading-[1.65]
-              text-[#6B6B80]
+                sm:mt-[15px]
+                sm:text-[14px]
+                sm:leading-[1.7]
 
-              sm:text-[14px]
+                md:max-w-[600px]
 
-              lg:text-[15px]
-            "
-          >
-            {description}
-          </p>
+                lg:mt-[16px]
+                lg:text-[15px]
+                lg:leading-[1.75]
+              "
+              style={{ overflowWrap: "anywhere" }}
+            >
+              {description}
+            </p>
+          )}
         </div>
 
         {/* RIGHT IMAGE */}
         <div
           className="
+            box-border
             w-full
-            overflow-hidden
+            min-w-0
+            max-w-full
             rounded-[12px]
             border
             border-[#E8E8F0]
             bg-[#FDF2F2]
-
-            h-[230px]
-
-            sm:h-[270px]
-
-            md:h-[235px]
-
-            lg:h-[315px]
           "
         >
           {image ? (
@@ -137,10 +185,21 @@ const ServiceHero = ({
               src={image}
               alt={imageAlt || title}
               className="
-                h-full
+                block
+                h-auto
                 w-full
+                max-w-full
+                rounded-[11px]
                 object-cover
                 object-center
+
+                aspect-[16/10]
+                sm:aspect-[16/10]
+
+                md:h-[235px]
+                md:aspect-auto
+
+                lg:h-[315px]
               "
             />
           ) : null}

@@ -5,9 +5,9 @@ import {
 } from "lucide-react";
 
 // Images
-import embroideryImg from "../../images/GIRL & SKULL  1.png";
-import vectorImg from "../../images/846 2 1.png";
-import logoImg from "../../images/12 inches wide 1.png";
+import embroideryImg from "../../images/Embroidery.jpg";
+import vectorImg from "../../images/Vector.jpg";
+import logoImg from "../../images/Logo.jpg";
 
 export const MegaMenuData = [
   {
