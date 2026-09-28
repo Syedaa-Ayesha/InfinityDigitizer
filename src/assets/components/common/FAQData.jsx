@@ -201,3 +201,53 @@ export const faqData = [
     ],
   },
 ];
+
+export const helpPageFaqItems = [
+  {
+    id: 1,
+    number: "01.",
+    question: "What file formats do you provide?",
+    answer:
+      "We deliver embroidery files in all standard formats, including DST, PES, and EMB, along with any other format your machine requires. For vector art orders, we provide AI, EPS, SVG, and other formats as needed.",
+  },
+
+  {
+    id: 2,
+    number: "02.",
+    question: "How long does it take to get my design?",
+    answer:
+      "Most orders are completed within 4 to 24 hours, depending on the complexity and urgency of your request.",
+  },
+
+  {
+    id: 3,
+    number: "03.",
+    question: "How much does digitizing cost?",
+    answer:
+      "Our pricing starts at $15, with the final cost depending on the size and complexity of your design. You’ll always get a clear quote before you confirm your order.",
+  },
+
+  {
+    id: 4,
+    number: "04.",
+    question: "Which countries do you serve?",
+    answer:
+      "We work with clients across the USA, Canada, Australia, and the UK. We also offer B2B services for businesses looking for ongoing digitizing support.",
+  },
+
+  {
+    id: 5,
+    number: "05.",
+    question: "Do you offer revisions if I'm not happy with the design?",
+    answer:
+      "Yes. Minor edits like colour changes or small resizing are free of charge. If your request involves a bigger redesign, we'll let you know the cost upfront before making any changes.",
+  },
+
+  {
+    id: 6,
+    number: "06.",
+    question: "How do I place an order / what's the process?",
+    answer:
+      "Simply submit your quote request with your image and instructions. Once confirmed, our digitizer gets to work, and your completed file is delivered straight to your email.",
+  },
+];

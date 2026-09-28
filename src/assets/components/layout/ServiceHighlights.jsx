@@ -1,6 +1,7 @@
 const ServiceHighlights = ({
   Icon,
   title,
+  description = "",
   variant = "default",
   classname = "",
   iconBg = "bg-[#E8DBFE]",
@@ -19,7 +20,6 @@ const ServiceHighlights = ({
         gap-3
         lg:gap-[10px]
         ${width}
-       
       `}
     >
       {/* Icon */}
@@ -51,15 +51,40 @@ const ServiceHighlights = ({
       {/* Text */}
       <span
         className={`
-          whitespace-pre-line
-          text-xs
-          font-semibold
-          leading-[16px]
-          text-[#00030B]
+          flex
+          min-w-0
+          flex-col
           ${classname}
         `}
       >
-        {title}
+        {/* Title */}
+        <span
+          className="
+            whitespace-pre-line
+            text-xs
+            font-semibold
+            leading-[16px]
+            text-[#00030B]
+          "
+        >
+          {title}
+        </span>
+
+        {/* Description */}
+        {description && (
+          <span
+            className="
+              mt-[1px]
+              break-words
+              text-[10px]
+              font-normal
+              leading-[13px]
+              text-[#8A8892]
+            "
+          >
+            {description}
+          </span>
+        )}
       </span>
     </div>
   );

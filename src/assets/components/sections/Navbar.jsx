@@ -7,14 +7,18 @@ import logo from "../../images/Logo.png";
 import MegaMenu from "../layout/MegaMenu";
 
 const resources = [
-  { title: "Blogs", path: "/blogsList" },
+  { title: "Blogs", path: "/blogs-list" },
   { title: "Reviews", path: "/reviews" },
-  { title: "Why Choose Us", path: "/whychooseus" },
-  { title: "Referral Program", path: "/referral-program" },
-  { title: "Size Guideline", path: "/sizes" },
+   { title: "Size Guideline", path: "/sizes" },
   { title: "FAQs", path: "/faqs" },
-  { title: "Documentation", path: "/documentation" },
-  { title: "Site Map", path: "/sitemap" },
+  { title: "Why Choose Us", path: "/why-choose-us" },
+   { title: "Privacy Policy", path: "/privacy-policy" },
+ { title: "Terms & Conditions", path: "/terms-and-conditions" },
+ { title: "Refund Policy", path: "/refund-policy" },
+   { title: "Site Map", path: "/sitemap" },
+   { title: "File Formats", path: "/file-formats" },
+   { title: "How can we help you", path: "/help" },
+   { title: "Art Requirements", path: "/art-requirements" },
 ];
 
 /* =========================================================
