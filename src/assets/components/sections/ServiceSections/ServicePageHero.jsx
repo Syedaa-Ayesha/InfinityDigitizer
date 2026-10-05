@@ -8,7 +8,7 @@ const ServicePageHero = ({
   reverse = false,
 }) => {
   return (
-    <section className="bg-[#FBF9FE] py-6 sm:py-8 lg:py-10">
+    <section className="bg-[#FBF9FE] px-[12px] py-6 sm:py-8 lg:py-10">
       <div
         className={`
           mx-auto
@@ -27,7 +27,7 @@ const ServicePageHero = ({
           sm:p-6
           md:p-8
           lg:flex-row
-          lg:items-center
+          
           lg:justify-between
           lg:gap-10
           xl:p-10
@@ -104,7 +104,7 @@ const ServicePageHero = ({
         </div>
 
         {/* Image */}
-        <div className="w-full lg:w-[52%]">
+        <div className="w-full lg:w-[40%]">
           <div
             className="
               h-[280px]
@@ -112,9 +112,7 @@ const ServicePageHero = ({
               rounded-2xl
               sm:h-[350px]
               sm:rounded-3xl
-              md:h-[420px]
-              lg:h-[480px]
-              xl:h-[500px]
+              
             "
           >
             <img
