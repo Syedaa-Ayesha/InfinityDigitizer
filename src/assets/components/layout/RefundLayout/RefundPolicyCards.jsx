@@ -27,7 +27,7 @@ const RefundPolicyCards = ({ cards = [] }) => {
               key={card.number}
               className="
                 group
-                relative
+             
                 flex
                 min-h-[370px]
                 flex-col
@@ -51,39 +51,7 @@ const RefundPolicyCards = ({ cards = [] }) => {
                 hover:shadow-[0_18px_42px_rgba(116,52,229,0.11)]
               "
             >
-              {/* =========================
-                  SOFT DECORATIVE GLOW
-              ========================= */}
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  -right-[55px]
-                  -top-[55px]
-                  h-[145px]
-                  w-[145px]
-                  rounded-full
-                  bg-[#F4EEFF]
-                  opacity-80
-                  transition-all
-                  duration-500
-                  group-hover:scale-[1.25]
-                  group-hover:bg-[#EDE3FF]
-                "
-              />
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  -bottom-[65px]
-                  -left-[65px]
-                  h-[130px]
-                  w-[130px]
-                  rounded-full
-                  bg-[#FAF8FF]
-                "
-              />
+              
 
               {/* =========================
                   HEADER
@@ -333,16 +301,13 @@ const RefundPolicyCards = ({ cards = [] }) => {
         {/* Icon */}
         <div
           className="
-            relative
-            z-10
-
+            
             flex
             h-[42px]
             w-[42px]
             shrink-0
             items-center
             justify-center
-
             rounded-[12px]
             bg-[#7434E5]
             shadow-[0_6px_18px_rgba(116,52,229,0.18)]

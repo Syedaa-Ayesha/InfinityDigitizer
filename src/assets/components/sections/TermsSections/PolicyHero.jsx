@@ -5,7 +5,6 @@ const PolicyHero = ({
   date = "May 15, 2026",
   subtitle = "",
   rightImage = null,
-
   containerClassName = "",
   gridClassName = "",
   contentClassName = "",
@@ -256,7 +255,7 @@ const PolicyHero = ({
             self-stretch
             overflow-hidden
             bg-[#FDF2F2]
-
+rounded-[12px]
             h-[260px]
 
             sm:h-[300px]

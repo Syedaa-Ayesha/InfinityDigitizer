@@ -86,7 +86,7 @@ const SizeGuide = () => {
       min-w-0
       flex-wrap
       items-center
-      justify-start
+      justify-center
       gap-2
 
       sm:gap-2.5

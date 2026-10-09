@@ -5,7 +5,7 @@ import Breadcrumb from "../assets/components/layout/SiteMap/breadcrumb";
 
 const RefundPage = () => {
   return (
-    <main className="w-full min-h-screen overflow-x-hidden bg-[#FBF9FE]">
+    <main className="w-full min-h-screen overflow-x-hidden">
       {/* BREADCRUMB */}
       <div
         className="
@@ -78,7 +78,7 @@ const RefundPage = () => {
             w-full
             min-w-0
             text-center
-
+bg-white
             px-[8px]
             py-[30px]
 
