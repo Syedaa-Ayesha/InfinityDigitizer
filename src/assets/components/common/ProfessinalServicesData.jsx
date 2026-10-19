@@ -4,9 +4,9 @@ import {
   BadgePercent,
 } from "lucide-react";
 
-import embroideryImg from "../../images/ServiceHeroImage01.png";
-import vectorImg from "../../images/ServiceHeroImage02.png";
-import logoImg from "../../images/ServiceHeroImage03.png";
+import embroideryImg from "../../images/embroidery.jpg";
+import vectorImg from "../../images/vector.jpg";
+import logoImg from "../../images/logo.jpg";
 
 export const ProfessionalServicesData = [
   {

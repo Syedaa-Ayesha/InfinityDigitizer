@@ -1,5 +1,5 @@
 import { BriefcaseBusiness, ArrowRight, Phone } from "lucide-react";
-import heroImage from "../../../images/B2BHeroImg.png";
+import heroImage from "../../../images/hero section image.jpg";
 import B2BStateItem from "../../layout/B2BLayout/B2BStateItem";
 import { B2BStatsData } from "../../common/B2BStatsData"
 import SolidButton from "../../layout/SolidButton";
