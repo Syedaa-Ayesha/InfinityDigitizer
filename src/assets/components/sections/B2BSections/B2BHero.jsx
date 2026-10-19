@@ -135,8 +135,9 @@ const B2BHero = () => {
   alt="B2B"
   className="
     w-full
-    object-cover
+     object-cover
     lg:h-[560px]
+    
   "
 />
   </div> 

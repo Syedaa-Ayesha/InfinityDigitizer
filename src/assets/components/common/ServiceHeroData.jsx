@@ -6,9 +6,9 @@ import {
   File,
 } from "lucide-react";
 
-import img1 from "../../images/ServiceHeroImage01.png";
-import img2 from "../../images/ServiceHeroImage02.png";
-import img3 from "../../images/ServiceHeroImage03.png";
+import img1 from "../../images/EMBROIDERY IMAGE.jpg";
+import img2 from "../../images/vector image.jpg";
+import img3 from "../../images/logo image.jpg";
 
 export const serviceHeroData = [
   {
