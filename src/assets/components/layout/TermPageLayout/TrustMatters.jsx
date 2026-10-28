@@ -20,7 +20,7 @@ const TrustMatters = () => {
           lg:py-[48px]
         "
       >
-        <h2
+        <h3
           className="
             font-dmSans
             text-[28px]
@@ -33,7 +33,7 @@ const TrustMatters = () => {
           "
         >
           Your Trust Matters
-        </h2>
+        </h3>
 
         <p
           className="
@@ -44,8 +44,6 @@ const TrustMatters = () => {
             font-normal
             leading-[1.7]
             text-[#6B6B80]
-            
-
             lg:max-w-[590px]
           "
         >

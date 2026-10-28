@@ -27,7 +27,7 @@ const LoginForm = () => {
           sm:py-6
         "
       >
-        <h2
+        <h1
           className="
             text-center
             font-dmSans
@@ -39,7 +39,7 @@ const LoginForm = () => {
           "
         >
           Log In to Your Account
-        </h2>
+        </h1>
       </div>
 
       {/* Form */}

@@ -39,7 +39,7 @@ const RegisterForm = () => {
           
           <UserPlus size={16}/> Create Account
         </span>
-<h1
+<p
           className="
           pt-3
           text-[32px]
@@ -50,7 +50,7 @@ const RegisterForm = () => {
           "
         >
           Sign Up to create account
-        </h1> 
+        </p> 
       </div>
 
 

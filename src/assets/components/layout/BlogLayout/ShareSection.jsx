@@ -73,7 +73,7 @@ const ShareSection = ({ blog }) => {
       >
         {/* Heading */}
 
-        <h4
+        <p
           className="
             shrink-0
             font-dmSans
@@ -83,7 +83,7 @@ const ShareSection = ({ blog }) => {
           "
         >
           Share this article:
-        </h4>
+        </p>
 
         {/* Buttons */}
 

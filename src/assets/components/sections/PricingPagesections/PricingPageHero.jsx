@@ -24,6 +24,7 @@ title : `Bulk Order\nDiscounts`,
     <div className=" lg:border-[#E7E3ED] lg:pb-12 lg:border-b">
     
     <SectionHeading
+     as="h1"
         icon={<Tag/>}
         badge="Transparent Pricing"
         heading="OUR COMPETITIVE PRICES"

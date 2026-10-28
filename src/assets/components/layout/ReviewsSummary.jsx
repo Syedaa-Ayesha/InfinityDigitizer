@@ -18,7 +18,7 @@ const ReviewsSummary = ({design}) => {
     >
       {/* Rating */}
 
-      <h2
+      <p
         className="
         text-center
         text-[72px]
@@ -29,7 +29,7 @@ const ReviewsSummary = ({design}) => {
         "
       >
         {design.rating}
-      </h2>
+      </p>
 
       {/* Stars Rating*/}
 

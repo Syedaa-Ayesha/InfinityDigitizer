@@ -98,7 +98,7 @@ const TermsRow = ({
         "
       >
         {/* Title */}
-        <h2
+        <p
           className="
             font-dmSans
             text-[17px]
@@ -111,7 +111,7 @@ const TermsRow = ({
           "
         >
           {title}
-        </h2>
+        </p>
 
         {/* Description */}
         <div

@@ -105,7 +105,7 @@ const TestimonialCard = ({ item }) => {
           {/* Name + Country */}
 
           <div className="min-w-0">
-            <h4
+            <p
               className="
                 truncate
                 font-dmSans
@@ -115,7 +115,7 @@ const TestimonialCard = ({ item }) => {
               "
             >
               {item.name}
-            </h4>
+            </p>
 
             <p
               className="

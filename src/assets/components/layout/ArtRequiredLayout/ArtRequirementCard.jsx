@@ -368,7 +368,7 @@ const ArtRequirementCard = ({
 
             {/* CONTENT */}
             <div className="min-w-0 max-w-full flex-1">
-              <h4
+              <p
                 className="
                   min-w-0
                   max-w-full
@@ -388,7 +388,7 @@ const ArtRequirementCard = ({
                 }}
               >
                 {acceptedFormats.title}
-              </h4>
+              </p>
 
               <p
                 className="

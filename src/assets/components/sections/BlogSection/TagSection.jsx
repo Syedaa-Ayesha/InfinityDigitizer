@@ -7,7 +7,7 @@ const TagSection = ({ tags }) => {
 
       <div className="flex flex-wrap items-center gap-3">
 
-        <h4
+        <p
           className="
             text-[15px]
             font-semibold
@@ -15,7 +15,7 @@ const TagSection = ({ tags }) => {
           "
         >
           Tags:
-        </h4>
+        </p>
 
         {tags.map((tag, index) => (
 

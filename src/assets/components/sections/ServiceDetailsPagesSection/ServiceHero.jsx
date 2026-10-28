@@ -110,7 +110,7 @@ const ServiceHero = ({
           </div>
 
           {/* Title */}
-          <h1
+          <h2
             className="
               mt-[14px]
               max-w-[620px]
@@ -135,7 +135,7 @@ const ServiceHero = ({
             style={{ overflowWrap: "anywhere" }}
           >
             {title}
-          </h1>
+          </h2>
 
           {/* Description */}
           {description && (

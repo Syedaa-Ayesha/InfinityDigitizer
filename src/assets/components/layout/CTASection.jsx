@@ -80,7 +80,7 @@ const CTASection = ({
             {/* Content */}
 
             <div>
-              <h2
+              <p
                 className={`
                   font-dmSans
                   font-bold
@@ -94,7 +94,7 @@ const CTASection = ({
                 `}
               >
                 {title}
-              </h2>
+              </p>
 
               <p
                 className="

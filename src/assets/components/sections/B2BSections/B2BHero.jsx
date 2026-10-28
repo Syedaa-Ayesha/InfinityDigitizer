@@ -61,7 +61,7 @@ const B2BHero = () => {
 
             {/* Heading */}
 
-            <h1
+            <p
               className="
                mt-5
                pr-8
@@ -78,7 +78,7 @@ const B2BHero = () => {
     lg:leading-[52.5px]
               "
             >Custom Digitizing, Vector Art & Logo Design for Growing Businesses
-            </h1>
+            </p>
 
             {/* Description */}
 

@@ -1,5 +1,3 @@
-// import { FileCode2 } from "lucide-react";
-
 const SupportedFormats = ({ formats }) => {
   if (!formats?.length) return null;
 

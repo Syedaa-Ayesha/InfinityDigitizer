@@ -40,7 +40,7 @@ const KeyPointBox = ({ text }) => {
 
         <div>
 
-          <h4
+          <p
             className="
               font-dmSans
               text-[18px]
@@ -49,7 +49,7 @@ const KeyPointBox = ({ text }) => {
             "
           >
             Key Point
-          </h4>
+          </p>
 
           <p
             className="

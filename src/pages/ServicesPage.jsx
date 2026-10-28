@@ -31,18 +31,21 @@ const ServicesPage = () => {
       <Breadcrumb />
 
       <main>
-        {serviceSections.map(({ id, hero, OrderComponent }) => (
-          <section key={id} id={id}>
-            <ServicePageHero
-              title={hero.title}
-              description={hero.description}
-              image={hero.image}
-              services={hero.services}
-            />
+        {serviceSections.map(
+          ({ id, hero, OrderComponent }, index) => (
+            <section key={id} id={id}>
+              <ServicePageHero
+                as={index === 0 ? "h1" : "h2"}
+                title={hero.title}
+                description={hero.description}
+                image={hero.image}
+                services={hero.services}
+              />
 
-            <OrderComponent />
-          </section>
-        ))}
+              <OrderComponent />
+            </section>
+          )
+        )}
       </main>
     </>
   );

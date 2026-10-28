@@ -1,28 +1,13 @@
-// import { useState } from "react";
+
 import {
   Star,
-  // Minus,
-  // Plus,
-  // ShoppingCart,
   Check,
-  // Download,
-  // ShieldCheck,
-  // Lock,
-  // Heart
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 const ProductInfo = ({ design }) => {
-  // const [quantity, setQuantity] = useState(1);
-  const navigate = useNavigate();
-  // const increase = () => {
-  //   setQuantity((prev) => prev + 1);
-  // };
 
-  // const decrease = () => {
-  //   if (quantity > 1) {
-  //     setQuantity((prev) => prev - 1);
-  //   }
-  // };
+  const navigate = useNavigate();
+ 
   return (
     <section className=" flex flex-col gap-5">
       {/* Category Badge */}
@@ -88,10 +73,10 @@ const ProductInfo = ({ design }) => {
       <div className=" border-t border-[#ECECEC]" />
       {/* What's Included */}
 
-      <div className="">
-        <h3 className="text-base font-bold font-dmSans text-[#0F1729]">
+      <div >
+        <p className="text-base font-bold font-dmSans text-[#0F1729] text-[18px]">
           What's Included
-        </h3>
+        </p>
 
         <div className="mt-4 space-y-3">
           {design.included.map((item, index) => (
@@ -108,11 +93,7 @@ const ProductInfo = ({ design }) => {
           ))}
         </div>
       </div>
-      <div className="">
-        {/* <h3 className="text-lg font-semibold text-[#1E1E1E]">
-    Supported Formats
-  </h3> */}
-
+      <div>
         <div className="mt-4 flex flex-wrap gap-3">
           {design.formats.map((format) => (
             <span
@@ -135,113 +116,6 @@ const ProductInfo = ({ design }) => {
           ))}
         </div>
       </div>
-
-      {/* <div className=" border-t border-[#ECECEC]" /> */}
-      {/* <div className=" flex flex-col gap-4 lg:flex-row"> */}
-        {/* Quantity */}
-
-        {/* <div */}
-          {/* className="
-    flex
-    h-15
-    w-[130px]
-    items-center
-    justify-between
-    rounded-[14px]
-    border
-    border-[#DCDFE5] */}
-{/*     
-    "
-        >
-          <div className="h-full flex items-center justify-center border-r border-[#DCDFE5]  w-10">
-            <button onClick={decrease}>
-              <Minus size={18} />
-            </button>
-          </div>
-          <div className="h-full flex items-center justify-center border-r border-[#DCDFE5] 10">
-            <span className="font-semibold">{quantity}</span>
-          </div>
-          <div className="h-full flex items-center justify-center w-10">
-            <button onClick={increase}>
-              <Plus size={18} />
-            </button>
-          </div> */}
-        {/* </div>
-
-      
-
-        <button
-          className="
-    flex-1
-    rounded-xl
-    bg-[#7B3FF2]
-   
-    py-4
-    font-semibold
-    text-white
-    transition
-    hover:bg-[#6930E6]
-    "
-        >
-          <ShoppingCart size={18} className="mr-2 inline" />
-          Add To Cart
-        </button>
-      </div> */}
-      
-
-{/* <button
-  className="
-    flex
-    h-14
-    w-full
-    items-center
-    justify-center
-    gap-3
-    rounded-2xl
-    border
-    border-[#DCDFE5]
-    bg-white
-    font-inter
-    text-[#1F2937]
-    font-semibold
-    transition-all
-    duration-300
-    hover:border-[#7B3FF2]
-    hover:bg-[#F7F3FF]
-    hover:text-[#7B3FF2]
-    active:scale-[0.98]
-  "
->
-  <Heart
-    size={20}
-    strokeWidth={2}
-    className="transition-colors duration-300"
-  />
-
-  Add to Wishlist
-</button> */}
-     {/* <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-  <div className="flex items-center justify-center gap-2 border-r border-[#E5E7EB] px-2">
-    <Download className="text-[#7B3FF2]" size={16} />
-    <p className="text-[10px] sm:text-xs text-[#6B7280] whitespace-nowrap">
-      Instant Download
-    </p>
-  </div>
-
-  <div className="flex items-center justify-center gap-2 border-r border-[#E5E7EB] px-2">
-    <Lock className="text-[#7B3FF2]" size={16} />
-    <p className="text-[10px] sm:text-xs text-[#6B7280] whitespace-nowrap">
-      Secure Payment
-    </p>
-  </div>
-
-  <div className="flex items-center justify-center gap-2 px-2">
-    <ShieldCheck className="text-[#7B3FF2]" size={16} />
-    <p className="text-[10px] sm:text-xs text-[#6B7280] whitespace-nowrap">
-      Quality Guarantee
-    </p>
-  </div>
-</div> */}
     </section>
   );
 };

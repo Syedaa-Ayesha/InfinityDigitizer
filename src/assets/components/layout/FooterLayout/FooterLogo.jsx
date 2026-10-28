@@ -109,7 +109,7 @@ const FooterLogo = () => {
                 />
               </div>
 
-              <h4
+              <p
                 className="
                 mt-3
                 text-[11px]
@@ -119,7 +119,7 @@ const FooterLogo = () => {
                 "
               >
                 {item.title}
-              </h4>
+              </p>
 
               <p
                 className="
@@ -138,7 +138,7 @@ const FooterLogo = () => {
 
       {/* Follow */}
 
-      <h4
+      <p
         className="
         mt-10
         text-[18px]
@@ -150,7 +150,7 @@ const FooterLogo = () => {
         "
       >
         Follow Us
-      </h4>
+      </p>
 
       {/* Social */}
 

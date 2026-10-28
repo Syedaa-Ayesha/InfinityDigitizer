@@ -6,6 +6,7 @@ const ServicePageHero = ({
   services,
   image,
   reverse = false,
+  as: HeadingTag = "h2",
 }) => {
   return (
     <section className="bg-[#FBF9FE] px-[12px] py-6 sm:py-8 lg:py-10">
@@ -45,7 +46,7 @@ const ServicePageHero = ({
             lg:w-[48%]
           "
         >
-          <h1
+          <HeadingTag
             className="
               max-w-[600px]
               font-dmSans
@@ -61,7 +62,7 @@ const ServicePageHero = ({
             "
           >
             {title}
-          </h1>
+          </HeadingTag>
 
           <p
             className="

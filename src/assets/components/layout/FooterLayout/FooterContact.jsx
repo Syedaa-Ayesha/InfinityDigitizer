@@ -103,7 +103,7 @@ const FooterContact = () => {
               {/* Text */}
 
               <div className="min-w-0">
-                <h4
+                <p
                   className="
                   wrap-break-words
 
@@ -113,7 +113,7 @@ const FooterContact = () => {
                 "
                 >
                   {item.title}
-                </h4>
+                </p>
 
                 {item.subtitle && (
                   <p

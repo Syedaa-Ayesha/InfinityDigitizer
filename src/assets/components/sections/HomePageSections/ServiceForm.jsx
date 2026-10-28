@@ -168,7 +168,7 @@ const ServiceForm = () => {
               lg:pt-2
             "
           >
-            <h2
+            <h3
               className="
                 font-dmSans
                 text-[26px]
@@ -182,7 +182,7 @@ const ServiceForm = () => {
               What Do You Get with
               <br />
               Infinity Digitizing?
-            </h2>
+            </h3>
 
             <div
               className="

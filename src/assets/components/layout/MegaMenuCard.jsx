@@ -59,7 +59,7 @@ const MegaMenuCard = ({
 
                 <div>
 
-                    <h3
+                    <p
                         className="
             font-inter
             font-bold
@@ -70,7 +70,7 @@ const MegaMenuCard = ({
           "
                     >
                         {title}
-                    </h3>
+                    </p>
 
                     <p
                         className="

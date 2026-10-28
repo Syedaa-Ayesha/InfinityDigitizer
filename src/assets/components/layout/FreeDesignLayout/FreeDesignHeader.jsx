@@ -12,7 +12,7 @@ const FreeDesignHeader = ({
 
       {/* Heading */}
 
-      <h1 className="text-[28px] md:text-[42px] font-bold leading-none">
+      <p className="text-[28px] md:text-[42px] font-bold leading-none">
 
         <span className="text-[#202020]">
           Free &
@@ -24,7 +24,7 @@ const FreeDesignHeader = ({
           Premium Designs
         </span>
 
-      </h1>
+      </p>
 
       <p className="mt-2 text-[#8A8A8A] text-[13px]">
         High quality embroidery and vector designs for your next project.
