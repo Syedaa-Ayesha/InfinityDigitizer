@@ -1,7 +1,7 @@
 
 
 import Heading from "../../layout/Heading";
-import patchPreview from "../../../images/Patch preview with infographic.png";
+// import patchPreview from "../../../images/FOX-LOGO.png";
 import FormState from "../../layout/HomeLayout/FormState";
 import {
   Zap,
@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Clover,
 } from "lucide-react";
+import ImageComparison from "../../layout/HelpPagelayout/ComparisonImage";
 
 /* SERVICE BENEFITS DATA*/
 
@@ -84,7 +85,7 @@ const ServiceForm = () => {
             lg:col-start-1
           "
         >
-          <Heading title={`Your Artwork,\nPerfectly Prepared`} />
+          <Heading title={"Your Artwork, Perfectly Prepared"} />
 
           <p
             className="
@@ -106,30 +107,24 @@ const ServiceForm = () => {
             IMAGE
         ================================================= */}
 
-        <div
-          className="
-            flex
-            min-w-0
-            items-center
-            justify-center
-
-            lg:row-start-2
-            lg:col-start-1
-            lg:justify-start
-            lg:-mt-65
-          "
-        >
-          <img
-            src={patchPreview}
-            alt="Patch Preview"
-            className="
-              block
-              w-full
-              max-w-[500px]
-              object-contain
-            "
-          />
-        </div>
+      {/* IMAGE */}
+<div
+  className="
+    flex
+    min-w-0
+    w-full
+    items-center
+    justify-center
+    lg:row-start-2
+    lg:col-start-1
+    lg:justify-start
+    lg:mt-[-750px]
+  "
+>
+  <div className="w-full max-w-[500px] h-[600px]">
+    <ImageComparison />
+  </div>
+</div>
 
         {/* =================================================
             FORM

@@ -1,5 +1,5 @@
 import StatsCard from "../../layout/WhyChooseLayout/StatesCard";
-import Image from '../../../images/ServiceHeroImage03.png'
+import Image from '../../../images/1-creative-team 1.png'
 const CommitmentImage = () => {
   return (
     <div className="w-full">

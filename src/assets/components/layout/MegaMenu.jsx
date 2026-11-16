@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-import vector21 from "../../images/Vector 21.png";
-import vector23 from "../../images/Vector 23.png";
+
 
 import MegaMenuCard from "../layout/MegaMenuCard";
 import { MegaMenuData } from "../common/MegaMenuData";
@@ -44,7 +43,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
               absolute
               top-6
               z-[1000]
-              h-[591px]
+              h-[511px]
               w-[1114px]
               -translate-x-1/4
               rounded-[18px]
@@ -80,43 +79,9 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
       {/* ================= HEADER ================= */}
 
       <div className="shrink-0">
-        <div className="flex justify-center">
-          <div
-            className="
-              flex
-              items-center
-              gap-2
-              font-inter
-              text-[11px]
-              font-semibold
-              uppercase
-              tracking-[1.5px]
-              text-[#7434E5]
-
-              sm:gap-3
-              sm:text-[14px]
-              sm:tracking-[2px]
-            "
-          >
-            <img
-              src={vector23}
-              alt=""
-              className="h-auto w-auto"
-            />
-
-            <span>OUR SERVICES</span>
-
-            <img
-              src={vector21}
-              alt="Vector Image"
-              className="h-auto w-auto"
-            />
-          </div>
-        </div>
-
         <p
           className="
-            mt-3
+           
             text-center
             font-inter
             text-[21px]
@@ -126,28 +91,15 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
 
             sm:text-[28px]
 
-            lg:mt-4
+            
             lg:text-[36px]
+           
           "
         >
           Choose the service that fits your needs
         </p>
 
-        <p
-          className="
-            mt-2
-            text-center
-            font-inter
-            text-[11px]
-            font-medium
-            leading-5
-            text-[#000000]
-
-            sm:text-[14px]
-          "
-        >
-          High quality. Fast turnaround. 100% satisfaction guaranteed.
-        </p>
+        
       </div>
 
       {/* ================= DESKTOP ================= */}
@@ -159,6 +111,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
             grid
             grid-cols-3
             gap-[18px]
+            
           "
         >
           {MegaMenuData.map((service) => (
@@ -411,4 +364,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
 };
 
 export default MegaMenu;
+
+
+
 

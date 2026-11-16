@@ -5,7 +5,12 @@ import {
   Database,
   Headphones,
 } from "lucide-react";
-
+import PrivacyImg from '../../images/PrivacyPolicyHero.svg'
+import commitmentImg from '../../images/Commitment svg.svg'
+import infoImg from '../../images/InfoWeCollect.svg'
+import howWeImg from '../../images/HowWeUse.svg'
+import securityImg from '../../images/DataSecurity.png'
+import choiceImg from '../../images/Your Rights.svg'
 export const privacyPolicyData = {
   /* =================================
      HERO
@@ -19,7 +24,7 @@ export const privacyPolicyData = {
 
     date: "May 15, 2026",
 
-    rightImage: null,
+    rightImage: PrivacyImg,
   },
 
   /* =================================
@@ -84,7 +89,7 @@ export const privacyPolicyData = {
   ],
 
      
-      image: null,
+      image: commitmentImg,
 
       imagePosition: "left",
     },
@@ -118,7 +123,7 @@ export const privacyPolicyData = {
         },
       ],
 
-      image: null,
+      image: infoImg,
 
       imagePosition: "right",
     },
@@ -148,7 +153,7 @@ export const privacyPolicyData = {
         },
       ],
 
-      image: null,
+      image: howWeImg,
 
       imagePosition: "left",
     },
@@ -174,9 +179,9 @@ export const privacyPolicyData = {
 
         "While we take every precaution to safeguard your information, no method of internet transmission is 100% secure. We continuously update our security practices to maintain the highest level of protection.",
       ],
-      image: null,
+      image: securityImg,
 
-      imagePosition: "left",
+      imagePosition: "right",
     },
     {
   id: "06",
@@ -219,7 +224,7 @@ export const privacyPolicyData = {
         },
       ],
 
-      image: null,
+      image: choiceImg,
 
       imagePosition: "left",
     },

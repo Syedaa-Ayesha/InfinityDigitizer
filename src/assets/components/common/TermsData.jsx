@@ -15,7 +15,7 @@ import {
   TriangleAlert,
   Mail,
 } from "lucide-react";
-
+import termsImg from '../../images/TermsAndCondition svg.svg'
 /* ========================================
    TERMS HERO DATA
 ======================================== */
@@ -30,7 +30,7 @@ export const termsHero = {
 
   // Abhi screenshot wala pale block hi rahega.
   // Baad mein image deni ho to sirf yahan path add karna hai.
-  rightImage: null,
+  rightImage: termsImg,
 };
 
 /* ========================================

@@ -1,11 +1,11 @@
-import Design01 from "../../images/ServiceHeroImage01.png";
-import Design02 from "../../images/ServiceHeroImage02.png";
-import Design03 from "../../images/ServiceHeroImage03.png";
-import Design04 from "../../images/Before After-07.jpg 1.png";
-import Vector01 from "../../images/ServiceHeroImage01.png";
-import Vector02 from "../../images/ServiceHeroImage02.png";
-import Vector03 from "../../images/ServiceHeroImage03.png";
-import Vector04 from "../../images/Before After-07.jpg 1.png";
+import Design01 from "../../images/2-fast-turnaround.png";
+import Design02 from "../../images/2-fast-turnaround.png";
+import Design03 from "../../images/2-fast-turnaround.png";
+import Design04 from "../../images/2-fast-turnaround.png";
+import Vector01 from "../../images/2-fast-turnaround.png";
+import Vector02 from "../../images/2-fast-turnaround.png";
+import Vector03 from "../../images/2-fast-turnaround.png";
+import Vector04 from "../../images/2-fast-turnaround.png";
 export const EmbroideryDesignData = [
     {
         id: 1,

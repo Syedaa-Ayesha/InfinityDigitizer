@@ -286,6 +286,7 @@ rounded-[12px]
                 max-w-full
                 object-cover
                 object-center
+                
               "
             />
           )}

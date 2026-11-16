@@ -1,5 +1,4 @@
 import { ShieldCheck } from "lucide-react";
-
 const PrivacyContentSection = ({
   number,
   title,
@@ -31,7 +30,6 @@ const PrivacyContentSection = ({
               {item.text ? " " : ""}
             </span>
           )}
-
           {item.text && item.text}
         </>
       );
@@ -41,7 +39,7 @@ const PrivacyContentSection = ({
   };
 
   return (
-    <section className="w-full max-w-full min-w-0 overflow-x-hidden">
+    <section className="w-full max-w-full min-w-0">
       <div
         className={`
           grid
@@ -51,33 +49,21 @@ const PrivacyContentSection = ({
           items-center
           grid-cols-1
           gap-[28px]
-
           sm:gap-[34px]
-
           ${showVisual ? "lg:grid-cols-2 lg:gap-[52px]" : ""}
         `}
       >
-        {/* =====================================================
-            VISUAL / IMAGE / PLACEHOLDER
-        ===================================================== */}
+        {/* IMAGE / VISUAL */}
         {showVisual && (
           <div
             className={`
+              box-border
               w-full
               max-w-full
               min-w-0
               overflow-hidden
               rounded-[12px]
               bg-[#F7F4FB]
-
-              h-[250px]
-
-              sm:h-[300px]
-
-              md:h-[350px]
-
-              lg:h-[420px]
-
               ${isImageLeft ? "lg:order-1" : "lg:order-2"}
             `}
           >
@@ -89,25 +75,23 @@ const PrivacyContentSection = ({
                 decoding="async"
                 className="
                   block
-                  h-full
                   w-full
+                  h-auto
                   max-w-full
-                  object-cover
+                  object-contain
                   object-center
                 "
               />
             ) : (
               <div
-                className="h-full w-full bg-[#FDF2F2]"
+                className="w-full aspect-[16/9] bg-[#FDF2F2]"
                 aria-hidden="true"
               />
             )}
           </div>
         )}
 
-        {/* =====================================================
-            CONTENT
-        ===================================================== */}
+        {/* CONTENT */}
         <div
           className={`
             min-w-0
@@ -156,9 +140,7 @@ const PrivacyContentSection = ({
                 leading-[1.3]
                 tracking-[-0.01em]
                 text-[#17161F]
-
                 sm:text-[20px]
-
                 lg:text-[22px]
               "
             >
@@ -175,7 +157,6 @@ const PrivacyContentSection = ({
               shrink-0
               rounded-full
               bg-[#B29BDA]
-
               sm:mt-[11px]
             "
           />
@@ -186,10 +167,8 @@ const PrivacyContentSection = ({
               className="
                 mt-[15px]
                 space-y-[10px]
-
                 sm:mt-[16px]
                 sm:space-y-[12px]
-
                 lg:mt-[18px]
                 lg:space-y-[13px]
               "
@@ -206,10 +185,8 @@ const PrivacyContentSection = ({
                     font-normal
                     leading-[1.75]
                     text-[#6B6B80]
-
                     sm:text-[15px]
                     sm:leading-[1.8]
-
                     lg:text-[16px]
                     lg:leading-[1.8]
                   "
@@ -226,7 +203,6 @@ const PrivacyContentSection = ({
               className="
                 mt-[16px]
                 space-y-[9px]
-
                 sm:mt-[18px]
                 sm:space-y-[10px]
               "
@@ -239,7 +215,6 @@ const PrivacyContentSection = ({
                     min-w-0
                     items-start
                     gap-[9px]
-
                     sm:gap-[10px]
                   "
                 >
@@ -251,10 +226,7 @@ const PrivacyContentSection = ({
                       items-start
                       justify-center
                       pt-[3px]
-
                       sm:pt-[4px]
-
-                      lg:pt-[4px]
                     "
                   >
                     <ShieldCheck
@@ -264,7 +236,6 @@ const PrivacyContentSection = ({
                         block
                         shrink-0
                         text-[#7434E5]
-
                         sm:h-[16px]
                         sm:w-[16px]
                       "
@@ -282,10 +253,8 @@ const PrivacyContentSection = ({
                       font-normal
                       leading-[1.7]
                       text-[#5F6072]
-
                       sm:text-[15px]
                       sm:leading-[1.75]
-
                       lg:text-[16px]
                       lg:leading-[1.8]
                     "

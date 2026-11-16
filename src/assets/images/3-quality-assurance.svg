@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 360 275" style="enable-background:new 0 0 360 275;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#2F3E66;}
+	.st2{fill:none;stroke:#3B4C7A;stroke-width:2;}
+	.st3{fill:#F4F0FF;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:1.6;}
+	.st5{fill:url(#SVGID_1_);}
+	.st6{opacity:0.7;fill:#E4DAFB;enable-background:new    ;}
+	.st7{opacity:0.6;fill:#DDD0FB;enable-background:new    ;}
+	.st8{fill:url(#SVGID_2_);}
+	.st9{fill:url(#SVGID_3_);}
+	.st10{font-family:'Arial-Black';}
+	.st11{font-size:96px;}
+	.st12{fill:none;stroke:#E9E1FD;}
+	.st13{clip-path:url(#SVGID_6_);}
+	.st14{fill:none;stroke:#F4F0FF;stroke-width:5;stroke-linecap:round;}
+	.st15{fill:none;stroke:#C9BBF5;stroke-linecap:round;}
+	.st16{fill:none;stroke:#FFFFFF;stroke-width:7;}
+	.st17{fill:none;stroke:#6D28D9;stroke-width:3;}
+	.st18{fill:none;stroke:#1E1B4B;stroke-width:12;stroke-linecap:round;}
+	.st19{fill:#FFFFFF;}
+	.st20{fill:#1E1B4B;}
+	.st21{font-family:'Arial-BoldMT';}
+	.st22{font-size:8.5px;}
+	.st23{fill:#6D28D9;}
+	.st24{font-size:9px;}
+	.st25{fill:#16A34A;}
+	.st26{fill:none;stroke:#FFFFFF;stroke-width:1.96;stroke-linecap:round;stroke-linejoin:round;}
+	.st27{font-size:9.5px;}
+	.st28{fill:url(#SVGID_7_);}
+	.st29{font-size:11px;}
+</style>
+<pattern  y="275" width="6" height="6" patternUnits="userSpaceOnUse" id="denim" viewBox="1 -6 6 6" style="overflow:visible;">
+	<g>
+		<rect x="1" y="-6" class="st0" width="6" height="6"/>
+		<rect x="1" y="-6" class="st1" width="6" height="6"/>
+		<path class="st2" d="M1,0v-6"/>
+	</g>
+</pattern>
+<pattern  y="275" width="4" height="40" patternUnits="userSpaceOnUse" id="satinW" viewBox="0.8 -40 4 40" style="overflow:visible;">
+	<g>
+		<rect x="0.8" y="-40" class="st0" width="4" height="40"/>
+		<rect x="0.8" y="-40" class="st3" width="4" height="40"/>
+		<path class="st4" d="M0.8,0v-40"/>
+	</g>
+</pattern>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-776.8361" y1="676.5382" x2="-775.8361" y2="675.5382" gradientTransform="matrix(360 0 0 -275 279661 186048)">
+	<stop  offset="0" style="stop-color:#F7F3FF"/>
+	<stop  offset="1" style="stop-color:#E9E0FF"/>
+</linearGradient>
+<rect class="st5" width="360" height="275"/>
+<circle class="st6" cx="331.2" cy="22" r="88"/>
+<circle class="st7" cx="18" cy="261.2" r="71.5"/>
+<g>
+	<pattern  id="SVGID_2_" xlink:href="#denim" patternTransform="matrix(0.7071 0.7071 0.7071 -0.7071 3550.2568 -7485.8604)">
+	</pattern>
+	<path class="st8" d="M46,56h158c8.8,0,16,7.2,16,16v136c0,8.8-7.2,16-16,16H46c-8.8,0-16-7.2-16-16V72C30,63.2,37.2,56,46,56z"/>
+</g>
+<pattern  id="SVGID_3_" xlink:href="#satinW" patternTransform="matrix(0.866 -0.5 -0.5 -0.866 -5247.4272 -18527.4043)"  style="enable-background:new    ;">
+</pattern>
+<text transform="matrix(1 0 0 1 87.6641 172)" class="st9 st10 st11"><pattern  id="SVGID_4_" xlink:href="#satinW" patternTransform="matrix(0.866 -0.5 -0.5 -0.866 -5247.4272 -18527.4043)">
+</pattern>
+A</text>
+<text transform="matrix(1 0 0 1 87.6641 172)" class="st12 st10 st11">A</text>
+<g>
+	<defs>
+		<circle id="SVGID_5_" cx="150" cy="120" r="42"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st13">
+		<rect x="100" y="70" class="st1" width="110" height="110"/>
+		<path class="st14" d="M100,180l30-120"/>
+		<path class="st15" d="M102,180l30-120"/>
+		<path class="st14" d="M107,180l30-120"/>
+		<path class="st15" d="M109,180l30-120"/>
+		<path class="st14" d="M114,180l30-120"/>
+		<path class="st15" d="M116,180l30-120"/>
+		<path class="st14" d="M121,180l30-120"/>
+		<path class="st15" d="M123,180l30-120"/>
+		<path class="st14" d="M128,180l30-120"/>
+		<path class="st15" d="M130,180l30-120"/>
+		<path class="st14" d="M135,180l30-120"/>
+		<path class="st15" d="M137,180l30-120"/>
+		<path class="st14" d="M142,180l30-120"/>
+		<path class="st15" d="M144,180l30-120"/>
+		<path class="st14" d="M149,180l30-120"/>
+		<path class="st15" d="M151,180l30-120"/>
+		<path class="st14" d="M156,180l30-120"/>
+		<path class="st15" d="M158,180l30-120"/>
+		<path class="st14" d="M163,180l30-120"/>
+		<path class="st15" d="M165,180l30-120"/>
+		<path class="st14" d="M170,180l30-120"/>
+		<path class="st15" d="M172,180l30-120"/>
+		<path class="st14" d="M177,180l30-120"/>
+		<path class="st15" d="M179,180l30-120"/>
+		<path class="st14" d="M184,180l30-120"/>
+		<path class="st15" d="M186,180l30-120"/>
+		<path class="st14" d="M191,180l30-120"/>
+		<path class="st15" d="M193,180l30-120"/>
+	</g>
+</g>
+<circle class="st16" cx="150" cy="120" r="42"/>
+<circle class="st17" cx="150" cy="120" r="47"/>
+<path class="st18" d="M182,152l26,26"/>
+<g>
+	<path class="st19" d="M148,182h58c4.4,0,8,3.6,8,8v10c0,4.4-3.6,8-8,8h-58c-4.4,0-8-3.6-8-8v-10C140,185.6,143.6,182,148,182z"/>
+</g>
+<text transform="matrix(1 0 0 1 151.2531 199)" class="st20 st21 st22">0.4 mm satin</text>
+<g>
+	<path class="st19" d="M246,56h82c7.7,0,14,6.3,14,14v104c0,7.7-6.3,14-14,14h-82c-7.7,0-14-6.3-14-14V70C232,62.3,238.3,56,246,56z
+		"/>
+</g>
+<text transform="matrix(1 0 0 1 246 74.0827)" class="st23 st21 st24">QC CHECK</text>
+<circle class="st25" cx="253" cy="88.9" r="7"/>
+<path class="st26" d="M249.9,88.9l2.2,2.2l4.2-4.3"/>
+<text transform="matrix(1 0 0 1 266 92.9)" class="st20 st21 st27">Density</text>
+<circle class="st25" cx="253" cy="110.9" r="7"/>
+<path class="st26" d="M249.9,110.9l2.2,2.2l4.2-4.3"/>
+<text transform="matrix(1 0 0 1 266 114.9)" class="st20 st21 st27">Underlay</text>
+<circle class="st25" cx="253" cy="132.9" r="7"/>
+<path class="st26" d="M249.9,132.9l2.2,2.2l4.2-4.3"/>
+<text transform="matrix(1 0 0 1 266 136.9)" class="st20 st21 st27">Pull comp.</text>
+<circle class="st25" cx="253" cy="154.9" r="7"/>
+<path class="st26" d="M249.9,154.9l2.2,2.2l4.2-4.3"/>
+<text transform="matrix(1 0 0 1 266 158.9)" class="st20 st21 st27">Trims</text>
+<g>
+	<circle class="st25" cx="253" cy="176.9" r="7"/>
+	<path class="st26" d="M249.9,176.9l2.2,2.2l4.2-4.3"/>
+</g>
+<text transform="matrix(1 0 0 1 266 180.9)" class="st20 st21 st27">Sew-out</text>
+<g>
+	
+		<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="-771.9182" y1="667.95" x2="-770.9182" y2="666.95" gradientTransform="matrix(110 0 0 -40 85143 26918)">
+		<stop  offset="0" style="stop-color:#7C3AED"/>
+		<stop  offset="1" style="stop-color:#5B21B6"/>
+	</linearGradient>
+	<path class="st28" d="M244,200h86c6.6,0,12,5.4,12,12v16c0,6.6-5.4,12-12,12h-86c-6.6,0-12-5.4-12-12v-16
+		C232,205.4,237.4,200,244,200z"/>
+</g>
+<text transform="matrix(1 0 0 1 248.4785 225)" class="st19 st21 st29">100% Checked</text>
+</svg>

@@ -16,7 +16,7 @@ const MegaMenuCard = ({
     relative
     flex
     flex-col
-    h-[413px]
+    h-[400px]
     rounded-xl
     border
     bg-[#F3F3F34A]
@@ -48,7 +48,7 @@ const MegaMenuCard = ({
         "
                 >
                     <Icon
-                        size={48}
+                        size={42}
                         strokeWidth={1.8}
                         className="text-[#7434E5]
             "
@@ -63,7 +63,7 @@ const MegaMenuCard = ({
                         className="
             font-inter
             font-bold
-            text-[20px]
+            text-[18px]
             -leading-[3%]
             text-[#7434E5]
             
@@ -94,7 +94,7 @@ const MegaMenuCard = ({
 
                 {/* Features */}
 
-                <div className="flex-1 space-y-2 capitalize">
+                <div className=" border npmflex-1 space-y-2 capitalize">
 
                     {features.map((item, index) => (
 

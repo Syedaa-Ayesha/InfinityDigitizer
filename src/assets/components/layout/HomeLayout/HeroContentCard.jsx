@@ -101,7 +101,7 @@ const HeroContentCard = () => {
       {/* ================= MAIN HEADING ================= */}
 
   <h1 className="text-[34px] font-bold leading-[110%] tracking-[-0.01em] text-[#04000B] mb-3 whitespace-pre-line lg:text-[58px]" >
-      Professional Embroidery Digitizing,
+     Embroidery Digitizing,
         Logo Designing &
         Vector Art Services
       </h1>

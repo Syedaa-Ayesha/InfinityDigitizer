@@ -28,7 +28,7 @@ const ServicePageHero = ({
           sm:p-6
           md:p-8
           lg:flex-row
-          
+          lg:items-center
           lg:justify-between
           lg:gap-10
           xl:p-10
@@ -105,7 +105,7 @@ const ServicePageHero = ({
         </div>
 
         {/* Image */}
-        <div className="w-full lg:w-[40%]">
+        <div className="w-full lg:w-[40%] ">
           <div
             className="
               h-[280px]
@@ -119,7 +119,7 @@ const ServicePageHero = ({
             <img
               src={image}
               alt={title}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
         </div>

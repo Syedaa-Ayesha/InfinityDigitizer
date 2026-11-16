@@ -11,7 +11,9 @@ import {
   Shirt,
   PenLine,
 } from "lucide-react";
-
+import embroideryImage from "../../images/Embroidery-artwork.png";
+import vectorImage from "../../images/Vector-artwork.png";
+import logoImage from "../../images/Logo-artwork.png";
 export const artRequiredData = {
   /* =====================================================
      PAGE HERO
@@ -32,6 +34,7 @@ export const artRequiredData = {
       title: "Faster Processing",
       description: "Get your files ready and save time.",
       Icon: Zap,
+      
     },
     {
       id: 2,
@@ -112,8 +115,9 @@ export const artRequiredData = {
       title: "Embroidery Digitizing Requirements",
 
       subtitle:
-        "To create the best embroidery files, please provide:",
+  "To create the best embroidery files, please provide:",
 
+image: embroideryImage,
       /* BLUE THEME */
       theme: {
         iconGradient:
@@ -171,7 +175,7 @@ export const artRequiredData = {
       },
 
       Icon: Shirt,
-      image: null,
+     
     },
 
     /* ===================================================
@@ -185,7 +189,7 @@ export const artRequiredData = {
 
       subtitle:
         "For the best vector tracing results, please provide:",
-
+image: vectorImage,
       /* GREEN THEME */
       theme: {
         iconGradient:
@@ -243,7 +247,7 @@ export const artRequiredData = {
       },
 
       Icon: PenTool,
-      image: null,
+      
     },
 
     /* ===================================================
@@ -257,7 +261,7 @@ export const artRequiredData = {
 
       subtitle:
         "To design a logo that matches your vision, please share:",
-
+image:logoImage,
       /* ORANGE THEME */
       theme: {
         iconGradient:
@@ -315,7 +319,7 @@ export const artRequiredData = {
       },
 
       Icon: PenLine,
-      image: null,
+      
     },
   ],
 };

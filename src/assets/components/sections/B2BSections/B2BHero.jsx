@@ -1,5 +1,5 @@
 import { BriefcaseBusiness, ArrowRight, Phone } from "lucide-react";
-import heroImage from "../../../images/hero section image.jpg";
+import heroImage from "../../../images/b2b-hero-612x560.svg";
 import B2BStateItem from "../../layout/B2BLayout/B2BStateItem";
 import { B2BStatsData } from "../../common/B2BStatsData"
 import SolidButton from "../../layout/SolidButton";
@@ -122,96 +122,101 @@ const B2BHero = () => {
 
           
           
-          <div className="relative w-full lg:w-[620px]">
- <div
-  className="
-    overflow-hidden
-    rounded-t-[28px]
-    lg:rounded-[28px]
-  "
->
-   <img
-  src={heroImage}
-  alt="B2B"
-  className="
-    w-full
-     object-cover
-    lg:h-[560px]
-    
-  "
-/>
-  </div> 
+          
+{/* RIGHT */}
 
-  {/* Floating Card */}
+<div className="relative w-full lg:w-[620px] lg:shrink-0 lg:-mt-8">
 
- <div
-  className="
-    relative
-    w-full
-   -mt-[52px]
-    lg:absolute
-    lg:left-1/2
-    lg:w-[92%]
-    lg:-translate-x-1/2
-    lg:-bottom-[48px]
-  "
->
-<div
-  className="
-    overflow-hidden
-    bg-white
+  {/* HERO IMAGE */}
 
-    rounded-b-[24px]
+  <div
+    className="
+      w-full
+      overflow-hidden
+      rounded-[28px]
+      lg:h-[560px]
+    "
+  >
+    <img
+      src={heroImage}
+      alt="B2B"
+      className="
+        block
+        w-full
+        h-auto
+        lg:h-full
+        object-contain
+        rounded-[28px]
+      "
+    />
+  </div>
 
-    shadow-[0px_18px_50px_rgba(0,0,0,0.12)]
+  {/* FLOATING CARD */}
 
-    lg:rounded-[22px]
-  "
->
-
- <div
-  className="
-    grid
-    grid-cols-2
-    lg:grid-cols-4
-  "
->
-  {B2BStatsData.map((item, index) => (
+  <div
+    className="
+      relative
+      w-full
+      -mt-[52px]
+      lg:absolute
+      lg:left-1/2
+      lg:w-[92%]
+      lg:-translate-x-1/2
+      lg:-bottom-[48px]
+    "
+  >
     <div
-      key={item.id}
- className={`
-    flex
-
-    ${
-      index % 2 === 0
-        ? "border-r border-[#ECECEC]"
-        : ""
-    }
-
-    ${
-      index < 2
-        ? "border-b border-[#ECECEC]"
-        : ""
-    }
-
-    ${
-      index !== B2BStatsData.length - 1
-        ? "lg:border-r"
-        : ""
-    }
-
-    lg:border-b-0
-`}
+      className="
+        overflow-hidden
+        bg-white
+        rounded-b-[24px]
+        shadow-[0px_18px_50px_rgba(0,0,0,0.12)]
+        lg:rounded-[22px]
+      "
     >
-      <B2BStateItem {...item} />
-    </div>
-  ))}
-</div>
+      <div
+        className="
+          grid
+          grid-cols-2
+          lg:grid-cols-4
+        "
+      >
+        {B2BStatsData.map((item, index) => (
+          <div
+            key={item.id}
+            className={`
+              flex
 
-</div>
+              ${
+                index % 2 === 0
+                  ? "border-r border-[#ECECEC]"
+                  : ""
+              }
+
+              ${
+                index < 2
+                  ? "border-b border-[#ECECEC]"
+                  : ""
+              }
+
+              ${
+                index !== B2BStatsData.length - 1
+                  ? "lg:border-r"
+                  : ""
+              }
+
+              lg:border-b-0
+            `}
+          >
+            <B2BStateItem {...item} />
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 
 </div>
+
         </div>
       </div>
     </section>
@@ -219,3 +224,6 @@ const B2BHero = () => {
 }
 
 export default B2BHero
+
+
+

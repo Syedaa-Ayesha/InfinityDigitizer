@@ -1,5 +1,4 @@
 import { CheckCircle2, FileText } from "lucide-react";
-
 const ArtRequirementCard = ({
   title = "",
   subtitle = "",
@@ -58,9 +57,7 @@ const ArtRequirementCard = ({
           xl:gap-[24px]
         "
       >
-        {/* =====================================================
-            LEFT IMAGE / VISUAL
-        ===================================================== */}
+        {/* LEFT IMAGE / VISUAL */}
         <div
           className="
             box-border
@@ -94,7 +91,7 @@ const ArtRequirementCard = ({
                 h-full
                 w-full
                 max-w-full
-                object-cover
+                object-contain
                 object-center
               "
             />
@@ -111,9 +108,7 @@ const ArtRequirementCard = ({
           )}
         </div>
 
-        {/* =====================================================
-            CENTER CONTENT
-        ===================================================== */}
+        {/* CENTER CONTENT */}
         <div
           className="
             min-w-0
@@ -150,10 +145,7 @@ const ArtRequirementCard = ({
                   background: iconGradient,
                 }}
               >
-                <Icon
-                  size={19}
-                  strokeWidth={2}
-                />
+                <Icon size={19} strokeWidth={2} />
               </div>
             )}
 
@@ -171,9 +163,7 @@ const ArtRequirementCard = ({
                   text-[#17161F]
 
                   sm:text-[20px]
-
                   md:text-[21px]
-
                   lg:text-[21px]
                 "
                 style={{
@@ -197,9 +187,7 @@ const ArtRequirementCard = ({
                     text-[#747383]
 
                     sm:text-[14px]
-
                     md:text-[15px]
-
                     lg:text-[14px]
                   "
                   style={{
@@ -212,9 +200,7 @@ const ArtRequirementCard = ({
             </div>
           </div>
 
-          {/* =====================================================
-              BULLETS
-          ===================================================== */}
+          {/* BULLETS */}
           {Array.isArray(bullets) && bullets.length > 0 && (
             <div
               className="
@@ -282,7 +268,6 @@ const ArtRequirementCard = ({
                         text-[#626773]
 
                         sm:text-[14px]
-
                         md:text-[15px]
 
                         lg:text-[14px]
@@ -310,9 +295,7 @@ const ArtRequirementCard = ({
           )}
         </div>
 
-        {/* =====================================================
-            ACCEPTED FILE FORMATS
-        ===================================================== */}
+        {/* ACCEPTED FILE FORMATS */}
         {acceptedFormats && (
           <div
             className="
@@ -380,7 +363,6 @@ const ArtRequirementCard = ({
                   text-[#343541]
 
                   sm:text-[14px]
-
                   md:text-[14px]
                 "
                 style={{
@@ -403,7 +385,6 @@ const ArtRequirementCard = ({
                   text-[#626773]
 
                   sm:text-[14px]
-
                   md:text-[13px]
                 "
                 style={{

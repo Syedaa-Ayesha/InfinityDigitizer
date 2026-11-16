@@ -10,7 +10,7 @@ import {
   UserRoundPlus,
   Headphones,
 } from "lucide-react";
-
+import refund from '../../images/RefundPolic.svg'
 export const refundPolicyData = {
   hero: {
     title: "Refund Policy",
@@ -19,6 +19,7 @@ export const refundPolicyData = {
       "We aim to provide high quality embroidery digitizing, vector art and logo design services. Customer satisfaction is our top priority. Please read our refund policy carefully before placing an order.",
 
     date: "May 15, 2026",
+    rightImage: refund,
   },
 
   overview: {

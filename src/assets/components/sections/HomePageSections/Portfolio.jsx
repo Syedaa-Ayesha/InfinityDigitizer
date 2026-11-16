@@ -14,7 +14,7 @@ import {
   SmilePlus,
 } from "lucide-react";
 
-import work1 from "../../../images/Before After-12.jpg 1.png";
+import work1 from "../../../images/2-fast-turnaround.png";
 
 const portfolio = [
   { id: 1, image: work1 },
