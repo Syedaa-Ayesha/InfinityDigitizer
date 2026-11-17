@@ -1,14 +1,10 @@
-
-
-// import Heading from "../../layout/Heading";
-// import patchPreview from "../../../images/FOX-LOGO.png";
 import FormState from "../../layout/HomeLayout/FormState";
 import {
   Zap,
   FileCheck,
   ShieldCheck,
   Clover,
-  Star,
+  
 } from "lucide-react";
 import ImageComparison from "../../layout/HelpPagelayout/ComparisonImage";
 import SectionHeading from "../../layout/SectionHeading";
@@ -56,8 +52,9 @@ const ServiceForm = () => {
        <SectionHeading
          
           heading="Your Artwork, Perfectly Prepared"
-          description="Embroidery digitizing, vector art & logo digitizing services designed to deliver 
-          accurate, reliable, and production ready files."
+          description="Embroidery digitizing, vector art & logo digitizing 
+          services designed to deliver accurate, reliable, 
+          and production ready files."
            headingClassName="lg:text-[38px] text-[#0C0C30] font-extrablod tracking-[-2px]"
         />
       <div
