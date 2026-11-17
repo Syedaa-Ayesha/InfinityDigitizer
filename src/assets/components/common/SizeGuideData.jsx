@@ -1,3 +1,580 @@
+// import {
+//   Shirt,
+//   Badge,
+//   BriefcaseBusiness,
+//   UserRound,
+//   ShoppingBag,
+//   Layers3,
+//   Home,
+// } from "lucide-react";
+// import img from "../../images/"
+// import image1 from "../../icons/left chest.png";
+// import image2 from "../../icons/right chest.png";
+// import image3 from "../../icons/Center chest.png";
+// import image4 from "../../icons/Full front.png";
+// import image5 from "../../icons/Back upper.png";
+// import image6 from "../../icons/Back full.png";
+
+// export const sizeGuideData = [
+//   /* =========================================================
+//      01 NAMES & MONOGRAMS EMBROIDERY
+//   ========================================================= */
+//   {
+//     id: "names-monograms",
+//     title: "Names & Monograms Embroidery",
+//     value: "names-monograms",
+//     icon: UserRound,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Chest Name (Left/Right)",
+//         placement: "Left or right chest area Above pocket or seam",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
+//         bestFor: "Employee names, small text branding",
+//         notes: "Keep text short for best readability.",
+//       },
+//       {
+//         id: 2,
+//         item: "Sleeve Name",
+//         placement: "Left or right sleeve 1–2” below shoulder seam",
+//         size:
+//           "W: 2”–4” (5 cm–10 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
+//         bestFor: "Personal names, team names",
+//         notes: "Avoid long names on narrow sleeves.",
+//       },
+//       {
+//         id: 3,
+//         item: "Back Yoke Name",
+//         placement: "Upper back yoke Below collar seam",
+//         size:
+//           "W: 3”–6” (7.5 cm–15 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
+//         bestFor: "Names, brand tags, personalization",
+//         notes: "Centered for a balanced look.",
+//       },
+//       {
+//         id: 4,
+//         item: "Cuff Name",
+//         placement: "On cuff edge Left or right cuff",
+//         size:
+//           "W: 1.5”–3” (4 cm–7.5 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
+//         bestFor: "Initials, names, personal style",
+//         notes: "Best for short names or initials.",
+//       },
+//       {
+//         id: 5,
+//         item: "Collar Name",
+//         placement: "On collar tip or band Left or right side",
+//         size:
+//           "W: 1.5”–3” (4 cm–7.5 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
+//         bestFor: "Names, initials, brand identity",
+//         notes: "Keep small for a clean finish.",
+//       },
+//       {
+//         id: 6,
+//         item: "Towel Monogram",
+//         placement: "Or corner Center lower band",
+//         size:
+//           "W: 1.5”–3.5” (4 cm–9 cm)\nH: 1.5”–3.5” (4 cm–9 cm)",
+//         bestFor: "Monograms, initials, gifts",
+//         notes: "Use larger size for luxury look.",
+//       },
+//       {
+//         id: 7,
+//         item: "Hat Name (Back)",
+//         placement: "Back above strap Centered",
+//         size:
+//           "W: 2”–4” (5 cm–10 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
+//         bestFor: "Personal names, casual branding",
+//         notes: "Short names work best.",
+//       },
+//       {
+//         id: 8,
+//         item: "Monogram (3 Letter)",
+//         placement: "Centered placement On pocket, chest, or towel",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2”–4” (5 cm–10 cm)",
+//         bestFor: "Elegant monograms, weddings, gifts",
+//         notes: "Center letter slightly larger for balance.",
+//       },
+//     ],
+//   },
+
+//   /* =========================================================
+//      02 BAGS & ACCESSORIES
+//   ========================================================= */
+//   {
+//     id: "bags-accessories",
+//     title: "Bags & Accessories Embroidery",
+//     value: "bags-accessories",
+//     icon: ShoppingBag,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Tote Bag",
+//         placement: "Front center area Keep away from seams and edges",
+//         size:
+//           "W: 6”–10” (15 cm–25 cm)\nH: 6”–8” (15 cm–20 cm)",
+//         bestFor: "Logos, artwork, brand designs",
+//         notes: "Best for medium to large logos.",
+//       },
+//       {
+//         id: 2,
+//         item: "Backpack",
+//         placement: "Front pocket area Center placement",
+//         size:
+//           "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
+//         bestFor: "School logos, team logos, text",
+//         notes: "Avoid zippers and curved seams.",
+//       },
+//       {
+//         id: 3,
+//         item: "Duffel Bag",
+//         placement: "Side panel center Flat area recommended",
+//         size:
+//           "W: 6”–10” (15 cm–25 cm)\nH: 4”–7” (10 cm–18 cm)",
+//         bestFor: "Team logos, company logos",
+//         notes: "Keep design away from handles.",
+//       },
+//       {
+//         id: 4,
+//         item: "Pouch / Travel Pouch",
+//         placement: "Front center area Avoid folds and edges",
+//         size:
+//           "W: 3”–6” (7.5 cm–15 cm)\nH: 2.5”–4” (6.5 cm–10 cm)",
+//         bestFor: "Small logos, initials, monograms",
+//         notes: "Perfect for minimal embroidery.",
+//       },
+//       {
+//         id: 5,
+//         item: "Apron",
+//         placement: "Chest area Center placement",
+//         size:
+//           "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
+//         bestFor: "Brand logos, names, text",
+//         notes: "Avoid seams and pocket areas.",
+//       },
+//       {
+//         id: 6,
+//         item: "Laptop Sleeve",
+//         placement: "Front center area Flat surface only",
+//         size:
+//           "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
+//         bestFor: "Company logos, initials",
+//         notes: "Keep design small for best results.",
+//       },
+//       {
+//         id: 7,
+//         item: "Cosmetic Bag",
+//         placement: "Front center area On flat panel",
+//         size:
+//           "W: 3”–6” (7.5 cm–15 cm)\nH: 2.5”–4” (6.5 cm–10 cm)",
+//         bestFor: "Name, text, small logos",
+//         notes: "Avoid corners and binding areas.",
+//       },
+//       {
+//         id: 8,
+//         item: "Luggage Tag",
+//         placement: "Front side center Inside stitched area",
+//         size:
+//           "W: 2”–3.5” (5 cm–9 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+//         bestFor: "Initials, small logos, name tags",
+//         notes: "Small area, keep design simple.",
+//       },
+//     ],
+//   },
+
+//   /* =========================================================
+//      03 SHIRT & POLO EMBROIDERY
+//   ========================================================= */
+//   {
+//     id: "shirt-polo",
+//     title: "Shirt & Polo Embroidery",
+//     value: "shirt-polo",
+//     icon: Shirt,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Left Chest",
+//         placement:
+//           "Left chest area 3”–4” below shoulder seam above pocket area",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+//         bestFor: "Logos, text, small designs",
+//         notes: "Best for company logos or name tags.",
+//         image: image1,
+//       },
+//       {
+//         id: 2,
+//         item: "Right Chest",
+//         placement:
+//           "Right chest area 3”–4” below shoulder seam above pocket area",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+//         bestFor: "Name, text, initials, logo",
+//         notes: "Ideal for employee names or branding.",
+//         image: image2,
+//       },
+//       {
+//         id: 3,
+//         item: "Center Chest",
+//         placement: "Center chest area 2”–3” below collar centered",
+//         size:
+//           "W: 6”–10” (15 cm–25 cm)\nH: 6”–10” (15 cm–25 cm)",
+//         bestFor: "Large logos, team designs",
+//         notes: "Perfect for bigger logos and designs.",
+//         image: image3,
+//       },
+//       {
+//         id: 4,
+//         item: "Sleeve (Left / Right)",
+//         placement: "Sleeve area 1”–2” below shoulder seam on sleeve",
+//         size:
+//           "W: 2”–3.5” (5 cm–9 cm)\nH: 2”–3.5” (5 cm–9 cm)",
+//         bestFor: "Patches, icons, sponsor logos",
+//         notes: "Great for sleeve logos or patches.",
+//       },
+//       {
+//         id: 5,
+//         item: "Pocket",
+//         placement: "Pocket area Centered on pocket or above it",
+//         size:
+//           "W: 2”–3” (5 cm–7.5 cm)\nH: 2”–3” (5 cm–7.5 cm)",
+//         bestFor: "Small logos, text, icons",
+//         notes: "Keep within pocket size for best results.",
+//       },
+//       {
+//         id: 6,
+//         item: "Collar",
+//         placement: "Collar area On collar points or above button",
+//         size:
+//           "W: 1.5”–2.5” (4 cm–6.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+//         bestFor: "Initials, small text, brand marks",
+//         notes: "Keep small for a clean look.",
+//       },
+//       {
+//         id: 7,
+//         item: "Yoke (Back)",
+//         placement: "Yoke area Upper back yoke below collar seam",
+//         size:
+//           "W: 6”–10” (15 cm–25 cm)\nH: 2”–4” (5 cm–10 cm)",
+//         bestFor: "Company logos, branding, text",
+//         notes: "Great for large back branding on shirts.",
+//         image: image5,
+//       },
+//     ],
+//   },
+
+//   /* =========================================================
+//      04 JACKET & OUTERWEAR
+//   ========================================================= */
+//   {
+//     id: "jacket-outerwear",
+//     title: "Jacket & Outerwear Embroidery",
+//     value: "jacket-outerwear",
+//     icon: BriefcaseBusiness,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Left Chest",
+//         placement:
+//           "Left chest area 3”–4” below shoulder seam above pocket",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+//         bestFor: "Logos, text, small designs",
+//         notes: "Best for company logos or name tags.",
+//       },
+//       {
+//         id: 2,
+//         item: "Right Chest",
+//         placement:
+//           "Right chest area 3”–4” below shoulder seam above pocket",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+//         bestFor: "Name, text, initials, logo",
+//         notes: "Ideal for employee names or branding.",
+//       },
+//       {
+//         id: 3,
+//         item: "Full Front",
+//         placement: "Front area Between chest and waist",
+//         size:
+//           "W: 8”–12” (20 cm–30 cm)\nH: 8”–14” (20 cm–35 cm)",
+//         bestFor: "Large logos, team designs, custom artwork",
+//         notes: "Best for big logos or detailed designs.",
+//         image: image4,
+//       },
+//       {
+//         id: 4,
+//         item: "Back (Upper)",
+//         placement: "Upper back area 3”–4” below collar",
+//         size:
+//           "W: 8”–12” (20 cm–30 cm)\nH: 3”–6” (8 cm–15 cm)",
+//         bestFor: "Company logos, web address, branding",
+//         notes: "Great for branding or small back logos.",
+//         image: image5,
+//       },
+//       {
+//         id: 5,
+//         item: "Back (Full)",
+//         placement: "Full back area Between shoulders and waist",
+//         size:
+//           "W: 10”–14” (25 cm–35 cm)\nH: 10”–14” (25 cm–35 cm)",
+//         bestFor: "Large artwork, club logos, custom designs",
+//         notes: "Best for big, detailed or multi-color designs.",
+//         image: image6,
+//       },
+//       {
+//         id: 6,
+//         item: "Sleeve",
+//         placement: "Upper sleeve area 2”–3” below shoulder",
+//         size:
+//           "W: 2”–4” (5 cm–10 cm)\nH: 2”–4” (5 cm–10 cm)",
+//         bestFor: "Patches, flags, icons, emblems",
+//         notes: "Great for patches or small branding.",
+//       },
+//       {
+//         id: 7,
+//         item: "Collar / Hood",
+//         placement: "Collar or hood area Center placement",
+//         size:
+//           "W: 2”–4” (5 cm–10 cm)\nH: 1”–2” (2.5 cm–5 cm)",
+//         bestFor: "Text, initials, small logos",
+//         notes: "Ideal for subtle branding.",
+//       },
+//     ],
+//   },
+
+//   /* =========================================================
+//      05 CAP & HAT EMBROIDERY
+//   ========================================================= */
+//   {
+//     id: "cap-hat",
+//     title: "Cap & Hat Embroidery",
+//     value: "cap-hat",
+//     icon: Badge,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Cap Front (Center)",
+//         placement: "Front center panel Above the brim, centered",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+//         bestFor: "Logos, text, brand designs",
+//         notes: "Keep away from the crown flex for best results.",
+//       },
+//       {
+//         id: 2,
+//         item: "Cap Side (Left / Right)",
+//         placement: "Left or right side panel 2”–3” above the brim edge",
+//         size:
+//           "W: 2”–3” (5 cm–7.5 cm)\nH: 1.2”–2.2” (3 cm–5.5 cm)",
+//         bestFor: "Small logos, initials, icons",
+//         notes: "Ideal for small logos or side branding.",
+//       },
+//       {
+//         id: 3,
+//         item: "Cap Back (Back Center)",
+//         placement: "Back center above opening 1”–1.5” above strap opening",
+//         size:
+//           "W: 1.5”–3.5” (4 cm–9 cm)\nH: 0.8”–1.5” (2 cm–4 cm)",
+//         bestFor: "Text, website, team name",
+//         notes: "Keep it small and clear for readability.",
+//       },
+//       {
+//         id: 4,
+//         item: "5 Panel Cap (Front Panel)",
+//         placement: "Front panel Centered (flat embroidery area)",
+//         size:
+//           "W: 3”–5” (7.5 cm–12.5 cm)\nH: 1.8”–3” (4.5 cm–7.5 cm)",
+//         bestFor: "Big logos, patch style designs",
+//         notes: "More flat area gives more embroidery space.",
+//       },
+//       {
+//         id: 5,
+//         item: "Trucker Cap (Front Foam)",
+//         placement: "Front foam panel Centered above the brim",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+//         bestFor: "Logos, text, outdoor brands",
+//         notes: "Foam allows clean and high quality stitching.",
+//       },
+//       {
+//         id: 6,
+//         item: "Beanie Hat (Cuff Area)",
+//         placement: "Center of cuff Front side (folded area)",
+//         size:
+//           "W: 2”–4” (5 cm–10 cm)\nH: 0.8”–2” (2 cm–5 cm)",
+//         bestFor: "Text, initials, small logos",
+//         notes: "Avoid bulk designs on thin knit beanies.",
+//       },
+//     ],
+//   },
+
+//   /* =========================================================
+//      06 EMBROIDERY PLACEMENT ON GARMENTS
+//   ========================================================= */
+//   {
+//     id: "garment-placement",
+//     title: "Embroidery Placement on Garments",
+//     value: "garment-placement",
+//     icon: Layers3,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Left Chest",
+//         placement: "Left chest area 3”–4” below shoulder seam",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+//         bestFor: "Logos, text, small designs",
+//         notes: "Best for logos and small text designs.",
+//         image: image1,
+//       },
+//       {
+//         id: 2,
+//         item: "Right Chest",
+//         placement: "Right chest area 3”–4” below shoulder seam",
+//         size:
+//           "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+//         bestFor: "Name, text, or logo",
+//         notes: "Ideal for name, text or logo.",
+//         image: image2,
+//       },
+//       {
+//         id: 3,
+//         item: "Center Chest",
+//         placement: "Center chest area 2”–3” below collar",
+//         size:
+//           "W: 6”–10” (15 cm–25 cm)\nH: 6”–10” (15 cm–25 cm)",
+//         bestFor: "Large logos, team designs",
+//         notes: "Perfect for larger logos and designs.",
+//         image: image3,
+//       },
+//       {
+//         id: 4,
+//         item: "Full Front",
+//         placement: "Full front area Between chest and waist",
+//         size:
+//           "W: 8”–12” (20 cm–30 cm)\nH: 8”–14” (20 cm–35 cm)",
+//         bestFor: "Big logos, custom artwork",
+//         notes: "Best for big logos or custom artwork.",
+//         image: image4,
+//       },
+//       {
+//         id: 5,
+//         item: "Back (Upper)",
+//         placement: "Upper back area 3”–4” below collar seam",
+//         size:
+//           "W: 8”–12” (20 cm–30 cm)\nH: 3”–6” (8 cm–15 cm)",
+//         bestFor: "Company logos, branding",
+//         notes: "Great for company logos or branding.",
+//         image: image5,
+//       },
+//       {
+//         id: 6,
+//         item: "Back (Full)",
+//         placement: "Full back area Between shoulders and waist",
+//         size:
+//           "W: 10”–14” (25 cm–35 cm)\nH: 10”–14” (25 cm–35 cm)",
+//         bestFor: "Large artwork, detailed designs",
+//         notes: "Best for large artwork and designs.",
+//         image: image6,
+//       },
+//     ],
+//   },
+
+//   /* =========================================================
+//      07 TOWELS & HOME TEXTILE
+//   ========================================================= */
+//   {
+//     id: "towels-home-textile",
+//     title: "Towels & Home Textile Embroidery",
+//     value: "towels-home-textile",
+//     icon: Home,
+
+//     tableData: [
+//       {
+//         id: 1,
+//         item: "Hand Towel",
+//         placement: "Border area Lower band or corner",
+//         size:
+//           "W: 3”–6” (7.5 cm–15 cm)\nH: 1.5”–3” (4 cm–7.5 cm)",
+//         bestFor: "Names, initials, monograms, small logos",
+//         notes: "Keep above the hem and edges.",
+//       },
+//       {
+//         id: 2,
+//         item: "Bath Towel",
+//         placement: "Lower border area Center placement",
+//         size:
+//           "W: 6”–12” (15 cm–30 cm)\nH: 2”–4” (5 cm–10 cm)",
+//         bestFor: "Large names, logos, decorative designs",
+//         notes: "Ideal for more visible embroidery.",
+//       },
+//       {
+//         id: 3,
+//         item: "Face Towel",
+//         placement: "Border or corner Lower band or corner",
+//         size:
+//           "W: 2.5”–5” (6.5 cm–12.5 cm)\nH: 1”–2.5” (2.5 cm–6.5 cm)",
+//         bestFor: "Initials, small logos, delicate designs",
+//         notes: "Perfect for personal use or gifts.",
+//       },
+//       {
+//         id: 4,
+//         item: "Kitchen Towel",
+//         placement: "Bottom border Center placement",
+//         size:
+//           "W: 3”–7” (7.5 cm–18 cm)\nH: 1.5”–3” (4 cm–7.5 cm)",
+//         bestFor: "Kitchen themes, text, small logos",
+//         notes: "Keep design away from folds.",
+//       },
+//       {
+//         id: 5,
+//         item: "Blanket",
+//         placement: "Corner area Lower right or left corner",
+//         size:
+//           "W: 4”–10” (10 cm–25 cm)\nH: 2”–5” (5 cm–12.5 cm)",
+//         bestFor: "Monograms, names, decorative logos",
+//         notes: "Avoid thick seams and stitched edges.",
+//       },
+//       {
+//         id: 6,
+//         item: "Pillow (Front)",
+//         placement: "Center area Front panel",
+//         size:
+//           "W: 4”–10” (10 cm–25 cm)\nH: 3”–8” (7.5 cm–20 cm)",
+//         bestFor: "Monograms, quotes, decorative designs",
+//         notes: "Ensure design is balanced.",
+//       },
+//       {
+//         id: 7,
+//         item: "Cushion Cover",
+//         placement: "Center area Front side",
+//         size:
+//           "W: 4”–9” (10 cm–23 cm)\nH: 3”–7” (7.5 cm–18 cm)",
+//         bestFor: "Names, initials, home décor designs",
+//         notes: "Consider zipper placement.",
+//       },
+//       {
+//         id: 8,
+//         item: "Table Runner",
+//         placement: "End panel Center placement",
+//         size:
+//           "W: 6”–12” (15 cm–30 cm)\nH: 2”–5” (5 cm–12.5 cm)",
+//         bestFor: "Decorative motifs, seasonal designs",
+//         notes: "Keep design proportional.",
+//       },
+//     ],
+//   },
+// ];
+
 import {
   Shirt,
   Badge,
@@ -8,12 +585,69 @@ import {
   Home,
 } from "lucide-react";
 
-import image1 from "../../icons/left chest.png";
-import image2 from "../../icons/right chest.png";
-import image3 from "../../icons/Center chest.png";
-import image4 from "../../icons/Full front.png";
-import image5 from "../../icons/Back upper.png";
-import image6 from "../../icons/Back full.png";
+// Names & Monograms
+import namesMonogramsChestNameLeftRight from "../../images/size-guideline-images/names-monograms--chest-name-left-right.svg";
+import namesMonogramsSleeveName from "../../images/size-guideline-images/names-monograms--sleeve-name.svg";
+import namesMonogramsBackYokeName from "../../images/size-guideline-images/names-monograms--back-yoke-name.svg";
+import namesMonogramsCuffName from "../../images/size-guideline-images/names-monograms--cuff-name.svg";
+import namesMonogramsCollarName from "../../images/size-guideline-images/names-monograms--collar-name.svg";
+import namesMonogramsTowelMonogram from "../../images/size-guideline-images/names-monograms--towel-monogram.svg";
+import namesMonogramsHatNameBack from "../../images/size-guideline-images/names-monograms--hat-name-back.svg";
+import namesMonogramsMonogram3Letter from "../../images/size-guideline-images/names-monograms--monogram-3-letter.svg";
+
+// Bags & Accessories
+import bagsAccessoriesToteBag from "../../images/size-guideline-images/bags-accessories--tote-bag.svg";
+import bagsAccessoriesBackpack from "../../images/size-guideline-images/bags-accessories--backpack.svg";
+import bagsAccessoriesDuffelBag from "../../images/size-guideline-images/bags-accessories--duffel-bag.svg";
+import bagsAccessoriesPouchTravelPouch from "../../images/size-guideline-images/bags-accessories--pouch-travel-pouch.svg";
+import bagsAccessoriesApron from "../../images/size-guideline-images/bags-accessories--apron.svg";
+import bagsAccessoriesLaptopSleeve from "../../images/size-guideline-images/bags-accessories--laptop-sleeve.svg";
+import bagsAccessoriesCosmeticBag from "../../images/size-guideline-images/bags-accessories--cosmetic-bag.svg";
+import bagsAccessoriesLuggageTag from "../../images/size-guideline-images/bags-accessories--luggage-tag.svg";
+
+// Shirt & Polo
+import shirtPoloLeftChest from "../../images/size-guideline-images/shirt-polo--left-chest.svg";
+import shirtPoloRightChest from "../../images/size-guideline-images/shirt-polo--right-chest.svg";
+import shirtPoloCenterChest from "../../images/size-guideline-images/shirt-polo--center-chest.svg";
+import shirtPoloSleeveLeftRight from "../../images/size-guideline-images/shirt-polo--sleeve-left-right.svg";
+import shirtPoloPocket from "../../images/size-guideline-images/shirt-polo--pocket.svg";
+import shirtPoloCollar from "../../images/size-guideline-images/shirt-polo--collar.svg";
+import shirtPoloYokeBack from "../../images/size-guideline-images/shirt-polo--yoke-back.svg";
+
+// Jacket & Outerwear
+import jacketOuterwearLeftChest from "../../images/size-guideline-images/jacket-outerwear--left-chest.svg";
+import jacketOuterwearRightChest from "../../images/size-guideline-images/jacket-outerwear--right-chest.svg";
+import jacketOuterwearFullFront from "../../images/size-guideline-images/jacket-outerwear--full-front.svg";
+import jacketOuterwearBackUpper from "../../images/size-guideline-images/jacket-outerwear--back-upper.svg";
+import jacketOuterwearBackFull from "../../images/size-guideline-images/jacket-outerwear--back-full.svg";
+import jacketOuterwearSleeve from "../../images/size-guideline-images/jacket-outerwear--sleeve.svg";
+import jacketOuterwearCollarHood from "../../images/size-guideline-images/jacket-outerwear--collar-hood.svg";
+
+// Cap & Hat
+import capHatCapFrontCenter from "../../images/size-guideline-images/cap-hat--cap-front-center.svg";
+import capHatCapSideLeftRight from "../../images/size-guideline-images/cap-hat--cap-side-left-right.svg";
+import capHatCapBackBackCenter from "../../images/size-guideline-images/cap-hat--cap-back-back-center.svg";
+import capHat5PanelCapFrontPanel from "../../images/size-guideline-images/cap-hat--5-panel-cap-front-panel.svg";
+import capHatTruckerCapFrontFoam from "../../images/size-guideline-images/cap-hat--trucker-cap-front-foam.svg";
+import capHatBeanieHatCuffArea from "../../images/size-guideline-images/cap-hat--beanie-hat-cuff-area.svg";
+
+// Garment Placement
+import embroideryPlacementOnGarmentsLeftChest from "../../images/size-guideline-images/embroidery-placement-on-garments--left-chest.svg";
+import embroideryPlacementOnGarmentsRightChest from "../../images/size-guideline-images/embroidery-placement-on-garments--right-chest.svg";
+import embroideryPlacementOnGarmentsCenterChest from "../../images/size-guideline-images/embroidery-placement-on-garments--center-chest.svg";
+import embroideryPlacementOnGarmentsFullFront from "../../images/size-guideline-images/embroidery-placement-on-garments--full-front.svg";
+import embroideryPlacementOnGarmentsBackUpper from "../../images/size-guideline-images/embroidery-placement-on-garments--back-upper.svg";
+import embroideryPlacementOnGarmentsBackFull from "../../images/size-guideline-images/embroidery-placement-on-garments--back-full.svg";
+
+// Towels & Home Textile
+import towelsHomeTextileHandTowel from "../../images/size-guideline-images/towels-home-textile--hand-towel.svg";
+import towelsHomeTextileBathTowel from "../../images/size-guideline-images/towels-home-textile--bath-towel.svg";
+import towelsHomeTextileFaceTowel from "../../images/size-guideline-images/towels-home-textile--face-towel.svg";
+import towelsHomeTextileKitchenTowel from "../../images/size-guideline-images/towels-home-textile--kitchen-towel.svg";
+import towelsHomeTextileBlanket from "../../images/size-guideline-images/towels-home-textile--blanket.svg";
+import towelsHomeTextilePillowFront from "../../images/size-guideline-images/towels-home-textile--pillow-front.svg";
+import towelsHomeTextileCushionCover from "../../images/size-guideline-images/towels-home-textile--cushion-cover.svg";
+import towelsHomeTextileTableRunner from "../../images/size-guideline-images/towels-home-textile--table-runner.svg";
 
 export const sizeGuideData = [
   /* =========================================================
@@ -29,72 +663,72 @@ export const sizeGuideData = [
       {
         id: 1,
         item: "Chest Name (Left/Right)",
+        image: namesMonogramsChestNameLeftRight,
         placement: "Left or right chest area Above pocket or seam",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
         bestFor: "Employee names, small text branding",
         notes: "Keep text short for best readability.",
       },
       {
         id: 2,
         item: "Sleeve Name",
+        image: namesMonogramsSleeveName,
         placement: "Left or right sleeve 1–2” below shoulder seam",
-        size:
-          "W: 2”–4” (5 cm–10 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
+        size: "W: 2”–4” (5 cm–10 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
         bestFor: "Personal names, team names",
         notes: "Avoid long names on narrow sleeves.",
       },
       {
         id: 3,
         item: "Back Yoke Name",
+        image: namesMonogramsBackYokeName,
         placement: "Upper back yoke Below collar seam",
-        size:
-          "W: 3”–6” (7.5 cm–15 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
+        size: "W: 3”–6” (7.5 cm–15 cm)\nH: 0.5”–1” (1.5 cm–2.5 cm)",
         bestFor: "Names, brand tags, personalization",
         notes: "Centered for a balanced look.",
       },
       {
         id: 4,
         item: "Cuff Name",
+        image: namesMonogramsCuffName,
         placement: "On cuff edge Left or right cuff",
-        size:
-          "W: 1.5”–3” (4 cm–7.5 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
+        size: "W: 1.5”–3” (4 cm–7.5 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
         bestFor: "Initials, names, personal style",
         notes: "Best for short names or initials.",
       },
       {
         id: 5,
         item: "Collar Name",
+        image: namesMonogramsCollarName,
         placement: "On collar tip or band Left or right side",
-        size:
-          "W: 1.5”–3” (4 cm–7.5 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
+        size: "W: 1.5”–3” (4 cm–7.5 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
         bestFor: "Names, initials, brand identity",
         notes: "Keep small for a clean finish.",
       },
       {
         id: 6,
         item: "Towel Monogram",
+        image: namesMonogramsTowelMonogram,
         placement: "Or corner Center lower band",
-        size:
-          "W: 1.5”–3.5” (4 cm–9 cm)\nH: 1.5”–3.5” (4 cm–9 cm)",
+        size: "W: 1.5”–3.5” (4 cm–9 cm)\nH: 1.5”–3.5” (4 cm–9 cm)",
         bestFor: "Monograms, initials, gifts",
         notes: "Use larger size for luxury look.",
       },
       {
         id: 7,
         item: "Hat Name (Back)",
+        image: namesMonogramsHatNameBack,
         placement: "Back above strap Centered",
-        size:
-          "W: 2”–4” (5 cm–10 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
+        size: "W: 2”–4” (5 cm–10 cm)\nH: 0.4”–0.8” (1 cm–2 cm)",
         bestFor: "Personal names, casual branding",
         notes: "Short names work best.",
       },
       {
         id: 8,
         item: "Monogram (3 Letter)",
+        image: namesMonogramsMonogram3Letter,
         placement: "Centered placement On pocket, chest, or towel",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2”–4” (5 cm–10 cm)",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2”–4” (5 cm–10 cm)",
         bestFor: "Elegant monograms, weddings, gifts",
         notes: "Center letter slightly larger for balance.",
       },
@@ -114,72 +748,72 @@ export const sizeGuideData = [
       {
         id: 1,
         item: "Tote Bag",
+        image: bagsAccessoriesToteBag,
         placement: "Front center area Keep away from seams and edges",
-        size:
-          "W: 6”–10” (15 cm–25 cm)\nH: 6”–8” (15 cm–20 cm)",
+        size: "W: 6”–10” (15 cm–25 cm)\nH: 6”–8” (15 cm–20 cm)",
         bestFor: "Logos, artwork, brand designs",
         notes: "Best for medium to large logos.",
       },
       {
         id: 2,
         item: "Backpack",
+        image: bagsAccessoriesBackpack,
         placement: "Front pocket area Center placement",
-        size:
-          "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
+        size: "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
         bestFor: "School logos, team logos, text",
         notes: "Avoid zippers and curved seams.",
       },
       {
         id: 3,
         item: "Duffel Bag",
+        image: bagsAccessoriesDuffelBag,
         placement: "Side panel center Flat area recommended",
-        size:
-          "W: 6”–10” (15 cm–25 cm)\nH: 4”–7” (10 cm–18 cm)",
+        size: "W: 6”–10” (15 cm–25 cm)\nH: 4”–7” (10 cm–18 cm)",
         bestFor: "Team logos, company logos",
         notes: "Keep design away from handles.",
       },
       {
         id: 4,
         item: "Pouch / Travel Pouch",
+        image: bagsAccessoriesPouchTravelPouch,
         placement: "Front center area Avoid folds and edges",
-        size:
-          "W: 3”–6” (7.5 cm–15 cm)\nH: 2.5”–4” (6.5 cm–10 cm)",
+        size: "W: 3”–6” (7.5 cm–15 cm)\nH: 2.5”–4” (6.5 cm–10 cm)",
         bestFor: "Small logos, initials, monograms",
         notes: "Perfect for minimal embroidery.",
       },
       {
         id: 5,
         item: "Apron",
+        image: bagsAccessoriesApron,
         placement: "Chest area Center placement",
-        size:
-          "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
+        size: "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
         bestFor: "Brand logos, names, text",
         notes: "Avoid seams and pocket areas.",
       },
       {
         id: 6,
         item: "Laptop Sleeve",
+        image: bagsAccessoriesLaptopSleeve,
         placement: "Front center area Flat surface only",
-        size:
-          "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
+        size: "W: 4”–7” (10 cm–18 cm)\nH: 4”–7” (10 cm–18 cm)",
         bestFor: "Company logos, initials",
         notes: "Keep design small for best results.",
       },
       {
         id: 7,
         item: "Cosmetic Bag",
+        image: bagsAccessoriesCosmeticBag,
         placement: "Front center area On flat panel",
-        size:
-          "W: 3”–6” (7.5 cm–15 cm)\nH: 2.5”–4” (6.5 cm–10 cm)",
+        size: "W: 3”–6” (7.5 cm–15 cm)\nH: 2.5”–4” (6.5 cm–10 cm)",
         bestFor: "Name, text, small logos",
         notes: "Avoid corners and binding areas.",
       },
       {
         id: 8,
         item: "Luggage Tag",
+        image: bagsAccessoriesLuggageTag,
         placement: "Front side center Inside stitched area",
-        size:
-          "W: 2”–3.5” (5 cm–9 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+        size: "W: 2”–3.5” (5 cm–9 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
         bestFor: "Initials, small logos, name tags",
         notes: "Small area, keep design simple.",
       },
@@ -199,71 +833,65 @@ export const sizeGuideData = [
       {
         id: 1,
         item: "Left Chest",
-        placement:
-          "Left chest area 3”–4” below shoulder seam above pocket area",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+        placement: "Left chest area 3”–4” below shoulder seam above pocket area",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
         bestFor: "Logos, text, small designs",
         notes: "Best for company logos or name tags.",
-        image: image1,
+        image: shirtPoloLeftChest,
       },
       {
         id: 2,
         item: "Right Chest",
-        placement:
-          "Right chest area 3”–4” below shoulder seam above pocket area",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+        placement: "Right chest area 3”–4” below shoulder seam above pocket area",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
         bestFor: "Name, text, initials, logo",
         notes: "Ideal for employee names or branding.",
-        image: image2,
+        image: shirtPoloRightChest,
       },
       {
         id: 3,
         item: "Center Chest",
         placement: "Center chest area 2”–3” below collar centered",
-        size:
-          "W: 6”–10” (15 cm–25 cm)\nH: 6”–10” (15 cm–25 cm)",
+        size: "W: 6”–10” (15 cm–25 cm)\nH: 6”–10” (15 cm–25 cm)",
         bestFor: "Large logos, team designs",
         notes: "Perfect for bigger logos and designs.",
-        image: image3,
+        image: shirtPoloCenterChest,
       },
       {
         id: 4,
         item: "Sleeve (Left / Right)",
         placement: "Sleeve area 1”–2” below shoulder seam on sleeve",
-        size:
-          "W: 2”–3.5” (5 cm–9 cm)\nH: 2”–3.5” (5 cm–9 cm)",
+        size: "W: 2”–3.5” (5 cm–9 cm)\nH: 2”–3.5” (5 cm–9 cm)",
         bestFor: "Patches, icons, sponsor logos",
         notes: "Great for sleeve logos or patches.",
+        image: shirtPoloSleeveLeftRight,
       },
       {
         id: 5,
         item: "Pocket",
         placement: "Pocket area Centered on pocket or above it",
-        size:
-          "W: 2”–3” (5 cm–7.5 cm)\nH: 2”–3” (5 cm–7.5 cm)",
+        size: "W: 2”–3” (5 cm–7.5 cm)\nH: 2”–3” (5 cm–7.5 cm)",
         bestFor: "Small logos, text, icons",
         notes: "Keep within pocket size for best results.",
+        image: shirtPoloPocket,
       },
       {
         id: 6,
         item: "Collar",
         placement: "Collar area On collar points or above button",
-        size:
-          "W: 1.5”–2.5” (4 cm–6.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+        size: "W: 1.5”–2.5” (4 cm–6.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
         bestFor: "Initials, small text, brand marks",
         notes: "Keep small for a clean look.",
+        image: shirtPoloCollar,
       },
       {
         id: 7,
         item: "Yoke (Back)",
         placement: "Yoke area Upper back yoke below collar seam",
-        size:
-          "W: 6”–10” (15 cm–25 cm)\nH: 2”–4” (5 cm–10 cm)",
+        size: "W: 6”–10” (15 cm–25 cm)\nH: 2”–4” (5 cm–10 cm)",
         bestFor: "Company logos, branding, text",
         notes: "Great for large back branding on shirts.",
-        image: image5,
+        image: shirtPoloYokeBack,
       },
     ],
   },
@@ -281,70 +909,65 @@ export const sizeGuideData = [
       {
         id: 1,
         item: "Left Chest",
-        placement:
-          "Left chest area 3”–4” below shoulder seam above pocket",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+        placement: "Left chest area 3”–4” below shoulder seam above pocket",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
         bestFor: "Logos, text, small designs",
         notes: "Best for company logos or name tags.",
+        image: jacketOuterwearLeftChest,
       },
       {
         id: 2,
         item: "Right Chest",
-        placement:
-          "Right chest area 3”–4” below shoulder seam above pocket",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+        placement: "Right chest area 3”–4” below shoulder seam above pocket",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
         bestFor: "Name, text, initials, logo",
         notes: "Ideal for employee names or branding.",
+        image: jacketOuterwearRightChest,
       },
       {
         id: 3,
         item: "Full Front",
         placement: "Front area Between chest and waist",
-        size:
-          "W: 8”–12” (20 cm–30 cm)\nH: 8”–14” (20 cm–35 cm)",
+        size: "W: 8”–12” (20 cm–30 cm)\nH: 8”–14” (20 cm–35 cm)",
         bestFor: "Large logos, team designs, custom artwork",
         notes: "Best for big logos or detailed designs.",
-        image: image4,
+        image: jacketOuterwearFullFront,
       },
       {
         id: 4,
         item: "Back (Upper)",
         placement: "Upper back area 3”–4” below collar",
-        size:
-          "W: 8”–12” (20 cm–30 cm)\nH: 3”–6” (8 cm–15 cm)",
+        size: "W: 8”–12” (20 cm–30 cm)\nH: 3”–6” (8 cm–15 cm)",
         bestFor: "Company logos, web address, branding",
         notes: "Great for branding or small back logos.",
-        image: image5,
+        image: jacketOuterwearBackUpper,
       },
       {
         id: 5,
         item: "Back (Full)",
         placement: "Full back area Between shoulders and waist",
-        size:
-          "W: 10”–14” (25 cm–35 cm)\nH: 10”–14” (25 cm–35 cm)",
+        size: "W: 10”–14” (25 cm–35 cm)\nH: 10”–14” (25 cm–35 cm)",
         bestFor: "Large artwork, club logos, custom designs",
         notes: "Best for big, detailed or multi-color designs.",
-        image: image6,
+        image: jacketOuterwearBackFull,
       },
       {
         id: 6,
         item: "Sleeve",
         placement: "Upper sleeve area 2”–3” below shoulder",
-        size:
-          "W: 2”–4” (5 cm–10 cm)\nH: 2”–4” (5 cm–10 cm)",
+        size: "W: 2”–4” (5 cm–10 cm)\nH: 2”–4” (5 cm–10 cm)",
         bestFor: "Patches, flags, icons, emblems",
         notes: "Great for patches or small branding.",
+        image: jacketOuterwearSleeve,
       },
       {
         id: 7,
         item: "Collar / Hood",
         placement: "Collar or hood area Center placement",
-        size:
-          "W: 2”–4” (5 cm–10 cm)\nH: 1”–2” (2.5 cm–5 cm)",
+        size: "W: 2”–4” (5 cm–10 cm)\nH: 1”–2” (2.5 cm–5 cm)",
         bestFor: "Text, initials, small logos",
         notes: "Ideal for subtle branding.",
+        image: jacketOuterwearCollarHood,
       },
     ],
   },
@@ -363,55 +986,55 @@ export const sizeGuideData = [
         id: 1,
         item: "Cap Front (Center)",
         placement: "Front center panel Above the brim, centered",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
         bestFor: "Logos, text, brand designs",
         notes: "Keep away from the crown flex for best results.",
+        image: capHatCapFrontCenter,
       },
       {
         id: 2,
         item: "Cap Side (Left / Right)",
         placement: "Left or right side panel 2”–3” above the brim edge",
-        size:
-          "W: 2”–3” (5 cm–7.5 cm)\nH: 1.2”–2.2” (3 cm–5.5 cm)",
+        size: "W: 2”–3” (5 cm–7.5 cm)\nH: 1.2”–2.2” (3 cm–5.5 cm)",
         bestFor: "Small logos, initials, icons",
         notes: "Ideal for small logos or side branding.",
+        image: capHatCapSideLeftRight,
       },
       {
         id: 3,
         item: "Cap Back (Back Center)",
         placement: "Back center above opening 1”–1.5” above strap opening",
-        size:
-          "W: 1.5”–3.5” (4 cm–9 cm)\nH: 0.8”–1.5” (2 cm–4 cm)",
+        size: "W: 1.5”–3.5” (4 cm–9 cm)\nH: 0.8”–1.5” (2 cm–4 cm)",
         bestFor: "Text, website, team name",
         notes: "Keep it small and clear for readability.",
+        image: capHatCapBackBackCenter,
       },
       {
         id: 4,
         item: "5 Panel Cap (Front Panel)",
         placement: "Front panel Centered (flat embroidery area)",
-        size:
-          "W: 3”–5” (7.5 cm–12.5 cm)\nH: 1.8”–3” (4.5 cm–7.5 cm)",
+        size: "W: 3”–5” (7.5 cm–12.5 cm)\nH: 1.8”–3” (4.5 cm–7.5 cm)",
         bestFor: "Big logos, patch style designs",
         notes: "More flat area gives more embroidery space.",
+        image: capHat5PanelCapFrontPanel,
       },
       {
         id: 5,
         item: "Trucker Cap (Front Foam)",
         placement: "Front foam panel Centered above the brim",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 1.5”–2.5” (4 cm–6.5 cm)",
         bestFor: "Logos, text, outdoor brands",
         notes: "Foam allows clean and high quality stitching.",
+        image: capHatTruckerCapFrontFoam,
       },
       {
         id: 6,
         item: "Beanie Hat (Cuff Area)",
         placement: "Center of cuff Front side (folded area)",
-        size:
-          "W: 2”–4” (5 cm–10 cm)\nH: 0.8”–2” (2 cm–5 cm)",
+        size: "W: 2”–4” (5 cm–10 cm)\nH: 0.8”–2” (2 cm–5 cm)",
         bestFor: "Text, initials, small logos",
         notes: "Avoid bulk designs on thin knit beanies.",
+        image: capHatBeanieHatCuffArea,
       },
     ],
   },
@@ -430,61 +1053,55 @@ export const sizeGuideData = [
         id: 1,
         item: "Left Chest",
         placement: "Left chest area 3”–4” below shoulder seam",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
         bestFor: "Logos, text, small designs",
         notes: "Best for logos and small text designs.",
-        image: image1,
+        image: embroideryPlacementOnGarmentsLeftChest,
       },
       {
         id: 2,
         item: "Right Chest",
         placement: "Right chest area 3”–4” below shoulder seam",
-        size:
-          "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
+        size: "W: 2.5”–4.5” (6.5 cm–11.5 cm)\nH: 2.5”–4.5” (6.5 cm–11.5 cm)",
         bestFor: "Name, text, or logo",
         notes: "Ideal for name, text or logo.",
-        image: image2,
+        image: embroideryPlacementOnGarmentsRightChest,
       },
       {
         id: 3,
         item: "Center Chest",
         placement: "Center chest area 2”–3” below collar",
-        size:
-          "W: 6”–10” (15 cm–25 cm)\nH: 6”–10” (15 cm–25 cm)",
+        size: "W: 6”–10” (15 cm–25 cm)\nH: 6”–10” (15 cm–25 cm)",
         bestFor: "Large logos, team designs",
         notes: "Perfect for larger logos and designs.",
-        image: image3,
+        image: embroideryPlacementOnGarmentsCenterChest,
       },
       {
         id: 4,
         item: "Full Front",
         placement: "Full front area Between chest and waist",
-        size:
-          "W: 8”–12” (20 cm–30 cm)\nH: 8”–14” (20 cm–35 cm)",
+        size: "W: 8”–12” (20 cm–30 cm)\nH: 8”–14” (20 cm–35 cm)",
         bestFor: "Big logos, custom artwork",
         notes: "Best for big logos or custom artwork.",
-        image: image4,
+        image: embroideryPlacementOnGarmentsFullFront,
       },
       {
         id: 5,
         item: "Back (Upper)",
         placement: "Upper back area 3”–4” below collar seam",
-        size:
-          "W: 8”–12” (20 cm–30 cm)\nH: 3”–6” (8 cm–15 cm)",
+        size: "W: 8”–12” (20 cm–30 cm)\nH: 3”–6” (8 cm–15 cm)",
         bestFor: "Company logos, branding",
         notes: "Great for company logos or branding.",
-        image: image5,
+        image: embroideryPlacementOnGarmentsBackUpper,
       },
       {
         id: 6,
         item: "Back (Full)",
         placement: "Full back area Between shoulders and waist",
-        size:
-          "W: 10”–14” (25 cm–35 cm)\nH: 10”–14” (25 cm–35 cm)",
+        size: "W: 10”–14” (25 cm–35 cm)\nH: 10”–14” (25 cm–35 cm)",
         bestFor: "Large artwork, detailed designs",
         notes: "Best for large artwork and designs.",
-        image: image6,
+        image: embroideryPlacementOnGarmentsBackFull,
       },
     ],
   },
@@ -502,72 +1119,72 @@ export const sizeGuideData = [
       {
         id: 1,
         item: "Hand Towel",
+        image: towelsHomeTextileHandTowel,
         placement: "Border area Lower band or corner",
-        size:
-          "W: 3”–6” (7.5 cm–15 cm)\nH: 1.5”–3” (4 cm–7.5 cm)",
+        size: "W: 3”–6” (7.5 cm–15 cm)\nH: 1.5”–3” (4 cm–7.5 cm)",
         bestFor: "Names, initials, monograms, small logos",
         notes: "Keep above the hem and edges.",
       },
       {
         id: 2,
         item: "Bath Towel",
+        image: towelsHomeTextileBathTowel,
         placement: "Lower border area Center placement",
-        size:
-          "W: 6”–12” (15 cm–30 cm)\nH: 2”–4” (5 cm–10 cm)",
+        size: "W: 6”–12” (15 cm–30 cm)\nH: 2”–4” (5 cm–10 cm)",
         bestFor: "Large names, logos, decorative designs",
         notes: "Ideal for more visible embroidery.",
       },
       {
         id: 3,
         item: "Face Towel",
+        image: towelsHomeTextileFaceTowel,
         placement: "Border or corner Lower band or corner",
-        size:
-          "W: 2.5”–5” (6.5 cm–12.5 cm)\nH: 1”–2.5” (2.5 cm–6.5 cm)",
+        size: "W: 2.5”–5” (6.5 cm–12.5 cm)\nH: 1”–2.5” (2.5 cm–6.5 cm)",
         bestFor: "Initials, small logos, delicate designs",
         notes: "Perfect for personal use or gifts.",
       },
       {
         id: 4,
         item: "Kitchen Towel",
+        image: towelsHomeTextileKitchenTowel,
         placement: "Bottom border Center placement",
-        size:
-          "W: 3”–7” (7.5 cm–18 cm)\nH: 1.5”–3” (4 cm–7.5 cm)",
+        size: "W: 3”–7” (7.5 cm–18 cm)\nH: 1.5”–3” (4 cm–7.5 cm)",
         bestFor: "Kitchen themes, text, small logos",
         notes: "Keep design away from folds.",
       },
       {
         id: 5,
         item: "Blanket",
+        image: towelsHomeTextileBlanket,
         placement: "Corner area Lower right or left corner",
-        size:
-          "W: 4”–10” (10 cm–25 cm)\nH: 2”–5” (5 cm–12.5 cm)",
+        size: "W: 4”–10” (10 cm–25 cm)\nH: 2”–5” (5 cm–12.5 cm)",
         bestFor: "Monograms, names, decorative logos",
         notes: "Avoid thick seams and stitched edges.",
       },
       {
         id: 6,
         item: "Pillow (Front)",
+        image: towelsHomeTextilePillowFront,
         placement: "Center area Front panel",
-        size:
-          "W: 4”–10” (10 cm–25 cm)\nH: 3”–8” (7.5 cm–20 cm)",
+        size: "W: 4”–10” (10 cm–25 cm)\nH: 3”–8” (7.5 cm–20 cm)",
         bestFor: "Monograms, quotes, decorative designs",
         notes: "Ensure design is balanced.",
       },
       {
         id: 7,
         item: "Cushion Cover",
+        image: towelsHomeTextileCushionCover,
         placement: "Center area Front side",
-        size:
-          "W: 4”–9” (10 cm–23 cm)\nH: 3”–7” (7.5 cm–18 cm)",
+        size: "W: 4”–9” (10 cm–23 cm)\nH: 3”–7” (7.5 cm–18 cm)",
         bestFor: "Names, initials, home décor designs",
         notes: "Consider zipper placement.",
       },
       {
         id: 8,
         item: "Table Runner",
+        image: towelsHomeTextileTableRunner,
         placement: "End panel Center placement",
-        size:
-          "W: 6”–12” (15 cm–30 cm)\nH: 2”–5” (5 cm–12.5 cm)",
+        size: "W: 6”–12” (15 cm–30 cm)\nH: 2”–5” (5 cm–12.5 cm)",
         bestFor: "Decorative motifs, seasonal designs",
         notes: "Keep design proportional.",
       },

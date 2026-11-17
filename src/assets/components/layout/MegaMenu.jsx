@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-
-
 import MegaMenuCard from "../layout/MegaMenuCard";
 import { MegaMenuData } from "../common/MegaMenuData";
 
@@ -10,9 +8,33 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
   const [openService, setOpenService] = useState(null);
 
   const handleServiceClick = (service) => {
-    setOpenService(
-      openService === service.id ? null : service.id
+    setOpenService((current) =>
+      current === service.id ? null : service.id
     );
+  };
+
+  const handleNavigate = (service) => {
+    if (!service) return;
+
+    if (typeof onNavigate === "function") {
+      onNavigate(service);
+      return;
+    }
+
+    const destination =
+      service.href ||
+      service.path ||
+      service.url ||
+      service.link;
+
+    if (destination) {
+      window.location.href = destination;
+    } else {
+      console.warn(
+        "Navigation destination missing for:",
+        service.title
+      );
+    }
   };
 
   return (
@@ -34,18 +56,15 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
               border-[#E7E3ED]
               bg-white
               p-4
-
               [scrollbar-width:none]
               [-ms-overflow-style:none]
               [&::-webkit-scrollbar]:hidden
             `
             : `
-              absolute
-              top-6
+              relative
               z-[1000]
               h-[511px]
               w-[1114px]
-              -translate-x-1/4
               rounded-[18px]
               border
               border-[#FFFFFF]
@@ -56,7 +75,8 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
         }
       `}
     >
-      {/* ================= TRIANGLE ================= */}
+
+      {/* TRIANGLE */}
 
       {!mobile && (
         <div
@@ -76,33 +96,26 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
         />
       )}
 
-      {/* ================= HEADER ================= */}
+      {/* HEADER */}
 
       <div className="shrink-0">
         <p
           className="
-           
             text-center
             font-inter
             text-[21px]
             font-semibold
             leading-tight
             text-[#000000]
-
             sm:text-[28px]
-
-            
             lg:text-[36px]
-           
           "
         >
           Choose the service that fits your needs
         </p>
-
-        
       </div>
 
-      {/* ================= DESKTOP ================= */}
+      {/* DESKTOP */}
 
       {!mobile && (
         <div
@@ -111,21 +124,21 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
             grid
             grid-cols-3
             gap-[18px]
-            
           "
         >
           {MegaMenuData.map((service) => (
             <MegaMenuCard
               key={service.id}
               {...service}
-              mobile={mobile}
-              onNavigate={onNavigate}
+              service={service}
+              mobile={false}
+              onNavigate={handleNavigate}
             />
           ))}
         </div>
       )}
 
-      {/* ================= MOBILE SERVICES ================= */}
+      {/* MOBILE SERVICES */}
 
       {mobile && (
         <div className="mt-6 flex flex-col gap-2">
@@ -144,6 +157,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                   bg-white
                 "
               >
+
                 {/* SERVICE HEADER */}
 
                 <button
@@ -161,7 +175,6 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                   "
                 >
                   <div className="flex min-w-0 items-center gap-3">
-                    {/* Icon */}
 
                     <div
                       className="
@@ -176,14 +189,14 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                         shadow-[0px_5px_15px_rgba(0,0,0,0.10)]
                       "
                     >
-                      <Icon
-                        size={25}
-                        strokeWidth={1.8}
-                        className="text-[#7434E5]"
-                      />
+                      {Icon && (
+                        <Icon
+                          size={25}
+                          strokeWidth={1.8}
+                          className="text-[#7434E5]"
+                        />
+                      )}
                     </div>
-
-                    {/* Title */}
 
                     <span
                       className="
@@ -195,9 +208,8 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                     >
                       {service.title}
                     </span>
-                  </div>
 
-                  {/* Arrow */}
+                  </div>
 
                   <ChevronDown
                     size={20}
@@ -223,7 +235,8 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                       pt-3
                     "
                   >
-                    {/* Description */}
+
+                    {/* DESCRIPTION */}
 
                     <p
                       className="
@@ -236,7 +249,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                       {service.description}
                     </p>
 
-                    {/* Features */}
+                    {/* FEATURES */}
 
                     {service.features?.length > 0 && (
                       <div className="mt-3 space-y-2">
@@ -276,7 +289,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                       </div>
                     )}
 
-                    {/* Image */}
+                    {/* IMAGE */}
 
                     {service.image && (
                       <div className="mt-4 flex justify-center">
@@ -294,18 +307,22 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                           <img
                             src={service.image}
                             alt={service.title}
-                            className="max-h-[90px] max-w-[150px] object-contain"
+                            className="
+                              max-h-[90px]
+                              max-w-[150px]
+                              object-contain
+                            "
                           />
                         </div>
                       </div>
                     )}
 
-                    {/* Button */}
+                    {/* EXPLORE BUTTON */}
 
                     {service.buttonText && (
                       <button
                         type="button"
-                        onClick={() => onNavigate?.(service)}
+                        onClick={() => handleNavigate(service)}
                         className="
                           mt-4
                           w-full
@@ -326,12 +343,12 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                       </button>
                     )}
 
-                    {/* Link */}
+                    {/* BOTTOM LINK */}
 
                     {service.linkText && (
                       <button
                         type="button"
-                        onClick={() => onNavigate?.(service)}
+                        onClick={() => handleNavigate(service)}
                         className="
                           mt-3
                           flex
@@ -346,12 +363,10 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
                         "
                       >
                         {service.linkText}
-
-                        <span className="text-[16px]">
-                          →
-                        </span>
+                        <span className="text-[16px]">→</span>
                       </button>
                     )}
+
                   </div>
                 )}
               </div>
@@ -364,7 +379,3 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
 };
 
 export default MegaMenu;
-
-
-
-

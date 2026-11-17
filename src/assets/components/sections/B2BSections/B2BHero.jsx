@@ -1,12 +1,240 @@
+// import { BriefcaseBusiness, ArrowRight, Phone } from "lucide-react";
+// import heroImage from "../../../images/b2b-hero-612x560.svg";
+// import B2BStateItem from "../../layout/B2BLayout/B2BStateItem";
+// import { B2BStatsData } from "../../common/B2BStatsData"
+// import SolidButton from "../../layout/SolidButton";
+// import OutlineBtn from "../../layout/OutlineBtn";
+// const B2BHero = () => {
+//   return (
+//     <section className="p-[22px] lg:py-6" >
+//       <div
+//         className="
+//           mx-auto
+//           rounded-[28px]
+//           bg-white
+//           lg:max-w-[1340px]
+//         "
+//       >
+//         <div
+//           className="
+//             flex
+//             flex-col
+//             items-center
+//             lg:flex-row
+//           "
+//         >
+//           {/* LEFT */}
+
+//           <div className="w-full lg:w-[55%] font-dmSans flex flex-col lg:gap-2">
+
+//             {/* Badge */}
+
+//             <div
+//               className="
+//                 inline-flex
+//                 w-fit
+//                 items-center
+//                 rounded-full
+//                 bg-[#F5F0FF]
+//                 gap-2
+//                 px-[22px]
+//                 py-[10px]
+//               "
+//             >
+//               <BriefcaseBusiness
+//                 size={14}
+//                 className="text-[#7434E5]"
+//               />
+
+//               <span
+//                 className="
+//                   text-[14px]
+//                   font-bold
+//                   uppercase
+//                   tracking-[1px]
+//                   text-[#7434E5]
+//                 "
+//               >
+//                 B2B Solutions
+//               </span>
+//             </div>
+
+//             {/* Heading */}
+
+//             <p
+//               className="
+//                mt-5
+//                pr-8
+//     max-w-[780px]
+//     font-dmSans
+//     font-extrabold
+//     text-[36px]
+//     leading-[110%]
+//     tracking-[-0.96px]
+//     text-[#111827]
+//     md:text-[42px]
+//     md:leading-[110%]
+//     lg:text-[48px]
+//     lg:leading-[52.5px]
+//               "
+//             >Custom Digitizing, Vector Art & Logo Design for Growing Businesses
+//             </p>
+
+//             {/* Description */}
+
+//             <p
+//               className="
+//                 max-w-[480px]
+//                 font-inter
+//                 text-[16px]
+//                 leading-8
+//                 text-[#6C7283]
+//                 lg:mt-6
+//               "
+//             >
+//               We work behind the scenes with print shops,
+//               embroidery brands and design agencies to turn
+//               their orders into clean, production-ready files.
+//             </p>
+
+//             {/* Buttons */}
+
+//             <div
+//               className="
+//                 mt-[10px]
+//                 mb-[18px]
+//                 flex
+//                 justify-around
+//                 flex-row
+//                 lg:gap-4
+//                 lg:mb-0
+//                 lg:justify-start
+//                 lg:mt-8
+//               "
+//             >
+//               <SolidButton title="Get  Quote" Icon={ArrowRight} classname=""/>
+//                <OutlineBtn title="Schedule a Call" Icon={Phone} classname="flex-row-reverse"/>
+//             </div>
+
+//           </div>
+
+//           {/* RIGHT */}
+
+          
+          
+          
+// {/* RIGHT */}
+
+// <div className="relative w-full lg:w-[620px] lg:shrink-0 lg:-mt-8">
+
+//   {/* HERO IMAGE */}
+
+//   <div
+//     className="
+//       w-full
+//       overflow-hidden
+//       rounded-[28px]
+//       lg:h-[560px]
+//     "
+//   >
+//     <img
+//       src={heroImage}
+//       alt="B2B"
+//       className="
+//         block
+//         w-full
+//         h-auto
+//         lg:h-full
+//         object-contain
+//         rounded-[28px]
+//       "
+//     />
+//   </div>
+
+//   {/* FLOATING CARD */}
+
+//   <div
+//     className="
+//       relative
+//       w-full
+//       -mt-[52px]
+//       lg:absolute
+//       lg:left-1/2
+//       lg:w-[92%]
+//       lg:-translate-x-1/2
+//       lg:-bottom-[48px]
+//     "
+//   >
+//     <div
+//       className="
+//         overflow-hidden
+//         bg-white
+//         rounded-b-[24px]
+//         shadow-[0px_18px_50px_rgba(0,0,0,0.12)]
+//         lg:rounded-[22px]
+//       "
+//     >
+//       <div
+//         className="
+//           grid
+//           grid-cols-2
+//           lg:grid-cols-4
+//         "
+//       >
+//         {B2BStatsData.map((item, index) => (
+//           <div
+//             key={item.id}
+//             className={`
+//               flex
+
+//               ${
+//                 index % 2 === 0
+//                   ? "border-r border-[#ECECEC]"
+//                   : ""
+//               }
+
+//               ${
+//                 index < 2
+//                   ? "border-b border-[#ECECEC]"
+//                   : ""
+//               }
+
+//               ${
+//                 index !== B2BStatsData.length - 1
+//                   ? "lg:border-r"
+//                   : ""
+//               }
+
+//               lg:border-b-0
+//             `}
+//           >
+//             <B2BStateItem {...item} />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   </div>
+
+// </div>
+
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+
+// export default B2BHero
+
 import { BriefcaseBusiness, ArrowRight, Phone } from "lucide-react";
 import heroImage from "../../../images/b2b-hero-612x560.svg";
 import B2BStateItem from "../../layout/B2BLayout/B2BStateItem";
-import { B2BStatsData } from "../../common/B2BStatsData"
+import { B2BStatsData } from "../../common/B2BStatsData";
 import SolidButton from "../../layout/SolidButton";
 import OutlineBtn from "../../layout/OutlineBtn";
+
 const B2BHero = () => {
   return (
-    <section className="p-[22px] lg:py-6" >
+    <section className="p-[22px] lg:pt-6 lg:pb-28">
       <div
         className="
           mx-auto
@@ -23,7 +251,7 @@ const B2BHero = () => {
             lg:flex-row
           "
         >
-          {/* LEFT */}
+          {/* LEFT CONTENT */}
 
           <div className="w-full lg:w-[55%] font-dmSans flex flex-col lg:gap-2">
 
@@ -63,21 +291,22 @@ const B2BHero = () => {
 
             <p
               className="
-               mt-5
-               pr-8
-    max-w-[780px]
-    font-dmSans
-    font-extrabold
-    text-[36px]
-    leading-[110%]
-    tracking-[-0.96px]
-    text-[#111827]
-    md:text-[42px]
-    md:leading-[110%]
-    lg:text-[48px]
-    lg:leading-[52.5px]
+                mt-5
+                pr-8
+                max-w-[780px]
+                font-dmSans
+                font-extrabold
+                text-[36px]
+                leading-[110%]
+                tracking-[-0.96px]
+                text-[#111827]
+                md:text-[42px]
+                md:leading-[110%]
+                lg:text-[48px]
+                lg:leading-[52.5px]
               "
-            >Custom Digitizing, Vector Art & Logo Design for Growing Businesses
+            >
+              Custom Digitizing, Vector Art & Logo Design for Growing Businesses
             </p>
 
             {/* Description */}
@@ -112,118 +341,124 @@ const B2BHero = () => {
                 lg:mt-8
               "
             >
-              <SolidButton title="Get  Quote" Icon={ArrowRight} classname=""/>
-               <OutlineBtn title="Schedule a Call" Icon={Phone} classname="flex-row-reverse"/>
+              <SolidButton
+                title="Get Quote"
+                Icon={ArrowRight}
+                classname=""
+              />
+
+              <OutlineBtn
+                title="Schedule a Call"
+                Icon={Phone}
+                classname="flex-row-reverse"
+              />
             </div>
 
           </div>
 
-          {/* RIGHT */}
+          {/* RIGHT IMAGE & STATS */}
 
-          
-          
-          
-{/* RIGHT */}
-
-<div className="relative w-full lg:w-[620px] lg:shrink-0 lg:-mt-8">
-
-  {/* HERO IMAGE */}
-
-  <div
-    className="
-      w-full
-      overflow-hidden
-      rounded-[28px]
-      lg:h-[560px]
-    "
-  >
-    <img
-      src={heroImage}
-      alt="B2B"
-      className="
-        block
-        w-full
-        h-auto
-        lg:h-full
-        object-contain
-        rounded-[28px]
-      "
-    />
-  </div>
-
-  {/* FLOATING CARD */}
-
-  <div
-    className="
-      relative
-      w-full
-      -mt-[52px]
-      lg:absolute
-      lg:left-1/2
-      lg:w-[92%]
-      lg:-translate-x-1/2
-      lg:-bottom-[48px]
-    "
-  >
-    <div
-      className="
-        overflow-hidden
-        bg-white
-        rounded-b-[24px]
-        shadow-[0px_18px_50px_rgba(0,0,0,0.12)]
-        lg:rounded-[22px]
-      "
-    >
-      <div
-        className="
-          grid
-          grid-cols-2
-          lg:grid-cols-4
-        "
-      >
-        {B2BStatsData.map((item, index) => (
           <div
-            key={item.id}
-            className={`
-              flex
-
-              ${
-                index % 2 === 0
-                  ? "border-r border-[#ECECEC]"
-                  : ""
-              }
-
-              ${
-                index < 2
-                  ? "border-b border-[#ECECEC]"
-                  : ""
-              }
-
-              ${
-                index !== B2BStatsData.length - 1
-                  ? "lg:border-r"
-                  : ""
-              }
-
-              lg:border-b-0
-            `}
+            className="
+              relative
+              w-full
+              lg:w-[620px]
+              lg:shrink-0
+              lg:-mt-8
+            "
           >
-            <B2BStateItem {...item} />
-          </div>
-        ))}
-      </div>
+
+            {/* HERO IMAGE CONTAINER */}
+
+            <div
+              className="
+                relative
+                w-full
+                overflow-hidden
+                rounded-[28px]
+                lg:h-[560px]
+              "
+            >
+              <img
+                src={heroImage}
+                alt="Infinity Digitizing B2B Dashboard"
+                className="
+                  block
+                  w-full
+                  h-auto
+                  lg:h-full
+                  object-contain
+                  rounded-[28px]
+                  lg:relative
+                  lg:-top-[60px]
+                "
+              />
+            </div>
+
+            {/* FLOATING STATS CARD */}
+
+            
+{/* FLOATING STATS CARD */}
+
+<div
+  className="
+    relative
+    w-full
+    -mt-[52px]
+    lg:absolute
+    lg:left-1/2
+    lg:w-[92%]
+    lg:-translate-x-1/2
+    lg:-bottom-[48px]
+  "
+>
+  <div
+    className="
+      overflow-hidden
+      bg-white
+      rounded-b-[24px]
+      shadow-[0px_18px_50px_rgba(0,0,0,0.12)]
+      lg:rounded-[22px]
+    "
+  >
+    <div className="grid grid-cols-2 lg:grid-cols-4">
+      {B2BStatsData.map((item, index) => (
+        <div
+          key={item.id}
+          className={`
+            flex
+            ${
+              index % 2 === 0
+                ? "border-r border-[#ECECEC]"
+                : ""
+            }
+            ${
+              index < 2
+                ? "border-b border-[#ECECEC]"
+                : ""
+            }
+            ${
+              index !== B2BStatsData.length - 1
+                ? "lg:border-r"
+                : ""
+            }
+            lg:border-b-0
+          `}
+        >
+          <B2BStateItem {...item} />
+        </div>
+      ))}
     </div>
   </div>
-
 </div>
+
+
+          </div>
 
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default B2BHero
-
-
-
+export default B2BHero;

@@ -1,7 +1,13 @@
 
 import { useState } from "react";
-import { ChevronDown, Menu, X, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import {
+  ChevronDown,
+  Menu,
+  X,
+  ArrowLeft,
+} from "lucide-react";
+
+import { Link, useNavigate } from "react-router-dom";
 
 import logo from "../../images/Logo.png";
 import MegaMenu from "../layout/MegaMenu";
@@ -9,16 +15,16 @@ import MegaMenu from "../layout/MegaMenu";
 const resources = [
   { title: "Blogs", path: "/blogs-list" },
   { title: "Reviews", path: "/reviews" },
-   { title: "Size Guideline", path: "/sizes" },
+  { title: "Size Guideline", path: "/sizes" },
   { title: "FAQs", path: "/faqs" },
   { title: "Why Choose Us", path: "/why-choose-us" },
-   { title: "Privacy Policy", path: "/privacy-policy" },
- { title: "Terms & Conditions", path: "/terms-and-conditions" },
- { title: "Refund Policy", path: "/refund-policy" },
-   { title: "Site Map", path: "/sitemap" },
-   { title: "File Formats", path: "/file-formats" },
-   { title: "How can we help you", path: "/help" },
-   { title: "Art Requirements", path: "/art-requirements" },
+  { title: "Privacy Policy", path: "/privacy-policy" },
+  { title: "Terms & Conditions", path: "/terms-and-conditions" },
+  { title: "Refund Policy", path: "/refund-policy" },
+  { title: "Site Map", path: "/sitemap" },
+  { title: "File Formats", path: "/file-formats" },
+  { title: "How can we help you", path: "/help" },
+  { title: "Art Requirements", path: "/art-requirements" },
 ];
 
 /* =========================================================
@@ -45,6 +51,8 @@ const mobileServices = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   // Mobile states
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -84,14 +92,62 @@ const Navbar = () => {
     setMobileResourcesOpen(false);
   };
 
+  /* =========================================================
+     DESKTOP MEGA MENU HOVER
+  ========================================================= */
+
+  const openDesktopMegaMenu = () => {
+    setShowDesktopServices(true);
+  };
+
+  const closeDesktopMegaMenu = () => {
+    setShowDesktopServices(false);
+  };
+
+  /* =========================================================
+     MEGA MENU NAVIGATION
+  ========================================================= */
+
+  const handleMegaMenuNavigate = (service) => {
+    if (!service) return;
+
+    const destination =
+      service.href ||
+      service.path ||
+      service.url ||
+      service.link;
+
+    // Close all menus
+    setShowDesktopServices(false);
+    setShowDesktopResources(false);
+    closeMobileMenu();
+
+    if (!destination) {
+      console.warn(
+        "Navigation destination missing for:",
+        service.title
+      );
+      return;
+    }
+
+    // External URL
+    if (/^https?:\/\//i.test(destination)) {
+      window.location.assign(destination);
+      return;
+    }
+
+    // Internal React Router navigation
+    navigate(destination);
+  };
+
   return (
-    <nav className="sticky top-0 z-[1000] w-full max-w-full overflow-x-clip bg-[#7434E5] text-white">
+    <nav className="sticky top-0 z-[1000] w-full max-w-full overflow-visible bg-[#7434E5] text-white">
 
       {/* =====================================================
           DESKTOP NAVBAR
       ===================================================== */}
 
-      <div className="mx-auto hidden w-full max-w-7xl min-w-0 items-center justify-between gap-6 overflow-x-clip px-6 py-4 xl:flex">
+      <div className="mx-auto hidden w-full max-w-7xl min-w-0 items-center justify-between gap-6 px-6 py-4 xl:flex">
 
         {/* Logo */}
 
@@ -118,45 +174,60 @@ const Navbar = () => {
             </Link>
           </li>
 
-          {/* Services */}
+          {/* =================================================
+              SERVICES + MEGA MENU
+              CONTINUOUS HOVER AREA
+          ================================================= */}
 
-          <li
-            className="relative shrink-0"
-            onMouseEnter={() => setShowDesktopServices(true)}
-            onMouseLeave={() => setShowDesktopServices(false)}
-          >
-            <Link
-              to="/services"
-              className="flex items-center gap-2 text-[16px]"
-            >
-              Services
-
-              <ChevronDown
-                size={18}
-                className={`transition-transform duration-300 ${
-                  showDesktopServices ? "rotate-180" : ""
-                }`}
-              />
-            </Link>
+          <li className="relative shrink-0">
 
             <div
-              className={`
-                absolute
-                left-1/2
-                top-full
-                -translate-x-1/2
-                pt-6
-                transition-all
-                duration-300
-
-                ${
-                  showDesktopServices
-                    ? "visible translate-y-0 opacity-100"
-                    : "invisible -translate-y-3 opacity-0"
-                }
-              `}
+              className="relative"
+              onMouseEnter={openDesktopMegaMenu}
+              onMouseLeave={closeDesktopMegaMenu}
             >
-              <MegaMenu />
+
+              {/* SERVICES TRIGGER */}
+
+              <Link
+                to="/services"
+                className="flex items-center gap-2 text-[16px]"
+              >
+                Services
+
+                <ChevronDown
+                  size={18}
+                  className={`transition-transform duration-300 ${
+                    showDesktopServices ? "rotate-180" : ""
+                  }`}
+                />
+              </Link>
+
+              {/* MEGA MENU WRAPPER */}
+
+              <div
+                className={`
+                  absolute
+                  left-1/2
+                  top-full
+                  z-[1000]
+                  -translate-x-1/4
+                  pt-6
+                  transition-all
+                  duration-300
+                  ${
+                    showDesktopServices
+                      ? "visible translate-y-0 opacity-100"
+                      : "invisible -translate-y-3 opacity-0 pointer-events-none"
+                  }
+                `}
+              >
+                <MegaMenu
+                  mobile={false}
+                  onNavigate={handleMegaMenuNavigate}
+                />
+              </div>
+
             </div>
           </li>
 
@@ -244,7 +315,6 @@ const Navbar = () => {
                 shadow-[0px_20px_40px_rgba(0,0,0,0.12)]
                 transition-all
                 duration-300
-
                 ${
                   showDesktopResources
                     ? "visible translate-y-0 opacity-100"
@@ -256,9 +326,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  onClick={() =>
-                    setShowDesktopResources(false)
-                  }
+                  onClick={() => setShowDesktopResources(false)}
                   className="
                     block
                     rounded-md
@@ -395,11 +463,9 @@ const Navbar = () => {
           bg-[#7434E5]
           shadow-[0_20px_40px_rgba(0,0,0,0.18)]
           xl:hidden
-
           transition-all
           duration-300
           ease-[cubic-bezier(0.4,0,0.2,1)]
-
           ${
             mobileMenuOpen
               ? "visible opacity-100"
@@ -408,13 +474,9 @@ const Navbar = () => {
         `}
       >
 
-        {/* ===================================================
-            MAIN MOBILE MENU
-        =================================================== */}
+        {/* MAIN MOBILE MENU */}
 
         <div className="box-border w-full min-w-0 max-w-full overflow-x-clip px-5 py-4">
-
-          {/* Home */}
 
           <MobileLink
             to="/"
@@ -422,9 +484,7 @@ const Navbar = () => {
             onClick={closeMobileMenu}
           />
 
-          {/* =================================================
-              SERVICES ACCORDION
-          ================================================= */}
+          {/* SERVICES ACCORDION */}
 
           <button
             type="button"
@@ -461,9 +521,7 @@ const Navbar = () => {
             />
           </button>
 
-          {/* =================================================
-              SERVICES DROPDOWN
-          ================================================= */}
+          {/* SERVICES DROPDOWN */}
 
           <div
             className={`
@@ -487,10 +545,7 @@ const Navbar = () => {
                   onClick={closeMobileMenu}
                   className="
                     block
-                   
-                  
-                   my-3
-                    
+                    my-3
                     text-[14px]
                     font-medium
                     text-white
@@ -538,9 +593,7 @@ const Navbar = () => {
             onClick={closeMobileMenu}
           />
 
-          {/* =================================================
-              RESOURCES
-          ================================================= */}
+          {/* RESOURCES */}
 
           <button
             type="button"
@@ -568,10 +621,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* =================================================
-            RESOURCES SUB MENU
-            SERVICES IS NO LONGER A SLIDER
-        ================================================= */}
+        {/* RESOURCES SUB MENU */}
 
         <div
           className={`
@@ -589,7 +639,6 @@ const Navbar = () => {
             transition-all
             duration-300
             ease-[cubic-bezier(0.4,0,0.2,1)]
-
             ${
               mobileResourcesOpen
                 ? "translate-x-0 opacity-100"
@@ -616,7 +665,6 @@ const Navbar = () => {
             "
           >
             <ArrowLeft size={18} />
-
             <span>Back</span>
           </button>
 

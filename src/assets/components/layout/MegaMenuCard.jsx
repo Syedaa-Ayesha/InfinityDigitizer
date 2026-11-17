@@ -1,5 +1,4 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
-
 const MegaMenuCard = ({
     icon: Icon,
     title,
@@ -8,25 +7,31 @@ const MegaMenuCard = ({
     image,
     buttonText,
     linkText,
+    onNavigate,
+    service,
 }) => {
+    const handleNavigate = () => {
+        onNavigate?.(service);
+    };
+
     return (
         <div
             className="
-    group
-    relative
-    flex
-    flex-col
-    h-[400px]
-    rounded-xl
-    border
-    bg-[#F3F3F34A]
-    p-[18px]
-    shadow-[0px_2px_11.2px_rgba(0,0,0,0.18)]
-    transition-all
-    duration-300
-    hover:-translate-y-1
-    hover:shadow-[0_20px_45px_rgba(116,52,229,.18)]
-"
+                group
+                relative
+                flex
+                flex-col
+                h-[400px]
+                rounded-xl
+                border
+                bg-[#F3F3F34A]
+                p-[18px]
+                shadow-[0px_2px_11.2px_rgba(0,0,0,0.18)]
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-[0_20px_45px_rgba(116,52,229,.18)]
+            "
         >
             {/* Top */}
 
@@ -36,50 +41,54 @@ const MegaMenuCard = ({
 
                 <div
                     className="
-          flex
-          h-[73px]
-          w-[73px]
-          shrink-0
-          items-center
-          justify-center
-          rounded-full
-          bg-white
-          shadow-[0px_12px_30px_rgba(0,0,0,0.12),inset_0px_2px_6px_rgba(255,255,255,0.95),inset_0px_-2px_8px_rgba(0,0,0,0.03)]
-        "
+                        flex
+                        h-[73px]
+                        w-[73px]
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        bg-white
+                        shadow-[0px_12px_30px_rgba(0,0,0,0.12),inset_0px_2px_6px_rgba(255,255,255,0.95),inset_0px_-2px_8px_rgba(0,0,0,0.03)]
+                    "
                 >
                     <Icon
                         size={42}
                         strokeWidth={1.8}
-                        className="text-[#7434E5]
-            "
+                        className="text-[#7434E5]"
                     />
                 </div>
 
-                {/* Heading */}
+                {/* Heading - Clickable */}
 
                 <div>
 
-                    <p
+                    <button
+                        type="button"
+                        onClick={handleNavigate}
                         className="
-            font-inter
-            font-bold
-            text-[18px]
-            -leading-[3%]
-            text-[#7434E5]
-            
-          "
+                            text-left
+                            font-inter
+                            font-bold
+                            text-[18px]
+                            text-[#7434E5]
+                            cursor-pointer
+                            transition-colors
+                            duration-300
+                            hover:text-[#5116B6]
+                        "
                     >
                         {title}
-                    </p>
+                    </button>
 
                     <p
                         className="
-    mt-1
-    min-h-[70px]
-    text-[12px]
-    leading-[22px]
-    text-[#000000]
-  "
+                            mt-1
+                            min-h-[70px]
+                            text-[12px]
+                            leading-[22px]
+                            text-[#000000]
+                        "
                     >
                         {description}
                     </p>
@@ -94,7 +103,7 @@ const MegaMenuCard = ({
 
                 {/* Features */}
 
-                <div className=" border npmflex-1 space-y-2 capitalize">
+                <div className="flex-1 space-y-2 capitalize">
 
                     {features.map((item, index) => (
 
@@ -106,15 +115,14 @@ const MegaMenuCard = ({
                             <CheckCircle2
                                 size={14}
                                 fill="#ffffff"
-
                                 stroke="#7434E5"
                             />
 
                             <span
                                 className="
-                text-[12px]
-                text-[#000000]
-              "
+                                    text-[12px]
+                                    text-[#000000]
+                                "
                             >
                                 {item}
                             </span>
@@ -126,29 +134,30 @@ const MegaMenuCard = ({
                 </div>
 
                 {/* Preview */}
-<div
-  className="
-    h-[135px]
-    w-[111px]
-    shrink-0
-    overflow-hidden
-    rounded-2xl
-    bg-white
-    shadow-[0_15px_35px_rgba(0,0,0,.12)]
-  "
->
-  <img
-    src={image}
-    alt={title}
-    className="
-      block
-      h-full
-      w-full
-      rounded-2xl
-      object-cover
-    "
-  />
-</div>
+
+                <div
+                    className="
+                        h-[135px]
+                        w-[111px]
+                        shrink-0
+                        overflow-hidden
+                        rounded-2xl
+                        bg-white
+                        shadow-[0_15px_35px_rgba(0,0,0,.12)]
+                    "
+                >
+                    <img
+                        src={image}
+                        alt={title}
+                        className="
+                            block
+                            h-full
+                            w-full
+                            rounded-2xl
+                            object-cover
+                        "
+                    />
+                </div>
 
             </div>
 
@@ -156,47 +165,54 @@ const MegaMenuCard = ({
 
             <div className="absolute w-[310px] bottom-1">
 
+                {/* Explore Button */}
+
                 <button
+                    type="button"
+                    onClick={handleNavigate}
                     className="
-          w-full
-          rounded-lg
-          bg-[linear-gradient(94.89deg,_#6724DB_0%,_#5116B6_100%)]
-          py-[10px]
-          px-[46px]
-          text-[12px]
-          font-bold
-          font-dmSans
-          text-white
-          transition
-          duration-300
-          hover:opacity-90
-        "
-        
+                        w-full
+                        rounded-lg
+                        bg-[linear-gradient(94.89deg,_#6724DB_0%,_#5116B6_100%)]
+                        py-[10px]
+                        px-[46px]
+                        text-[12px]
+                        font-bold
+                        font-dmSans
+                        text-white
+                        transition
+                        duration-300
+                        hover:opacity-90
+                    "
                 >
                     {buttonText}
                 </button>
 
+                {/* Link */}
+
                 <button
+                    type="button"
+                    onClick={handleNavigate}
                     className="
-        my-2
-          flex
-          w-full
-          items-center
-          justify-center
-          gap-2
-          font-semibold
-          text-[#7434E5]
-        "
+                        my-2
+                        flex
+                        w-full
+                        items-center
+                        justify-center
+                        gap-2
+                        font-semibold
+                        text-[#7434E5]
+                    "
                 >
                     {linkText}
 
                     <ArrowRight
                         size={18}
                         className="
-            transition-transform
-            duration-300
-            group-hover:translate-x-1
-          "
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1
+                        "
                     />
 
                 </button>
@@ -204,7 +220,7 @@ const MegaMenuCard = ({
             </div>
 
         </div>
-    )
-}
+    );
+};
 
-export default MegaMenuCard
+export default MegaMenuCard;

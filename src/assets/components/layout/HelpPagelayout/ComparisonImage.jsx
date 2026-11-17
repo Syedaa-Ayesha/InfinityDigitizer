@@ -2,9 +2,9 @@
 import { useState, useRef } from "react";
 import { MoveHorizontal } from "lucide-react";
 
-import beforeImage from "../../../images/fox-2.png";
-import afterImage from "../../../images/FOX-LOGO.png";
 
+import beforeImage from "../../../images/FOX-LOGO.png";
+import afterImage from "../../../images/fox-2.png";
 const ImageComparison = () => {
   const [position, setPosition] = useState(50);
   const containerRef = useRef(null);
