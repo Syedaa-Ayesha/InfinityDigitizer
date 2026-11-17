@@ -1,6 +1,6 @@
 
 
-import Heading from "../../layout/Heading";
+// import Heading from "../../layout/Heading";
 // import patchPreview from "../../../images/FOX-LOGO.png";
 import FormState from "../../layout/HomeLayout/FormState";
 import {
@@ -8,8 +8,10 @@ import {
   FileCheck,
   ShieldCheck,
   Clover,
+  Star,
 } from "lucide-react";
 import ImageComparison from "../../layout/HelpPagelayout/ComparisonImage";
+import SectionHeading from "../../layout/SectionHeading";
 
 /* SERVICE BENEFITS DATA*/
 
@@ -51,6 +53,13 @@ const ServiceForm = () => {
           "linear-gradient(227.68deg, rgba(116,52,229,0.17) 2.34%, rgba(116,52,229,0) 29.5%, rgba(116,52,229,0) 58.71%, rgba(116,52,229,0.17) 97.66%), #FFFFFF",
       }}
     >
+       <SectionHeading
+         
+          heading="Your Artwork, Perfectly Prepared"
+          description="   Embroidery digitizing, vector art & logo digitizing services designed to deliver accurate, reliable,
+            and production ready files."
+           headingClassName="lg:text-[38px] text-[#0C0C30] font-extrablod tracking-[-2px]"
+        />
       <div
         className="
           mx-auto
@@ -74,38 +83,7 @@ const ServiceForm = () => {
           xl:gap-x-20
         "
       >
-        {/* =================================================
-            TOP LEFT
-        ================================================= */}
-
-        <div
-          className="
-            min-w-0
-            lg:row-start-1
-            lg:col-start-1
-          "
-        >
-          <Heading title={"Your Artwork, Perfectly Prepared"} />
-
-          <p
-            className="
-              mt-3
-              max-w-[620px]
-              font-inter
-              text-[15px]
-              leading-6
-              text-[#0F1729]/80
-            "
-          >
-            Embroidery digitizing, vector art & logo digitizing
-            services designed to deliver accurate, reliable,
-            and production ready files.
-          </p>
-        </div>
-
-        {/* =================================================
-            IMAGE
-        ================================================= */}
+       
 
       {/* IMAGE */}
 <div
@@ -117,11 +95,10 @@ const ServiceForm = () => {
     justify-center
     lg:row-start-2
     lg:col-start-1
-    lg:justify-start
-    lg:mt-[-750px]
+    lg:justify-start   lg:mt-[-1250px]
   "
 >
-  <div className="w-full max-w-[500px] h-[600px]">
+  <div className="w-full max-w-[500px] h-auto">
     <ImageComparison />
   </div>
 </div>
