@@ -1,6 +1,6 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
 const MegaMenuCard = ({
-    icon: Icon,
+    
     title,
     description,
     features,
@@ -21,7 +21,7 @@ const MegaMenuCard = ({
                 relative
                 flex
                 flex-col
-                h-[400px]
+                h-[364px]
                 rounded-xl
                 border
                 bg-[#F3F3F34A]
@@ -39,7 +39,7 @@ const MegaMenuCard = ({
 
                 {/* Icon */}
 
-                <div
+                {/* <div
                     className="
                         flex
                         h-[73px]
@@ -57,7 +57,7 @@ const MegaMenuCard = ({
                         strokeWidth={1.8}
                         className="text-[#7434E5]"
                     />
-                </div>
+                </div> */}
 
                 {/* Heading - Clickable */}
 
@@ -99,7 +99,7 @@ const MegaMenuCard = ({
 
             {/* Middle */}
 
-            <div className="mt-8 flex gap-2">
+            <div className="flex gap-2">
 
                 {/* Features */}
 

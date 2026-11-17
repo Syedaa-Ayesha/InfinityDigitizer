@@ -63,7 +63,7 @@ const MegaMenu = ({ mobile = false, onNavigate }) => {
             : `
               relative
               z-[1000]
-              h-[511px]
+              h-[468px]
               w-[1114px]
               rounded-[18px]
               border
