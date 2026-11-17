@@ -56,8 +56,8 @@ const ServiceForm = () => {
        <SectionHeading
          
           heading="Your Artwork, Perfectly Prepared"
-          description="   Embroidery digitizing, vector art & logo digitizing services designed to deliver accurate, reliable,
-            and production ready files."
+          description="Embroidery digitizing, vector art & logo digitizing services designed to deliver 
+          accurate, reliable, and production ready files."
            headingClassName="lg:text-[38px] text-[#0C0C30] font-extrablod tracking-[-2px]"
         />
       <div
